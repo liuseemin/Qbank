@@ -103,9 +103,12 @@
 
 ```
 線上出題機/
-├── app.py           # 伺服器後端程式
+├── quiz_web.py                # 核心應用程式：處理路由、出題邏輯、AI 詳解生成
+├── data.json                  # 題庫檔案：儲存所有題目、選項與答案
+├── pdftojson.json             # 用pdf產生題庫檔案：抓取pdf中表格產生json(抓取欄位需自行設定)
 ├── templates/
-│   └── index.html   # 前端使用者介面
-├── data.json        # 你的題庫檔案
-└── README.md        # 專案說明文件
+│   ├── index.html             # 前端介面：應用程式的主要使用者介面
+│   ├── review.html            # 錯題記錄：自動記錄所有答錯的題目
+│   └── review_marked.html     # 標記題目：儲存使用者手動標記的題目
+└── README.md                  # 專案說明：介紹專案功能、安裝與使用方法
 ```
