@@ -92,7 +92,7 @@
     在專案根目錄下執行：
 
     ```bash
-    python quiz_web.py "你的題庫.json"
+    python quiz_web.py "data.json"
     ```
 
     然後打開你的瀏覽器，前往 `http://127.0.0.1:5000` 即可開始使用。
