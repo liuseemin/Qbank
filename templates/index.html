@@ -239,6 +239,7 @@
                         <option value="wrong">錯題練習</option>
                     </select>
                 </label>
+                <button id="previousQuestionBtn" onclick="prevQuestion()">↩</button>
                 <button id="nextQuestionBtn" onclick="loadQuestion()">下一題</button>
                 <button id="restartBtn" onclick="resetAndStart()" style="display:none;">重新開始</button>
                 <a href="/review" target="_blank">查看錯題</a>
@@ -359,6 +360,21 @@
             }
         }
 
+        function prevQuestion() {
+            const questionId = jumpSelect.value - 1;
+            if (questionId) {
+                fetch(`/get_question?question_id=${questionId}`)
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.error) {
+                            alert(data.error);
+                            return;
+                        }
+                        renderQuestion(data);
+                    });
+            }
+        }
+
         function submitAnswer(ans) {
             fetch("/submit_answer", {
                 method: "POST",
@@ -445,7 +461,9 @@
             })
                 .then(res => res.json())
                 .then(() => {
-                    alert("已標記本題");
+                    const markBtn = document.querySelector(".mark-button");
+                    markBtn.innerText = "已標記";
+                    markBtn.style.backgroundColor = "#2ecc71";
                 });
         }
 

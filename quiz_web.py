@@ -26,6 +26,9 @@ question_index = 0
 remaining_questions_order = []
 remaining_questions_random = []
 
+# 新增：建立一個全域快取字典來儲存 AI 詳解
+ai_explanation_cache = {}
+
 @app.route("/")
 def index():
     # 傳遞所有題號給前端，以便生成下拉選單
@@ -48,14 +51,22 @@ def get_question():
 
     if not questions:
         return jsonify({"error": "題庫尚未載入"})
-    
+
     # 處理跳轉到特定題號的請求
     if question_id:
-        q = next((q for q in questions if q.get("題號") == question_id), None)
-        if q:
-            q["is_marked"] = q in marked_questions
+        try:
+            jump_index = next(i for i, q in enumerate(questions) if q.get("題號") == question_id)
+            question_index = jump_index
+            
+            if mode == "order":
+                remaining_questions_order = questions[question_index:]
+
+            q = questions[question_index]
+            # 修正：透過題號判斷題目是否已被標記
+            q["is_marked"] = any(marked_q.get("題號") == q.get("題號") for marked_q in marked_questions)
+            question_index += 1
             return jsonify(q)
-        else:
+        except StopIteration:
             return jsonify({"error": f"找不到題號為 {question_id} 的題目"})
 
     # 以下是處理正常出題模式的邏輯
@@ -83,7 +94,8 @@ def get_question():
     if q is None:
         return jsonify({"error": "所有題目都已出完！", "finished": True})
 
-    q["is_marked"] = q in marked_questions
+    # 修正：確保所有回傳題目的判斷方式一致
+    q["is_marked"] = any(marked_q.get("題號") == q.get("題號") for marked_q in marked_questions)
     return jsonify(q)
 
 @app.route("/submit_answer", methods=["POST"])
@@ -108,7 +120,8 @@ def submit_answer():
 def mark_question():
     data = request.json
     q = data["question"]
-    if q not in marked_questions:
+    # 儲存題號，而不是整個題目物件
+    if q.get("題號") not in [mq.get("題號") for mq in marked_questions]:
         marked_questions.append(q)
     return jsonify({"status": "marked"})
 
@@ -129,13 +142,30 @@ def get_ai_explanation():
 
     if not question:
         return jsonify({"error": "未提供題目"}), 400
+    
+    question_id = question["題號"]
 
-    prompt = f"請以繁體中文，針對以下問題提供詳細的解釋：\n\n題目：{question['題目']}\n選項：{' '.join(question['選項'])}"
+    # 步驟 1: 檢查快取中是否有詳解
+    if question_id in ai_explanation_cache:
+        print(f"✅ 題號 {question_id} 的詳解已從快取中取得。")
+        explanation = ai_explanation_cache[question_id]
+        return jsonify({
+            "explanation": explanation,
+            "current_tokens": 0,  # 從快取中取得，不計算 token 數
+            "total_tokens": total_tokens_used
+        })
+
+    # 步驟 2: 如果快取中沒有，則執行 API 呼叫
+
+    prompt = f"請以繁體中文，針對以下問題提供詳細的解釋：\n\n題目：{question['題目']}\n選項：{' '.join(question['選項'])}\n答案：{question['答案']}"
     
     try:
         response = model.generate_content(prompt)
         # 移除這行程式碼，讓 AI 回傳的換行和格式得以保留
         explanation = response.text
+
+        # 步驟 3: 將新的詳解儲存到快取中
+        ai_explanation_cache[question_id] = explanation
         
         # 計算本次請求的 token 數
         prompt_tokens = model.count_tokens(prompt).total_tokens
