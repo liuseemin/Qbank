@@ -112,3 +112,97 @@
 │   └── review_marked.html     # 標記題目：儲存使用者手動標記的題目
 └── README.md                  # 專案說明：介紹專案功能、安裝與使用方法
 ```
+
+-----
+
+這是一個針對你提供的 Python 程式碼 `pdf_to_json.py` 所撰寫的簡短 README。它清楚地說明了這個工具的功能、如何使用，以及參數的用法。
+
+-----
+-----
+
+## PDF 轉 JSON 題庫工具
+
+這個 Python 腳本可以將特定格式的 PDF 表格自動轉換為 JSON 格式的題庫，方便用於線上測驗或其他應用程式。
+
+### 功能
+
+  * **自動化轉換**：將 PDF 中的表格內容解析為結構化的 JSON 資料。
+  * **支援單一檔案與資料夾**：可以處理單個 PDF 檔案，也可以批次處理整個資料夾中的所有 PDF。
+  * **自動拆分選項**：可選擇自動從題目內容中辨識並拆分出選項（A, B, C, ...），讓匯出資料更完整。
+
+### 使用方法
+
+首先，請確認你已安裝必要的函式庫：
+
+```bash
+pip install pdfplumber
+```
+
+-----
+
+#### 轉換單一 PDF 檔案
+
+你可以直接指定一個 PDF 檔案路徑。腳本會將轉換後的 JSON 檔案儲存在相同目錄下，並以 `.json` 作為副檔名。
+
+```bash
+python pdf_to_json.py your_file.pdf
+```
+
+**自訂輸出路徑**
+
+使用 `-o` 或 `--output` 參數來指定 JSON 檔案的輸出路徑。
+
+```bash
+python pdf_to_json.py your_file.pdf -o output_directory/result.json
+```
+
+-----
+
+#### 批次轉換整個資料夾
+
+如果你指定一個資料夾路徑，腳本會自動轉換該資料夾內所有的 PDF 檔案。
+
+```bash
+python pdf_to_json.py your_folder/
+```
+
+**自訂輸出資料夾**
+
+你可以使用 `-o` 或 `--output` 參數來指定 JSON 檔案的輸出資料夾。
+
+```bash
+python pdf_to_json.py your_folder/ -o output_folder/
+```
+
+-----
+
+#### 自動拆分選項
+
+如果你的 PDF 格式是題目和選項都在同一個欄位，可以使用 `--autoitem` 參數讓腳本嘗試自動拆分。
+
+```bash
+python pdf_to_json.py your_file.pdf --autoitem
+```
+
+### 轉換後的 JSON 格式範例
+
+腳本會生成一個包含題目資訊的 JSON 陣列，格式如下：
+
+```json
+[
+  {
+    "題別": "單選題",
+    "題號": "1",
+    "題目": "太陽系中，哪一個行星是離太陽最近的？",
+    "選項": [
+      "A. 水星",
+      "B. 金星",
+      "C. 地球",
+      "D. 火星"
+    ],
+    "答案": "A",
+    "出處": "天文學"
+  },
+  ...
+]
+```
