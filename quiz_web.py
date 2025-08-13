@@ -10,7 +10,7 @@ import os
 # 如果沒有設定環境變數，這裡會出錯，所以要先設定好
 genai.configure(api_key=os.environ.get("GEMINI_API_KEY")) 
 # 選擇一個適合的模型，例如 'gemini-1.5-flash-latest'
-model = genai.GenerativeModel('gemini-1.5-flash-latest')
+model = genai.GenerativeModel('gemini-2.5-flash')
 # ---
 
 app = Flask(__name__)
