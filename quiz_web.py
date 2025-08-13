@@ -28,7 +28,7 @@ def review_marked():
 @app.route("/get_question")
 def get_question():
     global question_index, remaining_questions_order, remaining_questions_random
-    mode = request.args.get("mode", "random")
+    mode = request.args.get("mode", "order")
 
     if not questions:
         return jsonify({"error": "題庫尚未載入"})
