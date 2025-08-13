@@ -42,7 +42,7 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             text-align: left;
             min-width: 300px;
-            max-width: 400px;
+            max-width: 500px;
         }
 
         #ai-explanation h2 {
@@ -265,6 +265,7 @@
 
         <div id="ai-explanation">
             <h2>AI 詳解</h2>
+            <div id="token-info" style="display:none;"></div>
             <div id="ai-explanation-content"></div>
         </div>
     </div>
@@ -279,6 +280,7 @@
         const jumpSelect = document.getElementById("question_jump");
         const aiExplanationBtn = document.getElementById("aiExplanationBtn");
         const aiExplanationContent = document.getElementById("ai-explanation-content");
+        const tokenInfoDiv = document.getElementById("token-info");
 
         function renderQuestion(data) {
             currentQuestion = data;
@@ -393,12 +395,15 @@
 
             fetch("/get_ai_explanation", {
                 method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ question: currentQuestion })
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    question: currentQuestion
+                })
             })
                 .then(res => {
                     if (!res.ok) {
-                        // 如果 HTTP 狀態碼不是成功 (200-299)，則拋出錯誤
                         return res.json().then(errorData => {
                             throw new Error(errorData.error || "未知錯誤");
                         });
@@ -412,8 +417,11 @@
                     if (ai_data.explanation) {
                         const html = marked.parse(ai_data.explanation);
                         aiExplanationContent.innerHTML = html;
+
+                        // 顯示 token 資訊
+                        tokenInfoDiv.innerHTML = `本次請求 token 數: ${ai_data.current_tokens} | 累積 token 數: ${ai_data.total_tokens} / 250,000 (day)`;
+                        tokenInfoDiv.style.display = "block";
                     } else {
-                        // 如果後端沒有返回 explanation，但也沒有明確錯誤訊息
                         aiExplanationContent.innerHTML = `<p style="color:red;">無法取得 AI 詳解。</p>`;
                     }
                 })
@@ -421,7 +429,6 @@
                     console.error('Error fetching AI explanation:', error);
                     aiExplanationBtn.innerText = "取得 AI 詳解";
                     aiExplanationBtn.disabled = false;
-                    // 根據錯誤訊息顯示更具體的提示
                     aiExplanationContent.innerHTML = `<p style="color:red;">${error.message}</p>`;
                 });
         };

@@ -15,6 +15,9 @@ model = genai.GenerativeModel('gemini-1.5-flash-latest')
 
 app = Flask(__name__)
 
+# 模擬一個儲存累積 token 數的變數
+total_tokens_used = 0
+
 # 全域資料
 questions = []
 wrong_questions = []
@@ -120,6 +123,7 @@ def reset_questions():
 
 @app.route("/get_ai_explanation", methods=["POST"])
 def get_ai_explanation():
+    global total_tokens_used
     data = request.json
     question = data.get("question")
 
@@ -130,9 +134,22 @@ def get_ai_explanation():
     
     try:
         response = model.generate_content(prompt)
-        # 移除回傳內容中的所有換行符號
-        explanation = response.text.replace('\n', ' ').replace('\r', '') 
-        return jsonify({"explanation": explanation})
+        # 移除這行程式碼，讓 AI 回傳的換行和格式得以保留
+        explanation = response.text
+        
+        # 計算本次請求的 token 數
+        prompt_tokens = model.count_tokens(prompt).total_tokens
+        completion_tokens = model.count_tokens(explanation).total_tokens
+        current_tokens = prompt_tokens + completion_tokens
+        
+        # 更新累積 token 數
+        total_tokens_used += current_tokens
+
+        return jsonify({
+            "explanation": explanation,
+            "current_tokens": current_tokens,
+            "total_tokens": total_tokens_used
+        })
     except Exception as e:
         print(f"Gemini API 呼叫失敗: {e}")
         return jsonify({"error": "無法取得 AI 詳解，請稍後再試。"}), 500
