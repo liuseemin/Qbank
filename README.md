@@ -120,7 +120,7 @@
 -----
 -----
 
-## PDF 轉 JSON 題庫工具
+## PDF 轉 JSON 題庫工具 (pdftojson.py)
 
 這個 Python 腳本可以將特定格式的 PDF 表格自動轉換為 JSON 格式的題庫，方便用於線上測驗或其他應用程式。
 
