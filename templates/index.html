@@ -11,20 +11,47 @@
             background-color: #f4f7f6;
             color: #333;
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            justify-content: center;
+            align-items: flex-start;
             min-height: 100vh;
             margin: 0;
         }
 
-        .container {
+        .main-container {
+            display: flex;
+            gap: 30px;
             width: 100%;
-            max-width: 800px;
+            max-width: 1500px;
+        }
+
+        .container {
+            flex: 1;
+            max-width: 1000px;
             background-color: #ffffff;
             padding: 30px;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             text-align: center;
+        }
+
+        #ai-explanation {
+            flex: 1;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            min-width: 300px;
+            max-width: 400px;
+        }
+
+        #ai-explanation h2 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+
+        #ai-explanation .loading {
+            color: #7f8c8d;
         }
 
         h1 {
@@ -61,6 +88,12 @@
 
         .controls select {
             width: 150px;
+        }
+
+        select#question_jump {
+            min-width: 60px;
+            max-width: 80px;
+            width: auto;
         }
 
         .controls button {
@@ -119,26 +152,66 @@
             transform: scale(1.02);
         }
 
+        .options button.selected {
+            background-color: #3498db;
+            color: white;
+            border-color: #2980b9;
+        }
+
         .result {
             margin-top: 20px;
             font-size: 1.3em;
             font-weight: bold;
+            text-align: center;
         }
 
-        .mark-button {
+        .result a {
+            color: #e74c3c;
+            text-decoration: underline;
+            font-size: 1em;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        .result a:hover {
+            color: #c0392b;
+        }
+
+        .action-buttons {
             margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .mark-button,
+        .explanation-button {
             padding: 10px 20px;
-            background-color: #9b59b6;
             color: white;
             border: none;
             border-radius: 8px;
             font-size: 1em;
             cursor: pointer;
             transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .mark-button {
+            background-color: #9b59b6;
         }
 
         .mark-button:hover {
             background-color: #8e44ad;
+            transform: translateY(-2px);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .explanation-button {
+            background-color: #e74c3c;
+        }
+
+        .explanation-button:hover {
+            background-color: #c0392b;
             transform: translateY(-2px);
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         }
@@ -154,34 +227,94 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1>線上出題機</h1>
+    <div class="main-container">
+        <div class="container">
+            <h1>線上出題機</h1>
 
-        <div class="controls">
-            <label>模式：
-                <select id="mode">
-                    <option value="random">隨機出題</option>
-                    <option value="order">順序出題</option>
-                    <option value="wrong">錯題練習</option>
+            <div class="controls">
+                <label>
+                    <select id="mode">
+                        <option value="order">順序出題</option>
+                        <option value="random">隨機出題</option>
+                        <option value="wrong">錯題練習</option>
+                    </select>
+                </label>
+                <button id="nextQuestionBtn" onclick="loadQuestion()">下一題</button>
+                <button id="restartBtn" onclick="resetAndStart()" style="display:none;">重新開始</button>
+                <a href="/review" target="_blank">查看錯題</a>
+                <a href="/review_marked" target="_blank">查看已標記</a>
+                <label for="question_jump">跳：</label>
+                <select id="question_jump" onchange="jumpToQuestion()">
+                    <option value="">題號</option>
+                    {% for qid in all_question_ids %}
+                    <option value="{{ qid }}">{{ qid }}</option>
+                    {% endfor %}
                 </select>
-            </label>
-            <button id="nextQuestionBtn" onclick="loadQuestion()">下一題</button>
-            <button id="restartBtn" onclick="resetAndStart()" style="display:none;">重新開始</button>
-            <a href="/review" target="_blank">查看錯題</a>
-            <a href="/review_marked" target="_blank">查看已標記</a>
+            </div>
+
+            <div class="question" id="question"></div>
+            <div class="options" id="options"></div>
+            <div class="result" id="result"></div>
+
+            <div class="action-buttons">
+                <button class="mark-button" onclick="markCurrent()">標記本題</button>
+                <button id="aiExplanationBtn" class="explanation-button" style="display: none;">取得 AI 詳解</button>
+            </div>
+
         </div>
 
-        <div class="question" id="question"></div>
-        <div class="options" id="options"></div>
-        <div class="result" id="result"></div>
-        <button class="mark-button" onclick="markCurrent()">標記本題</button>
+        <div id="ai-explanation">
+            <h2>AI 詳解</h2>
+            <div id="ai-explanation-content"></div>
+        </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
     <script>
         let currentQuestion = null;
         const nextQuestionBtn = document.getElementById("nextQuestionBtn");
         const restartBtn = document.getElementById("restartBtn");
         const modeSelect = document.getElementById("mode");
+        const jumpSelect = document.getElementById("question_jump");
+        const aiExplanationBtn = document.getElementById("aiExplanationBtn");
+        const aiExplanationContent = document.getElementById("ai-explanation-content");
+
+        function renderQuestion(data) {
+            currentQuestion = data;
+            document.getElementById("question").innerText = `[${data.題號}] ${data.題目}`;
+            let opts = document.getElementById("options");
+            opts.innerHTML = "";
+            data.選項.forEach(opt => {
+                let btn = document.createElement("button");
+                btn.innerText = opt;
+                btn.onclick = (event) => {
+                    document.querySelectorAll('.options button').forEach(button => {
+                        button.classList.remove('selected');
+                    });
+                    event.target.classList.add('selected');
+                    submitAnswer(opt[0]);
+                };
+                opts.appendChild(btn);
+            });
+            document.getElementById("result").innerHTML = "";
+            nextQuestionBtn.style.display = "block";
+            restartBtn.style.display = "none";
+
+            jumpSelect.value = data.題號;
+
+            aiExplanationBtn.style.display = "none";
+            aiExplanationContent.innerHTML = "";
+
+            const markBtn = document.querySelector(".mark-button");
+            if (data.is_marked) {
+                markBtn.innerText = "已標記";
+                markBtn.style.backgroundColor = "#2ecc71";
+            } else {
+                markBtn.innerText = "標記本題";
+                markBtn.style.backgroundColor = "#9b59b6";
+            }
+        }
 
         function loadQuestion() {
             let mode = modeSelect.value;
@@ -191,7 +324,7 @@
                     if (data.finished) {
                         document.getElementById("question").innerText = data.error;
                         document.getElementById("options").innerHTML = "";
-                        document.getElementById("result").innerText = "";
+                        document.getElementById("result").innerHTML = "";
                         nextQuestionBtn.style.display = "none";
                         restartBtn.style.display = "block";
                         return;
@@ -200,62 +333,102 @@
                     if (data.error) {
                         document.getElementById("question").innerText = data.error;
                         document.getElementById("options").innerHTML = "";
-                        document.getElementById("result").innerText = "";
+                        document.getElementById("result").innerHTML = "";
                         nextQuestionBtn.style.display = "block";
                         restartBtn.style.display = "none";
                         return;
                     }
-
-                    currentQuestion = data;
-                    document.getElementById("question").innerText = `[${data.題號}] ${data.題目}`;
-                    let opts = document.getElementById("options");
-                    opts.innerHTML = "";
-                    data.選項.forEach(opt => {
-                        let btn = document.createElement("button");
-                        btn.innerText = opt;
-                        btn.onclick = () => submitAnswer(opt[0]);
-                        opts.appendChild(btn);
-                    });
-                    document.getElementById("result").innerText = "";
-                    nextQuestionBtn.style.display = "block";
-                    restartBtn.style.display = "none";
-
-                    // 根據後端回傳的 is_marked 狀態更新標記按鈕
-                    const markBtn = document.querySelector(".mark-button");
-                    if (data.is_marked) {
-                        markBtn.innerText = "已標記";
-                        markBtn.style.backgroundColor = "#2ecc71"; // 綠色
-                    } else {
-                        markBtn.innerText = "標記本題";
-                        markBtn.style.backgroundColor = "#9b59b6"; // 原來的紫色
-                    }
+                    renderQuestion(data);
                 });
+        }
+
+        function jumpToQuestion() {
+            const questionId = jumpSelect.value;
+            if (questionId) {
+                fetch(`/get_question?question_id=${questionId}`)
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.error) {
+                            alert(data.error);
+                            return;
+                        }
+                        renderQuestion(data);
+                    });
+            }
         }
 
         function submitAnswer(ans) {
             fetch("/submit_answer", {
                 method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ question: currentQuestion, answer: ans })
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    question: currentQuestion,
+                    answer: ans
+                })
             })
                 .then(res => res.json())
                 .then(data => {
                     const resultDiv = document.getElementById("result");
+                    resultDiv.innerHTML = "";
                     if (data.correct) {
                         resultDiv.innerText = "✅ 答對了！";
                         resultDiv.className = "result correct";
                     } else {
-                        resultDiv.innerText = `❌ 答錯！正確答案是：${data.right_answer}`;
+                        const rightAnswer = data.right_answer;
+                        const explanationText = `❌ 答錯！正確答案是：${rightAnswer}`;
+                        resultDiv.innerText = explanationText;
                         resultDiv.className = "result wrong";
                     }
+
+                    aiExplanationBtn.style.display = "block";
                 });
         }
+
+        aiExplanationBtn.onclick = () => {
+            aiExplanationBtn.innerText = "生成中...";
+            aiExplanationBtn.disabled = true;
+            aiExplanationContent.innerHTML = `<span class="loading">AI 正在生成詳解，請稍候...</span>`;
+
+            fetch("/get_ai_explanation", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    question: currentQuestion
+                })
+            })
+                .then(res => res.json())
+                .then(ai_data => {
+                    aiExplanationBtn.innerText = "取得 AI 詳解";
+                    aiExplanationBtn.disabled = false;
+
+                    if (ai_data.explanation) {
+                        const html = marked.parse(ai_data.explanation);
+                        aiExplanationContent.innerHTML = html;
+                    } else if (ai_data.error) {
+                        aiExplanationContent.innerHTML = `<p style="color:red;">${ai_data.error}</p>`;
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching AI explanation:', error);
+                    aiExplanationBtn.innerText = "取得 AI 詳解";
+                    aiExplanationBtn.disabled = false;
+                    aiExplanationContent.innerHTML = `<p style="color:red;">發生錯誤，請稍後再試。</p>`;
+                });
+        };
 
         function markCurrent() {
             fetch("/mark_question", {
                 method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ question: currentQuestion })
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    question: currentQuestion
+                })
             })
                 .then(res => res.json())
                 .then(() => {
