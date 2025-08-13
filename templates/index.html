@@ -393,14 +393,18 @@
 
             fetch("/get_ai_explanation", {
                 method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    question: currentQuestion
-                })
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ question: currentQuestion })
             })
-                .then(res => res.json())
+                .then(res => {
+                    if (!res.ok) {
+                        // 如果 HTTP 狀態碼不是成功 (200-299)，則拋出錯誤
+                        return res.json().then(errorData => {
+                            throw new Error(errorData.error || "未知錯誤");
+                        });
+                    }
+                    return res.json();
+                })
                 .then(ai_data => {
                     aiExplanationBtn.innerText = "取得 AI 詳解";
                     aiExplanationBtn.disabled = false;
@@ -408,15 +412,17 @@
                     if (ai_data.explanation) {
                         const html = marked.parse(ai_data.explanation);
                         aiExplanationContent.innerHTML = html;
-                    } else if (ai_data.error) {
-                        aiExplanationContent.innerHTML = `<p style="color:red;">${ai_data.error}</p>`;
+                    } else {
+                        // 如果後端沒有返回 explanation，但也沒有明確錯誤訊息
+                        aiExplanationContent.innerHTML = `<p style="color:red;">無法取得 AI 詳解。</p>`;
                     }
                 })
                 .catch(error => {
                     console.error('Error fetching AI explanation:', error);
                     aiExplanationBtn.innerText = "取得 AI 詳解";
                     aiExplanationBtn.disabled = false;
-                    aiExplanationContent.innerHTML = `<p style="color:red;">發生錯誤，請稍後再試。</p>`;
+                    // 根據錯誤訊息顯示更具體的提示
+                    aiExplanationContent.innerHTML = `<p style="color:red;">${error.message}</p>`;
                 });
         };
 
