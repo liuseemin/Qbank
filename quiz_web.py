@@ -232,30 +232,27 @@ def stream_ai_explanation():
     
     # 確保 prompt_tokens 在串流開始前計算一次
     # 因為 prompt tokens 在發送請求時就已確定
-    prompt_tokens = client.models.count_tokens(prompt).total_tokens
+    # prompt_tokens = client.models.count_tokens(model=MODEL, contents=prompt).total_tokens
 
     def generate_stream():
+        global total_tokens_used
         try:
+            response = client.models.generate_content_stream(
+                model=MODEL,
+                contents=prompt
+            )
             # 呼叫 genai API 並啟用串流
-            for chunk in client.models.generate_content(
-                model=MODEL, contents=prompt, stream=True):
-                # 將每個回應片段的文字以 utf-8 編碼
+            for chunk in response:
                 text_chunk = chunk.text
                 if (text_chunk):
                     yield text_chunk.encode('utf-8')
-
-                # 儲存最後一個 chunk 的使用元數據
-                last_chunk_metadata = chunk.usage_metadata
-            
-            # 串流結束後，從最後一個 chunk 取得 Completion Token 數
-            if last_chunk_metadata:
-                completion_tokens = last_chunk_metadata.completion_token_count
-            
-            # 總結 Token 資訊並以 JSON 格式傳送
-            token_info = {
-                "prompt_tokens": prompt_tokens,
-                "completion_tokens": completion_tokens
-            }
+                if (chunk.usage_metadata):
+                    current_tokens = chunk.usage_metadata.total_token_count
+                    total_tokens_used += current_tokens
+                    token_info = {
+                        "current_tokens": current_tokens,
+                        "total_tokens": total_tokens_used
+                    }
             
             # 將 JSON 資訊傳送給前端
             yield f"<div data-tokens='{json.dumps(token_info)}' style='display:none;'></div>".encode('utf-8')
