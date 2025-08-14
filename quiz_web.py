@@ -26,6 +26,8 @@ question_index = 0
 remaining_questions_order = []
 remaining_questions_random = []
 
+answered_questions = set()
+
 # 新增：建立一個全域快取字典來儲存 AI 詳解
 ai_explanation_cache = {}
 
@@ -33,7 +35,7 @@ ai_explanation_cache = {}
 def index():
     # 傳遞所有題號給前端，以便生成下拉選單
     all_question_ids = [q.get("題號") for q in questions]
-    return render_template("index.html", all_question_ids=all_question_ids)
+    return render_template("index.html", all_question_ids=all_question_ids, total_questions=len(questions))
 
 @app.route("/review")
 def review():
@@ -64,6 +66,7 @@ def get_question():
             q = questions[question_index]
             # 修正：透過題號判斷題目是否已被標記
             q["is_marked"] = any(marked_q.get("題號") == q.get("題號") for marked_q in marked_questions)
+            q["is_multiple"] = True if q.get("題別") == "複" else False
             question_index += 1
             return jsonify(q)
         except StopIteration:
@@ -96,6 +99,8 @@ def get_question():
 
     # 修正：確保所有回傳題目的判斷方式一致
     q["is_marked"] = any(marked_q.get("題號") == q.get("題號") for marked_q in marked_questions)
+    q["is_multiple"] = True if q.get("題別") == "複" else False
+    print(q["is_multiple"])
     return jsonify(q)
 
 @app.route("/submit_answer", methods=["POST"])
@@ -111,9 +116,11 @@ def submit_answer():
         if q not in wrong_questions:
             wrong_questions.append(q)
 
+    answered_questions.add(q.get("題號"))
     return jsonify({
         "correct": is_correct,
-        "right_answer": correct
+        "right_answer": correct,
+        "answered_count": "{}/{}".format(len(answered_questions), len(questions)) if questions else len(answered_questions)
     })
 
 @app.route("/mark_question", methods=["POST"])
@@ -132,6 +139,7 @@ def reset_questions():
     remaining_questions_random = list(questions)
     random.shuffle(remaining_questions_random)
     question_index = 0
+    answered_questions.clear()
     return jsonify({"status": "reset"})
 
 @app.route("/get_ai_explanation", methods=["POST"])
@@ -186,11 +194,26 @@ def get_ai_explanation():
 
 def load_questions(json_paths):
     global questions, remaining_questions_order, remaining_questions_random
+    all_question_files = []
+    
+    for path_str in json_paths:
+        p = Path(path_str)
+        if not p.exists():
+            print(f"❌ 找不到路徑：{path_str}")
+            continue
+
+        if p.is_dir():
+            # 如果是資料夾，尋找所有 .json 檔案
+            print(f"📂 正在載入資料夾：{p}")
+            all_question_files.extend(p.glob("*.json"))
+        else:
+            # 如果是單一檔案，直接加入列表
+            all_question_files.append(p)
+
     all_questions = []
-    for path in json_paths:
-        p = Path(path)
-        if p.exists():
-            with open(p, "r", encoding="utf-8") as f:
+    for file_path in all_question_files:
+        try:
+            with open(file_path, "r", encoding="utf-8") as f:
                 data = json.load(f)
                 if isinstance(data, list):
                     cleaned_questions = []
@@ -199,12 +222,18 @@ def load_questions(json_paths):
                             q['題目'] = q['題目'].replace('\r\n', ' ').replace('\n', ' ').strip()
                         if '選項' in q and isinstance(q['選項'], list):
                             q['選項'] = [opt.replace('\r\n', ' ').replace('\n', ' ').strip() for opt in q['選項']]
+                        if '題號' in q:
+                            q['題號'] = f"{file_path.stem}_{q.get('題號')}"
                         cleaned_questions.append(q)
                     all_questions.extend(cleaned_questions)
+                    print(f"✅ 載入檔案：{file_path}，題數：{len(cleaned_questions)}")
                 else:
-                    print(f"⚠️ {path} 格式錯誤，非陣列，略過")
-        else:
-            print(f"❌ 找不到檔案：{path}")
+                    print(f"⚠️ {file_path} 格式錯誤，非陣列，略過")
+        except json.JSONDecodeError:
+            print(f"⚠️ {file_path} 無法解析為 JSON，略過")
+        except Exception as e:
+            print(f"❌ 處理檔案 {file_path} 時發生錯誤：{e}")
+            
     questions = all_questions
     remaining_questions_order = list(questions)
     remaining_questions_random = list(questions)
@@ -213,7 +242,7 @@ def load_questions(json_paths):
 if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser(description="國考出題機（支援多題庫與模式切換）")
-    parser.add_argument("json_files", nargs="+", help="一個或多個題庫 JSON 檔案")
+    parser.add_argument("json_files", nargs="+", help="一個或多個題庫 JSON 檔案或資料夾")
     parser.add_argument("--host", default="127.0.0.1")
     parser.add_argument("--port", default=5000, type=int)
     args = parser.parse_args()

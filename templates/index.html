@@ -32,6 +32,7 @@
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             text-align: center;
+            position: relative;
         }
 
         #ai-explanation {
@@ -58,6 +59,7 @@
             font-size: 2.5em;
             color: #2c3e50;
             margin-bottom: 20px;
+            margin-top: 0px;
         }
 
         .controls {
@@ -152,7 +154,8 @@
             transform: scale(1.02);
         }
 
-        .options button.selected {
+        .options button.selected,
+        .options button.chosen {
             background-color: #3498db;
             color: white;
             border-color: #2980b9;
@@ -200,6 +203,10 @@
             background-color: #9b59b6;
         }
 
+        #submit-button {
+            background-color: #e0af0d;
+        }
+
         .mark-button:hover {
             background-color: #8e44ad;
             transform: translateY(-2px);
@@ -223,6 +230,13 @@
         .wrong {
             color: #e74c3c;
         }
+
+        #question_count {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            float: left;
+        }
     </style>
 </head>
 
@@ -230,7 +244,7 @@
     <div class="main-container">
         <div class="container">
             <h1>線上出題機</h1>
-
+            <div id="question_count"></div>
             <div class="controls">
                 <label>
                     <select id="mode">
@@ -258,6 +272,7 @@
             <div class="result" id="result"></div>
 
             <div class="action-buttons">
+                <button id="submit-button">送出</button>
                 <button class="mark-button" onclick="markCurrent()">標記本題</button>
                 <button id="aiExplanationBtn" class="explanation-button" style="display: none;">取得 AI 詳解</button>
             </div>
@@ -282,24 +297,72 @@
         const aiExplanationBtn = document.getElementById("aiExplanationBtn");
         const aiExplanationContent = document.getElementById("ai-explanation-content");
         const tokenInfoDiv = document.getElementById("token-info");
+        const questionCountDiv = document.getElementById("question_count");
+        const submitAnswerBtn = document.getElementById("submit-button");
+
+        var multiple_answers_string = '';
+
+        function extractOptionCode(optText) {
+            // 嘗試擷取開頭的 A/B/C/D，不管是否有括號、點、冒號、空格
+            const match = optText.match(/^\(?([A-E])[\.\):]?\s?/);
+            return match ? match[1] : null;
+        }
+
+        function sortAnswerLetters(answerStr) {
+            return answerStr
+                .toUpperCase()               // 確保都是大寫
+                .split('')                   // 拆成陣列
+                .filter(c => /[A-Z]/.test(c)) // 過濾非字母
+                .sort()                      // 排序
+                .join('');                   // 合併成字串
+        }
 
         function renderQuestion(data) {
             currentQuestion = data;
+            multiple_answers_string = '';
             document.getElementById("question").innerText = `[${data.題號}] ${data.題目}`;
             let opts = document.getElementById("options");
             opts.innerHTML = "";
+            submitAnswerBtn.style.display = "none";
             data.選項.forEach(opt => {
                 let btn = document.createElement("button");
                 btn.innerText = opt;
                 btn.onclick = (event) => {
-                    document.querySelectorAll('.options button').forEach(button => {
-                        button.classList.remove('selected');
-                    });
-                    event.target.classList.add('selected');
-                    submitAnswer(opt[0]);
+                    if (data.is_multiple) {
+                        if (multiple_answers_string.includes(extractOptionCode(opt))) {
+                            event.target.classList.remove('chosen');
+                            multiple_answers_string = multiple_answers_string.replace(extractOptionCode(opt), '');
+                            console.log(multiple_answers_string);
+                        } else {
+                            event.target.classList.add('chosen');
+                            multiple_answers_string += extractOptionCode(opt);
+                            console.log(multiple_answers_string);
+                        }
+                    } else {
+                        document.querySelectorAll('.options button').forEach(button => {
+                            button.classList.remove('selected');
+                        });
+                        event.target.classList.add('selected');
+                        submitAnswer(extractOptionCode(opt));
+                    }
                 };
                 opts.appendChild(btn);
             });
+
+            if (data.is_multiple) {
+                submitAnswerBtn.style.display = "block";
+                submitAnswerBtn.innerText = "送出";
+                submitAnswerBtn.onclick = () => {
+                    multiple_answers_string = sortAnswerLetters(multiple_answers_string)
+                    console.log(multiple_answers_string);
+                    if (multiple_answers_string == '') {
+                        alert('請選擇答案');
+                        return;
+                    }
+                    submitAnswer(multiple_answers_string);
+                };
+            }
+
             document.getElementById("result").innerHTML = "";
             nextQuestionBtn.style.display = "block";
             restartBtn.style.display = "none";
@@ -361,7 +424,10 @@
         }
 
         function prevQuestion() {
-            const questionId = jumpSelect.value - 1;
+            const parts = jumpSelect.value.split("_");
+            const numberId = String(Number(parts[parts.length - 1]) - 1);
+            parts[parts.length - 1] = numberId;
+            const questionId = parts.join("_");
             if (questionId) {
                 fetch(`/get_question?question_id=${questionId}`)
                     .then(res => res.json())
@@ -401,6 +467,7 @@
                     }
 
                     aiExplanationBtn.style.display = "block";
+                    questionCountDiv.innerText = `已答題數 ${data.answered_count}`;
                 });
         }
 
