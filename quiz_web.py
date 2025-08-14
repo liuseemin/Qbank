@@ -1,17 +1,21 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, Response
 import json
 import random
 from pathlib import Path
-import google.generativeai as genai # 引入 Gemini SDK
+# import google.generativeai as genai # 引入 Gemini SDK
+from google import genai
 
 # --- 設定 Gemini API ---
 # ⚠️ 注意：將你的 API 金鑰存在環境變數中，而非直接寫在程式碼裡
 import os
 # 如果沒有設定環境變數，這裡會出錯，所以要先設定好
-genai.configure(api_key=os.environ.get("GEMINI_API_KEY")) 
+# genai.configure(api_key=os.environ.get("GEMINI_API_KEY")) 
 # 選擇一個適合的模型，例如 'gemini-1.5-flash-latest'
-model = genai.GenerativeModel('gemini-2.5-flash')
+# model = genai.GenerativeModel('gemini-2.5-flash')
 # ---
+
+client = genai.Client()
+MODEL = "gemini-2.5-flash"
 
 app = Flask(__name__)
 
@@ -168,7 +172,11 @@ def get_ai_explanation():
     prompt = f"請以繁體中文，針對以下問題提供詳細的解釋：\n\n題目：{question['題目']}\n選項：{' '.join(question['選項'])}\n答案：{question['答案']}"
     
     try:
-        response = model.generate_content(prompt)
+        # response = model.generate_content(prompt)
+        response = client.models.generate_content(
+            model=MODEL,
+            contents=prompt,
+        )
         # 移除這行程式碼，讓 AI 回傳的換行和格式得以保留
         explanation = response.text
 
@@ -176,8 +184,8 @@ def get_ai_explanation():
         ai_explanation_cache[question_id] = explanation
         
         # 計算本次請求的 token 數
-        prompt_tokens = model.count_tokens(prompt).total_tokens
-        completion_tokens = model.count_tokens(explanation).total_tokens
+        prompt_tokens = response.usage_metadata.prompt_token_count
+        completion_tokens = response.usage_metadata.prompt_token_count
         current_tokens = prompt_tokens + completion_tokens
         
         # 更新累積 token 數
@@ -191,6 +199,69 @@ def get_ai_explanation():
     except Exception as e:
         print(f"Gemini API 呼叫失敗: {e}")
         return jsonify({"error": "無法取得 AI 詳解，請稍後再試。"}), 500
+    
+# 新增一個用於串流回應的路由
+@app.route("/stream_ai_explanation", methods=["POST"])
+def stream_ai_explanation():
+    global total_tokens_used
+    data = request.json
+    question = data.get("question")
+
+    if not question:
+        return jsonify({"error": "未提供題目"}), 400
+    
+    question_id = question["題號"]
+
+    # 步驟 1: 檢查快取中是否有詳解
+    if question_id in ai_explanation_cache:
+        print(f"✅ 題號 {question_id} 的詳解已從快取中取得。")
+        explanation = ai_explanation_cache[question_id]
+        return jsonify({
+            "explanation": explanation,
+            "current_tokens": 0,  # 從快取中取得，不計算 token 數
+            "total_tokens": total_tokens_used
+        })
+
+    prompt = f"請以繁體中文，針對以下問題提供詳細的解釋：\n\n題目：{question['題目']}\n選項：{' '.join(question['選項'])}\n答案：{question['答案']}"
+    
+    # 確保 prompt_tokens 在串流開始前計算一次
+    # 因為 prompt tokens 在發送請求時就已確定
+    prompt_tokens = client.models.count_tokens(prompt).total_tokens
+
+    def generate_stream():
+        try:
+            # 呼叫 genai API 並啟用串流
+            for chunk in client.models.generate_content(
+                model=MODEL, contents=prompt, stream=True):
+                # 將每個回應片段的文字以 utf-8 編碼
+                text_chunk = chunk.text
+                if (text_chunk):
+                    yield text_chunk.encode('utf-8')
+
+                # 儲存最後一個 chunk 的使用元數據
+                last_chunk_metadata = chunk.usage_metadata
+            
+            # 串流結束後，從最後一個 chunk 取得 Completion Token 數
+            if last_chunk_metadata:
+                completion_tokens = last_chunk_metadata.completion_token_count
+            
+            # 總結 Token 資訊並以 JSON 格式傳送
+            token_info = {
+                "prompt_tokens": prompt_tokens,
+                "completion_tokens": completion_tokens
+            }
+            
+            # 將 JSON 資訊傳送給前端
+            yield f"<div data-tokens='{json.dumps(token_info)}' style='display:none;'></div>".encode('utf-8')
+
+        except Exception as e:
+            # 處理可能發生的 API 錯誤
+            error_message = f"無法取得 AI 詳解：{e}"
+            yield f'<p style="color:red;">{error_message}</p>'.encode('utf-8')
+
+    # 這裡回傳 Response 物件，並將生成器函式作為回應內容
+    # mimetype 設為 text/html，讓瀏覽器能直接解析 HTML 標籤
+    return Response(generate_stream(), mimetype='text/html')
 
 def load_questions(json_paths):
     global questions, remaining_questions_order, remaining_questions_random

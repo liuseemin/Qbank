@@ -477,7 +477,7 @@
             aiExplanationBtn.disabled = true;
             aiExplanationContent.innerHTML = `<span class="loading">AI 正在生成詳解，請稍候...</span>`;
 
-            fetch("/get_ai_explanation", {
+            fetch("/stream_ai_explanation", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -492,29 +492,49 @@
                             throw new Error(errorData.error || "未知錯誤");
                         });
                     }
-                    return res.json();
-                })
-                .then(ai_data => {
-                    aiExplanationBtn.innerText = "取得 AI 詳解";
-                    aiExplanationBtn.disabled = false;
+                    const reader = res.body.getReader();
+                    const decoder = new TextDecoder('utf-8');
 
-                    if (ai_data.explanation) {
-                        const html = marked.parse(ai_data.explanation);
-                        aiExplanationContent.innerHTML = html;
+                    aiExplanationContent.innerHTML = '';
 
-                        // 顯示 token 資訊
-                        tokenInfoDiv.innerHTML = `本次請求 token 數: ${ai_data.current_tokens} | 累積 token 數: ${ai_data.total_tokens} / 250,000 (day)`;
-                        tokenInfoDiv.style.display = "block";
-                    } else {
-                        aiExplanationContent.innerHTML = `<p style="color:red;">無法取得 AI 詳解。</p>`;
-                    }
-                })
-                .catch(error => {
-                    console.error('Error fetching AI explanation:', error);
-                    aiExplanationBtn.innerText = "取得 AI 詳解";
-                    aiExplanationBtn.disabled = false;
-                    aiExplanationContent.innerHTML = `<p style="color:red;">${error.message}</p>`;
-                });
+                    function readStream() {
+                        reader.read().then(({ done, value }) => {
+                            if (done) {
+                                console.log('Stream complete');
+                                aiExplanationBtn.innerText = "取得 AI 詳解";
+                                aiExplanationBtn.disabled = false;
+                                // 處理串流結束後傳送的 Token 資訊
+                                const tokenDiv = document.querySelector('[data-tokens]');
+                                if (tokenDiv) {
+                                    const tokenInfo = JSON.parse(tokenDiv.dataset.tokens);
+                                    const currentTokens = tokenInfo.prompt_tokens + tokenInfo.completion_tokens;
+                                    // 這裡可以呼叫後端 API 更新 total_tokens_used，
+                                    // 或在前端自行計算並更新 UI
+
+                                    // 為了簡單起見，我們直接在前端顯示
+                                    const totalQuestions = {{ total_questions }};
+                                // 這裡需要自己維護 total_tokens_used 的狀態
+                                // 由於 Flask 是無狀態的，這裡只示範顯示本次請求的 token 數
+                                tokenInfoDiv.innerHTML = `本次請求 token 數: ${currentTokens}`;
+                                tokenInfoDiv.style.display = "block";
+
+                                tokenDiv.remove(); // 移除這個隱藏的 div
+                            }
+                            return;
+                        }
+                        const textChunk = decoder.decode(value);
+                        aiExplanationContent.innerHTML += textChunk;
+                        readStream();
+                    });
+                }
+                readStream();
+            })
+            .catch (error => {
+                console.error('Error fetching AI explanation:', error);
+                aiExplanationBtn.innerText = "取得 AI 詳解";
+                aiExplanationBtn.disabled = false;
+                aiExplanationContent.innerHTML = `<p style="color:red;">${error.message}</p>`;
+            });
         };
 
         function markCurrent() {
