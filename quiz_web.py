@@ -243,9 +243,8 @@ def stream_ai_explanation():
             )
             # 呼叫 genai API 並啟用串流
             for chunk in response:
-                text_chunk = chunk.text
-                if (text_chunk):
-                    yield text_chunk.encode('utf-8')
+                if (chunk.text):
+                    yield chunk.text.encode('utf-8')
                 if (chunk.usage_metadata):
                     current_tokens = chunk.usage_metadata.total_token_count
                     total_tokens_used += current_tokens

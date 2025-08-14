@@ -523,6 +523,7 @@
 
                     aiExplanationContent.innerHTML += buffer;
                     buffer = '';
+                    aiExplanationContent.innerHTML = marked.parse(aiExplanationContent.innerHTML);
                 }
             } catch (error) {
                 console.error('串流處理失敗:', error);
