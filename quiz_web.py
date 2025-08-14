@@ -41,6 +41,12 @@ def index():
     all_question_ids = [q.get("題號") for q in questions]
     return render_template("index.html", all_question_ids=all_question_ids, total_questions=len(questions))
 
+@app.route("/test")
+def test():
+    # 傳遞所有題號給前端，以便生成下拉選單
+    all_question_ids = [q.get("題號") for q in questions]
+    return render_template("index_test.html", all_question_ids=all_question_ids, total_questions=len(questions))
+
 @app.route("/review")
 def review():
     return render_template("review.html", wrong_questions=wrong_questions)

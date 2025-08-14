@@ -472,70 +472,89 @@
                 });
         }
 
-        aiExplanationBtn.onclick = () => {
+        async function getAIExplanation() {
+            const currentQuestion = document.getElementById('question-id-input').dataset.currentQuestion;
+            if (!currentQuestion) {
+                alert("請先載入題目！");
+                return;
+            }
+            
             aiExplanationBtn.innerText = "生成中...";
             aiExplanationBtn.disabled = true;
             aiExplanationContent.innerHTML = `<span class="loading">AI 正在生成詳解，請稍候...</span>`;
+            tokenInfoDiv.textContent = '';
 
-            fetch("/stream_ai_explanation", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    question: currentQuestion
-                })
-            })
-                .then(res => {
-                    if (!res.ok) {
-                        return res.json().then(errorData => {
-                            throw new Error(errorData.error || "未知錯誤");
-                        });
-                    }
-                    const reader = res.body.getReader();
-                    const decoder = new TextDecoder('utf-8');
+            try {
+                const response = await fetch('/stream_ai_explanation', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ question: JSON.parse(currentQuestion) })
+                });
 
-                    aiExplanationContent.innerHTML = '';
-
-                    function readStream() {
-                        reader.read().then(({ done, value }) => {
-                            if (done) {
-                                console.log('Stream complete');
-                                aiExplanationBtn.innerText = "取得 AI 詳解";
-                                aiExplanationBtn.disabled = false;
-                                // 處理串流結束後傳送的 Token 資訊
-                                const tokenDiv = document.querySelector('[data-tokens]');
-                                if (tokenDiv) {
-                                    const tokenInfo = JSON.parse(tokenDiv.dataset.tokens);
-                                    const currentTokens = tokenInfo.prompt_tokens + tokenInfo.completion_tokens;
-                                    // 這裡可以呼叫後端 API 更新 total_tokens_used，
-                                    // 或在前端自行計算並更新 UI
-
-                                    // 為了簡單起見，我們直接在前端顯示
-                                    const totalQuestions = {{ total_questions }};
-                                // 這裡需要自己維護 total_tokens_used 的狀態
-                                // 由於 Flask 是無狀態的，這裡只示範顯示本次請求的 token 數
-                                tokenInfoDiv.innerHTML = `本次請求 token 數: ${currentTokens}`;
-                                tokenInfoDiv.style.display = "block";
-
-                                tokenDiv.remove(); // 移除這個隱藏的 div
-                            }
-                            return;
-                        }
-                        const textChunk = decoder.decode(value);
-                        aiExplanationContent.innerHTML += textChunk;
-                        readStream();
-                    });
+                if (!response.ok) {
+                    throw new Error(`HTTP 錯誤! 狀態碼: ${response.status}`);
                 }
-                readStream();
-            })
-            .catch (error => {
-                console.error('Error fetching AI explanation:', error);
-                aiExplanationBtn.innerText = "取得 AI 詳解";
-                aiExplanationBtn.disabled = false;
-                aiExplanationContent.innerHTML = `<p style="color:red;">${error.message}</p>`;
-            });
-        };
+                aiExplanationContent.innerHTML = '';
+                
+                // 使用 Response.body.getReader() 處理串流
+                const reader = response.body.getReader();
+                const decoder = new TextDecoder('utf-8');
+                let done = false;
+                let buffer = ''; // 用於緩存不完整的 HTML 片段
+
+                while (!done) {
+                    const { value, done: readerDone } = await reader.read();
+                    done = readerDone;
+                    
+                    // 將 Uint8Array 轉換為字串
+                    buffer += decoder.decode(value, { stream: !done });
+                    
+                    // 檢查緩衝區中是否有完整的 HTML 標籤
+                    let lastDivIndex = buffer.lastIndexOf('</div>');
+                    while(lastDivIndex !== -1) {
+                        // 找到完整的標籤，將它從緩衝區中取出
+                        let completePart = buffer.substring(0, lastDivIndex + 6);
+                        buffer = buffer.substring(lastDivIndex + 6);
+                        
+                        // 檢查是否是包含 token 資訊的隱藏 div
+                        if (completePart.includes('data-tokens')) {
+                            // 建立一個臨時 div 來解析 HTML
+                            const tempDiv = document.createElement('div');
+                            tempDiv.innerHTML = completePart;
+                            const hiddenDiv = tempDiv.querySelector('[data-tokens]');
+
+                            if (hiddenDiv) {
+                                const tokens = JSON.parse(hiddenDiv.dataset.tokens);
+                                const totalTokens = tokens.prompt_tokens + tokens.completion_tokens;
+                                tokenInfo.textContent = `本次呼叫：prompt(${tokens.prompt_tokens}) + completion(${tokens.completion_tokens}) = ${totalTokens} tokens`;
+                            }
+                        } else {
+                            // 將 HTML 片段插入到容器中
+                            aiExplanationContent.innerHTML += completePart;
+                        }
+                        
+                        // 繼續尋找下一個完整的標籤
+                        lastDivIndex = buffer.lastIndexOf('</div>');
+                    }
+
+                    // 將剩餘的文本直接追加到容器中
+                    aiExplanationContent.innerHTML += buffer;
+                    buffer = '';
+                }
+            } catch (error) {
+                console.error('串流處理失敗:', error);
+                aiExplanationContent.innerHTML = `<p style="color: red;">無法取得 AI 詳解，請稍後再試。錯誤: ${error.message}</p>`;
+                tokenInfo.textContent = '';
+            }
+        }
+
+        aiExplanationBtn.onclick = () => {
+            console.log('getAIExplanation...');
+            getAIExplanation();
+        }
+        
 
         function markCurrent() {
             fetch("/mark_question", {
