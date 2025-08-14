@@ -35,7 +35,7 @@
 1.  **複製專案**：
 
     ```bash
-    git clone https://github.com/你的專案名稱/線上出題機.git
+    git clone https://github.com/liuseemin/Qbank.git
     cd 線上出題機
     ```
 
