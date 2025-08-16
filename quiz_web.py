@@ -208,6 +208,10 @@ def get_ai_explanation():
         # 更新累積 token 數
         total_tokens_used += current_tokens
 
+        html = review_ai()
+        with open("tmp_explanation.html", "w", encoding="utf-8") as f:
+            f.write(html)
+
         return jsonify({
             "explanation": explanation,
             "current_tokens": current_tokens,

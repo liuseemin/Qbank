@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>AI詳解</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 5px;
+            vertical-align: top;
+        }
+
+        .empty-message {
+            text-align: center;
+            font-size: 1.2em;
+            color: #7f8c8d;
+            padding: 50px;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+    <h1>AI詳解</h1>
+    
+    <table>
+        <tr>
+            <th>題號</th>
+            <th>題目&選項</th>
+            <th>答案</th>
+            <th>AI 詳解</th>
+        </tr>
+        
+        <tr>
+            <td>心臟外科_單_45</td>
+            <td>下列何者非主動脈弓中斷(Interrupted Aortic Arch)之矯正手 術術後死亡之危險因子？<br>A. 性別。<br>B. 出生體重。<br>C. 手術年齡。<br>D. VSD大小。<br>E. 主動脈弓中斷之疾病型態。</td>
+            <td>A</td>
+            <td>
+                <div class="markdown">## 主動脈弓中斷手術死亡危險因子詳解
+
+本題答案為 **A. 性別**。
+
+### 關鍵概念：主動脈弓中斷 (Interrupted Aortic Arch, IAA)
+
+主動脈弓中斷(Interrupted Aortic Arch, IAA)是一種罕見且嚴重的先天性心臟病，指主動脈弓在正常發育過程中某處完全中斷，導致血液無法順暢供應到全身。這種情況通常需要新生兒時期就進行緊急手術矯正，且常合併其他心臟缺陷（如心室中膈缺損VSD）。術後死亡風險受多重因素影響。
+
+### 選項解釋：
+
+*   **A. 性別 (不是危險因子)**
+    *   在大多數先天性心臟病手術中，**性別本身通常不被視為獨立且顯著的術後死亡危險因子**。雖然某些先天性疾病可能在特定性別中發生率較高，但性別並不會直接影響手術的成功率或術後的恢復與死亡率。
+
+*   **B. 出生體重 (是危險因子)**
+    *   **出生體重過低**（特別是低於2.5公斤的低出生體重嬰兒或早產兒），其生理功能（如呼吸、循環、免疫系統）發育不成熟，對手術的耐受性較差，麻醉風險高，術後併發症（如呼吸衰竭、感染）發生率高，因此是重要的死亡風險因子。
+
+*   **C. 手術年齡 (是危險因子)**
+    *   **過小的手術年齡**（尤其是在新生兒早期，甚至是極度新生兒）意味著患者器官尚未成熟，生理儲備功能有限，手術和麻醉的風險相對較高。然而，主動脈弓中斷若不及時手術，病情會迅速惡化，因此必須在早期進行。如何在最佳時機進行手術以平衡風險與效益至關重要。
+
+*   **D. VSD大小 (是危險因子)**
+    *   心室中膈缺損(VSD)是IAA最常見的合併症之一。**較大或複雜的VSD** 會導致肺血流量過多，引起嚴重的肺動脈高壓和心臟衰竭，增加手術的複雜性、難度和術後肺部併發症的風險，進而顯著提高死亡率。
+
+*   **E. 主動脈弓中斷之疾病型態 (是危險因子)**
+    *   IAA根據中斷位置分為不同類型（Type A, B, C）。**不同型態的IAA，以及是否合併其他複雜的先天性心臟畸形（如複雜的左心室流出道阻塞、其他大血管轉位等）**，會直接影響手術的難度、所需的重建範圍及術後預後。通常，越複雜的型態或合併越多其他畸形，其術後死亡風險越高。
+
+**總結：** 主動脈弓中斷矯正手術的術後死亡風險主要與患者的生理狀態（如體重、年齡）以及疾病本身的複雜程度（如合併畸形、疾病型態）密切相關，而非患者的性別。</div>
+            </td>
+        </tr>
+        
+    </table>
+    
+    <script>
+        document.querySelectorAll('.markdown').forEach(function (el) {
+            const raw = el.textContent;
+            const html = marked.parse(raw);
+            el.innerHTML = html;
+        });
+    </script>
+
+</body>
+
+</html>
