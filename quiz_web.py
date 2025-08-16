@@ -55,6 +55,15 @@ def review():
 def review_marked():
     return render_template("review_marked.html", marked_questions=marked_questions)
 
+@app.route("/review_ai")
+def review_ai():
+    q_ai = []
+    for q in questions:
+        q["ai_explanation"] = ai_explanation_cache.get(q["題號"], "")
+        if q["ai_explanation"] != "":
+            q_ai.append(q)
+    return render_template("review_ai.html", q_ai=q_ai)
+
 @app.route("/get_question")
 def get_question():
     global question_index, remaining_questions_order, remaining_questions_random
@@ -155,6 +164,7 @@ def reset_questions():
 @app.route("/get_ai_explanation", methods=["POST"])
 def get_ai_explanation():
     global total_tokens_used
+    is_detail = request.args.get("detail", "false").lower() == "true"
     data = request.json
     question = data.get("question")
 
@@ -174,9 +184,10 @@ def get_ai_explanation():
         })
 
     # 步驟 2: 如果快取中沒有，則執行 API 呼叫
-
-    prompt = f"請以繁體中文，針對以下問題提供詳細的解釋：\n\n題目：{question['題目']}\n選項：{' '.join(question['選項'])}\n答案：{question['答案']}"
-    
+    prompt = f"請以繁體中文，針對以下問題，生成 1 分鐘內可以閱讀完的詳解，包含關鍵概念和每個選項解釋，文字簡明，重點清楚：\n\n題目：{question['題目']}\n選項：{' '.join(question['選項'])}\n答案：{question['答案']}"
+    if is_detail:
+        prompt = f"請以繁體中文，針對以下問題提供詳細的解釋：\n\n題目：{question['題目']}\n選項：{' '.join(question['選項'])}\n答案：{question['答案']}"
+        
     try:
         # response = model.generate_content(prompt)
         response = client.models.generate_content(

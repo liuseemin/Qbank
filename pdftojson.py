@@ -14,17 +14,18 @@ def split_question_and_options(text):
 
     # 尋找第一個選項（A. 或 (A) 等）的位置
     # 優化後的正規表達式，可以匹配 (A). (B). (C). (D). 或 (A) (B) (C) (D) 等多種格式
-    match = re.search(r"(\n|^)[(]?[A-E][\.\．\s)]", text)
+    match = re.search(r"(?:\n|^)(?=[(]?[A-E](?:[\.\．\s)]|：|:|、))", text)
     if match:
         q_text = text[:match.start()].strip()
         opts_text = text[match.start():].strip()
 
         # 分割每個選項
         # 優化後的正規表達式，用於分割選項
-        options = re.split(r"(?:\n|^)(?=[(]?[A-E][\.\．\s)])", opts_text)
+        options = re.split(r"(?:\n|^)(?=[(]?[A-E](?:[\.\．\s)]|：|:|、))", opts_text)
         options = [opt.strip() for opt in options if opt.strip()]
         return q_text, options
     else:
+        print("⚠️ 未找到選項: " + text[:10] + "...")
         return text.strip(), []
 
 def pdf_table_to_json(pdf_path, json_path, auto_item=False):

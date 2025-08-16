@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>AI詳解</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 5px;
+            vertical-align: top;
+        }
+
+        .empty-message {
+            text-align: center;
+            font-size: 1.2em;
+            color: #7f8c8d;
+            padding: 50px;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+    <h1>AI詳解</h1>
+    {% if q_ai %}
+    <table>
+        <tr>
+            <th>題號</th>
+            <th>題目&選項</th>
+            <th>答案</th>
+            <th>AI 詳解</th>
+        </tr>
+        {% for q in q_ai %}
+        <tr>
+            <td>{{ q.題號 }}</td>
+            <td>{{ q.題目 }}<br>{{ q.選項 | join('<br>') | safe }}</td>
+            <td>{{ q.答案 }}</td>
+            <td>
+                <div class="markdown">{{ q.ai_explanation | safe }}</div>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <div class="empty-message">
+        目前沒有取得任何 AI 詳解
+    </div>
+    {% endif %}
+    <script>
+        document.querySelectorAll('.markdown').forEach(function (el) {
+            const raw = el.textContent;
+            const html = marked.parse(raw);
+            el.innerHTML = html;
+        });
+    </script>
+
+</body>
+
+</html>

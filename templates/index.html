@@ -76,6 +76,7 @@
             font-weight: bold;
         }
 
+        #ai-explanation a,
         .controls select,
         .controls button,
         .controls a {
@@ -111,6 +112,7 @@
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         }
 
+        #ai-explanation a,
         .controls a {
             color: #2c3e50;
             border: 1px solid #bdc3c7;
@@ -159,6 +161,12 @@
             background-color: #3498db;
             color: white;
             border-color: #2980b9;
+        }
+
+        .options button.correct {
+            background-color: #e74c3c;
+            color: white;
+            border-color: #c0392b;
         }
 
         .result {
@@ -341,6 +349,56 @@
                 background-position: 0 0;
             }
         }
+
+        .ai-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        /* switch*/
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 80px;
+            height: 34px;
+            vertical-align: middle;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            background-color: #cccccc;
+            border-radius: 34px;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            transition: .4s;
+            text-align: center;
+            line-height: 34px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .slider::after {
+            content: "精簡";
+        }
+
+        input:checked+.slider {
+            background-color: #2196F3;
+        }
+
+        input:checked+.slider::after {
+            content: "詳細";
+        }
     </style>
 </head>
 
@@ -384,7 +442,17 @@
         </div>
 
         <div id="ai-explanation">
-            <h2>AI 詳解</h2>
+            <div class="ai-header">
+                <h2>AI 詳解</h2>
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" id="isDetail_toggleBtn">
+                        <span class="slider"></span>
+                    </label>
+                    <a href="/review_ai" target="_blank">詳解紀錄</a>
+
+                </div>
+            </div>
             <div id="token-info" style="display:none;"></div>
             <div id="ai-explanation-content"></div>
         </div>
@@ -431,6 +499,7 @@
             data.選項.forEach(opt => {
                 let btn = document.createElement("button");
                 btn.innerText = opt;
+                btn.id = "option-" + extractOptionCode(opt);
                 btn.onclick = (event) => {
                     if (data.is_multiple) {
                         if (multiple_answers_string.includes(extractOptionCode(opt))) {
@@ -560,14 +629,19 @@
                 .then(data => {
                     const resultDiv = document.getElementById("result");
                     resultDiv.innerHTML = "";
+                    Correct_OptionBtn = document.getElementById('option-' + extractOptionCode(data.right_answer));
+                    Correct_OptionBtn.classList.remove('correct');
                     if (data.correct) {
                         resultDiv.innerText = "✅ 答對了！";
                         resultDiv.className = "result correct";
+                        Correct_OptionBtn = document.getElementById('option-' + extractOptionCode(data.right_answer));
                     } else {
                         const rightAnswer = data.right_answer;
                         const explanationText = `❌ 答錯！正確答案是：${rightAnswer}`;
                         resultDiv.innerText = explanationText;
                         resultDiv.className = "result wrong";
+                        Correct_OptionBtn = document.getElementById('option-' + extractOptionCode(rightAnswer));
+                        Correct_OptionBtn.classList.add('correct');
                     }
 
                     aiExplanationBtn.style.display = "block";
@@ -594,7 +668,8 @@
                 </div>
                 `;
 
-            fetch("/get_ai_explanation", {
+            is_detail = document.getElementById("isDetail_toggleBtn").checked;
+            fetch(`/get_ai_explanation?detail=${is_detail}`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
