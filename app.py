@@ -415,7 +415,7 @@ if __name__ == "__main__":
 
     default_path = ["./json"]
 
-    # keep old code
+    # for debug
     for path_str in default_path:
         p = Path(path_str)
         if not p.exists():
@@ -430,10 +430,9 @@ if __name__ == "__main__":
             # 如果是單一檔案，直接加入列表
             AVAILABLE_JSONS.append(p)
 
-    # Overwrite
-    base_dir = Path(__file__).resolve().parent
-    json_path = base_dir / 'json'
-    AVAILABLE_JSONS.extend(json_path.glob("*.json"))
+    # base_dir = Path(__file__).resolve().parent
+    # json_path = base_dir / 'json'
+    # AVAILABLE_JSONS.extend(json_path.glob("*.json"))
 
     # load_questions(args.json_files)
     print(f"✅ 題庫已載入，總題數：{len(questions)}")
