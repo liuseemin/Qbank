@@ -61,6 +61,11 @@ def logout():
 @app.route("/select", methods=["GET", "POST"])
 def select():
     global AVAILABLE_JSONS
+    # 讀入檔案
+    base_dir = Path(__file__).resolve().parent
+    json_path = base_dir / 'json'
+    AVAILABLE_JSONS.extend(json_path.glob("*.json"))
+
     if not session.get("logged_in"):
         return redirect(url_for("login"))
 
