@@ -133,7 +133,6 @@ def get_question():
     mode = request.args.get("mode", "random")
     question_id = request.args.get("question_id")
 
-    # 從 Session 取得當前題號列表
     current_question_ids = session.get("current_question_ids")
     if not current_question_ids:
         return jsonify({"error": "題庫尚未載入"})
@@ -142,10 +141,8 @@ def get_question():
 
     q = None
     if question_id:
-        # 跳轉到特定題號
         q = q_id_to_question_map.get(question_id)
         if q:
-            # 更新 session 中的 question_index
             try:
                 session["question_index"] = current_question_ids.index(question_id)
             except ValueError:
@@ -170,15 +167,12 @@ def get_question():
             q = q_id_to_question_map.get(q_id)
             session["question_index"] = q_index + 1
         else:
-            session["question_index"] = 0
-            q_id = current_question_ids[0]
-            q = q_id_to_question_map.get(q_id)
-            session["question_index"] = 1
-    
+            # 所有題目已出完
+            return jsonify({"error": "所有題目都已出完！", "finished": True})
+
     if q is None:
         return jsonify({"error": "所有題目都已出完！", "finished": True})
 
-    # 複製題目，以免修改原始資料
     question_copy = q.copy()
     marked_ids = [mq["題號"] for mq in session.get("marked_questions", [])]
     question_copy["is_marked"] = question_copy.get("題號") in marked_ids
