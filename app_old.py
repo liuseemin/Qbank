@@ -27,10 +27,10 @@ question_index_dict = {}
 answered_questions = set()
 
 # 新增：建立一個全域快取字典來儲存 AI 詳解
-# ai_explanation_cache = {}
+ai_explanation_cache = {}
 
 # 儲存題庫路徑，啟動時從參數取得
-# AVAILABLE_JSONS = []
+AVAILABLE_JSONS = []
 
 # --- 登入頁 ---
 @app.route("/login", methods=["GET", "POST"])
@@ -57,38 +57,32 @@ def logout():
     session.pop("logged_in", None)
     return redirect(url_for("login"))
 
+# --- 題庫選擇頁 ---
 @app.route("/select", methods=["GET", "POST"])
 def select():
-    available_jsons = sorted(Path(__file__).resolve().parent.joinpath('json').glob("*.json"))
-    
+    # global AVAILABLE_JSONS
+    # AVAILABLE_JSONS=[]
+    # 讀入檔案
+    available_jsons = []
+    base_dir = Path(__file__).resolve().parent
+    json_path = base_dir / 'json'
+    available_jsons.extend(json_path.glob("*.json"))
+    available_jsons.sort()
+
+    if not session.get("logged_in"):
+        return redirect(url_for("login"))
+
     if request.method == "POST":
-        selected_stems = request.form.getlist("question_sets")
-        if not selected_stems:
+        selected = request.form.getlist("question_sets")
+        if not selected:
             return render_template("select.html", files=available_jsons, error="請至少選擇一個題庫")
 
-        # 將選擇的題庫 ID 儲存在 session 中
-        session["selected_question_sets"] = selected_stems
-        session.pop("current_question_ids", None)
-        
-        # 載入選定的題目 IDs，並將狀態儲存到 Session
-        all_questions_for_user = []
-        for stem in selected_stems:
-            questions_list = ALL_QUESTIONS_DATA.get(stem, [])
-            all_questions_for_user.extend(questions_list)
-        
-        session["current_question_ids"] = [q["題號"] for q in all_questions_for_user]
-        
-        # 初始化 Session 狀態
-        session["wrong_questions"] = []
-        session["marked_questions"] = []
-        session["answered_questions"] = []
-        session["remaining_question_ids"] = session["current_question_ids"].copy()
-        session["question_index"] = 0
-        session["total_tokens_used"] = 0
-
+        load_questions(selected)
+        reset_questions()
+        all_question_ids = [q.get("題號") for q in questions]
         return redirect(url_for("index"))
 
-    return render_template("select.html", files=available_jsons)
+    return render_template("select.html", files=AVAILABLE_JSONS)
 
 @app.route("/")
 def index():
@@ -110,12 +104,10 @@ def test():
 
 @app.route("/review")
 def review():
-    wrong_questions = session.get("wrong_questions", [])
     return render_template("review.html", wrong_questions=wrong_questions)
 
 @app.route("/review_marked")
 def review_marked():
-    marked_questions = session.get("marked_questions", [])
     return render_template("review_marked.html", marked_questions=marked_questions)
 
 @app.route("/review_ai")
@@ -129,63 +121,63 @@ def review_ai():
 
 @app.route("/get_question")
 def get_question():
+    global question_index, remaining_questions
     mode = request.args.get("mode", "random")
     question_id = request.args.get("question_id")
 
-    # 從 Session 取得當前題號列表
-    current_question_ids = session.get("current_question_ids")
-    if not current_question_ids:
+    if not questions:
         return jsonify({"error": "題庫尚未載入"})
 
-    q_id_to_question_map = {q["題號"]: q for q_list in ALL_QUESTIONS_DATA.values() for q in q_list}
+    # 處理跳轉到特定題號的請求
+    if question_id:
+        try:
+            if question_id in question_index_dict:
+                question_index = question_index_dict[question_id]
+            else:
+                raise KeyError
+
+            q = questions[question_index]
+            # 修正：透過題號判斷題目是否已被標記
+            q["is_marked"] = any(marked_q.get("題號") == q.get("題號") for marked_q in marked_questions)
+            q["is_multiple"] = True if q.get("題別") == "複" else False
+            question_index += 1
+            return jsonify(q)
+        except StopIteration:
+            return jsonify({"error": f"找不到題號為 {question_id} 的題目"})
+        except KeyError:
+            return jsonify({"error": f"找不到題號為 {question_id} 的題目"})
+
+    if mode == "wrong" and not wrong_questions:
+        return jsonify({"error": "目前沒有錯題"})
 
     q = None
-    if question_id:
-        # 跳轉到特定題號
-        q = q_id_to_question_map.get(question_id)
-        if q:
-            # 更新 session 中的 question_index
-            try:
-                session["question_index"] = current_question_ids.index(question_id)
-            except ValueError:
-                pass
+    if mode == "random":
+        if remaining_questions:
+            q = random.choice(remaining_questions)
+            question_index = questions.index(q)
+    elif mode == "order":
+        if question_index < len(questions):
+            q = questions[question_index]
+            question_index += 1
         else:
-            return jsonify({"error": f"找不到題號為 {question_id} 的題目"})
+            question_index = 0
+            q = questions[question_index]
+            question_index += 1
     elif mode == "wrong":
-        wrong_questions_list = session.get("wrong_questions", [])
-        if wrong_questions_list:
-            q = random.choice(wrong_questions_list)
-        else:
-            return jsonify({"error": "目前沒有錯題"})
-    elif mode == "random":
-        remaining_ids = session.get("remaining_question_ids", [])
-        if remaining_ids:
-            q_id = random.choice(remaining_ids)
-            q = q_id_to_question_map.get(q_id)
-    else:  # order
-        q_index = session.get("question_index", 0)
-        if q_index < len(current_question_ids):
-            q_id = current_question_ids[q_index]
-            q = q_id_to_question_map.get(q_id)
-            session["question_index"] = q_index + 1
-        else:
-            session["question_index"] = 0
-            q_id = current_question_ids[0]
-            q = q_id_to_question_map.get(q_id)
-            session["question_index"] = 1
-    
+        if wrong_questions:
+            q = random.choice(wrong_questions)
+
     if q is None:
         return jsonify({"error": "所有題目都已出完！", "finished": True})
 
-    # 複製題目，以免修改原始資料
-    question_copy = q.copy()
-    marked_ids = [mq["題號"] for mq in session.get("marked_questions", [])]
-    question_copy["is_marked"] = question_copy.get("題號") in marked_ids
-    question_copy["is_multiple"] = True if question_copy.get("題別") == "複" else False
-    return jsonify(question_copy)
+    # 修正：確保所有回傳題目的判斷方式一致
+    q["is_marked"] = any(marked_q.get("題號") == q.get("題號") for marked_q in marked_questions)
+    q["is_multiple"] = True if q.get("題別") == "複" else False
+    return jsonify(q)
 
 @app.route("/submit_answer", methods=["POST"])
 def submit_answer():
+    global remaining_questions
     data = request.json
     q = data["question"]
     answer = data["answer"].strip().upper()
@@ -193,27 +185,18 @@ def submit_answer():
     correct = q.get("答案", "").strip().upper()
     is_correct = (answer == correct)
 
-    wrong_questions_list = session.get("wrong_questions", [])
     if not is_correct:
-        if q not in wrong_questions_list:
-            wrong_questions_list.append(q)
-            session["wrong_questions"] = wrong_questions_list
-    
-    answered_ids = session.get("answered_questions", [])
-    answered_ids.append(q.get("題號"))
-    session["answered_questions"] = answered_ids
-    
-    remaining_ids = session.get("remaining_question_ids", [])
-    if q.get("題號") in remaining_ids:
-        remaining_ids.remove(q.get("題號"))
-        session["remaining_question_ids"] = remaining_ids
-        
-    all_q_ids = session.get("current_question_ids", [])
-    
+        if q not in wrong_questions:
+            wrong_questions.append(q)
+
+    answered_questions.add(q.get("題號"))
+    if questions[question_index_dict[q.get("題號")]] in remaining_questions:
+        remaining_questions.remove(questions[question_index_dict[q.get("題號")]])
+     
     return jsonify({
         "correct": is_correct,
         "right_answer": correct,
-        "answered_count": f"{len(answered_ids)}/{len(all_q_ids)}"
+        "answered_count": "{}/{}".format(len(answered_questions), len(questions)) if questions else len(answered_questions)
     })
 
 @app.route("/mark_question", methods=["POST"])
@@ -227,15 +210,16 @@ def mark_question():
 
 @app.route("/reset_questions", methods=["POST"])
 def reset_questions():
-    all_q_ids = session.get("current_question_ids", [])
-    session["remaining_question_ids"] = all_q_ids.copy()
-    session["question_index"] = 0
-    session["answered_questions"] = []
+    global remaining_questions, question_index
+    print("重設題庫...")
+    remaining_questions = list(questions)
+    question_index = 0
+    answered_questions.clear()
     return jsonify({"status": "reset"})
 
 @app.route("/get_ai_explanation", methods=["POST"])
 def get_ai_explanation():
-    total_tokens_used = session.get("total_tokens_used", 0)
+    global total_tokens_used
 
     # 檢查是否已登入，並且設定api key
     if not session.get("logged_in"):
@@ -251,18 +235,19 @@ def get_ai_explanation():
     is_detail = request.args.get("detail", "false").lower() == "true"
     data = request.json
     question = data.get("question")
+
+    if not question:
+        return jsonify({"error": "未提供題目"}), 400
+    
     question_id = question["題號"]
-    
-    # 從 session 取得 AI 詳解快取
-    ai_explanation_cache = session.get("ai_explanation_cache", {})
-    
-    # 步驟 1: 檢查 session 快取中是否有詳解
+
+    # 步驟 1: 檢查快取中是否有詳解
     if question_id in ai_explanation_cache:
-        print(f"✅ 題號 {question_id} 的詳解已從 Session 快取中取得。")
+        print(f"✅ 題號 {question_id} 的詳解已從快取中取得。")
         explanation = ai_explanation_cache[question_id]
         return jsonify({
             "explanation": explanation,
-            "current_tokens": 0,
+            "current_tokens": 0,  # 從快取中取得，不計算 token 數
             "total_tokens": total_tokens_used
         })
 
@@ -280,9 +265,8 @@ def get_ai_explanation():
         # 移除這行程式碼，讓 AI 回傳的換行和格式得以保留
         explanation = response.text
 
-        # 步驟 3: 將新的詳解儲存到 session 快取中
+        # 步驟 3: 將新的詳解儲存到快取中
         ai_explanation_cache[question_id] = explanation
-        session["ai_explanation_cache"] = ai_explanation_cache
         
         # 計算本次請求的 token 數
         prompt_tokens = response.usage_metadata.prompt_token_count
@@ -291,7 +275,10 @@ def get_ai_explanation():
         
         # 更新累積 token 數
         total_tokens_used += current_tokens
-        session["total_tokens_used"] = total_tokens_used
+
+        html = review_ai()
+        with open("tmp_explanation.html", "w", encoding="utf-8") as f:
+            f.write(html)
 
         return jsonify({
             "explanation": explanation,
@@ -305,7 +292,7 @@ def get_ai_explanation():
 # 新增一個用於串流回應的路由
 @app.route("/stream_ai_explanation", methods=["POST"])
 def stream_ai_explanation():
-    total_tokens_used = session.get("total_tokens_used", 0)
+    global total_tokens_used
 
     # 檢查是否已登入，並且設定api key
     if not session.get("logged_in"):
@@ -321,22 +308,21 @@ def stream_ai_explanation():
     is_detail = request.args.get("detail", "false").lower() == "true"
     data = request.json
     question = data.get("question")
+
+    if not question:
+        return jsonify({"error": "未提供題目"}), 400
+    
     question_id = question["題號"]
 
-    # 從 session 取得 AI 詳解快取
-    ai_explanation_cache = session.get("ai_explanation_cache", {})
-    
-    # 步驟 1: 檢查 session 快取中是否有詳解
+    # 步驟 1: 檢查快取中是否有詳解
     if question_id in ai_explanation_cache:
-        print(f"✅ 題號 {question_id} 的詳解已從 Session 快取中取得。")
+        print(f"✅ 題號 {question_id} 的詳解已從快取中取得。")
         explanation = ai_explanation_cache[question_id]
         return jsonify({
             "explanation": explanation,
-            "current_tokens": 0,
+            "current_tokens": 0,  # 從快取中取得，不計算 token 數
             "total_tokens": total_tokens_used
         })
-
-    # 步驟 2: 如果 session 快取中沒有，則執行 API 呼叫
 
     prompt = f"請以繁體中文，針對以下問題，生成 1 分鐘內可以閱讀完的詳解，包含關鍵概念和每個選項解釋，文字簡明，重點清楚：\n\n題目：{question['題目']}\n選項：{' '.join(question['選項'])}\n答案：{question['答案']}"
     if is_detail:
@@ -347,9 +333,8 @@ def stream_ai_explanation():
     # prompt_tokens = client.models.count_tokens(model=MODEL, contents=prompt).total_tokens
 
     def generate_stream():
-        total_tokens_in_stream = session.get("total_tokens_used", 0)
+        global total_tokens_used
         try:
-            full_explanation = ""
             response = client.models.generate_content_stream(
                 model=MODEL,
                 contents=prompt
@@ -358,14 +343,12 @@ def stream_ai_explanation():
             for chunk in response:
                 if (chunk.text):
                     yield chunk.text.encode('utf-8')
-                    full_explanation += chunk.text
                 if (chunk.usage_metadata):
                     current_tokens = chunk.usage_metadata.total_token_count
-                    total_tokens_in_stream += current_tokens
-                    session["total_tokens_used"] = total_tokens_in_stream
+                    total_tokens_used += current_tokens
                     token_info = {
                         "current_tokens": current_tokens,
-                        "total_tokens": total_tokens_in_stream
+                        "total_tokens": total_tokens_used
                     }
             
             # 將 JSON 資訊傳送給前端
@@ -380,65 +363,83 @@ def stream_ai_explanation():
     # mimetype 設為 text/html，讓瀏覽器能直接解析 HTML 標籤
     return Response(generate_stream(), mimetype='text/html')
 
-# 修改 load_questions 為啟動時載入所有 JSON 檔
-# 並將其儲存在一個全域字典中。
-# 此字典的鍵為檔案名稱，值為題目列表。
-ALL_QUESTIONS_DATA = {}
+# TODO: 使用global 會有worker 和 race condition 問題，需解決
+def load_questions(json_paths):
+    global questions, remaining_questions, question_index_dict
+    all_question_files = []
+    
+    for path_str in json_paths:
+        p = Path(path_str)
+        if not p.exists():
+            print(f"❌ 找不到路徑：{path_str}")
+            continue
 
-def load_all_question_files():
-    """在應用程式啟動時載入所有題庫檔案一次。"""
-    base_dir = Path(__file__).resolve().parent
-    json_path = base_dir / 'json'
-    available_jsons = sorted(json_path.glob("*.json"))
+        if p.is_dir():
+            # 如果是資料夾，尋找所有 .json 檔案
+            print(f"📂 正在載入資料夾：{p}")
+            all_question_files.extend(p.glob("*.json"))
+        else:
+            # 如果是單一檔案，直接加入列表
+            all_question_files.append(p)
 
-    for file_path in available_jsons:
+    all_questions = []
+    for file_path in all_question_files:
         try:
             with open(file_path, "r", encoding="utf-8") as f:
                 data = json.load(f)
                 if isinstance(data, list):
-                    # 處理並儲存每個題庫，鍵為檔案名稱
-                    ALL_QUESTIONS_DATA[file_path.stem] = data
-                    print(f"✅ 載入檔案：{file_path.stem}，題數：{len(data)}")
+                    cleaned_questions = []
+                    for q in data:
+                        if '題目' in q:
+                            q['題目'] = q['題目'].replace('\r\n', ' ').replace('\n', ' ').strip()
+                        if '選項' in q and isinstance(q['選項'], list):
+                            q['選項'] = [opt.replace('\r\n', ' ').replace('\n', ' ').strip() for opt in q['選項']]
+                        if '題號' in q:
+                            q['題號'] = f"{file_path.stem}_{q.get('題號')}"
+                        cleaned_questions.append(q)
+                    all_questions.extend(cleaned_questions)
+                    print(f"✅ 載入檔案：{file_path}，題數：{len(cleaned_questions)}")
                 else:
                     print(f"⚠️ {file_path} 格式錯誤，非陣列，略過")
         except json.JSONDecodeError:
             print(f"⚠️ {file_path} 無法解析為 JSON，略過")
         except Exception as e:
             print(f"❌ 處理檔案 {file_path} 時發生錯誤：{e}")
+            
+    questions = all_questions
+    remaining_questions = list(questions)
+    question_index_dict = {q['題號']: i for i, q in enumerate(questions)}
 
-# 在應用程式啟動時呼叫此函數
-load_all_question_files()
+if __name__ == "__main__":
+    import argparse
+    parser = argparse.ArgumentParser(description="國考出題機（支援多題庫與模式切換）")
+    # parser.add_argument("json_files", nargs="+", help="一個或多個題庫 JSON 檔案或資料夾")
+    parser.add_argument("--host", default="127.0.0.1")
+    parser.add_argument("--port", default=5000, type=int)
+    args = parser.parse_args()
 
-# if __name__ == "__main__":
-#     import argparse
-#     parser = argparse.ArgumentParser(description="國考出題機（支援多題庫與模式切換）")
-#     # parser.add_argument("json_files", nargs="+", help="一個或多個題庫 JSON 檔案或資料夾")
-#     parser.add_argument("--host", default="127.0.0.1")
-#     parser.add_argument("--port", default=5000, type=int)
-#     args = parser.parse_args()
+    default_path = ["./json"]
 
-#     default_path = ["./json"]
+    # for debug
+    for path_str in default_path:
+        p = Path(path_str)
+        if not p.exists():
+            print(f"❌ 找不到路徑：{path_str}")
+            continue
 
-#     # for debug
-#     for path_str in default_path:
-#         p = Path(path_str)
-#         if not p.exists():
-#             print(f"❌ 找不到路徑：{path_str}")
-#             continue
+        if p.is_dir():
+            # 如果是資料夾，尋找所有 .json 檔案
+            print(f"📂 正在載入資料夾：{p}")
+            AVAILABLE_JSONS.extend(p.glob("*.json"))
+        else:
+            # 如果是單一檔案，直接加入列表
+            AVAILABLE_JSONS.append(p)
 
-#         if p.is_dir():
-#             # 如果是資料夾，尋找所有 .json 檔案
-#             print(f"📂 正在載入資料夾：{p}")
-#             AVAILABLE_JSONS.extend(p.glob("*.json"))
-#         else:
-#             # 如果是單一檔案，直接加入列表
-#             AVAILABLE_JSONS.append(p)
+    # base_dir = Path(__file__).resolve().parent
+    # json_path = base_dir / 'json'
+    # AVAILABLE_JSONS.extend(json_path.glob("*.json"))
 
-#     # base_dir = Path(__file__).resolve().parent
-#     # json_path = base_dir / 'json'
-#     # AVAILABLE_JSONS.extend(json_path.glob("*.json"))
-
-#     # load_questions(args.json_files)
-#     print(f"✅ 題庫已載入，總題數：{len(questions)}")
-#     print(f"🌐 網頁出題機：http://{args.host}:{args.port}")
-#     app.run(host=args.host, port=args.port, debug=True)
+    # load_questions(args.json_files)
+    print(f"✅ 題庫已載入，總題數：{len(questions)}")
+    print(f"🌐 網頁出題機：http://{args.host}:{args.port}")
+    app.run(host=args.host, port=args.port, debug=True)
