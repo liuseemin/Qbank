@@ -1,0 +1,422 @@
+[
+    {
+        "題別": "複",
+        "題號": "1",
+        "題目": "下列何者適合冠狀動脈繞道手術時使用？",
+        "選項": [
+            "A. 椎骨動脈（Vertebral Artery）",
+            "B. 胸內動脈（Internal Mammary Artery）",
+            "C. 股動脈（Femoral Artery）",
+            "D. 隱靜脈（Saphenous Vein）",
+            "E. 股靜脈（Femoral Vein）"
+        ],
+        "答案": "BD",
+        "出處": "Textbook of Surgery: The Biological\nBasis of Modern Surgical Practice,\n15th ed., 1997 (Sabiston, W.B.\nSaunders Company), p2088"
+    },
+    {
+        "題別": "複",
+        "題號": "2",
+        "題目": "在心包膜填塞症（Cardiac tamponade），可見到下列那些 表現？",
+        "選項": [
+            "A. 頸靜脈壓升高（elevated Jugular vein pressure）",
+            "B. 心音聲變小（distant heart sound）",
+            "C. 低血壓（hypotension）",
+            "D. 奇脈（pulsus paradoxus）",
+            "E. 心音聲變強（Accentuated heart sound）"
+        ],
+        "答案": "ABCD",
+        "出處": "Textbook of Surgery, 15th ed. 1997\nSabiston, p1948"
+    },
+    {
+        "題別": "複",
+        "題號": "3",
+        "題目": "冠狀動脈繞道術（Coronary Bypass）的敘述中，下列那些 是正確的？",
+        "選項": [
+            "A. 能夠降低心肌梗塞發生的機率",
+            "B. 能夠緩解心絞痛",
+            "C. 統計上能夠增進生命週期（Life Span）",
+            "D. 能夠改善心臟收縮功能（ejection fraction）",
+            "E. 手術的心肌梗塞發生率約10﹪（perioperative myocardial infarction）"
+        ],
+        "答案": "ABCD",
+        "出處": "Textbook of Surgery, 15th ed.\nsabiston, p2087"
+    },
+    {
+        "題別": "複",
+        "題號": "4",
+        "題目": "下列何者並非三尖瓣疾病所應有的表現？",
+        "選項": [
+            "A. 肺水腫（pulmonary edema）",
+            "B. 肝衰竭（hepatic failure）",
+            "C. 身體水腫（anasarca）",
+            "D. 聲音沙啞（hoarseness）",
+            "E. 頸靜脈擴張（engorged jugular vein）"
+        ],
+        "答案": "AD",
+        "出處": "Textbook of Surgery, 15th ed.\nSabiston, p2148"
+    },
+    {
+        "題別": "複",
+        "題號": "5",
+        "題目": "有關主動脈瓣膜狹窄的敘述，哪些是錯誤的？",
+        "選項": [
+            "A. 無症狀者有些需要手術",
+            "B. 發生心絞痛者需手術",
+            "C. 發生暈厥者需手術",
+            "D. 發生心臟衰竭便不可進行手術",
+            "E. 左心射出分數（ejection fraction）小於30﹪便不適合手 術"
+        ],
+        "答案": "DE",
+        "出處": "Surgery of the Chest, p1737"
+    },
+    {
+        "題別": "複",
+        "題號": "6",
+        "題目": "下列冠狀動脈繞道手術之適應症何者為是？",
+        "選項": [
+            "A. 經內科治療無效",
+            "B. 有症狀之三條血管阻塞且左心室功能受損",
+            "C. 心肌梗塞後之心絞痛",
+            "D. 川崎病（kawasaki’s disease）",
+            "E. 不穩定型心絞痛"
+        ],
+        "答案": "ABCDE",
+        "出處": "Glenn’s Thoracic and\nCardiovarcular Surgery, p2076"
+    },
+    {
+        "題別": "複",
+        "題號": "7",
+        "題目": "關於機械式人工瓣膜（mechanical prosthesis）手術之敘 述，何者正確？",
+        "選項": [
+            "A. 需長期服用抗凝血劑（anticoagulant）",
+            "B. 機械瓣膜支解（mechanical failure）為再手術之常見原 因",
+            "C. 可應用於年輕病患之三尖瓣病變",
+            "D. 發生感染性心內膜炎（infective endocarditis）之機率與 生物性瓣膜（bioprosthesis）相似",
+            "E. 患者手術後，若接近微波爐，會使機械式人工瓣膜失去 功能"
+        ],
+        "答案": "ACD",
+        "出處": "Textbook of Surgery, Sabiston, 16th\ned., p1310"
+    },
+    {
+        "題別": "複",
+        "題號": "8",
+        "題目": "下列何種藥物在心臟手術後應優先停止使用？",
+        "選項": [
+            "A. Dobutamine",
+            "B. Epinephrine",
+            "C. Dopamine",
+            "D. Milrinone",
+            "E. Norepinephrine"
+        ],
+        "答案": "BE",
+        "出處": "Surgery of the Chest, 6th, Sabiston\nand Spencer, p242-243"
+    },
+    {
+        "題別": "複",
+        "題號": "9",
+        "題目": "下列何種藥物不會增加心肌氧氣的需求量？",
+        "選項": [
+            "A. Dopamine",
+            "B. Nitroglycerine",
+            "C. Dobutamine",
+            "D. Milrinone",
+            "E. Epinephrine"
+        ],
+        "答案": "BD",
+        "出處": "Surgery of the Chest, 6th, Sabiston\nand Spencer, p242"
+    },
+    {
+        "題別": "複",
+        "題號": "10",
+        "題目": "下列有關冠狀動脈疾病，何者其長期效果為冠狀動脈繞道 手術（CABG）比氣球導管冠狀動脈成形術（PTCA）好？",
+        "選項": [
+            "A. 左主幹 狹窄",
+            "B. 三血管疾病",
+            "C. 兩血管病併有左前降近端狹窄",
+            "D. 兩血管無左前降近端狹窄",
+            "E. 左前降近端（LAD Proximal）狹窄"
+        ],
+        "答案": "ABC",
+        "出處": "Textbook of Surgery, Sabiston 15th,\np2086"
+    },
+    {
+        "題別": "複",
+        "題號": "11",
+        "題目": "成人主動脈瓣狹窄合併心肌缺氧的可能機轉，何者為是？",
+        "選項": [
+            "A. 合併冠狀動脈疾病",
+            "B. 左心室收縮時間縮短，舒張時間增長",
+            "C. 左心室肌肉肥厚",
+            "D. 左心室壁張力減小",
+            "E. 左心室舒張壓力（diastolic pressure）增加"
+        ],
+        "答案": "ACE",
+        "出處": "Sabiston Text book of surgery 15 th\ned., p2137"
+    },
+    {
+        "題別": "複",
+        "題號": "12",
+        "題目": "有關主動脈氣球幫浦之敘述，何者正確？",
+        "選項": [
+            "A. 冠狀動脈繞道術後心輸出不足之病人適用",
+            "B. 因主動脈嚴重逆流造成心衰竭之病患適用",
+            "C. 因二尖辦嚴重逆流造成心衰竭之病患適用",
+            "D. 可增加80﹪以上的心輸出量",
+            "E. 使用肝素（heparin）就不會造成下肢缺血之併發症"
+        ],
+        "答案": "AC",
+        "出處": "Sabiston Text book of surgery 15 th\ned., p2218-2227"
+    },
+    {
+        "題別": "複",
+        "題號": "13",
+        "題目": "有關心室中隔缺損（ventricular septal defect, VSD）之敘 述何者為非？",
+        "選項": [
+            "A. perimembranous type最常見",
+            "B. supracristal type可能併有主動脈瓣逆流",
+            "C. 單純VSD患者若有發紺（cyanosis）現象應立即手術修 補",
+            "D. 有些小VSD會自行癒合（spontaneous closure）",
+            "E. 手術方法最常用的是由左心房進入"
+        ],
+        "答案": "CE",
+        "出處": "Schwartz Principle of surgery 7th\ned., p813-815"
+    },
+    {
+        "題別": "複",
+        "題號": "14",
+        "題目": "感染性心內膜炎何種情況下適合手術治療？",
+        "選項": [
+            "A. 瓣膜逆流造成之心衰竭",
+            "B. Vegetation大於一公分",
+            "C. 已使用適當抗生素仍無法控制",
+            "D. 顱內出血而重度昏迷時",
+            "E. 發生肺膿瘍（pulmonary abscess）時"
+        ],
+        "答案": "ABCE",
+        "出處": "Glenn's thoracic and cardiovascular\nsurgery 6th ed., p1917-1921"
+    },
+    {
+        "題別": "複",
+        "題號": "15",
+        "題目": "心房中隔缺損之中，下例何種缺陷之四周皆有心房中隔組 織？",
+        "選項": [
+            "A. Foramen ovale defect",
+            "B. Partial Anomaly pulmonary venous return",
+            "C. Foramen secundum",
+            "D. Foramen Primum",
+            "E. Unroofing of coronary sinus"
+        ],
+        "答案": "AC",
+        "出處": "Sabiston Text of Surgery 15th ed.,\np1975"
+    },
+    {
+        "題別": "複",
+        "題號": "16",
+        "題目": "下列何者為主動脈瓣手術之適應症？",
+        "選項": [
+            "A. 主動脈瓣關閉不全同時有心衰竭症狀",
+            "B. 主動脈瓣狹窄同時有心衰竭症狀",
+            "C. 主動脈狹窄壓力差小於50 mmHg",
+            "D. 主動脈瓣關閉不全，無症狀，但超音波檢查左心室心縮 末期寬度大於55mm",
+            "E. 主動脈瓣狹窄壓力差大於75 mmHg，無症狀"
+        ],
+        "答案": "ABDE",
+        "出處": "Cardiac Surgery 2nd ed., p552"
+    },
+    {
+        "題別": "複",
+        "題號": "17",
+        "題目": "心肌梗塞後之併發症，何者需儘速手術治療？",
+        "選項": [
+            "A. 心室中隔缺損",
+            "B. 乳頭肌斷裂造成二尖瓣關閉不全",
+            "C. 心律不整",
+            "D. 心因性腦中風",
+            "E. 左心室瘤合併心衰竭"
+        ],
+        "答案": "ABE",
+        "出處": "Oxford Textbook of Surgery, p1781"
+    },
+    {
+        "題別": "複",
+        "題號": "18",
+        "題目": "以下哪幾項在臨床現象述說開心手術後導致心包膜填充（ Cardiac Tamponade）是正確的？",
+        "選項": [
+            "A. 明顯有Paradoxical Pulse產生",
+            "B. 血壓下降，中心靜脈壓增加，心搏出量減少（Cardiac output）",
+            "C. 術後胸前部X-光顯示中隔腔擴大",
+            "D. 通暢的中隔腔引流管較易造成心包填充",
+            "E. 有明顯清楚的心音及EKG顯示比平常較高的QRS voltage"
+        ],
+        "答案": "ABC",
+        "出處": "Glenn’s Thoracia and\nCardiovascular Surgery 6th Edition,\np2302"
+    },
+    {
+        "題別": "複",
+        "題號": "19",
+        "題目": "下列哪幾項述說組織膜瓣優於人工機械膜瓣是正確的？",
+        "選項": [
+            "A. 無膜瓣噪音（Valve noice）",
+            "B. 長時間膜瓣存活時間（Long term survival rate）",
+            "C. 不需長期服用抗凝血劑（Coumadin）",
+            "D. 出血性腦中風(hemorrhagic stroke)發生率較高",
+            "E. 栓塞性腦中風(ischemic stroke)發生率較低"
+        ],
+        "答案": "CE",
+        "出處": "Glenn’s Thoracic and\nCardiovascular Surgery 5th Edition,\np2043"
+    },
+    {
+        "題別": "複",
+        "題號": "20",
+        "題目": "以下述說有關心室中隔缺損（Ventricular Septal Defect， VSD）是正確的？",
+        "選項": [
+            "A. 第一類型心室中隔缺損（supracristal VSD）不論分流多 少一定要開心修補",
+            "B. 有75﹪左右的患者在年齡3歲前會Spontaneous closure",
+            "C. 最常見的心室中隔缺損是屬於第二類型（ perimembranous type VSD）",
+            "D. 此項先天性心臟病乃是嬰兒及小孩最常見的型態心臟病",
+            "E. Qp/Qs分流超過1.5以上需要開心手術修補"
+        ],
+        "答案": "ACDE",
+        "出處": "Glenn’s Thoracic and\nCardiovascular Surgery 5th Edition,\np1010"
+    },
+    {
+        "題別": "複",
+        "題號": "21",
+        "題目": "以下書說有關主動膜瓣狹窄需實施主動膜瓣置換術的適應 症何者是錯誤的？",
+        "選項": [
+            "A. 有暈厥（syncope）現象",
+            "B. 有心臟衰竭病史",
+            "C. 主動脈膜瓣壓力差僅10-20 mmHg",
+            "D. 無狹心症（Angina）症狀",
+            "E. 無症狀但主動脈膜瓣狹窄小於0.75 cm2，且並有冠狀動 脈狹窄需實施冠狀動脈繞道術式或左心室功能有逐漸變壞 時"
+        ],
+        "答案": "CD",
+        "出處": "Glenn’s Thoracic and\nCardiovascular Surgery 6th Edition,\np1983"
+    },
+    {
+        "題別": "複",
+        "題號": "22",
+        "題目": "關於左側性心內膜炎（L’t-side endocarditis）其手術的 indication，下例何者正確？",
+        "選項": [
+            "A. 因瓣膜破壞而造成心衰竭",
+            "B. 有Multiple embolic發生",
+            "C. 持續感染，抗生素無法控制",
+            "D. 由抗葯性強的細菌感染時",
+            "E. Vegetations的大小是決定手術的重要因素"
+        ],
+        "答案": "ABCDE",
+        "出處": "Glenn’s Thoracic &\nCardiovascular Surgery, p1918"
+    },
+    {
+        "題別": "複",
+        "題號": "23",
+        "題目": "50公斤的柯先生接受冠狀動脈繞道手術後出血稍多，下列 處理哪些是正確的？",
+        "選項": [
+            "A. 第1小時出血600C.C.便應再手術止血",
+            "B. 血壓180/100 mmHg應使用Nitroglycerin或Nitroprusside 控制血壓",
+            "C. Heparin rebound應給予protamine",
+            "D. 血色素（Hb）小於7 g/dL應輸濃縮紅血球",
+            "E. International Normalized Ratio(INR)>1.5應輸濃縮血小 板"
+        ],
+        "答案": "ABCD",
+        "出處": "Kirklin/ Barratt-Boyes : Cardiac\nSurgery, 2003 : 227,230"
+    },
+    {
+        "題別": "複",
+        "題號": "24",
+        "題目": "下列哪些心室中隔缺損，有自然癒合（Spontaneous closure）的機會？",
+        "選項": [
+            "A. 雙動脈下缺損（Doubly-committed subarterial defect）",
+            "B. 膜周肉柱缺損（Perimembranous trabecular defect）",
+            "C. 膜周內流道缺損（Perimembranous inlet defect）",
+            "D. 肌肉肉柱缺損（Muscular trabecular defect）",
+            "E. 肌肉內流道缺損（Muscular inlet defect）"
+        ],
+        "答案": "BCDE",
+        "出處": "Sabiston Textbook of Surgery.\nTownsend et al. 16th ed., p1247"
+    },
+    {
+        "題別": "複",
+        "題號": "25",
+        "題目": "以下有關機械性心臟輔助裝置，何者正確?",
+        "選項": [
+            "A. IABP是在心臟週期之diastolic phase充氣",
+            "B. IABP的使用會增加afterload",
+            "C. 使用IABP會有 3% limb ischemia的風險",
+            "D. 在裝置左心室輔助器時，可將導管插入左心房或左心室 心尖，將血液吸出",
+            "E. 約有70%的病人在等待心臟移植期間，接受心室輔助器 的治療"
+        ],
+        "答案": "ACD",
+        "出處": "Schwartz Principle of surgery 10th\ned., p768-p769"
+    },
+    {
+        "題別": "複",
+        "題號": "26",
+        "題目": "以下有關cardiac tumor，何者正確？",
+        "選項": [
+            "A. Primary cardiac tumor大部分是惡性的",
+            "B. Benign cardiac tumor之中，約80%為myxoma",
+            "C. Metastatic cardiac tumor遠遠多於Primary cardiac tumor",
+            "D. Myxoma雖為benign cariac tumor，但仍有再發的可能性",
+            "E. 對兒童病患而言，最常見的primary cardiac tumor是 rhabdomyoma"
+        ],
+        "答案": "CDE",
+        "出處": "Schwartz Principle of surgery 10th\ned., p774-p776"
+    },
+    {
+        "題別": "複",
+        "題號": "27",
+        "題目": "以下有關開放性動脈導管(PDA)，何者錯誤？",
+        "選項": [
+            "A. 早產兒較足月兒有較低的PDA發生率",
+            "B. 不須於新生兒階段進行PDA手術，適當的手術時機為6個 月大左右",
+            "C. 新生兒不可能因PDA而產生心臟衰竭症狀",
+            "D. 可以藥物、心導管之介入治療、外科手術來治療",
+            "E. 在手術時，要注意避免傷到recurrent pharyngeal nerve"
+        ],
+        "答案": "ABCE",
+        "出處": "Schwartz Principle of surgery 10th\ned., p702-p704"
+    },
+    {
+        "題別": "複",
+        "題號": "28",
+        "題目": "在進行瓣膜置換手術時，以下那些選項是正確的？",
+        "選項": [
+            "A. 生物瓣膜具有長期存活效益，因為需要長期抗凝治療， 這也能預防心房顫動引起的中風。",
+            "B. 機械瓣膜需要使用直接口服抗凝血劑（DOAC），以預 防血栓形成和瓣膜功能障礙。",
+            "C. 對於患有Marfan syndrome並接受主動脈根部置換手術 的患者，應選擇機械瓣膜，因為他們未來重複進行心血管 手術的風險較高。",
+            "D. 年齡較輕是生物瓣膜的絕對禁忌症，因為其長期耐久性 較差。",
+            "E. 在計劃懷孕的女性患者中，生物瓣膜比機械瓣膜更適 合。"
+        ],
+        "答案": "CE",
+        "出處": "Kirklin Cardiac surgery, 4th edition,\n2012, p 516-519"
+    },
+    {
+        "題別": "複",
+        "題號": "29",
+        "題目": "急性冠心症 (acute coronary syndrome) 會有那些可能的合 併症？",
+        "選項": [
+            "A. 心室中膈破裂 (ventricular septal rupture)",
+            "B. 心臟乳突肌斷裂 (papillary muscle rupture)",
+            "C. 心臟破裂 (free ventricular rupture)",
+            "D. 二尖瓣逆流 (mitral regurgitation)",
+            "E. 主動脈瓣狹窄 (aortic stenosis)"
+        ],
+        "答案": "ABCD",
+        "出處": "Sabiston Textbook of Surgery, 21\ned, Chapter 60, page 1683"
+    },
+    {
+        "題別": "複",
+        "題號": "30",
+        "題目": "下列關於主動脈瓣狹窄的敘述，下列何者正確？",
+        "選項": [
+            "A. 若出現下列症狀，則存活時間由長到短的排序為心衰竭 (heart failure)、心絞痛 (angina)、暈厥 (syncope)",
+            "B. 若出現下列症狀，則存活時間由長到短的排序為心絞痛 (angina)、暈厥 (syncope)、心衰竭 (heart failure)",
+            "C. 主動脈瓣狹窄會導致左心室肥大",
+            "D. 主動脈瓣狹窄會導致左心房擴張",
+            "E. 主動脈瓣狹窄不會影響右心功能"
+        ],
+        "答案": "BCD",
+        "出處": "Sabiston Textbook of Surgery, 21\ned, Chapter 61, page 1729"
+    }
+]

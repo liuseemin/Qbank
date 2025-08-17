@@ -1,0 +1,2326 @@
+[
+    {
+        "題別": "單",
+        "題號": "1",
+        "題目": "Calot's Triangle不包含下列何者？",
+        "選項": [
+            "A. 總膽管",
+            "B. 肝臟下缘",
+            "C. 膽囊管",
+            "D. 膽囊動脈",
+            "E. 十二指腸"
+        ],
+        "答案": "E",
+        "出處": "Surgical Anatomy, Barry J. Anson\nand Chester B Mcvay WB Saunders\nCompany, 5th ed., 1971, p599"
+    },
+    {
+        "題別": "單",
+        "題號": "2",
+        "題目": "關於肝臟的分葉描述，下列何者為非？",
+        "選項": [
+            "A. 以中肝靜脈將肝臟分為左右兩葉",
+            "B. 以左肝靜脈將肝左葉分為左肝內外側區",
+            "C. 以右肝靜脈分肝前後區",
+            "D. 以Falciform ligament將肝臟分為左右兩葉",
+            "E. 連接下腔靜脈與膽囊的虛線，將肝臟分為左右兩葉"
+        ],
+        "答案": "D",
+        "出處": "Surgery of the Liver and Biliary\nTract, Blumgart H. Churchill\nLivingstone, 2nd ed., 1994, p5"
+    },
+    {
+        "題別": "單",
+        "題號": "3",
+        "題目": "正常膽管的動脈血供應，下列何者較不可能？",
+        "選項": [
+            "A. 由十二指腸側向上供應2/3的動脈血液量",
+            "B. 由肝側向下供應1/3的動脈血液量",
+            "C. 膽管動脈的主幹主要幹支分佈在鐘面3與9的方位",
+            "D. 由Proper hepatic artery供應1/2的血液量",
+            "E. 由Gastroduodenal artery供應1/2的血液量"
+        ],
+        "答案": "D",
+        "出處": "Surgical Anatomy, Barry J. Anson\nand Chester B Mcvay WB Saunders\nCompany, 5th ed., 1971, p605"
+    },
+    {
+        "題別": "單",
+        "題號": "4",
+        "題目": "膽道系統由胚胎期的何者而來？",
+        "選項": [
+            "A. Foregut",
+            "B. Midgut",
+            "C. Hindgut",
+            "D. Duodenal bud",
+            "E. Cephalic bud"
+        ],
+        "答案": "A",
+        "出處": "Surgery of the Liver and Biliary\nTract, Blumgart H. Churchill\nLivingstone, 2nd ed., 1994, p121"
+    },
+    {
+        "題別": "單",
+        "題號": "5",
+        "題目": "下列何者不是術後呼吸道併發症的危險因子？",
+        "選項": [
+            "A. 上腹部手術",
+            "B. 抽煙史",
+            "C. 年齡大於60",
+            "D. 糖尿病",
+            "E. 肥胖"
+        ],
+        "答案": "D",
+        "出處": "Textbook of Surgery, Sabiston 15th\ned., p115"
+    },
+    {
+        "題別": "單",
+        "題號": "6",
+        "題目": "下列描述何者不對？",
+        "選項": [
+            "A. 傷口感染的病因包括細菌因素，局部傷口因素，病患因 素",
+            "B. 清潔傷口術後產生感染的機率為百分之三以下",
+            "C. 預防性抗生素乃使用於清潔傷口之手術",
+            "D. 大部份傷口感染的細菌是內因性的",
+            "E. 正常人發生外傷時，細菌數目大於105個才會造成感染"
+        ],
+        "答案": "C",
+        "出處": "Textbook of Surgery Sabiston\nsabinston 15th ed., p264-266"
+    },
+    {
+        "題別": "單",
+        "題號": "7",
+        "題目": "有關惡性腫瘤，下列描述何者不對？",
+        "選項": [
+            "A. 惡性腫瘤的發生過程乃是一種多重突變累積而成",
+            "B. 惡性腫瘤的突變基因主要可分為致癌基因和抑癌基因",
+            "C. 第一個被證實惡性腫瘤發生理論的是結腸腺癌",
+            "D. 抑癌基因APC位於第五對染色體其突變會引起腺瘤癌化",
+            "E. 致癌基因 Ras位於第十對染色體其突變會引起腺瘤癌化"
+        ],
+        "答案": "E",
+        "出處": "Textbook of Surgery Sabiston 15th\ned., p29-31"
+    },
+    {
+        "題別": "單",
+        "題號": "8",
+        "題目": "有關小腸的營養吸收何者下列有誤？",
+        "選項": [
+            "A. 鈣離子在近端小腸吸收",
+            "B. 脂肪主要在空腸吸收",
+            "C. 膽酸在遠端小腸吸收",
+            "D. Vitamin B12在遠端小腸吸收",
+            "E. 葉酸在遠端小腸吸收"
+        ],
+        "答案": "E",
+        "出處": "Principles of Surgery (6th Edition)\nVol 2, p1161"
+    },
+    {
+        "題別": "單",
+        "題號": "9",
+        "題目": "有關代謝性鹼中毒的描述下列何者有誤？",
+        "選項": [
+            "A. 嚴重嘔吐會導致",
+            "B. 其deficit可能是Loss of fixed acids",
+            "C. 在使用過量利尿劑（Diuretics）時，會產生代謝性鹼中 毒",
+            "D. BHCO3/H2CO3 ratio > 20/1",
+            "E. 會產生代償性的呼吸速度與深度的增加"
+        ],
+        "答案": "E",
+        "出處": "Principles of Surgery (6th Edition)\nVol 1, p68"
+    },
+    {
+        "題別": "單",
+        "題號": "10",
+        "題目": "於鉀離子異常情況之敘述下列何者有誤？",
+        "選項": [
+            "A. 正常人一天鉀的攝取量約50至100 meq，且大部分從尿 液中排泄",
+            "B. 以一位70公斤正常人而言，鉀離子在細胞外液中含量約 63 meq，但對於心肌與神經肌肉功能是相當重要的",
+            "C. 治療血鉀過高可以在心電圖監視下給於1 gm之10﹪ calcium gluconate",
+            "D. 血液中鉀離子過高（hyperkalemia）會導致代謝性鹼中 毒",
+            "E. 一般在治療低血鉀症時，給予之鉀離子在1公升輸液中勿 超過40 meq"
+        ],
+        "答案": "D",
+        "出處": "Principles of Surgery (6th Edition)\nVol 1, p72"
+    },
+    {
+        "題別": "單",
+        "題號": "11",
+        "題目": "一位病患因急性闌尾炎接受闌尾切除術，屬於下列何種手 術傷口分類？",
+        "選項": [
+            "A. Clean",
+            "B. Clean-contaminated",
+            "C. Contaminated",
+            "D. Dry non-contaminated",
+            "E. Dirty and Infected"
+        ],
+        "答案": "B",
+        "出處": "Principles of Surgery (6th Edition)\nVol 1, p152"
+    },
+    {
+        "題別": "單",
+        "題號": "12",
+        "題目": "有關人體體液的組成下列何者正確？",
+        "選項": [
+            "A. Total body water 佔人體體重的70﹪",
+            "B. 肥胖的人水分所佔的比例較高",
+            "C. Intracellular volume佔人體體重的20﹪",
+            "D. Interstitial fluid佔人體體重的15﹪",
+            "E. 70公斤成年人其血漿約有5000 cc"
+        ],
+        "答案": "D",
+        "出處": "Principles of Surgery (6th Edition)\nVol 1, p62"
+    },
+    {
+        "題別": "單",
+        "題號": "13",
+        "題目": "人體受傷害後所產生之系統性發炎反應症候群（Systemic inflammatory response syndrome (SIRS)），主要是由何 種因素造成？",
+        "選項": [
+            "A. 賀爾蒙（Hormones）",
+            "B. 細胞激素（Cytokines）",
+            "C. 感染（Infections）",
+            "D. 免疫反應（Immune）",
+            "E. 內皮細胞介質（Endothelial cell mediators）"
+        ],
+        "答案": "B",
+        "出處": "Principles of Surgery, Schwartz, et\nal. 7th ed., p14-15"
+    },
+    {
+        "題別": "單",
+        "題號": "14",
+        "題目": "一位外科加護病房之病人，其動脈血液氣體分析發現， pH=7.31、PaCO2=26 mmHg、HCO3=13.8 mEq/L，這個 病人最可能的問題是",
+        "選項": [
+            "A. 急性呼吸性酸中毒",
+            "B. 急性代謝性酸中毒",
+            "C. 代償性呼吸性酸中毒",
+            "D. 代償性代謝性酸中毒",
+            "E. 混合性酸中毒"
+        ],
+        "答案": "D",
+        "出處": "Principles of Surgery, Schwartz, et\nal. 7th ed., p59-62"
+    },
+    {
+        "題別": "單",
+        "題號": "15",
+        "題目": "一位35歲男性從工地2米高處跌落，送至急診室時意識清楚 ，血壓90/60 mmHg，脈搏60/min，呼吸20/min，經靜脈快 速給予500 cc生理食鹽水後，生命徵候無明顯變化，此病 人最可能之問題為",
+        "選項": [
+            "A. 神經性休克",
+            "B. 低血容性休克",
+            "C. 心因性休克",
+            "D. 敗血性休克",
+            "E. 無休克現象"
+        ],
+        "答案": "A",
+        "出處": "Principles of Surgery, Schwartz, et\nal. 7th ed., p114-115"
+    },
+    {
+        "題別": "單",
+        "題號": "16",
+        "題目": "有關人類惡性腫瘤之描述，下列何者有誤？",
+        "選項": [
+            "A. 惡性腫瘤最常轉移的位置之一為肺臟及肋膜",
+            "B. 轉移器官或組織的數目，以及轉移的位置，是影響病人 存活的重要因素",
+            "C. 手術切除肺臟、肝臟或腦部的單一轉移病灶，有機會延 長病人存活",
+            "D. 尿中Bence Jones protein是淋巴癌的腫瘤生物指標（ tumor biomarker）",
+            "E. 血液中癌胚蛋白（carcinoembryonic protein, CEA）的 敏感及專一性並不佳，但可做為手術後追蹤腫瘤復發的參 考"
+        ],
+        "答案": "D",
+        "出處": "Principles of Surgery, Schwartz, et\nal. 7th ed., p314-315, 324, 352"
+    },
+    {
+        "題別": "組合題",
+        "題號": "17",
+        "題目": "【組合題17-18】一位65歲女性病患因急性腎臟衰竭送醫治 療。病患血清中鉀離子高達6.8 mEq/dl。有關血鉀上升（ Hyperkalemia），下列敘述何者有誤？",
+        "選項": [
+            "A. 呼吸性酸中毒會造成血鉀上升",
+            "B. 利尿劑使用會造成血鉀上升",
+            "C. 代謝性鹼中毒則是使血鉀下降（Hypokalemia）",
+            "D. 心電圖變化可以看到T wave變高，QRS wave變寬",
+            "E. 病患會出現噁心及嘔吐症狀"
+        ],
+        "答案": "B",
+        "出處": "Sabiston Textbook of Surgery (15th\nEdition), Vol. I, p101-102"
+    },
+    {
+        "題別": "組合題",
+        "題號": "18",
+        "題目": "【組合題17-18】承上例，關於血鉀上升（Hyperkalemia） 的處置，下列敘述何者有誤？",
+        "選項": [
+            "A. 注射葡萄糖與胰島素使細胞外鉀離子移至細胞內",
+            "B. 注射Sodium Bicarbonate使細胞外鉀離子移至細胞內",
+            "C. 注射Calcium gluconate降低血鉀上升對心臟的副作用",
+            "D. 輸液補充以Lactated Ringer補充為主",
+            "E. 若無法改善，需緊急施於血液透析"
+        ],
+        "答案": "D",
+        "出處": "Sabiston Textbook of Surgery (15th\nEdition), Vol. I, p101-102"
+    },
+    {
+        "題別": "組合題",
+        "題號": "19",
+        "題目": "【組合題19-22】60歲的王先生因腹漲、腹絞痛及嘔吐三天 而至急診處求診，經診斷為沾黏性腸阻塞後住院治療。於 急診處時理學檢查顯示生命徵候正常，但有輕微脫水現象 ，體重為60公斤，較平常低約2公斤。部分血清生化檢查數 據如下：鈉離子125 meq/L、鉀離子3 meq/L、氯離子102 meq/L、尿氮素42 mg/dL、肌酸酐1.7 mg/dL、pH值7.4。 下列敘述中，關於此病患的診斷與處置何者正確：",
+        "選項": [
+            "A. 此病患的體液短缺約佔其總體液的3﹪",
+            "B. 此病患的鈉離子約短缺820 meq",
+            "C. 血清尿氮素與肌酸酐濃度同時上升，顯示有腎衰竭現象",
+            "D. 一般輸液治療的原則為在24小時內補足全部短缺的體液",
+            "E. 為盡快矯正患者的低血鈉症，可直接給予200毫升的3﹪ 氯化鈉輸液"
+        ],
+        "答案": "B",
+        "出處": "Current Surgical Diagnosis &\nTreatment 11th Edition, p142-154"
+    },
+    {
+        "題別": "組合題",
+        "題號": "20",
+        "題目": "【組合題19-22】承上題，關於王先生，下列何者為24小時 內最合適的點滴給予：",
+        "選項": [
+            "A 生理食鹽水3000毫升",
+            "B. 乳酸林格氏液5000毫升",
+            "C. 0.45食鹽水4000毫升加上3﹪氯化鈉200毫升",
+            "D. 5﹪葡萄糖液2000毫升加上生理食鹽水2000毫升",
+            "E. 5﹪葡萄糖液1000毫升加上乳酸林格氏液3000毫升"
+        ],
+        "答案": "B",
+        "出處": "Current Surgical Diagnosis &\nTreatment 11th Edition, p142-154"
+    },
+    {
+        "題別": "組合題",
+        "題號": "21",
+        "題目": "【組合題19-22】承上題，王先生的低血鉀症，下列敘述何 者錯誤：",
+        "選項": [
+            "A. 為更精確評估鉀離子的補充量，應配合檢測動脈血酸鹼 值",
+            "B. 由於病患有腎衰竭現象，不宜另外補充鉀離子",
+            "C. 補充鉀離子時，輸液中鉀離子濃度不可超過40 meq/L",
+            "D. 在正常情況下，此病患的全身鉀含量（Total Potassium Capacity）約為45 meq/kg",
+            "E. 此病患約流失全身鉀含量10﹪"
+        ],
+        "答案": "B",
+        "出處": "Current Surgical Diagnosis &\nTreatment 11th Edition, p142-155"
+    },
+    {
+        "題別": "組合題",
+        "題號": "22",
+        "題目": "【組合題19-22】承上題，王先生兩天後因臨床狀況未改善 ，而接受手術治療，行腸沾黏分離術（Enterolysis）。關於 術後處置，下列敘述何者正確：",
+        "選項": [
+            "A. 為預防術後肺部膨脹不全（atelectasis），最重要是給 予O2",
+            "B. 在術後24小時內，靜脈輸液應避免添加鉀離子",
+            "C. 術後一般在排氣後才拔除鼻胃管，這是因為大腸蠕動功 能恢復較胃快的緣故",
+            "D. 為避免成癮性，術後不應使用嗎啡類止痛劑",
+            "E. 為促進術後傷口癒合，應盡量維持血紅素至少在12g/L"
+        ],
+        "答案": "B",
+        "出處": "Current Surgical Diagnosis &\nTreatment 11th Edition, p17-20"
+    },
+    {
+        "題別": "單",
+        "題號": "23",
+        "題目": "下列病患中，何者是輸注新鮮冷凍血漿（fresh frozen plasma, FFP）的適應症：",
+        "選項": [
+            "A. 70歲李先生因腹漲併呼吸急促，接受超音波檢查，發現 有肝硬化合併腹水",
+            "B. 52歲王太太因置換心臟人工瓣膜，長期服用Warfarin。 此次因上消化道出血住院，prothrombin time (PT)檢查值延 長二倍",
+            "C. 20歲陳先生體重60公斤，因腹部挫傷併休克接受緊急手 術，術中接受8單位全血輸血",
+            "D. 53歲張先生為第三期胃癌術後病患，術後抽血檢查白蛋 白（albumin）值為2.9g/L",
+            "E. 65歲林先生為一肝硬化病患，因左鼠蹊疝氣住院手術治 療。術前檢查發現partial prothrombin time (PPT)異常，延 長約二倍"
+        ],
+        "答案": "B",
+        "出處": "Current Surgical Diagnosis &\nTreatment 11th Edition, p62"
+    },
+    {
+        "題別": "單",
+        "題號": "24",
+        "題目": "三十歲的吳先生因車禍腹部挫傷，而被送至急診處。到院 時意識清楚，血壓100/60毫米汞柱，心跳每分鐘126下，何 者為是？",
+        "選項": [
+            "A. 此狀況應為中度的低血容性休克",
+            "B. 失血量約為全身血量的15﹪",
+            "C. 在其他輸液之前應立即給予全血輸血",
+            "D. 在末梢靜脈導管之前應優先建立中央靜脈導管，以利監 測中央靜脈壓及大量輸液所需",
+            "E. 在輸液後若血壓持續下降心跳增加，應立即進行腹部電 腦斷層檢查以利診斷"
+        ],
+        "答案": "A",
+        "出處": "Current Surgical Diagnosis &\nTreatment 11th Edition, p204-205"
+    },
+    {
+        "題別": "單",
+        "題號": "25",
+        "題目": "一位中年婦女由腹部鈍傷接受剖腹探查，肝脾均發現有外 傷，以下敘述何者正確？",
+        "選項": [
+            "A. 為考慮肝實質外傷後之膽道廔管，即使總膽管正常也該 放置T管（T tube）",
+            "B. 若病人有其他多重腹部外傷，不要考慮脾臟之保留",
+            "C. 所有肝臟外傷不論深度均要外引流",
+            "D. 所有肝臟實質血管之出血，均可以用Pringle maneuver 控制之",
+            "E. 膽囊一定要予切除"
+        ],
+        "答案": "B",
+        "出處": "Sabiston: Textbook of Surgery, 16th\ned. 2001, p336-338"
+    },
+    {
+        "題別": "單",
+        "題號": "26",
+        "題目": "以下何者不是Blood overtransfusion常出現之症狀？",
+        "選項": [
+            "A. Lung base聽到rales",
+            "B. Cough",
+            "C. Dyspnea",
+            "D. CVP下降",
+            "E. Hypoxia"
+        ],
+        "答案": "D",
+        "出處": "Schwartz: Principles of Surgery 7th\ned. 1999, p98"
+    },
+    {
+        "題別": "單",
+        "題號": "27",
+        "題目": "下列有關患者術前之評估何者有誤？",
+        "選項": [
+            "A. 術前肺功能檢查FEV1，若低於預測值之30﹪其術後併發 症及肺功能衰竭之機會相當高",
+            "B. 患者術前肝功能檢查若顯示有急性肝炎時仍建議繼續常 規手術",
+            "C. 使用metformin之糖尿病患者術前應先停藥",
+            "D. 長期使用steroid之患者術前須給予Hydrocortisone補充",
+            "E. 長期洗腎患者術前應考慮再次洗腎以避免Fluid overload 及hyperkalemia"
+        ],
+        "答案": "B",
+        "出處": "Sabinston, Textbook of Surgery 17th\ned, p221-239"
+    },
+    {
+        "題別": "單",
+        "題號": "28",
+        "題目": "下列何種情形使用靜脈營養（Parenteral nutrition）治療較 無效？",
+        "選項": [
+            "A. Gastrointestinal cutaneous fistula",
+            "B. Renal failure (acute tubular necrosis)",
+            "C. Short bowel syndrome",
+            "D. Acute chemotherapy toxicity",
+            "E. Prolonged respiratory support"
+        ],
+        "答案": "E",
+        "出處": "Sabinston, Textbook of Surgery 17th\ned P.162"
+    },
+    {
+        "題別": "單",
+        "題號": "29",
+        "題目": "下列哪一項並非大部份Septic shock患者之Hemodynamic changes？",
+        "選項": [
+            "A. Cardiac output增加",
+            "B. 明顯的Vasoconstriction",
+            "C. Systemic vascular resistance降低",
+            "D. 血壓過低",
+            "E. 心跳加速"
+        ],
+        "答案": "B",
+        "出處": "Sabinston, Textbook of Surgery 17th\ned., p102"
+    },
+    {
+        "題別": "單",
+        "題號": "30",
+        "題目": "術後48至72小時內發燒較常見的原因是？",
+        "選項": [
+            "A. 傷口發炎",
+            "B. 腹內膿瘍",
+            "C. Atelectasis, Phlebitis",
+            "D. 尿道感染",
+            "E. 腹膜炎"
+        ],
+        "答案": "C",
+        "出處": "Sabinston, Textbook of Surgery 17th\ned., p305"
+    },
+    {
+        "題別": "單",
+        "題號": "31",
+        "題目": "想合併切除肝葉VII及VIII區時 必須存在有下列何者？",
+        "選項": [
+            "A. inferior right hepatic vein",
+            "B. middle hepatic vein",
+            "C. right hepatic vein",
+            "D. superior right hepatic vein",
+            "E. left hepatic vein"
+        ],
+        "答案": "A",
+        "出處": "Surgery of the Liver and Biliary\nTract, Blumgart H. Churchill\nLivingstone, 2nd ed., 1994, p1543"
+    },
+    {
+        "題別": "單",
+        "題號": "32",
+        "題目": "胰臟頭部與胰臟體部的分界線為：",
+        "選項": [
+            "A. superior mesenteric vein",
+            "B. inferior mesenteric vein",
+            "C. splenic artery",
+            "D. common hepatic artery",
+            "E. superior mesenteric artery"
+        ],
+        "答案": "A",
+        "出處": "Surgery of the Pancreas, Trede M\nand Carter DC. Churchill\nLivingstone, 1st ed., 1993, p21"
+    },
+    {
+        "題別": "單",
+        "題號": "33",
+        "題目": "膽汁中，電解質含量為：",
+        "選項": [
+            "A. Na+ 135-155mEq/l, K+ 5mEq/l",
+            "B. Na+ 110-120mEq/l, K+ 5mEq/l",
+            "C. Na+ 50-70mEq/l, K+ 10mEq/l",
+            "D. Na+ 110-120mEq/l, K+ 15mEq/l",
+            "E. Na+ 120-130mEq/l, K+ 20mEq/l"
+        ],
+        "答案": "A",
+        "出處": "Physiologic basis of Surgery, J.\nPatrick O’L’eary Williams &\nWilkins, 2nd ed., 1996, p451"
+    },
+    {
+        "題別": "單",
+        "題號": "34",
+        "題目": "下列細胞動素（cytokine），何者在敗血性休克病人變化中 ，扮演著啟動的角色？",
+        "選項": [
+            "A. IL-1",
+            "B. IL-2",
+            "C. IL-6",
+            "D. TNF-α",
+            "E. IFN- γ"
+        ],
+        "答案": "D",
+        "出處": "Textbook of Surgery, Sabiston 15th\ned., p80"
+    },
+    {
+        "題別": "單",
+        "題號": "35",
+        "題目": "下列何者不是抑癌基因？",
+        "選項": [
+            "A. Myc",
+            "B. P53",
+            "C. Rb",
+            "D. APC",
+            "E. DCC"
+        ],
+        "答案": "A",
+        "出處": "Textbook of Surgery, Sabiston 15th\ned., p33"
+    },
+    {
+        "題別": "單",
+        "題號": "36",
+        "題目": "有關前致癌基因（proto-oncogen），下列描述何者不對？",
+        "選項": [
+            "A. 前致癌基因src的活化會導致基因過度複製，進而造成細 胞中表皮生長接受體蛋白質過度生產",
+            "B. 前致癌基因活化機轉可以經由染色體基因轉位（ translocation）",
+            "C. 前致癌基因活化機轉可以經由染色體基因點狀突變",
+            "D. Her-2/neu活化常見於乳癌及卵巢癌",
+            "E. 前致癌基因src的活化機轉是經由染色體基因轉換（ transduction）"
+        ],
+        "答案": "E",
+        "出處": "Textbook of Surgery Sabiston 15th\ned., p30"
+    },
+    {
+        "題別": "單",
+        "題號": "37",
+        "題目": "一位24歲男性，因車禍送至急診室，病患呼吸困難脈搏 110/min，血壓90/60 mmHg，體檢發現左側聽不到呼吸 音、左側小腿變形，下一步處置何者為最適當？",
+        "選項": [
+            "A. 立即插氣管內管",
+            "B. 馬上插胸管",
+            "C. 馬上照頭部及小腿X-光",
+            "D. 先將小腿做外固定",
+            "E. 送入開刀房"
+        ],
+        "答案": "B",
+        "出處": "Principles of Surgery, Schwartz, et\nal. 7th ed., p155-159"
+    },
+    {
+        "題別": "單",
+        "題號": "38",
+        "題目": "後腹膜腔外傷之敘述何者正確？",
+        "選項": [
+            "A. 正擴大之後腹腔血腫要予探查",
+            "B. 腎臟周圍之側面穩定血腫，要予以探查有否腎臟外傷",
+            "C. 骨盆腔骨折引起骨盆血腫需探查之",
+            "D. 腹膜腔其他外傷控制之後，中央後腹膜腔血腫不必再探 查",
+            "E. 後腹膜腔血腫一律用手以壓迫止血法止血"
+        ],
+        "答案": "A",
+        "出處": "Sabiston: Textbook of Surgery, 16th\ned. 2001, p1410-1412"
+    },
+    {
+        "題別": "單",
+        "題號": "39",
+        "題目": "靜脈注射Prophylactic antibiotics，應該在何時給予？",
+        "選項": [
+            "A. 手術後30至60分鐘",
+            "B. 手術後60至120分鐘",
+            "C. 手術中間",
+            "D. 手術前30至60分鐘",
+            "E. 手術前60至120分鐘"
+        ],
+        "答案": "D",
+        "出處": "Schwartz: Principles of Surgery 7th\ned. 1999, p133"
+    },
+    {
+        "題別": "單",
+        "題號": "40",
+        "題目": "以下何者不是低血鈣症常見之原因？",
+        "選項": [
+            "A. Acute pancreatitis",
+            "B. Renal failure",
+            "C. Pancreatic fistula",
+            "D. Hypoparathyroidism",
+            "E. Biliary fistula"
+        ],
+        "答案": "E",
+        "出處": "Schwartz: Principles of Surgery 7th\ned. 1999, p64"
+    },
+    {
+        "題別": "單",
+        "題號": "41",
+        "題目": "急性大量失血2000毫升（ml）以上時，何者不是臨床常見 之表徵？",
+        "選項": [
+            "A. 意識焦慮（anxious）及錯亂（confused）",
+            "B. 呼吸加速",
+            "C. Pulse pressure上升",
+            "D. Blood pressure下降",
+            "E. 尿量減少"
+        ],
+        "答案": "C",
+        "出處": "Schwartz: Principles of Surgery 7th\ned. 1999, p158"
+    },
+    {
+        "題別": "單",
+        "題號": "42",
+        "題目": "外科病人中，使用抗生素或類固醇（steroid）較久，引起 的黴菌感染（fungus infection），最多的是什麼？",
+        "選項": [
+            "A. Aspergillus",
+            "B. Candida albicans",
+            "C. Yeasts",
+            "D. Blastomyces",
+            "E. Histoplasmosis"
+        ],
+        "答案": "B",
+        "出處": "Schwartz: Principles of Surgery 7th\ned. 1999, p138"
+    },
+    {
+        "題別": "單",
+        "題號": "43",
+        "題目": "傷口癒合過程中，下列細胞出現於傷口的順序（Time course）何者正確？",
+        "選項": [
+            "A. Neutrophil-Macrophage-Fibroblast-Lymphocyte",
+            "B. Neutrophil-Fibroblast-Lymphocyte-Macrophage",
+            "C. Macrophage-Lymphocyte- Fibroblast- Neutrophil",
+            "D. Lymphocyte-Fibroblast Neutrophil-Macrophage",
+            "E. Fibroblast- Neutrophil- Lymphocyte-Macrophage"
+        ],
+        "答案": "A",
+        "出處": "Sabinston, Textbook of Surgery 17th\ned, p186"
+    },
+    {
+        "題別": "單",
+        "題號": "44",
+        "題目": "Massive transfusion of stored blood不會造成下列何種現 象？",
+        "選項": [
+            "A. Acidosis",
+            "B. Hyperkalemia",
+            "C. Hypocalcemia",
+            "D.Thrombocytopenia",
+            "E. Coagulopathy"
+        ],
+        "答案": "A",
+        "出處": "Sabinston, Textbook of Surgery 17th\ned., p132"
+    },
+    {
+        "題別": "單",
+        "題號": "45",
+        "題目": "下列有關Pneumoperitoneum之Physiologic Effects何者有 誤？",
+        "選項": [
+            "A. Peak airway pressure增加",
+            "B. Pulmonary compliance及Vital capacity降低",
+            "C. End-tidal CO2降低",
+            "D. Renal blood flow降低",
+            "E. 下肢venous stasis之機會增加"
+        ],
+        "答案": "C",
+        "出處": "Sabinston, Textbook of Surgery 17th\ned., p446"
+    },
+    {
+        "題別": "單",
+        "題號": "46",
+        "題目": "下列何項荷爾蒙不是源自脂肪酸衍生物？",
+        "選項": [
+            "A. glucocorticoids",
+            "B. serotonin",
+            "C. androgens",
+            "D. prostaglandins",
+            "E. leukotrienes"
+        ],
+        "答案": "B",
+        "出處": "Schwartz, Principles of Surgery, 7th\ned., 1999, P.5"
+    },
+    {
+        "題別": "單",
+        "題號": "47",
+        "題目": "下列何項荷爾蒙並不是結合至細胞內接受器而產生作用？",
+        "選項": [
+            "A. androgens",
+            "B. thyroid hormones",
+            "C. retinoic acid",
+            "D. calciteriol",
+            "E. glucagon"
+        ],
+        "答案": "E",
+        "出處": "Schwartz, Principles of Surgery, 7th\ned., 1999, P.5"
+    },
+    {
+        "題別": "單",
+        "題號": "48",
+        "題目": "下列何種激素不是由腦下垂體前葉所分泌？",
+        "選項": [
+            "A. ACTH",
+            "B. TSH",
+            "C. oxytocin",
+            "D. growth hormone",
+            "E. prolactin"
+        ],
+        "答案": "C",
+        "出處": "Schwartz, Principles of Surgery, 7th\ned., 1999, P.4"
+    },
+    {
+        "題別": "單",
+        "題號": "49",
+        "題目": "發生格蘭氏陰性菌敗血性休克最常見之系統感染為:",
+        "選項": [
+            "A. 呼吸道感染",
+            "B.泌尿道感染",
+            "C. 腸道感染",
+            "D. 皮膚感染",
+            "E. 肝膽感染"
+        ],
+        "答案": "B",
+        "出處": "Schwartz, Principles of Surgery, 7th\ned., 1999, P.115"
+    },
+    {
+        "題別": "單",
+        "題號": "50",
+        "題目": "在血液凝固途徑中intrinsic pathway 及extrinsic pathway 二 者匯集時第一個凝血因子為：",
+        "選項": [
+            "A. Factor I",
+            "B. Factor III",
+            "C. Factor VII",
+            "D. Factor X",
+            "E. Factor XIII"
+        ],
+        "答案": "D",
+        "出處": "Schwartz, Principles of Surgery, 7th\ned., 1999, P.80"
+    },
+    {
+        "題別": "單",
+        "題號": "51",
+        "題目": "有關血管收縮素(Angiotensin)在人體受傷後的反應,下列何 者不正確?",
+        "選項": [
+            "A. Angiotensinogen 是在肝臟中初步合成",
+            "B. Angiotensin 轉化為Angiotensin I 是在腎臟中進行",
+            "C. Angiotensin I 可以刺激加壓素(Vasopressin)的形成",
+            "D. Angiotensin II 可以刺激心肌的收縮",
+            "E. Angiotensin II 可以間接活化交感神經系統"
+        ],
+        "答案": "C",
+        "出處": "Principles of Syrgery, Schwartz, et\nal. 8th ed, P.12-13"
+    },
+    {
+        "題別": "單",
+        "題號": "52",
+        "題目": "當人體處於休克狀態下,列何者不是正確的代償性反應?",
+        "選項": [
+            "A. 腎臟的血流量減少",
+            "B. 微血管的靜壓力(capillary hydrostatic pressure)升高",
+            "C. 內臟器官的血液供應進行再分配(redistribution)",
+            "D. 心臟和腦部的血流量減少",
+            "E. 胰島素的分泌量降低"
+        ],
+        "答案": "D",
+        "出處": "Principles of Surgery, Schwartz, et\nal, 8th ed, P.103"
+    },
+    {
+        "題別": "單",
+        "題號": "53",
+        "題目": "下列有關外科傷口的敘述何者為非？",
+        "選項": [
+            "A. 疝氣修補術傷口屬於第一類（calss I）傷口",
+            "B. 第一類（calss I）傷口的預期傷口感染率為5.5~9.5％",
+            "C. 單純膽結石的膽囊切除手術為第二類（calss II）傷口",
+            "D. 穿透性腹部瘡傷（penetrating abdominal trauma）為第 三類（calss III）傷口",
+            "E. 第三類（calss III）傷口的預期感染率為3.4~13.2％"
+        ],
+        "答案": "B",
+        "出處": "Schwartz’s Principles of Surgery,\n18th ed. P119"
+    },
+    {
+        "題別": "單",
+        "題號": "54",
+        "題目": "下列有關移植抗原的敘述何者為非？",
+        "選項": [
+            "A. 人類白血球抗原（HLA）位於第6對染色體（ chromosome 6）",
+            "B. 第一類（class I）人類白血球抗原（HLA）包括HLA-A ，HLA-B",
+            "C. 第二類（class II）人類白血球抗原（HLA）包括HLA-Dr",
+            "D. 在所有有核細胞皆可表現第二類（class II）人類白血球 抗原（HLA）",
+            "E. A.B.O血型抗原（blood group antigen）並非人類白血球 抗原（HLA）的一部份"
+        ],
+        "答案": "D",
+        "出處": "Schwartz’s Principles of Surgery,\n18th ed. P297"
+    },
+    {
+        "題別": "單",
+        "題號": "55",
+        "題目": "下列有關肝臟移植, 何者為誤?",
+        "選項": [
+            "A.Donor及recipient ABO血型不合時，在緊急狀況下亦可 行肝臟移植。",
+            "B.Graft verus host disease 在ABO compatible, 但not identical的肝臟移植中較ABO indentical者為高。",
+            "C.術前T-cell cross match及HLA typing若是不合時, 亦可行 肝臟移植。",
+            "D.急性排斥通常發生於術後3-6個月內, 此時最好改變免疫 抑制劑之使用種類，因為steroid pulse therapy在此時常常 無效。",
+            "E.脂肪肝比例大於30~40%，即可能導致graft 之primary nonfiction，因此若有懷疑，即需於術中施以冷凍切片檢 查。"
+        ],
+        "答案": "D",
+        "出處": "Schwartz 8th ed. P.295-329"
+    },
+    {
+        "題別": "單",
+        "題號": "56",
+        "題目": "下列敘述何者正確?",
+        "選項": [
+            "A. 在做胃之切除時，十二指腸之切除部位不應超越 gastroduodenal artery，以免傷害 accessory pancreatic duct。",
+            "B. 右肝動脈不會由胰臟頭部下方經過",
+            "C. Somatostatin主要由delta細胞分泌，主要功能為促進小 腸、膽道、胃之蠕動。",
+            "D. 接受部份胰臟切除的患者，Vitamin B12吸收不良，常是 一個很嚴重的問題。",
+            "E. 在pancreativ divisum的患者大部分的pancreatic duct皆 經由papilla of vater引流入腸道。"
+        ],
+        "答案": "A",
+        "出處": "Schwartz 8th ed. 1221-1230"
+    },
+    {
+        "題別": "單",
+        "題號": "57",
+        "題目": "下列何者常為高齡者手術後產生併發症時最早的症狀？",
+        "選項": [
+            "A. 血壓降低",
+            "B. 心跳加快",
+            "C. 劇烈疼痛",
+            "D. 心智狀態改變 (Delirium)",
+            "E. 冒冷汗"
+        ],
+        "答案": "D",
+        "出處": "Sabiston Textbook of Surgery (17th\nEdition), p341"
+    },
+    {
+        "題別": "單",
+        "題號": "58",
+        "題目": "術前準備下列何者錯誤?",
+        "選項": [
+            "A. 術前血小板至少要高於5萬/mm3",
+            "B. 術前INR至少要少於1.5",
+            "C. 曾有急性心肌梗塞病人，若非有馬上致命疾病，應等待 4-6週的評估再手術",
+            "D. 使用Estrogen的病人最好停用4週，以避免術後血管栓塞",
+            "E. 糖尿病人所有口服降血糖藥要先停用"
+        ],
+        "答案": "E",
+        "出處": "Sabiston’s 17th ed., p223、p228-\n30、p232"
+    },
+    {
+        "題別": "單",
+        "題號": "59",
+        "題目": "為避免不易凝血，下列藥物或食補，術前宜幾天前就停用 之敘述錯誤？",
+        "選項": [
+            "A. Aspirin ;7-10天",
+            "B. clopidogrel(plavix®) ;7-10天",
+            "C. 人蔘 ;至少7天",
+            "D. Sulindac ;1天",
+            "E. Coumadin ;3-5天"
+        ],
+        "答案": "D",
+        "出處": "Sabiston’s 17th ed., p232"
+    },
+    {
+        "題別": "單",
+        "題號": "60",
+        "題目": "有關介白質(IL-10)的描述，下列何者為非？",
+        "選項": [
+            "A. 介白質-10是一種抑制性細胞動素",
+            "B. 介白質-10主要是由Th1細胞所分泌",
+            "C. 介白質-10可以調降發炎性反應",
+            "D. 在嚴重外傷及敗血症時，病人的介白質-10的過度產生和 病患的預後相關",
+            "E. 在基因轉殖介白質-10陰性老鼠身上，可以觀察到老鼠產 生發炎性腸炎"
+        ],
+        "答案": "B",
+        "出處": "Sabinston 17th ed. P 59"
+    },
+    {
+        "題別": "單",
+        "題號": "61",
+        "題目": "下列有關轉移(metastasis)之陳述何者為誤？",
+        "選項": [
+            "A. 通常轉移發生之最初，原腫瘤須先經由血液或淋巴系統 進入循環系統內",
+            "B. 腫瘤轉移常含有特定器官轉移的趨勢",
+            "C. 轉移通常被認為是很有效率的現象",
+            "D. 轉移有時可能在原腫瘤被治療後多年才產生",
+            "E. Oncogeres如HER2/New被認為可能會加強轉移之步驟"
+        ],
+        "答案": "C",
+        "出處": "Schwartz’s Principles of Surgery\n8th Edition P.259-260"
+    },
+    {
+        "題別": "單",
+        "題號": "62",
+        "題目": "下列有關angiogenesis之陳述何者為誤？",
+        "選項": [
+            "A. Angiogenesis和腫瘤之成長有關但和腫瘤之轉移無關",
+            "B. Proangiogenic factors包括fibroblast growth factors 1、 hepatocyte growth factor和interleukin-8等",
+            "C. 許多onocogenes和tumor suppesor genes都被認為和 angiogenesis有相關",
+            "D. 某些腫瘤之microvessel density被發現和病人之生存率 有關",
+            "E. Antianiogenic factor包括endostatin、thrombospondins 1、tumstatin等"
+        ],
+        "答案": "A",
+        "出處": "Schwartz’s Principles of Surgery\n8th Edition P.258-259."
+    },
+    {
+        "題別": "單",
+        "題號": "63",
+        "題目": "關於輸血小板何者為真？",
+        "選項": [
+            "A. 輸血小板不會傳感染疾病",
+            "B. 輸血小板不會起過敏反應",
+            "C. 手術時血小板至少高於 200.000/cmm",
+            "D. 血小板大於 4.000/cmm 有流血情況須輸血小板",
+            "E. uremia時血小板功能較差"
+        ],
+        "答案": "E",
+        "出處": "Principle of Surgery 8th Edi PP 77"
+    },
+    {
+        "題別": "單",
+        "題號": "64",
+        "題目": "大量輸血不會發生",
+        "選項": [
+            "A. circulatory over load 或 disseminated intravascular coagulopathy",
+            "B. thrombosis",
+            "C. 血小板功能不全",
+            "D. citrate 中毒",
+            "E. 因溫度低而引起心功能不全"
+        ],
+        "答案": "B",
+        "出處": "Principle of Surgery 8th Edi 79"
+    },
+    {
+        "題別": "單",
+        "題號": "65",
+        "題目": "有關腹內膿腫之敘述，下列何者是不正確的？",
+        "選項": [
+            "A.傳統的正式療法為外科探查及引流",
+            "B.目前，大多數病例可用CT診斷及經皮引流( percutaneous drainage )",
+            "C.膿腫若緊靠重要構造( vital structure )時，可考慮手術治 療",
+            "D.多發性膿腫，目前的原則可使用手術治療( Surgical intervention )",
+            "E.在膿腫腔塌陷，且每日引流量小於20毫升時，不論有無 持續性感染源存在，皆可拔除其經皮引流的導管。"
+        ],
+        "答案": "E",
+        "出處": "Schwartz, p120"
+    },
+    {
+        "題別": "單",
+        "題號": "66",
+        "題目": "下列有關原發性細菌性腹膜炎之敘述，那一項為不正確 的？",
+        "選項": [
+            "A.常為遠處感染源經血行性散佈而來",
+            "B.原先已有腹水之病人較常發生",
+            "C.此病若一再發生於接受腹膜透析之尿毒症病人，可能需 要拔除其腹膜透析導管才能有效治療",
+            "D.病人常不需手術引流治療",
+            "E.病原菌常不只一種"
+        ],
+        "答案": "E",
+        "出處": "Schwartz, p120"
+    },
+    {
+        "題別": "單",
+        "題號": "67",
+        "題目": "關於幹細胞(stem cells)的描述，下列何者不正確？",
+        "選項": [
+            "A. 幹細胞的特性之一為必須具有self-renewal的能力,且保 持未分化(undifferentiated)的狀態",
+            "B. 幹細胞的特性之一為必須具有分化成各種不同cell types 的能力",
+            "C. 人類胚胎幹細胞(human embryonic stem cells)可由早期 preimplantation embryos(5 days post-fertilization)取得",
+            "D. 成體幹細胞(adult stem cells) 可由成體組織分離培養,及 分化成各種不同cell types,但並無transdifferentiation的現象",
+            "E. 幹細胞的應用,為diabetes mellitus, Parkinson’s disease, neurological degeneration, 及congenital heart disease病 患的治療,提供了一線曙光"
+        ],
+        "答案": "D",
+        "出處": "Schwartz’s Principles of Surgery,\n8th ed., P415"
+    },
+    {
+        "題別": "單",
+        "題號": "68",
+        "題目": "關於組織工程皮膚(tissue-engineered skin)的描述，下列何 者不正確？",
+        "選項": [
+            "A. 上皮細胞可在體外大量培養,再植入生體",
+            "B. 已有被FDA approved的engineered living-skin 產品",
+            "C. dermal fibroblast 可培養在synthetic scaffold,如 polylactide coglycolide",
+            "D. dermal fibroblast 亦可培養在natural scaffold, 如 collagen solution",
+            "E. 這些cultured dermal fibroblast 無法secret ECM(extracellular matrix) proteins"
+        ],
+        "答案": "E",
+        "出處": "Textbook of Surgery, Sabinston,\n17th ed., P204."
+    },
+    {
+        "題別": "單",
+        "題號": "69",
+        "題目": "手術病人之使用〝預防性抗生素〞為目的之使用原則，下 列何者為錯誤？",
+        "選項": [
+            "A. 術前劃刀前約一小時給予。",
+            "B. 必要時在抗生素半衰期之時間後再給一劑。",
+            "C. 術後24小時內即停止不用。",
+            "D. 限使用第一代Cephalosporin類。",
+            "E. 如有可能厭氧菌感染預防，則可使用第二代以上抗生 素。"
+        ],
+        "答案": "D",
+        "出處": "Greenfield´s Surgery. Lippincott\nWilliam & Wilkins 2006版.\n頁數：P.176"
+    },
+    {
+        "題別": "單",
+        "題號": "70",
+        "題目": "關於腹腔鏡手術時，運用二氧化碳充氣造成氣腹狀態 (pneumoperitoneum)的生理變化，何者敘述錯誤?",
+        "選項": [
+            "A. 因為氣腹狀態所併發的心律不整，以心跳過快較常見",
+            "B. 二氧化碳透過腹膜吸收，進入循環系統內被轉換成 carbonic acid， 進而引起高碳酸血症 (hypercarbia) 或呼吸 性酸中毒 (respiratory acidosis)",
+            "C. 若氣腹的時間較短，骨骼可吸收二氧化碳，作為身體內 最大的緩衝系統 (body buffer)",
+            "D. 爲了減少高碳酸血症的影響，可以增加換氣速率 (ventilatory rate) 或換氣容積 (vital capacity)",
+            "E. 因為腹壓增加 ，腎臟血流減少引起腎素(renin)及抗利尿 賀爾蒙(ADH)增加， 所以術中常見尿量減少(reduced urine output)的情形"
+        ],
+        "答案": "A",
+        "出處": "Schwartz’s Principles of Surgery\n8th ed, 2005, p381-2"
+    },
+    {
+        "題別": "單",
+        "題號": "71",
+        "題目": "正常的ureter，較狹窄的三個部位包括ureteral pelvic junction，ureteral vesical junction，及下面那一部位？",
+        "選項": [
+            "A. at the 2nd lumbar vertebra area (L2)",
+            "B. at the 3rd lumbar vertebra area (L3)",
+            "C. at the pelvic brim where the ureter crosses the common iliac vessels",
+            "D. at the pelvis where the ureter crosses the superior vesical artery",
+            "E. at the sacrum"
+        ],
+        "答案": "C",
+        "出處": "Schwartz’s Principles of Surgery,\nEighth edition, 2005, p1520"
+    },
+    {
+        "題別": "單",
+        "題號": "72",
+        "題目": "施行radical prostatectomy時，保存前列腺旁邊的 neurovascular bundles可減少erectile dysfunction的發生， 此neurovascular bundles內包含下面那一條nerve？",
+        "選項": [
+            "A. obturator nerve",
+            "B. genitofemoral nerve",
+            "C. ilioinguinal nerve",
+            "D. lateral femoral cutaneous nerve",
+            "E. cavernous nerve"
+        ],
+        "答案": "E",
+        "出處": "Schwartz’s Principles of Surgery,\nEighth edition, 2005, p1538"
+    },
+    {
+        "題別": "單",
+        "題號": "73",
+        "題目": "器官移植之後長期使用免疫抑制劑要面對的問題包括感染 和惡性腫瘤的產生, 以下敘述何者有誤?",
+        "選項": [
+            "A. 器官捐贈者為巨細胞病毒(CMV)血清陽性而受贈者為陰 性, 最易造成受贈者感染CMV。",
+            "B. 黴菌感染若發生侵入性念珠菌或麴菌病, 其死亡率經常超 過20% 。",
+            "C. 器官移植受贈者最常發生的惡性腫瘤為肺癌。",
+            "D. 器官移植受贈者罹患的淋巴瘤大部分都是B細胞型, 且與 EB病毒有關。",
+            "E. 器官移植後感染, 除針對菌種加以治療外, 一般也須減低 免疫抑制劑的使用。"
+        ],
+        "答案": "C",
+        "出處": "Schwartz’s PRINCIPLES OF\nSURGERY, 8TH ed. PP326-328"
+    },
+    {
+        "題別": "單",
+        "題號": "74",
+        "題目": "外科手術後因病況需要住進加護病房使用呼吸器時, 以下有 關呼吸道壓力的敘述何者有誤?",
+        "選項": [
+            "A. 有使用呼吸器之患者其呼吸道壓力應持續監測。",
+            "B. Ppeak和Pplateau分別代表吸氣終末壓和短暫關閉吐氣 閥之氣道壓, 若同時都升高代表在肺/胸壁聯合體之順應性降 低 (decrease in the compliance in the lung/chest wall unit)。",
+            "C. 因為呼吸器而造成的肺傷害包括氣胸發作。",
+            "D. 將Pplateau控制在小於30公分水柱壓力, 以及潮氣容積 (tidal volume)小於6毫升/公斤理想體重可減少死亡率。",
+            "E. 病患產生ARDS時呼吸器不易供氣給病患, 故潮氣容積 (tidal volume)仍不得小於12毫升/公斤理想體重。"
+        ],
+        "答案": "E",
+        "出處": "Schwartz's Principles of Surgery,\nEleventh Edition, p446"
+    },
+    {
+        "題別": "單",
+        "題號": "75",
+        "題目": "Non-steroidal anti-inflammatory drugs (NSAIDs) 的抗發炎 藥效機轉，主要是因為NSAIDs抑制了下列何種酵素功能而 產生的？",
+        "選項": [
+            "A.Ribonucleotide reductase",
+            "B.Tyrosine kinase",
+            "C.Cyclooxygenase",
+            "D.Thymidylate synthetase",
+            "E.Dihydrofolate reductase"
+        ],
+        "答案": "C",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P386"
+    },
+    {
+        "題別": "單",
+        "題號": "76",
+        "題目": "有關肋膜積液（pleural effusions）何者正確？",
+        "選項": [
+            "A. 皆是導因於肋膜腔deranged fluid mechanics",
+            "B. 肋膜液lactate dehydrogenase（LDH）大於150mg/dL是 exudate的表徵",
+            "C. 肋膜液與血清蛋白之比值（ratio of pleural fluid protein to serum protein）大於0.5為transudate的表徵",
+            "D. Transudative肋膜積液必須要治療性引流（therapeutic drainge）",
+            "E. 良性肋膜積液（benign pleural effusions）不一定都是 transudate"
+        ],
+        "答案": "E",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P1605"
+    },
+    {
+        "題別": "單",
+        "題號": "77",
+        "題目": "有關Abdominal compartment syndrome（ACS）的敘述， 下列何者為非？",
+        "選項": [
+            "A. 多重外傷、燙傷、後腹腔受傷或後腹腔之手術是主要引 起ACS的因素。",
+            "B. ACS的表徵包括：腹脹、增加呼吸器的壓力、少尿甚或 無尿、腦壓升高。",
+            "C. 測量膀胱內壓力無法測知是否為ACS。",
+            "D. 治療ACS最有效的方法為打開原來的腹部傷口，或切開 腹壁肌膜（若原本無傷口）。",
+            "E. 開放的腹壁傷口，應於每隔48 hrs-72 hrs嘗試關閉肌 膜。"
+        ],
+        "答案": "C",
+        "出處": "Schwartz's Principles of Surgery,\nEleventh Edition, p238"
+    },
+    {
+        "題別": "單",
+        "題號": "78",
+        "題目": "當長期服用類固醇(Corticosteroid)而影響傷口癒合功能 (Impairment of wound healing)時，可以使用下列何者而予 以矯正?",
+        "選項": [
+            "A. Vitamin A",
+            "B. Vitamin C",
+            "C. Zinc",
+            "D. Vitamin K",
+            "E. Vitamin B12"
+        ],
+        "答案": "A",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P148"
+    },
+    {
+        "題別": "單",
+        "題號": "79",
+        "題目": "當菌血性休克時，最常見的生理反應為下列何者?",
+        "選項": [
+            "A. Elevation of central venous pressure",
+            "B. High systemic vascular resistance",
+            "C. Low cardiac output",
+            "D. Systemic vasodilatation",
+            "E. Pupil dilatation"
+        ],
+        "答案": "D",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P50-63"
+    },
+    {
+        "題別": "單",
+        "題號": "80",
+        "題目": "高鉀血症(hyperkalemia)且心電圖發現高T waves (peaked T waves)，此時一般用Insulin＋Glucose注射治療，此時在 細胞的作用機轉是？",
+        "選項": [
+            "A. 啟動細胞膜的carbonic acid system activity",
+            "B. 啟動細胞膜的permeability變化",
+            "C. 啟動細胞膜的Na+/K+ - ATPase activity",
+            "D. 啟動腎細胞的利尿作用(diuresis)",
+            "E. 單純的dilution效果"
+        ],
+        "答案": "C",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P89"
+    },
+    {
+        "題別": "單",
+        "題號": "81",
+        "題目": "以下哪一項不是影響手術危險性的基本因子？",
+        "選項": [
+            "A. 年齡大於70歲",
+            "B. 緊急手術",
+            "C. 病人整體身體狀況",
+            "D. 惡性腫瘤手術",
+            "E. 既有疾病的數目"
+        ],
+        "答案": "D",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P205-206"
+    },
+    {
+        "題別": "單",
+        "題號": "82",
+        "題目": "預防性抗生素對以下何種手術沒有好處？",
+        "選項": [
+            "A. 人工網腹股溝疝氣修補術",
+            "B. 小腸切除手術",
+            "C. 闌尾穿孔手術",
+            "D. 股動脈人工血管繞道手術",
+            "E. 膝關節人工關節置換術"
+        ],
+        "答案": "A",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P247"
+    },
+    {
+        "題別": "單",
+        "題號": "83",
+        "題目": "下肢手術後亦發生deep vein thrombosis，有關預防療法的 敘述何者為非？",
+        "選項": [
+            "A. 檢驗prothrombin time可監測患者的extrinsic及common pathway的狀況。",
+            "B. 檢驗partial thromboplastin time可監測患者的intrinsic及 common pathway的狀況。",
+            "C. Warfarin 在預防上的藥理角色是對抗Vitamin K- dependent factors。",
+            "D. Low molecular weight heparin 比adjusted-dose heparin 更值得被推薦使用.",
+            "E. 短期預防性治療，在出院前即停止投藥，是目前最被推 薦的主流方式。"
+        ],
+        "答案": "E",
+        "出處": "Othopaedic Knowledge Update7,\nP.55~P.58"
+    },
+    {
+        "題別": "單",
+        "題號": "84",
+        "題目": "有關瘢痕瘤（Keloid），下列敘述何者錯誤：",
+        "選項": [
+            "A. 較易發生在臉部、低於鎖骨的軀幹部、及下肢，",
+            "B. 較常發生在皮膚顏色較深的人種例如非裔美國人，亞洲 人，及拉丁裔人，",
+            "C. 其盛行率約15% to 20%，",
+            "D. 其發生有遺傳傾向，",
+            "E. 目前仍無法預防，不論內科或外科療法效果皆不彰。"
+        ],
+        "答案": "A",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P142"
+    },
+    {
+        "題別": "單",
+        "題號": "85",
+        "題目": "有關輸血使用之Packed RBCs， 下列敘述何者錯誤：",
+        "選項": [
+            "A. 儲存於AS-1 solution（additive solution 1），超過42天 即屬過期",
+            "B. 所謂過期是因為輸入體內24小時後，70%的紅血球已失 去活性",
+            "C. 含於Packed RBC中之血小板本質上已完全失去功能",
+            "D. 含於Packed RBC中之凝血因子factors V 及factor VIII 在 裝袋24小時後，數量即顯著降低，其他之凝血因子則較不 受影響",
+            "E. 紅血球比容（Hematocrit）低於30%（或血色素 hemoglobin小於10 g/DL）是臨床上應輸血的指標"
+        ],
+        "答案": "E",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P66-67"
+    },
+    {
+        "題別": "單",
+        "題號": "86",
+        "題目": "對於肝硬化之病人，以下何者不正確？",
+        "選項": [
+            "A. 有腹水存在時，發現有臍部疝氣(umbilical hernia)，若非 incarceration，不需急診手術。",
+            "B. Child B的病人於膽囊炎石，可施行腹腔鏡手術。",
+            "C. 急性肝炎時，盡量避免手術。",
+            "D. C型肝炎的病人不宜接受腹腔鏡膽囊切除手術。",
+            "E. 肝硬化病人往往合併營養不良(malnutrition)"
+        ],
+        "答案": "D",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P216"
+    },
+    {
+        "題別": "單",
+        "題號": "87",
+        "題目": "Child-Pugh scoring system 不含下列哪項？",
+        "選項": [
+            "A. total bilirubin。",
+            "B. ICG value。",
+            "C. albumin。",
+            "D. ascites。",
+            "E. encephalopathy"
+        ],
+        "答案": "B",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P216"
+    },
+    {
+        "題別": "單",
+        "題號": "88",
+        "題目": "使用類固醇之類的藥物會影響傷口之癒合是眾所周知的， 但它在那個時期對傷口影響最大",
+        "選項": [
+            "A. 傷口開始癒合之前三天",
+            "B. 傷口癒合後第二周",
+            "C. 傷口癒合後第六周",
+            "D. 傷口癒合後第三個月",
+            "E. 傷口癒合後第六個月"
+        ],
+        "答案": "A",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P283"
+    },
+    {
+        "題別": "單",
+        "題號": "89",
+        "題目": "缺乏微生素 C 時會讓傷口之癒合停止 ，其影響是發生在傷 口癒合過程之那個階段？",
+        "選項": [
+            "A. inflammation",
+            "B. granulation",
+            "C. epithelization",
+            "D. fibroplasia",
+            "E. contracture"
+        ],
+        "答案": "D",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P139"
+    },
+    {
+        "題別": "單",
+        "題號": "90",
+        "題目": "下列何者不屬於 Eicosanoid class of mediators？",
+        "選項": [
+            "A. histamine",
+            "B. thromboxanes",
+            "C. leukotrienes",
+            "D. lipoxins",
+            "E. prostaglandins"
+        ],
+        "答案": "A",
+        "出處": "Schwartz's Principles of Surgery,\nEleventh Edition, p117"
+    },
+    {
+        "題別": "單",
+        "題號": "91",
+        "題目": "下列那一個基因與Medullary thyroid cancer或Multiple endocrine neoplasia type 2（MEN 2）有關？",
+        "選項": [
+            "A. APC gene",
+            "B. BRCA 1",
+            "C. PTEN",
+            "D. RET",
+            "E. P 53"
+        ],
+        "答案": "D",
+        "出處": "Schwartz's Principles of Surgery,\nEleventh Edition, p325"
+    },
+    {
+        "題別": "單",
+        "題號": "92",
+        "題目": "一位建築工人由3樓墜落受傷，送至急診室時呈現低血壓 (70/30mmHg)，請問其休克之現象較不可能是下列何種原 因所造成？",
+        "選項": [
+            "A. 張力性氣胸",
+            "B. 腦挫傷",
+            "C. 脊髓受傷",
+            "D. 肝撕裂傷",
+            "E. 橫膈膜破裂"
+        ],
+        "答案": "B",
+        "出處": "Schwartz's Principles of Surgery,\nEleventh Edition, p151"
+    },
+    {
+        "題別": "單",
+        "題號": "93",
+        "題目": "營養支持對於外科重症的病患極為重要,請問下列何者為最 適合用於評估正常體重病患一天的基礎能量消耗(basal energy expenditure)",
+        "選項": [
+            "A. 10 Kcal x BW(Kg)",
+            "B. 15 Kcal x BW(Kg)",
+            "C. 20 Kcal x BW(Kg)",
+            "D. 25 Kcal x BW(Kg)",
+            "E. 30 Kcal x BW(Kg)"
+        ],
+        "答案": "D",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P123"
+    },
+    {
+        "題別": "單",
+        "題號": "94",
+        "題目": "下列物質何者由G細胞分泌？",
+        "選項": [
+            "A. 昇糖激素（Glucagon）",
+            "B. 胃酸（Gastric acid）",
+            "C. 胰島素（Insulin）",
+            "D. 蛋白酵素（Pepsinogen）",
+            "E. 胃泌素（Gastrin）"
+        ],
+        "答案": "E",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P37"
+    },
+    {
+        "題別": "單",
+        "題號": "95",
+        "題目": "外科病人之營養評估生化項目中，不含下列何項？",
+        "選項": [
+            "A. creatinine excretion",
+            "B. albumin",
+            "C. prealbumin",
+            "D. serum sodium",
+            "E. total lymphocyte count"
+        ],
+        "答案": "D",
+        "出處": "Schwartz's Principles of Surgery,\nEleventh Edition, p67"
+    },
+    {
+        "題別": "單",
+        "題號": "96",
+        "題目": "一位病人,叫他時會張開眼睛,只回答一些不適當的單字,對疼 痛刺激會主動撥開測試者的手,請問這位病人的 GCS(Glasgow Coma Scale)為幾分？",
+        "選項": [
+            "A. 9",
+            "B. 10",
+            "C. 11",
+            "D. 12",
+            "E. 13"
+        ],
+        "答案": "C",
+        "出處": "Schwartz's Principles of Surgery,\nEleventh Edition, p192"
+    },
+    {
+        "題別": "單",
+        "題號": "97",
+        "題目": "一個36歲女性，因氣喘（asthma）使用吸入性噴劑約二年 ，但於一個月前停止使用。此次因右副腎上腺腫瘤及胰頭 神經內分泌瘤接受右副腎上腺切除及胰十二指腸切除術， 術後4小時血壓下降至70/50 mmHg，腹部引流 (drainage) 約100㏄血水（serosanguinous discharge），給予大量輸 液後血壓仍不回升，6小時後檢查血液血紅素（ Hemoglobin）為14 g/dl，血容積（Hematocrit）為42％， 白血球為8000/cumm，嗜中性白血球(neutrophil)為72％， 淋巴球(lymphocyte)18％，嗜伊血性白血球 (eosinophil)9％。請問下列診斷何者較為可能？",
+        "選項": [
+            "A. 腹內大量出血（intraabdominal hemorrhage）",
+            "B. 副腎上腺危機（adrenal crisis）",
+            "C. 敗血症（sepsis）",
+            "D. 氣喘急性發作",
+            "E. 心肌梗塞"
+        ],
+        "答案": "B",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P971"
+    },
+    {
+        "題別": "單",
+        "題號": "98",
+        "題目": "病患29歲女性，第一型糖尿病合併尿毒症，於6個月前接受 胰腎同時移植。二星期前因急性排斥，接受3天的高劑量類 固醇(prednisolone 500 mg)靜脈注射，最近因發燒至 39.5℃，呼吸急喘，乾咳，肺部X光呈現兩側對稱性下肺部 浸潤（bilateral symmetric lower lung infiltration），血液白 血球為3400/cumm。請問此病人之診斷較可能為何？",
+        "選項": [
+            "A. 細菌性肺炎（bacterial pneumonia）",
+            "B. 黴菌性肺炎（fungal pneumonia）",
+            "C. 心衰竭合併肺積水（pulmonary congestion）",
+            "D. 巨細胞病毒肺炎（cytomegalovirus pneumonia）",
+            "E. 肺動脈栓塞 (pulmonary embolism)"
+        ],
+        "答案": "D",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P629"
+    },
+    {
+        "題別": "單",
+        "題號": "99",
+        "題目": "組織受傷後，血液中何種細胞激素會大幅增加？",
+        "選項": [
+            "A. IL-1",
+            "B. IL-2",
+            "C. IL-6",
+            "D. IL-12",
+            "E. TNF"
+        ],
+        "答案": "C",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P28-30"
+    },
+    {
+        "題別": "單",
+        "題號": "100",
+        "題目": "對於加護病房重症病人的免疫加強營養給予，下列何項不 妥？",
+        "選項": [
+            "A. 大多數研究均肯定可減少病患的感染率",
+            "B. 對於外傷病患可以減少其感染率",
+            "C. 對於多器官衰竭的末期病患仍可達到同樣效果",
+            "D. 對於癌症病患術後減少其感染率",
+            "E. 以上皆對"
+        ],
+        "答案": "C",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P561-564"
+    },
+    {
+        "題別": "單",
+        "題號": "101",
+        "題目": "在傷口癒合過程中,下列何種維生素對collagen synthesis為 必須的？",
+        "選項": [
+            "A. Vitamin A",
+            "B. Vitamin B",
+            "C. Vitamin C",
+            "D. Vitamin D",
+            "E. Vitamin E"
+        ],
+        "答案": "C",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P139"
+    },
+    {
+        "題別": "單",
+        "題號": "102",
+        "題目": "導管常和感染的產生有關；在全靜脈營養時，其導管最常 見的細菌是？",
+        "選項": [
+            "A. 大腸菌 (E.coli)",
+            "B. 葡萄球菌 (staphylococcus)",
+            "C. 鏈球菌 (streptococcus)",
+            "D. 綠膿桿菌 (pseudomonas)",
+            "E. 變形桿菌 (proteus)"
+        ],
+        "答案": "B",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P256"
+    },
+    {
+        "題別": "單",
+        "題號": "103",
+        "題目": "在法醫學中，辦案人員如需要把犯罪現場發現的微量的遺 傳物質(例如血漬、皮屑等)倍增，以便達到破案的目的，最 常用的是下列那一種方法？",
+        "選項": [
+            "A. Recombinant DNA technology",
+            "B. Polymerase chain reaction",
+            "C. DNA sequencing",
+            "D. DNA Cloning",
+            "E. RNA interference"
+        ],
+        "答案": "B",
+        "出處": "Schwartz's Principles of Surgery,\nEleventh Edition, p495"
+    },
+    {
+        "題別": "組合題",
+        "題號": "104",
+        "題目": "【組合題104-105】70歲男性, 過去有高血壓及輕度鬱血性 心臟衰竭的病史, 平常以毛地黃及利尿劑治療, 這次因接受 腹主動脈瘤修補手術後, 住進加護病房, 一個小時後, 病人之 血壓為 140/70 mmHg, 心跳 110/min, 頸靜脈扁平, 肺動脈 楔壓為 9 mmHg, 小便量很少, 接著給予病人最適當之處置 為何？",
+        "選項": [
+            "A. 靜脈注射利尿劑 (furosemide)",
+            "B. 靜脈給予0.9%生理食鹽水",
+            "C. 靜脈滴注 dopamine",
+            "D. 靜脈滴注 nitroprusside",
+            "E. 靜脈注射 digoxin"
+        ],
+        "答案": "B",
+        "出處": "Sabiston Textbook of Surgery, 17th\ned., 2004, pp.310–316, 617–622"
+    },
+    {
+        "題別": "組合題",
+        "題號": "105",
+        "題目": "【組合題104-105】承上題， 數小時之後, 再為病人評估生 命徵象, 血壓為 150/85 mmHg, 心跳 90/min, 頸靜脈鼓脹, 肺動脈楔壓為 17 mmHg, 小便量還是很少, 此時給予病人最 適當之處置為何？",
+        "選項": [
+            "A. 靜脈注射利尿劑 (furosemide)",
+            "B. 靜脈給予0.9%生理食鹽水",
+            "C. 靜脈滴注 dopamine",
+            "D. 靜脈滴注 nitroprusside",
+            "E. 靜脈注射 digoxin"
+        ],
+        "答案": "D",
+        "出處": "Sabiston Textbook of Surgery, 17th\ned., 2004, pp.310–316, 617–622"
+    },
+    {
+        "題別": "單",
+        "題號": "106",
+        "題目": "64歲男性，過去有糖尿病的病史，平時以降血糖藥物控制 中，這次因升結腸癌接受升結腸切除手術治療，手術後三 天晚上病人出現心跳加速，體溫上升至攝氏39度，同時手 術傷口發現有紅腫觸痛及黃色滲出液，接著給予病人最適 當之處置為何下列？",
+        "選項": [
+            "A. 給予廣效抗生素，NSAID鎮痛解熱劑及冰敷。",
+            "B. 將病人的手術傷口打開, 並開始高壓氧治療。",
+            "C. 以無菌溫濕的敷料取代紗布，覆蓋在手術傷口。",
+            "D. 將病人的手術傷口打開，滲出液送格蘭氏染色化驗並進 行傷口擴創。",
+            "E. 送全套手術後發燒評估，包含血液、尿液及痰液培養。"
+        ],
+        "答案": "D",
+        "出處": "Schwartz's Principles of Surgery,\nEleventh Edition, p238"
+    },
+    {
+        "題別": "單",
+        "題號": "107",
+        "題目": "60歲男性因橫結腸癌合併腸阻塞, 接受橫結腸切除手術治療 術後, 住進加護病房觀察, 24小時後忽然出現抽搐 (convulsions)的症狀, 血中電解質測得鈉離子為118 mEq/L, 下列何者為接著最適當之治療？",
+        "選項": [
+            "A. 靜脈給予0.9%生理食鹽水",
+            "B. 靜脈給予3%食鹽水",
+            "C. 緊急安排血液透析",
+            "D. 給予口服鹽片",
+            "E. 靜脈注射利尿劑 (Lasix, 40 mg IV)"
+        ],
+        "答案": "B",
+        "出處": "Schwartz's Principles of Surgery,\nEleventh Edition, p427"
+    },
+    {
+        "題別": "單",
+        "題號": "108",
+        "題目": "30歲男性因腹部外傷, 接受手術後, 出現了腸皮廔管的後遺 症, 每天廔管的排出量約為2公升, 下列何者電解質數值 (mEq/L)最接近其成份？",
+        "選項": [
+            "A. 鈉離子10, 鉀離子26, 氯離子10, 重碳酸根離子30",
+            "B. 鈉離子60, 鉀離子10, 氯離子130, 重碳酸根離子0",
+            "C. 鈉離子140, 鉀離子5, 氯離子104, 重碳酸根離子30",
+            "D. 鈉離子140, 鉀離子5, 氯離子75, 重碳酸根離子115",
+            "E. 鈉離子60, 鉀離子30, 氯離子40, 重碳酸根離子40"
+        ],
+        "答案": "C",
+        "出處": "Schwartz's Principles of Surgery,\nEleventh Edition, p85"
+    },
+    {
+        "題別": "單",
+        "題號": "109",
+        "題目": "30歲男性駕駛, 因高速公路車禍被送至醫院處置, 車禍現場 發現車子的擋風玻璃已破裂, 在急診室病人神智清醒, 可清 楚確認人事時地物, 並無呼吸窘迫現象, 雖然他的四肢皮膚 紅潤而且溫暖, 卻完全無法移動其肢體, 入院時血壓為70/40 毫米汞柱, 脈搏54下, 下列何者為正確診斷？",
+        "選項": [
+            "A. Hemorrhagic shock",
+            "B. Cardiogenic shock",
+            "C. Neurogenic shock",
+            "D. Septic shock",
+            "E. Anaphylactic Shock"
+        ],
+        "答案": "C",
+        "出處": "Schwartz's Principles of Surgery,\nEleventh Edition, p151"
+    },
+    {
+        "題別": "組合題",
+        "題號": "110",
+        "題目": "【組合題110-112】22歲男性病人, 不慎自四樓高工地墜落, 被送至醫院處置, 在急診室病人已出現嚴重休克現像, 經急 救後送至開刀房, 接受部份小腸切除及部份肝臟手術, 於術 中大約給予4公升的乳酸鹽林格氏液及15單位的紅血球濃厚 液及4單位新鮮冷凍血漿輸液治療, 最後準備縫合時, 傷口出 現廣泛性滲血, 下列何項為最可能之原因？",
+        "選項": [
+            "A. 肝衰竭",
+            "B. 脾臟功能亢進症",
+            "C. 血小板缺乏",
+            "D. 第九凝血因子缺乏",
+            "E. 先天性低凝血酵素原血症"
+        ],
+        "答案": "C",
+        "出處": "Schwartz's Principles of Surgery,\nEleventh Edition, p103-124"
+    },
+    {
+        "題別": "組合題",
+        "題號": "111",
+        "題目": "【組合題110-112】承上題， 針對上述病人, 下列哪項檢驗 可以幫助診斷？",
+        "選項": [
+            "A. 血小板計數",
+            "B. 骨髓切片",
+            "C. 肝脾核子掃描",
+            "D. 第八因子測定",
+            "E. 血液抹片"
+        ],
+        "答案": "A",
+        "出處": "Schwartz's Principles of Surgery,\nEleventh Edition, p103-124"
+    },
+    {
+        "題別": "組合題",
+        "題號": "112",
+        "題目": "【組合題110-112】承上題， 該病人在輸了所有合適的血 品及凝血因子後, 持續有出血的現像, 再次剖腹手術發現肝 臟及腹腔內多處嚴重滲血, 此時下列何項為較適當之處置？",
+        "選項": [
+            "A. 將肝動脈結紮",
+            "B. 以手術紗布墊填塞腹腔",
+            "C. 立刻將腹部傷口緊密縫合",
+            "D. 靜脈注射大劑量的肝素",
+            "E. 靜脈給予類固醇 (Solu-Medrol, 1 g IV)"
+        ],
+        "答案": "B",
+        "出處": "Schwartz's Principles of Surgery,\nEleventh Edition, p103-124"
+    },
+    {
+        "題別": "單",
+        "題號": "113",
+        "題目": "42歲男性體重為60公斤, 過去無抽菸或氣喘的病史, 術後住 進加護病房, 每日給予3升的全靜脈營養輸液補充, 生命徵候 穩定, 沒有發燒現象, 然而想要為此病人拔除呼吸管並脫離 呼吸機時卻失敗, 下列何者為最可能之原因?",
+        "選項": [
+            "A. 銅離子缺乏",
+            "B. 脂肪類熱量過多",
+            "C. 醣類熱量過多",
+            "D. 胺基酸類熱量過多",
+            "E. 醣類熱量不足"
+        ],
+        "答案": "C",
+        "出處": "Schwartz's Principles of Surgery,\nEleventh Edition, p420"
+    },
+    {
+        "題別": "單",
+        "題號": "114",
+        "題目": "下列有關腫瘤標記（tumor markers）之敘述，何者有誤？",
+        "選項": [
+            "A. 腫瘤標記可分別為細胞性、生化、分子或基因變異等項",
+            "B. 腫瘤標記可作為診斷、預後、腫瘤分類及治療反應預測 之用",
+            "C. 目前已有腫瘤抗原可完全符合作為特定腫瘤行為預測及 診療之用",
+            "D. 理想之腫瘤標記應具有專一性、標本易取得、可重複測 定、快速且便宜之特點",
+            "E. 腫瘤標記可有蛋白質﹑基因突變及表基因 (epigenretic) 變化三大類"
+        ],
+        "答案": "C",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P697"
+    },
+    {
+        "題別": "單",
+        "題號": "115",
+        "題目": "下列何者是減重手術無法治療的病態性肥胖合併症？",
+        "選項": [
+            "A. 血脂過高",
+            "B. 糖尿病",
+            "C. 高血壓",
+            "D. 憂鬱症",
+            "E. 睡眠呼吸中止症"
+        ],
+        "答案": "D",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P1181"
+    },
+    {
+        "題別": "單",
+        "題號": "116",
+        "題目": "可調節胃束帶手術是目前最安全的減重手術，但是長期的 併發症以下列何者最高？",
+        "選項": [
+            "A. 束帶滑脫 (Band slippage)",
+            "B. 束帶移位 (Band erosion)",
+            "C. 束帶感染 (Port infection)",
+            "D. 管路漏滲 (Tube leaksge)",
+            "E. 束帶狹窄 (Band stenosis)"
+        ],
+        "答案": "A",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P1176"
+    },
+    {
+        "題別": "單",
+        "題號": "117",
+        "題目": "膽胰分流手術(Biliopancrectic Diversion)是減重效果最好的 病態性肥胖外科手術，但是最主要的缺點是下列何者？",
+        "選項": [
+            "A. 手術死亡率高達10%",
+            "B. 維他命B的缺乏",
+            "C. 蛋白質營養不良",
+            "D. 無法容忍的油便，拉肚子",
+            "E. 邊緣性潰瘍"
+        ],
+        "答案": "C",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P1172"
+    },
+    {
+        "題別": "單",
+        "題號": "118",
+        "題目": "十二指腸轉位(Duodenal Switch)的發展最主要是要克服膽 胰分流(Bilopancreatic diversion)手術何種缺點？",
+        "選項": [
+            "A. 邊緣性潰瘍 (Marginal Ulcer)",
+            "B. 蛋白質營養不足",
+            "C. 減重效果不足",
+            "D. 脂溶性維他命缺乏",
+            "E. 油便的困擾"
+        ],
+        "答案": "A",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P1182"
+    },
+    {
+        "題別": "單",
+        "題號": "119",
+        "題目": "膽胰分流手術(Biliopancrectic Diversion)是一種以吸收不良 (Malabsorption)為主要原理的減重手術，膽胰消化液與食 物僅在後段小腸共同端(Common Channel)共同作用，共同 端之長度為？",
+        "選項": [
+            "A. 250-300公分",
+            "B. 200-250公分",
+            "C. 150-200公分",
+            "D. 100-150公分",
+            "E. 50-100公分"
+        ],
+        "答案": "E",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P1171"
+    },
+    {
+        "題別": "單",
+        "題號": "120",
+        "題目": "嚴重膽管炎之Reynolds pentad表現不包含下列何者?",
+        "選項": [
+            "A. 低血壓",
+            "B. 意識改變",
+            "C. 上腸胃道出血",
+            "D. 發燒",
+            "E. 黃疸"
+        ],
+        "答案": "C",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P1494"
+    },
+    {
+        "題別": "單",
+        "題號": "121",
+        "題目": "正常人體生理性膽汁分泌為每日多少毫升？",
+        "選項": [
+            "A. 500",
+            "B. 1000",
+            "C. 1500",
+            "D. 2000",
+            "E. 2500"
+        ],
+        "答案": "C",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P1432"
+    },
+    {
+        "題別": "組合題",
+        "題號": "122",
+        "題目": "【組合題122-123】一位42歲女性，今日上午接受無痛大腸 鏡檢查，發現在距離肛門口35公分處之大腸有一1.2公分大 之息肉，接受息肉切除術後返回病房休息；中午過後抱怨 腹脹、腹痛，且冒冷汗。KUB檢查如下圖。請問最可能之 診斷為何者？",
+        "選項": [
+            "A. 腸阻塞",
+            "B. 巨結腸症",
+            "C. 左側輸尿管結石",
+            "D. 中空器官穿孔",
+            "E. 缺血性腸壞死"
+        ],
+        "答案": "D",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P1130"
+    },
+    {
+        "題別": "組合題",
+        "題號": "123",
+        "題目": "【組合題122-123】承上題，該名婦人目前生命徵象BP 75/45mmHg, HR 112 bpm, 呼吸次數每分鐘22-24下，周邊 血氧濃度SpO2 88~89%; 意識狀況呈現嗜睡；女兒在旁邊 表示從上午做完檢查後回來已經四個小時沒有小便。請問 下列判斷及處置何者較合適？",
+        "選項": [
+            "A. 因懷疑是腸阻塞，放置鼻胃管減壓",
+            "B. 因懷疑乙狀結腸扭轉，放置肛管",
+            "C. 因懷疑是輸尿管結石合併Urosepsis，緊急會診泌尿外科",
+            "D. 因懷疑是缺血性腸壞死，緊急做電腦斷層檢查",
+            "E. 因懷疑是中空器官穿孔合併腹膜炎，緊急安排剖腹探查 手術"
+        ],
+        "答案": "E",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P1130"
+    },
+    {
+        "題別": "單",
+        "題號": "124",
+        "題目": "Bile 之正常生理濃度以下何者為非?",
+        "選項": [
+            "A. Bile acids 3-45 mM",
+            "B. Protein 300-3000 mg/L",
+            "C. Cholesterol 60-320mg/dL",
+            "D. HCO3- 3-7 mEq/L",
+            "E. K+ 4.2-5.6 mEq/L"
+        ],
+        "答案": "D",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P1432"
+    },
+    {
+        "題別": "組合題",
+        "題號": "125",
+        "題目": "【組合題125-128】56歲女性，一年多前開始出現間歇性眼 前發黑，失去意識；近半年來此症狀頻率增加，數次送至 地區醫院急診，在靜脈點滴注射後出院返家。在兩周前發 作送來本院急診，清醒後住院接受檢查：心血管及腦部檢 查正常；生化檢查 Hgb 11.9mg/dL, WBC 9800/cumm, Plt 258K/cumm, Na 139mmol/L, K 3.8mmol/L, Cl 105mmol/L, Ca 8.5mg/dL, total bilirubin 0.6mg/dL, GOT 26U/L, GPT 31U/L 住院期間發現病患焦慮、脾氣差、但有時傻笑。在 一次發生失去意識之下測得血中生化值：Na 133, K 4.3, Cl 101, Ca 8.6, Glucose(AC) 20mg/dL, 給予50% Glucose water 後恢復意識。該病患無服藥或注射藥物之病史，腹部 電腦斷層檢查如下題之影像，發現在胰臟尾處一 hypervascular tumor。此病人症狀可能是以下何種腫瘤所 引起？",
+        "選項": [
+            "A. Gastrinoma",
+            "B. Pancreas ductal adenocarcinoma",
+            "C. Insulinoma",
+            "D. VIPoma",
+            "E. Glucagonoma"
+        ],
+        "答案": "C",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P943"
+    },
+    {
+        "題別": "組合題",
+        "題號": "126",
+        "題目": "【組合題125-128】承上題，此病患之胰臟腫瘤的惡性比例 為？腹部電腦斷層檢查如下圖：",
+        "選項": [
+            "A. 幾乎是惡性",
+            "B. 75-90%",
+            "C. 50-75%",
+            "D. 30-50%",
+            "E. < 15%"
+        ],
+        "答案": "E",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P944"
+    },
+    {
+        "題別": "組合題",
+        "題號": "127",
+        "題目": "【組合題125-128】承上題，此病患之腫瘤會引起所謂 Whipple's triad是指？ (1)禁食時低血糖的症狀 (2)禁食時血中insulin值升高 (3)禁食時血中glucagon值升高 (4)血糖會低到50mg/dL以下 (5)給病人糖分後症狀會緩解",
+        "選項": [
+            "A. 1,2,4",
+            "B. 1,3,4",
+            "C. 1,2,5",
+            "D. 1,3,5",
+            "E. 1,4,5"
+        ],
+        "答案": "E",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P952"
+    },
+    {
+        "題別": "組合題",
+        "題號": "128",
+        "題目": "【組合題125-128】承上題，此病患接受血管攝影檢查發現 腫瘤由splenic artery 所供應，手術中超音波檢查發現腫瘤 與主胰管相連，且無其他腫瘤，請問最適合的手術方式為 何？",
+        "選項": [
+            "A. Enucleation",
+            "B. Distal pancreatectomy",
+            "C. Median pancreatectomy",
+            "D. Whipple operation",
+            "E. Total pancreatectomy"
+        ],
+        "答案": "B",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P954"
+    },
+    {
+        "題別": "單",
+        "題號": "129",
+        "題目": "腋下淋巴結可分為三區(level I, II, III)，是以下列何者作為解 剖上的分界？",
+        "選項": [
+            "A. 胸大肌",
+            "B. 胸小肌",
+            "C. 胸背神經Thoracodorsal nerve",
+            "D. 腋靜脈Axillary vein",
+            "E. 長胸神經Long thoracic nerve"
+        ],
+        "答案": "B",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P820"
+    },
+    {
+        "題別": "單",
+        "題號": "130",
+        "題目": "甲狀腺旁的喉返神經(Recurrent laryngeal nerve)之描述， 何者為是？",
+        "選項": [
+            "A. 雙側的喉返神經都受損，才會有聲音沙啞的情形",
+            "B. 喉返神經是運動、感覺與自主的混合神經",
+            "C. 甲狀腺手術傷害到一側喉返神經時，會使同側聲帶收縮 至旁側",
+            "D. 非喉返神經(Non-recurrent laryngeal nerve)常發生在左 側，約佔1.5%",
+            "E. 右側繞經主動脈弓返回，左側繞經subclavian artery 返 回"
+        ],
+        "答案": "B",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P882"
+    },
+    {
+        "題別": "組合題",
+        "題號": "131",
+        "題目": "【組合題131-132】40歲男性，體重70公斤，接受開心手 術，過程不順利，手術中低血壓時間甚久，術後在加護病 房前四個小時的尿量如下：60, 35, 20, 15 mL，應問應如何 處置？",
+        "選項": [
+            "A. Loop diuretics (如Lasix 20mg IV)",
+            "B. Mannitol 150ml IV drip",
+            "C. 開始CVVH (continuous veno-venous hemofiltraction)",
+            "D. 先確定循環體液是否足夠",
+            "E. 先補Colloid 500 ml"
+        ],
+        "答案": "D",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P301-303"
+    },
+    {
+        "題別": "組合題",
+        "題號": "132",
+        "題目": "【組合題131-132】承上題，以下何項檢查，不能鑑別尿量 減少，是由Pre-renal factor 或renal factor 造成的？",
+        "選項": [
+            "A. [Na+] urine",
+            "B. Urine specific gravity",
+            "C. BUN",
+            "D. [Cr] & [Cr] plasma urine",
+            "E. Urine osmolarity"
+        ],
+        "答案": "C",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P301-303"
+    },
+    {
+        "題別": "單",
+        "題號": "133",
+        "題目": "54歲男性，身高168公分，體重88公斤，過去病史有高血 壓，需服用三種口服降血壓藥物，兩年前曾經因十二指腸 潰瘍出血住院。此次住院診斷為胰臟頭部腫瘤準備接受胰 頭十二指腸切除手術。請問次病人手術前ASA(American Society of Anesthesiologist)的評估等級為？",
+        "選項": [
+            "A. ASA class II",
+            "B. ASA class III",
+            "C. ASA class IV",
+            "D. ASA class V",
+            "E. ASA class E"
+        ],
+        "答案": "B",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P205"
+    },
+    {
+        "題別": "單",
+        "題號": "134",
+        "題目": "關於甲狀腺癌的描述何者為是？",
+        "選項": [
+            "A. 大部分病人發現時已侵犯喉返神經",
+            "B. 不論是否有甲狀腺機能亢進，均應儘速手術",
+            "C. 濾泡癌很難在術前利用細針抽吸細胞檢查或術中利用冰 凍切片檢查得到明確的診斷",
+            "D. 服用Methimazole可以抑制癌細胞生長",
+            "E. 甲狀腺腫大且有聲音沙啞，細胞病理證實是甲狀腺淋巴 癌，最佳治療是甲狀腺全切除"
+        ],
+        "答案": "C",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P900-911"
+    },
+    {
+        "題別": "單",
+        "題號": "135",
+        "題目": "甲狀腺手術後當天的臨床照護，最應注意的是？",
+        "選項": [
+            "A. 檢查頸部有無出血或血腫，有無立即在手術的必要",
+            "B. 有無神經沙啞，評估喉返神經功能",
+            "C. 檢次血鈣濃度，評估副甲狀腺功能",
+            "D. 肺部聽診，評估有無肺塌陷引起之術後發燒",
+            "E. B+C"
+        ],
+        "答案": "A",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P920"
+    },
+    {
+        "題別": "單",
+        "題號": "136",
+        "題目": "有關甲狀腺荷爾蒙的合成、調控與分泌，下列何者正確？",
+        "選項": [
+            "A. TSH源自於腦下垂體後葉，刺激甲狀腺細胞生長與T3， T4的釋放",
+            "B. 懷孕期脈絡叢親生殖腺體素(chorionic gonadotropin)可 刺激甲狀腺荷爾蒙的合成，造成T3,T4值增高",
+            "C. Medullary thyroid cancer可用thyroglobulin來檢測與追蹤",
+            "D. 甲狀腺亢進手術前不需進行藥物控制甲狀腺荷爾蒙，直 接行甲狀腺全切除即可安全治療",
+            "E. 甲狀腺亢進手術前給予大量口服甲狀腺素，目的在發生 Wolff-Chaikoff effect"
+        ],
+        "答案": "B",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P885-889"
+    },
+    {
+        "題別": "單",
+        "題號": "137",
+        "題目": "再餵食症候群(Refeeding syndrome)的有關敘述，下列何 者不適當？",
+        "選項": [
+            "A. 血中磷（phosphate）降低",
+            "B. 血中磷（potassium）降低",
+            "C. 血中胰島素（insulin）上升",
+            "D. 血糖（glucose）降低",
+            "E. 血中鎂（magnesium）降低"
+        ],
+        "答案": "C",
+        "出處": "Sabiston, Textbook of Surgery,\n21ed,Chap5, p109"
+    },
+    {
+        "題別": "單",
+        "題號": "138",
+        "題目": "有關各種類型休克的敘述，下列何者較為適當？",
+        "選項": [
+            "A. 低容積休克（hypovolemic shock）的SVR(systemic vascular resistance)降低",
+            "B. 敗血性休克（septic shock）的SVR升高",
+            "C. 心因性休克（cardiogenic shock）的SVR降低",
+            "D. 神經性休克（neurogenic shock）的SVR降低",
+            "E. 神經性休克（neurogenic shock）的SvO2(mixed venous oxygen saturation)升高"
+        ],
+        "答案": "D",
+        "出處": "Schwartz's Principles of Surgery,"
+    },
+    {
+        "題別": "單",
+        "題號": "139",
+        "題目": "關於休克的荷爾蒙反應(hormonal response)的敘述，下列 何者較為適當？",
+        "選項": [
+            "A. 腦下垂體減少ADH的分泌，造成體液流失",
+            "B. ADH作用在腎絲球細胞膜通透性，改變水分及鈉的平衡",
+            "C. ADH又被稱為arginine vasopressin是一種血管收縮劑 (vasoconstricotr)",
+            "D. ADH會改善腸缺血症狀",
+            "E. vasopressin減少肝臟醣類生成"
+        ],
+        "答案": "C",
+        "出處": "Schwartz's Principles of Surgery,\n11e, Chap5, p7/43"
+    },
+    {
+        "題別": "單",
+        "題號": "140",
+        "題目": "休克的Inflammatory mediators，分成兩類，分別為 Proinflammatory及Anti-inflammatory，下列何者為Anti- inflammatory？",
+        "選項": [
+            "A. Interleukin-6",
+            "B. Interferon",
+            "C. TNF",
+            "D. Prostaglanding E2",
+            "E. PAF(platelet activating factor)"
+        ],
+        "答案": "D",
+        "出處": "Schwartz's Principles of Surgery,\n11e, Chap5, p14/43"
+    },
+    {
+        "題別": "單",
+        "題號": "141",
+        "題目": "關於外科病人抗生素的使用，下列敘述何者不適當？",
+        "選項": [
+            "A. 確認可能感染源",
+            "B. 選擇是當有效的抗生素",
+            "C. 一周後無法確認感染，建議根據病人的臨床表現停止使 用抗生素",
+            "D. 盡快使用廣效性抗生素",
+            "E. 如果確定抗生素治療有事當成效，可停止使用"
+        ],
+        "答案": "C",
+        "出處": "Schwartz's Principles of Surgery,\n11e, Chap6, p15/38"
+    },
+    {
+        "題別": "單",
+        "題號": "142",
+        "題目": "手術後黴菌感染的問題，下列敘述何者不適當？",
+        "選項": [
+            "A. 一般靠特殊染色確認，如(potassiumhydrooxide, india ink, methenanine silver, Gemsa)",
+            "B. 菌絲分支分隔可協助診斷",
+            "C. 最終確認診斷靠培養結果",
+            "D. 最終確認診斷靠PCR結果",
+            "E. 就像細菌培養，在(25C及37C)環境中進行"
+        ],
+        "答案": "D",
+        "出處": "Schwartz's Principles of Surgery,\n11e, Chap6, p10/38"
+    },
+    {
+        "題別": "單",
+        "題號": "143",
+        "題目": "下列何者不是SOFA(Sequential Organ Failure Assessment)Score的評估因子？",
+        "選項": [
+            "A. PaO2/FiO2 ratio",
+            "B. Platelet",
+            "C. Age",
+            "D. Mean arterial pressure(MAP)",
+            "E. Glasgow Coma Scale(GCS) Score"
+        ],
+        "答案": "C",
+        "出處": "Schwartz's Principles of Surgery,\n11e, Chap6, p6/38"
+    },
+    {
+        "題別": "單",
+        "題號": "144",
+        "題目": "關於Heat-Shock Proteins(HSPs)的敘述，何者為是？",
+        "選項": [
+            "A. HSPs由受損細胞產生，用來保護損傷壓力(traumatic stress)的傷害，在正常完整細胞部會產生",
+            "B. HSPs由secretory mitochondria及endosomal pathway 朗種方法產生",
+            "C. CD40是HSPs的protector receptor",
+            "D. HSPs是一種anti-inflammatory DAMPs",
+            "E. HSPs扮演細胞外chaperones的角色，將異源蛋白 (foreign proteins)解除摺疊"
+        ],
+        "答案": "C",
+        "出處": "Schwartz's Principles of Surgery,\n11e, Chap2, p5/83"
+    },
+    {
+        "題別": "單",
+        "題號": "145",
+        "題目": "計算滲透壓(osmotic pressure),下列何者不需要？",
+        "選項": [
+            "A. 原子量(atomic weight)",
+            "B. 鈉(sodium)",
+            "C. 血尿素氮(blood urea nitrogen,BUN)",
+            "D. 血清肌酸酐(creatinine)",
+            "E. 葡萄糖(glucose)"
+        ],
+        "答案": "D",
+        "出處": "Schwartz's Principles of Surgery,"
+    },
+    {
+        "題別": "單",
+        "題號": "146",
+        "題目": "大量輸血(massive transfusion)可能容易出血,下列何者不是 可能原因？",
+        "選項": [
+            "A. 血小板減少(thrombocytopenia)",
+            "B. 發燒(hyperthermia)",
+            "C. 稀釋姓凝血病變(dilutional coagulopathy)",
+            "D. 纖維蛋白分解作用(fibrinolysis)",
+            "E. 低纖維蛋白原血症(hypofibrinogenemia)"
+        ],
+        "答案": "B",
+        "出處": "Schwartz's Principles of Surgery,\n11e, Chap4, p32/42"
+    },
+    {
+        "題別": "單",
+        "題號": "147",
+        "題目": "當人體組織受傷害時，凝血作用(coagulation)的第一步是？",
+        "選項": [
+            "A. 切斷第十一因子而活化第九因子",
+            "B. 在鈣離子出現時，結合第九及第八因子",
+            "C. 第十二因子因接觸到內皮下基質 (collagen)而活化",
+            "D. Prothrombin 轉換成 thrombin",
+            "E. 由fibrinogen轉換成fibrin"
+        ],
+        "答案": "C",
+        "出處": "Schwartz's Principles of Surgery,\nEleventh Edition, p105"
+    },
+    {
+        "題別": "單",
+        "題號": "148",
+        "題目": "下列何種cytokine activity會抑制傷口收縮(wound contraction)？",
+        "選項": [
+            "A. IL-1",
+            "B. TNF-α",
+            "C. IL-6",
+            "D. IFN-γ",
+            "E. IL-8"
+        ],
+        "答案": "D",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P134"
+    },
+    {
+        "題別": "單",
+        "題號": "149",
+        "題目": "下列何者不是SIRS(Systemic Inflammation Syndrome)的 可能原因？",
+        "選項": [
+            "A. Polytrauma",
+            "B. Pancreatitis",
+            "C. Burns",
+            "D. Aspiration",
+            "E. Malignancy"
+        ],
+        "答案": "D",
+        "出處": "Schwartz's Principles of Surgery,\nEleventh Edition, p160"
+    },
+    {
+        "題別": "單",
+        "題號": "150",
+        "題目": "外科手術機器（Robotic）最大的優勢為除了提供3D影像， 還包括機器手臂可以提供幾個自由度 (Degree of freedom of motion)？",
+        "選項": [
+            "A. 1 degree",
+            "B. 3 degrees",
+            "C. 5 degrees",
+            "D. 7 degrees",
+            "E. 9 degrees"
+        ],
+        "答案": "D",
+        "出處": "Early Diagnosis and Treatment of\nCancer Series: Prostate Cancer,\n2010, Pages 229-250"
+    },
+    {
+        "題別": "單",
+        "題號": "151",
+        "題目": "下列何者是目前最低手術死亡率與後遺症(lower initial operative morbidity and mortality)的減重手術(Bariatric Surgery)？",
+        "選項": [
+            "A. 垂直胃束帶隔間手術(Vertical Banded Gastroplasy)",
+            "B. 可調節式胃束帶(Laparoscopic Adjusrable Gastric Banding)",
+            "C. 胃繞道手術(Roux-en Y gastric bypass)",
+            "D. 膽胰分泌手術 (Biliopancreatic Diversion)",
+            "E. 十二指腸轉位 (Duodenal Switch)"
+        ],
+        "答案": "B",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P1168"
+    },
+    {
+        "題別": "單",
+        "題號": "152",
+        "題目": "Roux-en-Y 胃繞道手術是減重外科的標準治療方法之一， 使用Roux-en-Y而非以loop方式與空腸作吻合的最主要理由 為？",
+        "選項": [
+            "A. 手術的困難度",
+            "B. 膽汁逆流食道炎",
+            "C. 營養不良的副作用",
+            "D. 降低Blind loop的可能",
+            "E. 內疝氣 (int hernia)"
+        ],
+        "答案": "B",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P1169"
+    },
+    {
+        "題別": "單",
+        "題號": "153",
+        "題目": "關於ERAS(Enhanced recovery after surgery)，下列何者 錯誤？",
+        "選項": [
+            "A. ERAS 是藉由多模式之對策以維持術前器官功能",
+            "B. 可減少住院日數",
+            "C. 手術前 2 小時允許攝入少量澄清液體",
+            "D. 術中和術後不限制給予鈉離子和靜脈輸液",
+            "E. 術後早期腸內攝入，並立即停止靜脈輸液"
+        ],
+        "答案": "D",
+        "出處": "Schwartz's Principles of Surgery,\nEleventh Edition, Chap 3, p97-98"
+    },
+    {
+        "題別": "單",
+        "題號": "154",
+        "題目": "關於refeeding syndrome，要開始refeeding前應先特別補 充何種維生素？",
+        "選項": [
+            "A. Vit A",
+            "B. Vit D",
+            "C. Vit E",
+            "D. Vit K",
+            "E. Thiamine"
+        ],
+        "答案": "E",
+        "出處": "Schwartz's Principles of Surgery,\nEleventh Edition, Chap 3, p99"
+    },
+    {
+        "題別": "單",
+        "題號": "155",
+        "題目": "Hemophilia B 缺乏的是何種凝血因子？",
+        "選項": [
+            "A. Factor II",
+            "B. Factor VII",
+            "C. Factor VIII",
+            "D. Factor IX.",
+            "E. Factor X"
+        ],
+        "答案": "D",
+        "出處": "Schwartz's Principles of Surgery,\nEleventh Edition, Chap 4, p106"
+    },
+    {
+        "題別": "單",
+        "題號": "156",
+        "題目": "Vitamin K 缺乏症或使用warfarin不會影響下列何種凝血因 子的功能？",
+        "選項": [
+            "A. Factor II",
+            "B. Factor VII",
+            "C. Factor VIII",
+            "D. Factor IX",
+            "E. Factor X"
+        ],
+        "答案": "C",
+        "出處": "Schwartz's Principles of Surgery,\nEleventh Edition, Chap 4, p105"
+    },
+    {
+        "題別": "單",
+        "題號": "157",
+        "題目": "診斷 DIC(Disseminated Intravascular Coagulation) 要依據 以下各項，除了何者？",
+        "選項": [
+            "A. an inciting etiology with associated thrombocytopenia",
+            "B. prolongation of the prothrombin time",
+            "C. a low fibrinogen level",
+            "D. elevated fibrin markers (FDPs, D-dimer)",
+            "E. transfusion reaction"
+        ],
+        "答案": "E",
+        "出處": "Schwartz's Principles of Surgery,\nEleventh Edition, Chap 4, p110"
+    },
+    {
+        "題別": "單",
+        "題號": "158",
+        "題目": "Warfarin的抗凝血作用會依因同時使用下列藥物或情況而減 低，除了何者？",
+        "選項": [
+            "A. Barbiturates.",
+            "B. with diets low in vitamin K",
+            "C. Contraceptives or estrogen-containing compounds",
+            "D. Corticosteroids, and adrenocorticotropic hormone (ACTH)",
+            "E. Cephalosporins"
+        ],
+        "答案": "E",
+        "出處": "Schwartz's Principles of Surgery,\nEleventh Edition, Chap 4, p112"
+    },
+    {
+        "題別": "單",
+        "題號": "159",
+        "題目": "關於低鈣血症(Hypocalcemia )的治療下列何者錯誤？",
+        "選項": [
+            "A. 無症狀低鈣血症是可以用口服或靜脈注射鈣來治療。",
+            "B. 急性症狀性低鈣血症應靜脈注射 10% 葡萄糖酸鈣，以達 到血清濃度高於 10 mg/dL。",
+            "C. 相關的鎂、鉀和 酸鹼值問題也必須同時治療",
+            "D. 如果不先處理同時存在的低鎂血症，低鈣血症將難以治 療。",
+            "E. 大量輸血時不再建議常規補鈣。"
+        ],
+        "答案": "B",
+        "出處": "Schwartz's Principles of Surgery,\nEleventh Edition, Chap 3, p95"
+    },
+    {
+        "題別": "單",
+        "題號": "160",
+        "題目": "在傷口癒合的過程中，最需要(essential to successful healing)的發炎細胞是？",
+        "選項": [
+            "A. Neutrophils",
+            "B. Macrophages",
+            "C. Fibroblasts",
+            "D. Lymphocytes",
+            "E. Basophils"
+        ],
+        "答案": "B",
+        "出處": "Schwartz's Principles of Surgery,\nEleventh Edition, Chap 3, p272"
+    },
+    {
+        "題別": "單",
+        "題號": "161",
+        "題目": "Marfan's syndrome是先天性 fibrillin 有問題，進而造成何 種組成的問題？",
+        "選項": [
+            "A. Collagen type I",
+            "B. Collagen type II",
+            "C. Collagen type III",
+            "D. Elastin",
+            "E. Fibronectin"
+        ],
+        "答案": "D",
+        "出處": "Schwartz's Principles of Surgery,\nEleventh Edition, Chap 23, p970"
+    },
+    {
+        "題別": "單",
+        "題號": "162",
+        "題目": "由慢性傷口或燒傷疤痕長出來的 SCC或BCC 稱為？",
+        "選項": [
+            "A. Marjolin's ulcers",
+            "B. Keratoacanthoma",
+            "C. Bowen disease",
+            "D. Kawasaki syndrome",
+            "E. Kaposi's sarcoma"
+        ],
+        "答案": "A",
+        "出處": "Schwartz's Principles of Surgery,\nEleventh Edition, Chap 9, p290"
+    },
+    {
+        "題別": "單",
+        "題號": "163",
+        "題目": "下列何者有關於測量Bladder pressure與Intra-abdominal pressure之敘述是錯誤的？",
+        "選項": [
+            "A. Oliguria, elevated peak airway pressures及elevated intra-abdominal pressure 是 abdominal compartment syndrome (ACS) 的 triad",
+            "B. 量測Transurethral bladder pressure在實務上可代表 intra-abdominal pressure",
+            "C. Intra-abdominal hypertension定義為 IAP ≥12 mmHg",
+            "D. ACS的診斷是依照 IAP ≥20 mmHg，再加上新發生的 organ dysfunction",
+            "E. ACS常見合併 respiratory alkalosis"
+        ],
+        "答案": "E",
+        "出處": "Schwartz's Principles of Surgery,\nEleventh Edition, Chap 7, p239 and\nChap 13, P447"
+    },
+    {
+        "題別": "單",
+        "題號": "164",
+        "題目": "關於糖尿病影響傷口癒合的敘述，下列何者不正確？",
+        "選項": [
+            "A. 糖尿病會合併large vessel occlusion及end-organ microangiopathy，會造成組織缺血和感染。",
+            "B. 微血管的基底膜(capillary basement membrane)會變 厚。",
+            "C. perivascular localization of albumin會增加，間接表示 capillary leak增加。",
+            "D. 糖尿病病人對缺氧的情形會有明顯的upregulate VEGF。",
+            "E. 高血糖會造成advanced glycation end products的增加， 進而造成TNF-α, IL-1的製造增加而影響膠原蛋白的合成。"
+        ],
+        "答案": "D",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P147"
+    },
+    {
+        "題別": "單",
+        "題號": "165",
+        "題目": "關於抽菸(tabacco smoking)對傷口癒合造成的影響，下列 敘述何者錯誤？",
+        "選項": [
+            "A. 會造成周邊血管收縮，讓傷口血流減少30%至40%。",
+            "B. 血清中一氧化碳增加會抑制oxidative cellular metabolism所需要的 enzyme systems。",
+            "C. Nicotine 也會促進 platelet prostacyclin, promoting platelet adhesiveness, thrombotic microvascular occlusion, and tissue ischemia。",
+            "D. 抽菸會抑制血管內皮細胞及纖維母細胞的功能, NO synthase activity, VEGF production, fibroblast proliferation, collagen synthesis, and vitamin C levels。",
+            "E. 動物實驗證實，皮瓣手術術前戒菸14天可與對照組有相 同的結果。"
+        ],
+        "答案": "C",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P146"
+    },
+    {
+        "題別": "單",
+        "題號": "166",
+        "題目": "下列何者有關於缺少Vitamin A時，在傷口癒合會出現的情 形是錯誤的？",
+        "選項": [
+            "A. 阻礙monocyte activation",
+            "B. 阻礙deposition of fibronectin",
+            "C. 影響cellular adhesion",
+            "D. 限制prothrombin and factors VII, IX, and X的合成",
+            "E. 妨害TGF-β receptors的功能"
+        ],
+        "答案": "D",
+        "出處": "SABISTON TEXTBOOK of\nSURGERY, 20th edition, P148"
+    }
+]

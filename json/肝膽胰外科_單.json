@@ -1,0 +1,2071 @@
+[
+    {
+        "題別": "單",
+        "題號": "1",
+        "題目": "無症狀之膽囊結石病人，其每年發生症狀的機率為？",
+        "選項": [
+            "A. 小於5﹪",
+            "B. 5-10﹪",
+            "C. 10-15﹪",
+            "D. 15-20﹪",
+            "E. 大於20﹪"
+        ],
+        "答案": "A",
+        "出處": "Schwartz's Principles of Surgery,\n10e, Ch 32, page 1346"
+    },
+    {
+        "題別": "單",
+        "題號": "2",
+        "題目": "有關肝臟之血流分布，下列敘述何者為正確？",
+        "選項": [
+            "A. 肝動脈（hepatic artery）提供大部分肝臟之血流供應",
+            "B. 與肝門靜脈（portal vein）相比較，肝動脈提供大部分膽 道之血流供應",
+            "C. 肝門靜脈提供大部分肝臟轉移瘤之血流供應",
+            "D. 大部分肝臟轉移瘤是經由肝動脈轉移而來的",
+            "E. 肝動脈和肝門靜脈皆有直接自我調解之作用（direct autoregulation）"
+        ],
+        "答案": "B",
+        "出處": "Sabiston's Textbook of Surgery 21th\ned., Ch 54, p1432-1435"
+    },
+    {
+        "題別": "單",
+        "題號": "3",
+        "題目": "嚴重肝臟外傷之病人，手術當中發生酸中毒及凝血功能不 正常，下列何者是最好的治療方法？",
+        "選項": [
+            "A. 肝動脈結紮（hepatic artery ligation）",
+            "B. 肝臟切除術（hepatic resection）",
+            "C. 肝臟周圍填塞（perihepatic packing）",
+            "D. 心房腔靜脈分流術（atrial caval shunting）",
+            "E. 肝門靜脈結紮（portal ligation）"
+        ],
+        "答案": "C",
+        "出處": "Trauma, Davis V. Feliciano 3rd ed.,\np506"
+    },
+    {
+        "題別": "單",
+        "題號": "4",
+        "題目": "關於阿米巴性肝膿瘍（Amebic liver abscess），下列何者 為非？",
+        "選項": [
+            "A. 主要源發於腸道感染(ascending vial portal vein)",
+            "B. 多為單一病灶",
+            "C. 好發於肝右葉",
+            "D. 臨床表現為急性腹痛與發燒",
+            "E. 臨床如果診斷確定，應儘早外科手術切開引流或切除"
+        ],
+        "答案": "E",
+        "出處": "Sabiston's Textbook of Surgery 21th\ned., Ch 54, p1457-1459"
+    },
+    {
+        "題別": "單",
+        "題號": "5",
+        "題目": "有關bile duct之malignant tumor，下列何者是錯誤的？",
+        "選項": [
+            "A. Adenocarcinoma最多，約佔70﹪",
+            "B. Upper third lesion最多",
+            "C. 最常見的symptom是pain",
+            "D. Klatskin tumor是指proximal CBD之lesions",
+            "E. CBD cancer的prognosis差"
+        ],
+        "答案": "C",
+        "出處": "Sabiston's Textbook of Surgery 21th\ned., Ch 55, p1519-1525"
+    },
+    {
+        "題別": "單",
+        "題號": "6",
+        "題目": "下列有關肝門部癌之觀念是錯誤？",
+        "選項": [
+            "A. 本症易發生於男性",
+            "B. 本症發生早期會有疼痛發生",
+            "C. 本症早期會出現黃疸",
+            "D. 本症手術時常已有局部轉移，但仍可切除治療",
+            "E. 本症手術切除後之五年生存率極低"
+        ],
+        "答案": "B",
+        "出處": "Sabiston's Textbook of Surgery 21th\ned., Ch 55, p1519-1525"
+    },
+    {
+        "題別": "單",
+        "題號": "7",
+        "題目": "肝細胞癌（hepatocellular carcinoma）可能與某些疾病有 關，何者不是？",
+        "選項": [
+            "A. B型肝炎",
+            "B. C型肝炎",
+            "C. primary biliary cirrhosis",
+            "D. hemochromatosis",
+            "E. aflatoxin"
+        ],
+        "答案": "C",
+        "出處": "Sabiston's Textbook of Surgery 21th\ned., Ch 54, p1465-1471"
+    },
+    {
+        "題別": "單",
+        "題號": "8",
+        "題目": "有關choledochocyst之敘述，下列何者不正確？",
+        "選項": [
+            "A. 百分之八十於孩童時期診斷出來",
+            "B. 常見之症狀為腹痛，黃膽，以及腹部腫塊",
+            "C. 膽道炎為常見之症狀，常合併有總膽管結石",
+            "D. 為一良性疾病，不會產生惡性變化",
+            "E. 最佳治療為囊腫切除合併膽道腸道吻合手術"
+        ],
+        "答案": "D",
+        "出處": "Sabiston's Textbook of Surgery 21th\ned., Ch 55, p1504-1505"
+    },
+    {
+        "題別": "單",
+        "題號": "9",
+        "題目": "Biliary enteric fistula下列哪種形式最為常見？",
+        "選項": [
+            "A. Choledochogastric",
+            "B. Choledochoduodenal",
+            "C. Cholecystocolic",
+            "D. Cholecystoduodenal",
+            "E. Choledochoesophageal"
+        ],
+        "答案": "D",
+        "出處": "Sabiston's Textbook of Surgery 21th\ned., Ch 55, p1502"
+    },
+    {
+        "題別": "單",
+        "題號": "10",
+        "題目": "下列何種primary malignancies轉移至肝臟，接受肝臟切除 ，其術後的效果最好？",
+        "選項": [
+            "A. Breast",
+            "B. Stomach",
+            "C. Ovary",
+            "D. Small intestines",
+            "E. Colon"
+        ],
+        "答案": "E",
+        "出處": "Schwartz, p1275"
+    },
+    {
+        "題別": "單",
+        "題號": "11",
+        "題目": "Left lateral segmentectomy of liver包括Couinaud’s segments幾小葉？",
+        "選項": [
+            "A. 1,2",
+            "B. 1,2,3",
+            "C. 2,3",
+            "D. 1,2,3,4",
+            "E. 2,3,4"
+        ],
+        "答案": "C",
+        "出處": "Sabiston's Textbook of Surgery 21th\ned., Ch 54, p15427-1430"
+    },
+    {
+        "題別": "單",
+        "題號": "12",
+        "題目": "有關於肝性腦病變（hepatic encephalopathy）的誘發因子 ，下列何者較無關？",
+        "選項": [
+            "A. GI bleeding",
+            "B. Constipation",
+            "C. Sedatives",
+            "D. Hyperglycemia",
+            "E. Diuretics"
+        ],
+        "答案": "D",
+        "出處": "Shackelford’s Surgery of the\nAlimentary Tract (3) 1996, p396"
+    },
+    {
+        "題別": "單",
+        "題號": "13",
+        "題目": "有關肝臟腺瘤（hepatic adenoma）的敘述，何者不正確？",
+        "選項": [
+            "A. 大多發生在年輕女性",
+            "B. 與口服避孕藥有關",
+            "C. 通常為單獨一個",
+            "D. 有出血及壞死的傾向",
+            "E. 不會轉變為惡性"
+        ],
+        "答案": "E",
+        "出處": "Sabiston's Textbook of Surgery 21th\ned., Ch 54, p1462-1463"
+    },
+    {
+        "題別": "單",
+        "題號": "14",
+        "題目": "下列敘述有關膽囊癌，何者是錯誤的？",
+        "選項": [
+            "A. 發生率約是膽囊手術例的1 - 2﹪",
+            "B. 女性較男性多",
+            "C. 可經由血流及淋巴擴散",
+            "D. 可經由膽囊結石手術，而早期發現",
+            "E. 臨床症狀絕少以黃疸表現"
+        ],
+        "答案": "E",
+        "出處": "Sabiston's Textbook of Surgery 21th\ned., Ch 55, p1516-1519"
+    },
+    {
+        "題別": "單",
+        "題號": "15",
+        "題目": "胰液（pancreatic juice）內，最重要的電解質是？",
+        "選項": [
+            "A. Sodium ion",
+            "B. Potassium ion",
+            "C. Bicarbonate ion",
+            "D. Chloride ion",
+            "E. Calcium ion"
+        ],
+        "答案": "C",
+        "出處": "Sabiston's Textbook of Surgery 21th\ned., Ch 56, p1531-1532"
+    },
+    {
+        "題別": "單",
+        "題號": "16",
+        "題目": "Intrahepatic stone最常發生哪個肝小葉的膽道？",
+        "選項": [
+            "A. Anterior segment Lateral",
+            "B. Anterior inferior segment",
+            "C. Lateral segment",
+            "D. Posterior superior segment",
+            "E. Posterior inferior segment"
+        ],
+        "答案": "C",
+        "出處": "Maingot’s Abdominal Operation,\np1739-1751"
+    },
+    {
+        "題別": "單",
+        "題號": "17",
+        "題目": "下列那一種Pancreatic endocrine tumor最容易ectopic的發 生在duodenum？",
+        "選項": [
+            "A. Somatosantinoma",
+            "B. Glucagonoma",
+            "C. Vipoma",
+            "D. Insalinoma",
+            "E. Gastrinoma"
+        ],
+        "答案": "E",
+        "出處": "Maingot’s Abdominal Operation,\np1961-1974"
+    },
+    {
+        "題別": "單",
+        "題號": "18",
+        "題目": "下列對於Cholangiocarcinoma的描述何者為誤？",
+        "選項": [
+            "A. Hilar cholangiocarcinoma又稱Klatskin tumor",
+            "B. Hilar cholangiocarcinoma常侵犯Segment 1的Biliary duct",
+            "C. Intrahepatic stone可以增加cholangiocarcinoma的發生",
+            "D. 病理上Infiltrating type較少見，且預後較好",
+            "E. Choledochol cyst是發生cholangio-carcinoma的危險因 子之一"
+        ],
+        "答案": "D",
+        "出處": "Maingot’s Abdominal Operation,\np1835-1851"
+    },
+    {
+        "題別": "單",
+        "題號": "19",
+        "題目": "下列有關胰臟囊性腫瘤（cystic neoplasm）的敘述，何者 為非？",
+        "選項": [
+            "A. 男性的罹患率是女性的三倍",
+            "B. 通常長在胰臟尾端",
+            "C. 漿液囊腺瘤（serous cystadenoma）極少有惡性變化",
+            "D. 黏液囊腺瘤（mucinous cystadenoma）有惡性變化的可 能",
+            "E. 手術前或手術中往往無法區別良性或惡性，因此建議一 律切除"
+        ],
+        "答案": "A",
+        "出處": "Sabiston's Textbook of Surgery 21th\ned., Ch 56, p15347-1551"
+    },
+    {
+        "題別": "單",
+        "題號": "20",
+        "題目": "下列有關急性膽管炎的敘述，何者為非？",
+        "選項": [
+            "A. Charcot's triad是指黃疸、腹痛、間歇性的寒顫及發燒",
+            "B. 患者在Charcot's triad的階段，緊急手術並非是必要的",
+            "C. Reynold's pentad 是指Charcot's triad再加上休克及代謝 性酸中毒",
+            "D. 當患者有Reynold's pentad時，若不予以緊急引流處置 ，會有致命的危險",
+            "E. 血液細菌培養最常見的細菌依次是E.Coli, Klebsiella pneumoniae, Streptococcus faecalis"
+        ],
+        "答案": "C",
+        "出處": "Sabiston's Textbook of Surgery 21th\ned., Ch 55, p1515-1516"
+    },
+    {
+        "題別": "單",
+        "題號": "21",
+        "題目": "下列何者是肝臟最常見的結節（nodule）？",
+        "選項": [
+            "A. 肝臟囊腫（cyst）",
+            "B. 血管瘤",
+            "C. 結核性結節",
+            "D. 腺瘤",
+            "E. 結節性增生"
+        ],
+        "答案": "B",
+        "出處": "Sabiston's Textbook of Surgery 21th\ned., Ch 54, p1464"
+    },
+    {
+        "題別": "單",
+        "題號": "22",
+        "題目": "下列何者不是Hemobilia之症狀？",
+        "選項": [
+            "A. 持續腸胃道出血",
+            "B. 右上腹痛",
+            "C. 黃膽",
+            "D. 斷續腸胃道出血",
+            "E. 吐血"
+        ],
+        "答案": "A",
+        "出處": "Sabiston's Textbook of Surgery 21th\ned., Ch 54, p1480-1481"
+    },
+    {
+        "題別": "單",
+        "題號": "23",
+        "題目": "有關十二指腸壺腹周圍癌症（periampullary cancer）經過 胰頭十二指腸切除後，預後最差的是？",
+        "選項": [
+            "A. 壺腹癌",
+            "B. 胰頭胰管癌",
+            "C. 胰頭黏液癌",
+            "D. 總膽管癌",
+            "E. 十二指腸癌"
+        ],
+        "答案": "B",
+        "出處": "Maingot’s abdominal operations,\n10th ed., p1962-1963"
+    },
+    {
+        "題別": "單",
+        "題號": "24",
+        "題目": "下列有關胰臟胰島素瘤（Insulinoma）之敘述，何者為非？",
+        "選項": [
+            "A. 為胰臟最常見的內分泌腫瘤",
+            "B. 最常出現於anatomic triangle",
+            "C. 約10﹪的病人為malignant",
+            "D. 約10﹪為multiple lesions",
+            "E. 大部份之insulinoma無法在術前定位"
+        ],
+        "答案": "B",
+        "出處": "Sabiston's Textbook of Surgery 21th\ned., Ch 39, p953-"
+    },
+    {
+        "題別": "單",
+        "題號": "25",
+        "題目": "關於gall stone ileus何者為非？",
+        "選項": [
+            "A. 造成小腸mechanical obstruction",
+            "B. Gall stone經由common bile duct掉到小腸造成阻塞",
+            "C. 20-50﹪病人可在KUB看到pneumobilia",
+            "D. 最常阻塞的地方為terminal ileum",
+            "E. 在年紀大的病患，手術方式以enterotomy and stone removal即可"
+        ],
+        "答案": "B",
+        "出處": "Surgery of the liver and biliary tract,\n2nd ed., p914-916"
+    },
+    {
+        "題別": "單",
+        "題號": "26",
+        "題目": "胰臟VIPoma之治療何者最理想？",
+        "選項": [
+            "A. 切除",
+            "B. 栓塞",
+            "C. 藥物治療",
+            "D. 飲食控制",
+            "E. 酒精局部注射"
+        ],
+        "答案": "A",
+        "出處": "Maingot's Abdominal operations\n10th ed. vol.2, p1971"
+    },
+    {
+        "題別": "單",
+        "題號": "27",
+        "題目": "胰臟mucinous ductal ectasia多位在何部位？",
+        "選項": [
+            "A. head",
+            "B. neck",
+            "C. body",
+            "D. tail",
+            "E. body + tail"
+        ],
+        "答案": "A",
+        "出處": "Maingot's Abdominal operations\n10th ed. vol.2, p1923"
+    },
+    {
+        "題別": "單",
+        "題號": "28",
+        "題目": "Caroli's desease指什麼類型之 Biliary cyst？",
+        "選項": [
+            "A. multiple extrahepatic cyst",
+            "B. multiple intrahepatic cyst",
+            "C. solitary fusiform extrahepatic cyst",
+            "D. fusiform extra and intrahepatic cyst",
+            "E. intraduodenal diverticulum, choledochocele"
+        ],
+        "答案": "B",
+        "出處": "Blumgart Surg. of Liver & Biliary\nTract 2nd ed. vol.2, p1184"
+    },
+    {
+        "題別": "單",
+        "題號": "29",
+        "題目": "與膽道囊腫（choledochal cyst）相關之惡性腫瘤以何者最 多？",
+        "選項": [
+            "A. 膽囊癌（gallbladder carcinoma）",
+            "B. 膽管癌（cholangiocarcinoma）",
+            "C. 胰臟癌（pancreatic carcinoma）",
+            "D. 肝癌（hepatocellular carcinoma）",
+            "E. 十二指腸癌（duodenal carcinoma）"
+        ],
+        "答案": "B",
+        "出處": "Blumgart Surg. of Liver & Biliary\nTract 2nd ed. vol.2, p1188"
+    },
+    {
+        "題別": "單",
+        "題號": "30",
+        "題目": "對於Type I choledochal cyst之手術，最理想的為何？",
+        "選項": [
+            "A. choledochocystoduodenostomy",
+            "B. choledochocystogastrostomy",
+            "C. choledochocystojejunostomy",
+            "D. excision of cyst plus Roux-en-y hepaticojejunostomy",
+            "E. Roux-en-y cholecystojejunostomy"
+        ],
+        "答案": "D",
+        "出處": "Blumgart Surg. of Liver & Biliary\nTract 2nd ed. vol.2, p1190"
+    },
+    {
+        "題別": "單",
+        "題號": "31",
+        "題目": "鑑別Liver之Cystadenoma與Simple cyst何者為非？",
+        "選項": [
+            "A. Cystadenoma可以惡性病變，Simple cyst大多不會",
+            "B. Cystadenoma切除後易再發，Simple cyst大多不會",
+            "C. Cystadenoma之內容為serous, Simple cyst之內容 mucinous",
+            "D. Cystadenoma有papillary projection, Simple cyst沒有",
+            "E. Cystadenoma有septations, Simple cyst沒有"
+        ],
+        "答案": "C",
+        "出處": "Blumgart Surg. of Liver & Biliary\nTract 2nd ed. vol.2, p1201"
+    },
+    {
+        "題別": "單",
+        "題號": "32",
+        "題目": "胰臟囊腫病灶之內容物何者viscosity較高？",
+        "選項": [
+            "A. Mucinous cystadenocarcinoma",
+            "B. Acute fluid collection",
+            "C. Pseudocyst",
+            "D. Serous cystadenoma",
+            "E. Papillary cystic neoplasm"
+        ],
+        "答案": "A",
+        "出處": "Maingot’s Abdomen Operation\n10th ed. Vol.1, p1925"
+    },
+    {
+        "題別": "單",
+        "題號": "33",
+        "題目": "有關胰臟之神經分佈何者不正確？",
+        "選項": [
+            "A. 其交感神經經由greater及lesser splanchnic nerve",
+            "B. 其副交感神經經由迷走神經",
+            "C. 自胰臟之疼痛刺激經由celiac plexus至thoracic sympathetic ganglion (V-XI) ganglion",
+            "D. Celiac block對胰臟炎比對胰臟癌有效",
+            "E. Celiac block可用alcohol, phenol或steroid"
+        ],
+        "答案": "D",
+        "出處": "Surgical Dissection of Pancreas, 3rd\ned. Howard J. 1998 (Williams &\nWilkins), p422"
+    },
+    {
+        "題別": "單",
+        "題號": "34",
+        "題目": "有關胰臟假性囊腫的敘述，下列何者不正確？",
+        "選項": [
+            "A. 最常見的症狀是腹痛",
+            "B. 通常在急性胰臟炎發作至少六週後才決定是否手術治療",
+            "C. 若假性囊腫大於六公分，需要手術治療的可能性更高",
+            "D. 電腦斷層攝影與腹部超音波，其診斷的價值並無明顯不 同",
+            "E. 急性胰臟炎發作三週內，胰臟周圍出現液體便可稱為假 性囊腫"
+        ],
+        "答案": "E",
+        "出處": "Sabiston: Textbook of surgery 15th\ned., p1168"
+    },
+    {
+        "題別": "單",
+        "題號": "35",
+        "題目": "急性胰臟炎的原因包括下列，除了？",
+        "選項": [
+            "A. 飲酒",
+            "B. 膽道疾患",
+            "C. 毒蝎咬傷",
+            "D. 藥物",
+            "E. 胃潰瘍"
+        ],
+        "答案": "E",
+        "出處": "Sabiston: Textbook of surgery 15th\ned., p1155"
+    },
+    {
+        "題別": "單",
+        "題號": "36",
+        "題目": "有關急性胰臟炎的敘述，下列何者不正確？",
+        "選項": [
+            "A. Cullen’s sign是急性出血性胰臟炎的一個徵象",
+            "B. Turner’s sign是急性出血性胰臟炎的一個徵象",
+            "C. 出現Cullen’s sign時，其死亡率大於30﹪",
+            "D. 出現Turner’s sign時，其死亡率大於30﹪",
+            "E. 急性胰臟炎時，不會出現黃疸"
+        ],
+        "答案": "E",
+        "出處": "Sabiston: Textbook of surgery 15th\ned., p1158"
+    },
+    {
+        "題別": "單",
+        "題號": "37",
+        "題目": "有關肝移植的敘述選擇正確者？",
+        "選項": [
+            "A. HBV related cirrhosis由於移植後復發率高，是 contraindication之一",
+            "B. 肝癌併肝外轉移者，仍可接受肝移植",
+            "C. HCV related cirrhosis患者在移植後，C型肝炎復發率小 於10%",
+            "D. 膽管癌的患者並不視為是好的適應症",
+            "E. 巨大肝癌合併肝硬化如施行肝移植，其存活率與其他非 肝癌適應症相當"
+        ],
+        "答案": "D",
+        "出處": "Transplantation of the Liver, p120-\n128"
+    },
+    {
+        "題別": "單",
+        "題號": "38",
+        "題目": "有關肝移植的敘述，正確者？",
+        "選項": [
+            "A. donor age > 50 y/o者，primary nonfunctional的比例大 於80%",
+            "B. 在liver procurement手術中，要注意從R't renal artery分 支過來的R't accessory hepatic artery",
+            "C. 肝臟保存溶液最好的是Euro-Collins solution",
+            "D. 一氧化碳中毒的腦死病人仍可以是organ donor",
+            "E. 摘取肝的過程中，我們會沖洗掉總膽管內之膽汁，其主 要原因是避免膽汁中的細菌造成移植後之膽管炎"
+        ],
+        "答案": "D",
+        "出處": "Transplantation of the Liver, p392-\n403"
+    },
+    {
+        "題別": "單",
+        "題號": "39",
+        "題目": "所謂pancreas divisum是？",
+        "選項": [
+            "A. 約50%的pancreas cancer的病人合併有pancreas divisum",
+            "B. 常與肝內結石有關",
+            "C. 臨床上有些病人會合併有胰臟炎",
+            "D. Main pancreatic duct消失不見，minor pancreatic duct 與distal CBD匯合後注入duodenum",
+            "E. Annular pancreas的病例一定會合併有pancreas divisum"
+        ],
+        "答案": "C",
+        "出處": "Shackelford’s Surgery of the\nAlimentary Tract, Vol Ⅲ, p13-15"
+    },
+    {
+        "題別": "單",
+        "題號": "40",
+        "題目": "有關肝癌何者正確？",
+        "選項": [
+            "A. 50%的病人是手術切除的Good candidate",
+            "B. 肝移植的成績可達5年80%的存活率",
+            "C. 術前肝功能是很重要的",
+            "D. CTAP是重要的檢查，檢查時需要做portal vein cannulation",
+            "E. 對於肝功能屬Child C等級的病人，TAE是治療方式的首 選"
+        ],
+        "答案": "C",
+        "出處": "Shackelford’s Surgery of the\nAlimentary Tract, Vol Ⅲ, p517-521"
+    },
+    {
+        "題別": "單",
+        "題號": "41",
+        "題目": "Idiopathic Thrombocytopenic Purpura的描述，何者錯誤？",
+        "選項": [
+            "A. CNS出血發生率約為1-2%",
+            "B. 常可摸到脾臟腫大",
+            "C. bleeding time延長，clotting time正常",
+            "D. 合併有autoimmune hemolytic anemia時稱為Evan's syndrome",
+            "E. Splenectomy後之病人約75-85%可永久治癒"
+        ],
+        "答案": "B",
+        "出處": "Principles of Surgery, Schwartz, 7th\ned., p1507"
+    },
+    {
+        "題別": "單",
+        "題號": "42",
+        "題目": "有關胰臟癌的切除性手術及治療，何者為非？",
+        "選項": [
+            "A. 胰臟全切除，會造成糖尿病",
+            "B. 根據腹腔內淋巴腺的分類，胰臟頭部後面的淋巴腺屬於 group 13",
+            "C. 主胰管的阻塞超過60%才會使胰臟外分泌功能產生異常",
+            "D. 約15 - 20%切除率",
+            "E. 術後化學治療平均之反應率（response rate）大於50%"
+        ],
+        "答案": "E",
+        "出處": "Textbook of Surgery, Sabiston 14th\ned., p1086-1088"
+    },
+    {
+        "題別": "單",
+        "題號": "43",
+        "題目": "胰小島所產生的內分泌物質包括，除了？",
+        "選項": [
+            "A. Insulin",
+            "B. Gastrin",
+            "C. Glucagon",
+            "D. Secretin",
+            "E. Pancreatic polypeptide (PP)"
+        ],
+        "答案": "D",
+        "出處": "Textbook of Surgery, Sabiston 13th\ned., p1177"
+    },
+    {
+        "題別": "單",
+        "題號": "44",
+        "題目": "下列有關門靜脈的敘述，哪一項是錯誤的？",
+        "選項": [
+            "A. 供應肝臟75%血流量",
+            "B. 約5 - 8公分長，1 - 3公分直徑",
+            "C. 匯集上繫膜靜脈（superior mesenteric vein）及脾靜脈 （splenic vein）",
+            "D. 與下肢較大靜脈一樣有valve",
+            "E. 左側門靜脈分成Pars Transversus及Pars Umbilicalis"
+        ],
+        "答案": "D",
+        "出處": "Textbook of Surgery, Sabiston, 14th\ned., p978-979"
+    },
+    {
+        "題別": "單",
+        "題號": "45",
+        "題目": "發生門靜脈高壓（portal hypertension）後，最重要的門靜 脈及腔靜脈側枝循環（portal systemic collaterals）是？",
+        "選項": [
+            "A. Recanalization（管道再形成）of Umbilical vein (臍靜 脈)",
+            "B. 後腹膜腔靜脈叢（retroperitoneal collaterals）",
+            "C. Hemorrhoid venous plexus",
+            "D. Intrahepatic shunt",
+            "E. Short gastric vein及coronary vein匯集入Azygos vein"
+        ],
+        "答案": "E",
+        "出處": "Textbook of Surgery, Sabiston, 14th\ned., p1016"
+    },
+    {
+        "題別": "單",
+        "題號": "46",
+        "題目": "Vasopressin使用於治療急性食道靜脈瘤破裂出血，下列敘 述，何者錯誤？",
+        "選項": [
+            "A. 強力的內臟血管擴張劑（splanchnic vasodilator），以 期降低門靜脈壓力",
+            "B. 約50%有效控制出血",
+            "C. 造成高血壓，心跳減慢，心臟輸出減少，冠狀動脈收縮",
+            "D. 因上述心臟血管之併發症，故現已較少被採用",
+            "E. 與nitroglycerin合用，可增加效果"
+        ],
+        "答案": "A",
+        "出處": "Textbook of Surgery, Sabiston, 14th\ned., p1021"
+    },
+    {
+        "題別": "單",
+        "題號": "47",
+        "題目": "下列敘述關於膽血症（Hemobilia），何者是錯誤的？",
+        "選項": [
+            "A. 外傷是膽血症最常見的原因",
+            "B. 臨床表現以消化道出血、發燒、畏寒、黃疸最為常見",
+            "C. ERCP是最好的診斷工具之一",
+            "D. 膽囊結石不會發生膽血症",
+            "E. 經導管肝動脈栓塞，是治療方法之一"
+        ],
+        "答案": "D",
+        "出處": "Textbook of Surgery, Sabiston, 14th\ned., p1012-1015"
+    },
+    {
+        "題別": "單",
+        "題號": "48",
+        "題目": "Klatskin tumor是指發生於何處之malignancy？",
+        "選項": [
+            "A. cystic duct",
+            "B. CBD",
+            "C. hepatic duct bifurcation",
+            "D. peripheral intrahepatic bile ducts",
+            "E. Ampulla of vater"
+        ],
+        "答案": "C",
+        "出處": "Schwartz Textbook of Surgery 7th\ned., p1068"
+    },
+    {
+        "題別": "單",
+        "題號": "49",
+        "題目": "drug-induced pancreatitis何者為非？",
+        "選項": [
+            "A. penicillin",
+            "B. estrogen-containing drugs",
+            "C. tetracycline",
+            "D. corticosteroid",
+            "E. azathioprine"
+        ],
+        "答案": "A",
+        "出處": "Sabiston Textbook of Surgery,\np1081"
+    },
+    {
+        "題別": "單",
+        "題號": "50",
+        "題目": "Pancreatic endocrine tumor中哪一種malignancy rate最 低？",
+        "選項": [
+            "A. gastrinoma",
+            "B. glucagonoma",
+            "C. vipoma",
+            "D. somatostatinoma",
+            "E. insulinoma"
+        ],
+        "答案": "E",
+        "出處": "Sabiston Textbook of Surgery 15th\ned., p1176"
+    },
+    {
+        "題別": "單",
+        "題號": "51",
+        "題目": "Periampullary carcinoma最常出現的臨床表徵為：",
+        "選項": [
+            "A. fever",
+            "B. jaundice",
+            "C. ascites",
+            "D. palpable RUQ mass",
+            "E. GI bleeding"
+        ],
+        "答案": "B",
+        "出處": "Sabiston Textbook of Surgery 15th\ned., p1094"
+    },
+    {
+        "題別": "單",
+        "題號": "52",
+        "題目": "Krukenberg's tumor是指胃癌經何種途徑轉移的？",
+        "選項": [
+            "A. 血液",
+            "B. 淋巴",
+            "C. 腹腔內播種",
+            "D. 直接侵犯",
+            "E. 門靜脈"
+        ],
+        "答案": "C",
+        "出處": "Sabiston Textbook of Surgery 7th\ned., p1203"
+    },
+    {
+        "題別": "單",
+        "題號": "53",
+        "題目": "以下何者不是SMA syndrome之特色？",
+        "選項": [
+            "A. 常發生於肥胖者",
+            "B. 和aorta and SMA的角度有關",
+            "C. 和長期平躺或臥床有關",
+            "D. 症狀是十二指腸阻塞症狀",
+            "E.手術施行duodeno-jejunostomy"
+        ],
+        "答案": "A",
+        "出處": "Sabiton Textbook of Surgery, p807-\n812"
+    },
+    {
+        "題別": "單",
+        "題號": "54",
+        "題目": "胃癌最常轉移到何處？",
+        "選項": [
+            "A. pancreas",
+            "B. lung",
+            "C. colon",
+            "D. liver",
+            "E. bone"
+        ],
+        "答案": "D",
+        "出處": "Sabiston Textbook of Surgery 14th\ned., p818-823"
+    },
+    {
+        "題別": "單",
+        "題號": "55",
+        "題目": "70歲男性因一年前胰頭癌接受傳統之 Whipple operation 近 來一個月主訴疲倦、發燒（38.5℃）、黃疸，血液檢查： WBC14500 cells/mm3, N/L:90/8, HGB:12.8g/Dl, platelet:158000 cells/mm3, SGOT:43 U/dL, SGPT:29 U/dL, Total bilirubin:5.8 mg/dL, direct bilirubin; 4.2 mg/dL, BUN:28 mg/dL, Cr:1.6 mg/dL，超音波顯示右上腹有一腫 脹之小腸，其最可能之診斷為？",
+        "選項": [
+            "A. 腹內膿瘍",
+            "B. 肝臟轉移",
+            "C. 肝硬化",
+            "D. 總肝管空腸吻合處狹窄",
+            "E. Roux-limb之空腸因腫瘤再發造成阻塞"
+        ],
+        "答案": "E",
+        "出處": "Maingot’s Abdominal Operation\n9th ed., p173"
+    },
+    {
+        "題別": "單",
+        "題號": "56",
+        "題目": "一位48歲女性當年因急性膽囊炎開刀，今日因右上腹痛， 至本院急診室求診，理學檢查右上腹有壓痛、腹脹、發燒 （38.5℃），血液學檢查WBC:16000 cells/mm3, N/L :90.8/9.1, HGB:13.2g/dL, PLT:158000 cells/mm3, 生化檢查：SGOT:39 U/dL, SGPT:40 U/dL, BUN:30mg/dL, Cr:1.6mg/dL, total bilirubin:2.3 mg/dL, Direct bilirubin:1.0 mg/dL Alk-P:210, Amylase:100IU/L, 超音波檢查可見總膽管，直徑約0.8cm大小。 下列何者為最有可能之診斷？",
+        "選項": [
+            "A. 急性胃炎（Acute gastritis）",
+            "B. 急性胰臟炎（Acute pancreatitis）",
+            "C. 急性腸炎（Acute enteritis）",
+            "D. 急性膽管炎（Acute cholangitis）",
+            "E. 肝膿瘍（Abscess of liver）"
+        ],
+        "答案": "D",
+        "出處": "Shackelford’s Surgery of the\nAlimentary Tract III, p222-223"
+    },
+    {
+        "題別": "單",
+        "題號": "57",
+        "題目": "30歲女性因右上腹部悶痛求診，超音波檢查發現肝臟左葉 有一4公分腫瘤。該患者病史顯示無肝炎史或酗酒曾服用口 服避孕藥有五年之久， 下列較有可能之診斷及適當處置為？",
+        "選項": [
+            "A. 腺瘤（Adenoma），觀察",
+            "B. 腺瘤（Adenoma），肝腫瘤切除",
+            "C. 肝細胞癌（Hepatoma），肝動脈栓塞術（TAE）",
+            "D. 肝細胞癌（Hepatoma），經皮酒精注射法",
+            "E. 肝細胞癌（Hepatoma），全身性化學治療"
+        ],
+        "答案": "B",
+        "出處": "Shackelford’s Surgery of the\nAlimentary Tract III, p432"
+    },
+    {
+        "題別": "組合題",
+        "題號": "58",
+        "題目": "【組合題58-59】一49歲男性，過去並無肝病病史。因右上 腹悶痛，至門診求診，經超音波檢查後，發現在Segment VII距離肝表面1公分處有一2 ×2公分，並呈圓形之 Hyperechoic lesion電腦斷層檢查，動脈相腫瘤顯影較正常 肝實質強，在門脈相腫瘤顯影較正常肝實質弱。 上述之腫瘤，最有可能為下列何者？",
+        "選項": [
+            "A. 肝細胞瘤（Hepatocellular carcinoma）",
+            "B. 肝膽管癌（Cholangiocarcinoma）",
+            "C. 肝腺瘤（Hepatic adenoma）",
+            "D. 局部節結（Focal nodular hyperplasia）",
+            "E. 大腸癌肝轉移"
+        ],
+        "答案": "A",
+        "出處": "Shackelford’s Surgery of the\nAlimentary Tract III, p428, 434-435"
+    },
+    {
+        "題別": "組合題",
+        "題號": "59",
+        "題目": "【組合題58-59】承上題，根據Couinaud肝葉命名法，上 述之Segment VII，位於",
+        "選項": [
+            "A. 左側中間葉（Left media）",
+            "B. 右前下葉（Right anterior inferior）",
+            "C. 右後下葉（Right posterior inferior）",
+            "D. 右後上葉（Right posterior superior）",
+            "E. 右前上葉（Right anterior superior）"
+        ],
+        "答案": "D",
+        "出處": "Shackelford’s Surgery of the\nAlimentary Tract III, p300-301"
+    },
+    {
+        "題別": "組合題",
+        "題號": "60",
+        "題目": "【組合題60-61】80歲肥胖男性，曾接受闌尾切除，體檢時 得知有膽結石，但無明顯之症狀，五天前突發腹絞痛、嘔 吐、發燒，腹部有壓痛，但無反彈痛，腸蠕動增加，血液 檢查：WBC:16000 cells/mm3，N/L:83/16，生化學檢查： Albumin:2.8gm/dl, total bilirubin:1.2 mg/Dl, AST/ALT:40/30, Alk-p:120IU, BUN/Cr:50/1.9，腹部X光檢 查，小腸有脹氣，右上方肝影有樹枝氣體陰影，右下方有 一橢圓形白色（radiopaque）影子，下列診斷何者最可 能：",
+        "選項": [
+            "A. 小腸粘連造成腸阻塞",
+            "B. 膽結石移位造成總膽管阻塞性",
+            "C. 膽石性腸阻塞（gallstone ileus）",
+            "D. 膽管破裂合併腹膜炎，並有敗血症",
+            "E. 急性膽囊炎併發膽汁性腹膜炎"
+        ],
+        "答案": "C",
+        "出處": "Shackelford’s Surgery of the\nAlimentary Tract III, p273-278\nMaingot’s Abdominal Operation\n9th ed., p923-926"
+    },
+    {
+        "題別": "組合題",
+        "題號": "61",
+        "題目": "【組合題60-61】承上題，剖腹探查術中，發現小腸腫脹， 膽囊內無大顆結石，若考慮降低手術風險，下列何者為較 適當處置？",
+        "選項": [
+            "A. 小腸粘連分離術（enterolysis）",
+            "B. 小腸切開取石術（enterotomy and removal of stone）",
+            "C. 膽囊切除術（cholecystectomy）",
+            "D. 膽囊腸廔管切除術",
+            "E. 小腸切開取石術和膽囊切除術"
+        ],
+        "答案": "B",
+        "出處": "Shackelford’s Surgery of the\nAlimentary Tract III, p273-278\nMaingot’s Abdominal Operation\n9th ed., p923-926"
+    },
+    {
+        "題別": "組合題",
+        "題號": "62",
+        "題目": "【組合題62-63】50歲男性B型肝炎帶原者因腹痛、心悸、 冒冷汗至急診室，超音波檢查發現在肝臟右後下葉（Seg VI）有一10 ×10 ㎝的腫瘤，腹腔內約有1000 ㏄液體，經輸 血後生命徵候暫穩定。 下列何者為最適當的處置？",
+        "選項": [
+            "A. 右後下葉切除術",
+            "B. 右葉切除術",
+            "C. 動脈栓塞術",
+            "D. Radiofrequency ablation",
+            "E. 酒精注射法"
+        ],
+        "答案": "C",
+        "出處": "Blumgart's Surgery of the Liver,\nBiliary tract, and Pancreas. 6th\nedition. P1400"
+    },
+    {
+        "題別": "組合題",
+        "題號": "63",
+        "題目": "【組合題62-63】承上題，病患若接受血清腫瘤指數檢查， 下列何者最有可能上升？",
+        "選項": [
+            "A. CEA",
+            "B. AFP",
+            "C. CA19-9",
+            "D. CA125",
+            "E. CA153"
+        ],
+        "答案": "B",
+        "出處": "Blumgart's Surgery of the Liver,\nBiliary tract, and Pancreas. 6th\nedition. P1334"
+    },
+    {
+        "題別": "組合題",
+        "題號": "64",
+        "題目": "【組合題64-65】一65歲男性因上腹痛至急診室求診，該患 者除平日喜歡喝酒外無其他病史，經超音波檢察查發現胰 臟水腫，膽囊腫脹但無結石。在急診室實驗室檢查如下： 血液常規檢查：Hct: 45﹪，WBC: 15000 cells/cm3， Neutrophil: 85﹪，Platelet: 20×104cells/mm3 生化檢查：Na: 135mmol/L，K: 4.1mmol/L，Glu: 250mg/dL，BUN: 25mg/dL，Cr: 1.0mg/dL，GOT: 200U/dL，GPT: 40U/dL，Amylase:1000IU/L，LDH: 300IU/L. 住院治療第二天，實驗室檢查如下： 血液常規檢查： Hct: 30﹪, WBC: 170000cells/am3, Neutrophil: 90﹪, Platelet: 15x104 生化檢查：Na: 133mmol/L, K: 3.5mmol/L, Glu: 200mg/Dl, BUN: 45mg/dL, Cr: 1.7mg/dL GOT:220 U/dL, GPT: 40 U/dL, Amylase: 400IU/L, Ca: 9mg/dL, Albumin: 3.0g/dL, 動脈氣體分析：PH: 7.35, PaCO2: 35mmHg, PaO2: 65mmHg, HCO3: 17.5mmol/L, Base deficit: 6meq/L 預估fluid sequestration約4L。 請問以Ranson's criteria來評估此病人的嚴重性為：",
+        "選項": [
+            "A. 2分 B. 3分 C. 4分 D. 5分 E. 6分"
+        ],
+        "答案": "D",
+        "出處": "Schwartz's Principle of Surgery. 11th\nedition. P1445"
+    },
+    {
+        "題別": "組合題",
+        "題號": "65",
+        "題目": "【組合題64-65】承上題，下列何者非該患者的手術適應 症？",
+        "選項": [
+            "A. 瀰漫性腹膜炎（Diffuse peritonitis）",
+            "B. 胰臟膿瘍（Pancreatic abscess）",
+            "C. 胰臟偽囊腫（pancreatic pseudocyst）",
+            "D. 在顯影電腦斷層中，胰臟50﹪沒有顯影",
+            "E. 內科治療三天，病情持續惡化"
+        ],
+        "答案": "C",
+        "出處": "Schwartz's Principle of Surgery. 11th\nedition. P1448"
+    },
+    {
+        "題別": "組合題",
+        "題號": "66",
+        "題目": "【組合題66-67】七十六歲劉老太太突發腹痛，間歇性寒顫 ，發燒被送到急診室。理學檢查發現劉老太太神智清醒， 血壓122/70 mmHg，心跳105/min，呼吸16/min，體溫 38.5℃，皮膚泛黃，血液檢查白血球15,000/cumm, Band 10﹪, Seg 85﹪, CRP（C-reactive protein）12 mg/dL，生 化檢查結果顯示血清總膽紅素6 mg/dL，直接型膽紅素4 mg/dl，鹼性磷酸脢：269U/L, AST：340U/L, ALT： 230U/L, BUN：36 mg/dL, Creatinine：1.8 mg/dL；腹部超 音波檢查疑有總膽管結石，膽囊結石及總膽管擴張現象， 劉老太太的臨床診斷是膽結石引起阻塞性黃疸及急性膽管 炎。 此時最適當的處置應是：",
+        "選項": [
+            "A. 立即安排電腦斷層掃描，若發現有總膽管結石，應即刻 進行膽囊切除及總膽管取石術",
+            "B. 立即安排核醫Cholescintigraphy以鑑別是膽囊發炎或膽 管炎，以利後續的治療",
+            "C. 立即安排膽管造影（Cholangiography）來找出造成黃疸 的原因",
+            "D. 不須額外影像檢查，即應安排膽囊切除及T型管置入總 膽管，以利膽管減壓，減少感染",
+            "E. 予以禁食，充足的靜脈輸液，血液細菌培養以及投予抗 生素"
+        ],
+        "答案": "E",
+        "出處": "Textbook of Surgery, Sabiston ed 第\n14版，p1064-1069"
+    },
+    {
+        "題別": "組合題",
+        "題號": "67",
+        "題目": "【組合題66-67】承上題，劉老太太臨床上已符合急性膽管 炎Charcot triad的診斷條件，如果劉老太太來到急診室時已 有神智障礙（CNS depression）再加下列何項，即構成 Reynolds' pentad，一種形式更嚴重更危急的急性膽管炎",
+        "選項": [
+            "A. Serum amylase > 2000U/L",
+            "B. Serum total bilirubin > 2.0mg/dL",
+            "C. Creatinine > 2.0mg/dL",
+            "D. 瞳孔對光反射遲鈍",
+            "E. 休克"
+        ],
+        "答案": "E",
+        "出處": "Sabiston Textbook of Surgery. 21th\nedition. p1500"
+    },
+    {
+        "題別": "組合題",
+        "題號": "68",
+        "題目": "【組合題68-69】楊先生，47歲，因腹脹，食慾下降，體重 減輕，膚色泛黃，到醫院接受檢查，血液檢查白血球 7500/cumm，血色素11.2g/dL，總膽紅素高達8.4mg/Dl, CA19-9: 156U/ml，電腦斷層掃描發現有一約3公分大的 periampullary mass lesion，並且有肝內及肝外膽管擴張現 象，沒有SMV及SMA encasement的情形，也沒有遠處轉 移。臨床上評估是可切除的periampullary cancer。 有關術前的準備那一項考慮是較不需要的？",
+        "選項": [
+            "A. 病患營養的評估及補充",
+            "B. 腸道準備，例如清腸及口服抗生素",
+            "C. 評估病患的凝血功能，必要時外加維他命K",
+            "D. 術前放置經皮穿肝膽管引流管，降低總膽紅素以期降低 手術的死亡率",
+            "E. 手術週期給予預防性抗生素注射以期減少傷口感染率"
+        ],
+        "答案": "D",
+        "出處": "Sabiston Textbook of Surgery. 21th\nedition. P1554"
+    },
+    {
+        "題別": "組合題",
+        "題號": "69",
+        "題目": "【組合題68-69】承上題，你打算幫楊先生手術，你選擇的 術式是傳統的Whipple procedure而非幽門保留十二指腸胰 臟切除（Pylorus preserving pancreaticoduodenectomy） ， 因為傳統Whipple procedure的優勢在於：",
+        "選項": [
+            "A. 手術較radical，對病患的survival有利",
+            "B. 較少的手術時間",
+            "C. 較少發生pancreaticojejunostomy leak",
+            "D. 較少發生marginal ulcer",
+            "E. 較少發生delayed gastric emptying"
+        ],
+        "答案": "E",
+        "出處": "Sabiston Textbook of Surgery. 21th\nedition. P1558"
+    },
+    {
+        "題別": "組合題",
+        "題號": "70",
+        "題目": "【組合題70-71】張太太，65歲，突發上腹部劇烈疼痛，立 即被家人送達急診室，理學檢查發現血壓160/90 mmHg， 心跳82/min，體溫37℃，其上腹有明顯壓痛及反彈疼痛外 ，並無腹部僵直的情形，血液檢查WBC: 12,000/cumm, Hg:11.3g/Dl, Blood sugar: 180mg/dL, AST: 200 U/dl, ALT:120 U/dL, Total bilirubin:1.8 mg/dL, Direct bilirubin: 0.7 mg/dL, Serum LDH: 400 IU/L, Serum amylase: 3,500U/L, serum lipase: 1,800U/dL。腹部超音波發現有膽 囊結石，總膽管寬度約8mm，臨床診斷是gall stone associated pancreatitis。 你用Ranson scoring system來評估此急性胰臟炎的嚴重度 ，下列何項不是Ranson score的項目？",
+        "選項": [
+            "A. 年齡",
+            "B. 白血球數",
+            "C. ALT",
+            "D. 血糖",
+            "E. LDH"
+        ],
+        "答案": "C",
+        "出處": "Schwartz's Principle of Surgery. 11th\nedition. P1445"
+    },
+    {
+        "題別": "組合題",
+        "題號": "71",
+        "題目": "【組合題70-71】承上題，依劉太太的情況，較恰當的處置 是：",
+        "選項": [
+            "A. 為防止膽石持續存留導致急性胰臟炎惡化，應在24小時 內為她做膽囊切除，術中做膽管攝影，若有總膽管結石， 再將膽管切開取石",
+            "B. 安排經皮穿肝膽囊或總膽管引流，以防進一步發展成急 性膽管炎而惡化病情",
+            "C. 內科治療及觀察期間，止痛藥物以效力強的morphine為 首選",
+            "D. 應在24小時內安排Endoscopic retrograde cholangiopancreatography (ERCP)，若有CBD stone，則 加上Sphincterotomy，將stone取出，以免胰臟炎惡化",
+            "E. 給予內科支持性治療即可，通常輕度急性胰臟炎會自然 緩解。待緩解後在同一次住院療程中進行膽石手術即可"
+        ],
+        "答案": "E",
+        "出處": "Schwartz's Principle of Surgery. 11th\nedition. P1446"
+    },
+    {
+        "題別": "組合題",
+        "題號": "72",
+        "題目": "【組合題72-74】陳先生，56歲，乙型肝炎帶原者，近期腹 部超音波發現有一大小約4公分的腫瘤，電腦斷層影像呈現 一高血管性的腫瘤於左側節（lateral segment），無肝硬化 現象，無腹水，其血清白蛋白為4.0 g/dl，總膽紅素為 0.6mg/dl, ALT: 56 U/L, INR: 1.0，血清胎兒蛋白: 200ng/ml；ICG15分鐘的retention rate是3﹪。在肝細胞癌 的診斷下，陳先生接受肝臟左側節切除。請依此段敘述， 回答下列各問題？ 上述陳先生的背景資料中，何項不屬Child classification的 criteria？",
+        "選項": [
+            "A. 血清白蛋白",
+            "B. 總膽紅素",
+            "C. 腹水",
+            "D. INR",
+            "E. ALT"
+        ],
+        "答案": "E",
+        "出處": "Schwartz's Principle of Surgery. 11th\nedition. P1365"
+    },
+    {
+        "題別": "組合題",
+        "題號": "73",
+        "題目": "【組合題72-74】承上題，陳先生手術後病理檢查證實為肝 細胞癌，腫瘤最大徑為4.2公分，無腫瘤包膜，有微視下（ microscopic）門脈血管侵襲，細胞分化程度是 Edmondson-Steiner grade III，無肝硬化現象。根據 American Joint Commission on Cancer，陳先生的TNM staging為T2N0M0，T的考慮除了腫瘤大小、數目，有無肝 臟周邊器官侵襲外，還要考慮下列何者？",
+        "選項": [
+            "A. 腫瘤的外觀型態，例如nodular type, massive type或 infiltrative type",
+            "B. 有無腫瘤包膜",
+            "C. 有無血管侵襲",
+            "D. 有無肝硬化",
+            "E. 細胞分化程度"
+        ],
+        "答案": "C",
+        "出處": "AJCC cancer staging manual. 8th\nedition."
+    },
+    {
+        "題別": "組合題",
+        "題號": "74",
+        "題目": "【組合題72-74】承上題，肝癌術後，復發的位置以何者最 為常見？",
+        "選項": [
+            "A. 肺",
+            "B. 骨骼",
+            "C. 肝",
+            "D. 腦",
+            "E. 皮膚"
+        ],
+        "答案": "C",
+        "出處": "Blumgart's Surgery of the Liver,\nBiliary tract, and Pancreas. 6th\nedition. P1338"
+    },
+    {
+        "題別": "組合題",
+        "題號": "75",
+        "題目": "【組合題75-76】李先生因上腹部不適，經診斷為膽囊結石 引起之慢性膽囊炎，經家庭醫師轉介給一般外科醫師，經 評估建議李先生接受腹腔鏡膽囊切除術。腹腔鏡膽囊切除 術，已被認為是膽囊切除術的gold standard procedure，原 因在於，除了？",
+        "選項": [
+            "A. 傷口小，美觀",
+            "B. 疼痛少，止痛劑使用較少",
+            "C. 雖然手術器材較貴，但因為住院天數少，所以整體成本 並未增加",
+            "D. 患者復原快，可提早回歸正常及工作",
+            "E. 對初學者而言，由於手術視野更清楚，所以膽管損傷率 較低"
+        ],
+        "答案": "E",
+        "出處": "Schwartz's Principle of Surgery. 11th\nedition. P1419"
+    },
+    {
+        "題別": "組合題",
+        "題號": "76",
+        "題目": "【組合題75-76】承上題，李先生手術後，腹脹的感覺不但 沒有消失，黃疸加劇，腹部超音波有很明顯的肝內膽管及 總肝管擴張的現象。你疑有總肝管或總膽管損傷，這時已 經是術後第七天，李先生開始有發燒情形。你幫李先生安 排經皮穿肝膽管攝影檢查，發現顯影劑無法通過總肝管， 懷疑有總肝管橫斷現象，下一步如何做較恰當？",
+        "選項": [
+            "A. 立即手術找到橫斷部位做總肝管及總膽管吻合end-to- end choledocholedocholedochostomy",
+            "B. 立即手術找到橫斷部位做總肝管及十二指腸吻合end-to- side choledochoduodenostomy",
+            "C. 不急手術，先放置膽管引流管，讓黃疸回復正常，發炎 消退，約6至8星期後，再手術找到橫斷部位做總肝管及總 膽管吻合end-to-end choledocholedocholedochostomy",
+            "D. 不急手術先放置膽管引流管，讓黃疸回復正常，發炎消 退，約6至8星期後，再手術找到橫斷部位做總肝管及小腸 吻合Roux-en-Y hepatucojejunostomy",
+            "E. 立即手術找到橫斷部位，做總肝管及小腸吻合Roux-en- Y choledochojejunostomy"
+        ],
+        "答案": "D",
+        "出處": "Schwartz's Principle of Surgery. 11th\nedition. P1420"
+    },
+    {
+        "題別": "單",
+        "題號": "77",
+        "題目": "某中年男性腹痛，澱粉酶上升，發燒、呼吸急促，診斷為 壞死性胰臟炎，在往後臨床變化上可預期之併發症敘述， 何者為非？",
+        "選項": [
+            "A. 可成黃疸，但無膽道阻塞",
+            "B. 可呈黃疸，但有膽道阻塞",
+            "C. 後腹腔組織侵潤可由腎臟包膜有無缺損判斷，但不影響 預後",
+            "D. 含活化消化酵素之胰分泌液體可造成腸胃穿孔與腹膜炎",
+            "E. 炎性動脈瘤破裂好發在脾動脈"
+        ],
+        "答案": "C",
+        "出處": "Schwartz's Principle of Surgery. 11th\nedition. P1450"
+    },
+    {
+        "題別": "單",
+        "題號": "78",
+        "題目": "某中年男性在胰臟炎發作，經保守療法治療兩個月後，發 生腹痛與腹部腫脹，下列敘述何者為非？",
+        "選項": [
+            "A. 行電腦斷層檢查，可能發現胰臟偽性囊腫（ pseudocyst）",
+            "B. 行電腦斷層檢查，可能發現胰臟炎復發",
+            "C. 行電腦斷層檢查，可能發現胰臟週邊組織之壞死",
+            "D. 如果存在偽性囊腫，需要即時作手術引流或切除",
+            "E. 偽性囊腫之內膜往往無上皮細胞披覆"
+        ],
+        "答案": "D",
+        "出處": "Schwartz's Principle of Surgery. 11th\nedition. P1448"
+    },
+    {
+        "題別": "單",
+        "題號": "79",
+        "題目": "某五十歲男性病人，腹部超音波意外發現有腫瘤陰影，經 診斷懷疑為肝臟之轉移性惡性腫瘤，下列敘述何者為非？",
+        "選項": [
+            "A. 最常見之原發癌來自肺、大腸、胰及乳房、胃",
+            "B. Colorectal cancer轉移至肝臟，30﹪為synchronous， 70﹪為metachronous",
+            "C. 轉移性肝腫瘤切除之預後不佳，所以不應以手術切除治 療",
+            "D. 有部份病人無法找到原發腫瘤病兆（unknown primary）",
+            "E. CEA或胎兒蛋白之高低可幫助鑑別原發或轉移性肝腫瘤"
+        ],
+        "答案": "C",
+        "出處": "Blumgart's Surgery of the Liver,\nBiliary tract, and Pancreas. 7th\nedition. P1179"
+    },
+    {
+        "題別": "單",
+        "題號": "80",
+        "題目": "某六十歲男性病人，發燒並有右上腹疼痛，超音波發現肝 內有一囊性病兆，診斷為肝膿瘍，下列敘述何者為非？",
+        "選項": [
+            "A. 病原為細菌約占80﹪，寄生蟲約占15﹪",
+            "B. 其原發原因包括膽道發炎、腸道炎症、癌症等，但約1/3 屬於cryptogenic",
+            "C. AIDS、DM、Alcoholism為好發族群因素",
+            "D. 右葉膿瘍較少為單發性，左葉膿瘍較少為多發性",
+            "E. 多數膿瘍可以抗生素與經皮穿刺引流治癒"
+        ],
+        "答案": "D",
+        "出處": "Schwartz's Principle of Surgery. 11th\nedition. P1369-1370"
+    },
+    {
+        "題別": "單",
+        "題號": "81",
+        "題目": "病人半年前曾接受laparoscopic cholecystectomy，由於 CBD injury，第一次術中即接受Roux-en-Y choledochojejunostomy，此次由於發燒，冷顫，由急診住 院，WBC 21000 (band 9﹪ segment 70﹪), total bilirubin 18.0 mg/dL, direct bilirubin 12.0 mg/ dL, alkaline phosphatase 540 U/L, blood culture: Gram negative bacilli, BP 70/40 mmHg, HR 140/min 以下(A)至(E)，那一項是您最不建議之處置？",
+        "選項": [
+            "(A) I.V. fluid, vasopressors to support blood pressure",
+            "(B) Parenteral antibiotics",
+            "(C) Emergency operation for reconstruction",
+            "(D) PTBD (percutaneous transhepatic biliary drainage)",
+            "(E) Abdomen CT scan"
+        ],
+        "答案": "C",
+        "出處": "Sabiston Textbook of Surgery. 21th\nedition. P1462"
+    },
+    {
+        "題別": "單",
+        "題號": "82",
+        "題目": "49歲男性病患，C肝帶原者，接受定期肝臟檢查，二週前腹 部超音波檢查及電腦斷層掃瞄均發現，在S (Segment) 7， 有一2.5x2.5公分病灶，沒有復水，胸部X光正常，甲型胎 兒蛋白(AFP): 420ng，肝機能為GOT 110U/L, GPT 89 U/L, bilirubin: total 2.6mg/dL, albumin 2.8 mg/dL, ICG (indocyanine green) test 42﹪，您認為之適當之手術方式 為何？",
+        "選項": [
+            "A. Right two-segmentectomy",
+            "B. Right lobectomy",
+            "C. Subsegmentectomy",
+            "D. Right hepatic artery ligation",
+            "E. Not candidate for resection"
+        ],
+        "答案": "E",
+        "出處": "Sabiston Textbook of Surgery. 21th\nedition. P1442-1444"
+    },
+    {
+        "題別": "單",
+        "題號": "83",
+        "題目": "在肝硬化引致肝門靜脈高壓（portal hypertension）之病人 ，發生esophageal varices bleeding時，以下何者，是你認 為較適當的candidate for distal splenorenal shunt operation？",
+        "選項": [
+            "A. Medically intractable ascites之病人",
+            "B. Prior splenectomy",
+            "C. A splenic vein diameter of less than 7 mm",
+            "D. Prior proximal splenorenal shunt",
+            "E. Failed pharmacotherapy and/or sclerotherapy"
+        ],
+        "答案": "E",
+        "出處": "Schwartz's Principle of Surgery. 11th\nedition. P1367-1368"
+    },
+    {
+        "題別": "單",
+        "題號": "84",
+        "題目": "有關大腸直腸癌轉移至肝臟之切除治療的預後，MSKCC( the Memorial Sloan-Kettering Cancer Center)發現了五個 和預後不佳最相關的預後因子，請問不包括下列何項？",
+        "選項": [
+            "A. 肝轉移癌之直徑大於五公分",
+            "B. 無病間隔時間(disease-free interval)少於一年",
+            "C. 肝轉移癌大於一個以上",
+            "D. CEA大於200ng/mL以上",
+            "E. 肝轉移癌之切除能有一公分以上之安全距離者（Safety margin）"
+        ],
+        "答案": "E",
+        "出處": "Sabiston Textbook of Surgery. 21th\nedition. P1474"
+    },
+    {
+        "題別": "單",
+        "題號": "85",
+        "題目": "一名42歲女性因為胰臟炎住院，超音波發現總膽管略為擴 大，直徑為8 mm，且膽囊擴大，內有許多結石、生化檢查 ，T-Bilirubin:20 mg/dl、ALK phos:360 IU、AST:150 IU/dl、ALT:250IU/dl、Amylase:1000 IU/dl，下列何者處置 比較可以減少手術的併發症：",
+        "選項": [
+            "A. 安排核磁共振膽道攝影(MRCP)，若沒有總膽管結石，可 在胰臟炎緩解後，安排腹腔鏡膽囊切除手術",
+            "B. 馬上安排治療性逆行性膽管攝影(ERCP)及內視鏡乳頭切 開(EPT)",
+            "C. 馬上安排腹腔鏡膽囊切除手術",
+            "D. 馬上安排上述的B及C的處置",
+            "E. 在胰臟炎改善之後即可出院，再門診追踪即可，若有復 發則急診手術"
+        ],
+        "答案": "A",
+        "出處": "Schwartz's Principle of Surgery. 11th\nedition. P1448-1449"
+    },
+    {
+        "題別": "單",
+        "題號": "86",
+        "題目": "有關胰臟外傷之敘述，下列何者為非？",
+        "選項": [
+            "A. 大部份的胰臟外傷，常伴隨周圍臟器和血管受傷。",
+            "B. 2/3的胰臟外傷為鈍傷，1/3為穿刺傷。",
+            "C. 胰臟外傷的致死原因以出血為最常見。",
+            "D. 第三級的胰臟外傷乃指除胰臟實質受傷外，同時也有主 胰管破裂。",
+            "E. 胰臟外傷後腹內感染常造成延遲性死亡。"
+        ],
+        "答案": "B",
+        "出處": "Sabiston Textbook of Surgery. 21th\nedition. P1563"
+    },
+    {
+        "題別": "單",
+        "題號": "87",
+        "題目": "下列有關膽囊息肉(polypoid lesions of the gall bladder)何 者為誤？",
+        "選項": [
+            "A. Cholesterol polyps是最常見的類型",
+            "B. 可能為惡性之因子包括病人年齡大於50歲或合併有膽囊 結石",
+            "C. 無症狀的病人即使息肉大於1公分也建議追蹤觀察即可",
+            "D. 如要手術，腹腔鏡膽囊切除術是治療的首要考慮方法",
+            "E. 息肉如果有呈現逐漸變大也是可考慮手術的理由之一"
+        ],
+        "答案": "C",
+        "出處": "Schwartz's Principle of Surgery. 11th\nedition. P1421"
+    },
+    {
+        "題別": "單",
+        "題號": "88",
+        "題目": "在一些肝腫瘤接受肝切除病患，手術前肝門脈栓塞術可用 來降低病患術後發生肝衰竭的危險。 請問有關肝門脈栓塞，下列敘述何者為誤?",
+        "選項": [
+            "A. 在沒有肝硬化病患若預測肝切除後剩餘的肝臟的體積小 於原來的體積的25%，可考慮給予手術前門脈栓塞以增加 切除剩餘部份肝臟體積",
+            "B. 經皮穿肝治療為最常用的方法",
+            "C. 若預定做擴大右肝葉切除術，必需將右門脈分枝及分節4 的門脈分枝給予栓塞",
+            "D. 一般栓塞後約3~4月再進行切除手術",
+            "E. 栓塞後平均增加的殘餘肝臟體積約為10~15%"
+        ],
+        "答案": "D",
+        "出處": "Schwartz's Principle of Surgery. 11th\nedition. P1385-1386"
+    },
+    {
+        "題別": "單",
+        "題號": "89",
+        "題目": "有關肝臟移植之適應症，以下何者不正確？",
+        "選項": [
+            "A. 原發性肝細胞癌 (hepatocellular carcinoma)",
+            "B. 轉移性肝腫瘤 (metastatic liver tumor)",
+            "C. 原發性膽汁鬱積性肝硬化 (primary biliary cirrhosis)",
+            "D. 原發性硬化性膽道炎 (primary sclerosing cholangitis)",
+            "E. 第一型肝醣儲積症 (type I glycogen storage disease)"
+        ],
+        "答案": "B",
+        "出處": "Blumgart's Surgery of the Liver,\nBiliary tract, and Pancreas. 7th\nedition. P1541"
+    },
+    {
+        "題別": "單",
+        "題號": "90",
+        "題目": "有關肝內結石 ( Intrahepatic stones ) 常見的問題,何者為 非？",
+        "選項": [
+            "A. 肝內結石(Intrahepatic stones) 是東亞地區(East Asia)之 風土病( endemic disease).",
+            "B. 肝內結石 (hepatolithiasis)經常和膽道問題有關例如膽道 狹窄(biliary strictures).",
+            "C. 肝內結石(hepatolithiasis) 不合併其他膽道病變而單獨發 生者小於10%.",
+            "D. 膽汁鬱積(bile stasis) 及膽道感染是肝內結石之重要致病 因子.",
+            "E. 大部分肝內結石和黑色素結石( black pigment stones)有 關."
+        ],
+        "答案": "E",
+        "出處": "Sabiston Textbook of Surgery. 21th\nedition. P1462 &P1500"
+    },
+    {
+        "題別": "單",
+        "題號": "91",
+        "題目": "下列何種胰臟腫瘤特別好發於年輕女性？",
+        "選項": [
+            "A. Serous Cystadenoma",
+            "B. Intraductal Papillary Mucinous Tumor (IPMT)",
+            "C. Solid-Pseudopapillary Tumor of the Pancreas",
+            "D. Neuroendocrine tumor",
+            "E. Mucinous Cystadenoma"
+        ],
+        "答案": "C",
+        "出處": "Schwartz's Principle of Surgery. 11th\nedition. P1500-1501"
+    },
+    {
+        "題別": "單",
+        "題號": "92",
+        "題目": "下列那一種膽道疾病接受檢查或手術可以考慮不需要預防 性抗生素？",
+        "選項": [
+            "A. 阻塞性黃疸病人接受經皮經肝膽道引流",
+            "B. 膽囊結石接受腹腔鏡膽囊切除術",
+            "C. 總膽管結石接受內視鏡十二指腸乳頭切開取石治療",
+            "D. 膽道癌手術",
+            "E. 膽囊息肉病變接受腹腔鏡手術，術中改為剖腹膽囊切除 術"
+        ],
+        "答案": "B",
+        "出處": "Sabiston Textbook of Surgery. 21th\nedition. P1497"
+    },
+    {
+        "題別": "單",
+        "題號": "93",
+        "題目": "50歲男性病人，B型肝炎帶原者已10年，超音波顯示右葉 有一個腫瘤12 x 9公分，沒腹水，胎兒蛋白1400 mg，以下 何者正確？",
+        "選項": [
+            "A. 由於腫瘤太大，唯恐切除後肝衰竭，故先考慮非手術之 其他療法；",
+            "B. 肝臟移植是理想的治療選項；",
+            "C. 先neoadjuvant chemotherapy縮小腫瘤才行切除；",
+            "D. 先行血管攝影及ICG之檢查；",
+            "E. 若total bilirubin大於2，但小於3，可以施行部分肝切 除。"
+        ],
+        "答案": "D",
+        "出處": "Schwartz's Principle of Surgery. 11th\nedition. P1376-1378"
+    },
+    {
+        "題別": "單",
+        "題號": "94",
+        "題目": "下列有關胰臟癌之敘述何者有誤？",
+        "選項": [
+            "A. 約2/3之胰臟癌發生在胰臟頭及鉤狀突",
+            "B. 病理組織切片在癌症病灶附近之胰管上皮細胞可發現癌 症之precursor lesions（pancreatic intraepithelial neoplasia, Pan IN）",
+            "C. 對於無法切除之胰臟癌Gemcitabine的治療可減輕疼痛 ，增加体重及 performance status",
+            "D. 術前組織學之確診是施行胰頭十二指腸切除術之必要條 件",
+            "E. 胰頭癌接受胰頭十二指腸切除後之median survival約12- 15個月"
+        ],
+        "答案": "D",
+        "出處": "Schwartz's Principle of Surgery. 11th\nedition. P1491"
+    },
+    {
+        "題別": "單",
+        "題號": "95",
+        "題目": "以下那種情形下的膽結石不需開刀?",
+        "選項": [
+            "A. Procelain gallbladder",
+            "B. Sickle cell disease",
+            "C. chronic immunosuppresant",
+            "D. Total parenteral nutrition",
+            "E. gallbladder polyp< 1 cm in diameter"
+        ],
+        "答案": "E",
+        "出處": "Schwartz's Principle of Surgery. 11th\nedition. P1421"
+    },
+    {
+        "題別": "單",
+        "題號": "96",
+        "題目": "下列預接受右肝葉切除的患者，何者最可能發生術後肝衰 竭？",
+        "選項": [
+            "A. Liver cirrhosis, Child A",
+            "B. Liver cirrhosis, MELD 5",
+            "C. 已接受過PVE (portal vein embolization)，FLR 30%",
+            "D. 大腸癌肝轉移，接受化學治療過後，FLR 30%",
+            "E. Indocyanine green clearance test之ICG-R15，10%"
+        ],
+        "答案": "C",
+        "出處": "Blumgart's Surgery of the Liver,\nBiliary tract, and Pancreas. 7th\nedition. P64-68"
+    },
+    {
+        "題別": "單",
+        "題號": "97",
+        "題目": "Brown-pigment stone為CBD之原發性stone，為何成份?",
+        "選項": [
+            "A. Cholesterol",
+            "B. Calcium bilirubin",
+            "C. Calcium carbonate",
+            "D. Parasite",
+            "E. Mixed"
+        ],
+        "答案": "B",
+        "出處": "Blumgart's Surgery of the Liver,\nBiliary tract, and Pancreas. 6th\nedition. P585"
+    },
+    {
+        "題別": "單",
+        "題號": "98",
+        "題目": "根據AJCC第8版(2017)之TNM分期，肝癌若侵犯至portal vein或hepatic vein之main branch，T分期為何?",
+        "選項": [
+            "A. T1",
+            "B. T2",
+            "C. T3a",
+            "D. T3b",
+            "E. T4"
+        ],
+        "答案": "E",
+        "出處": "AJCC (8th ed., 2017)"
+    },
+    {
+        "題別": "單",
+        "題號": "99",
+        "題目": "在西方社會，最常引起acute pancreatitis之原因?",
+        "選項": [
+            "A. Alcohol",
+            "B. Biliary or gallstone",
+            "C. ERCP",
+            "D. Hypertriglyceridemia",
+            "E. Trauma"
+        ],
+        "答案": "B",
+        "出處": "Sabiston, 21th ed, p1534"
+    },
+    {
+        "題別": "單",
+        "題號": "100",
+        "題目": "下列何種胰臟囊狀腫瘤較沒有惡性傾向？",
+        "選項": [
+            "A. Mucinous Cystadenoma",
+            "B. Intraductal Papillary Mucinous Tumor (IPMT)",
+            "C. Solid and Pseudopapillary Tumor of the Pancreas",
+            "D. Serous Cystadenoma",
+            "E. Mucinous Cystadenocarcinoma"
+        ],
+        "答案": "D",
+        "出處": "Sabiston Textbook of Surgery, 19th\ned. pp:1515-1547"
+    },
+    {
+        "題別": "單",
+        "題號": "101",
+        "題目": "有關肝內膽管結石的敘述，下列何者為非？",
+        "選項": [
+            "A. 一般來說，肝内膽管結石，還是以發生在左側最為常 見。",
+            "B. 對於肝內膽管結石的診斷檢查，腹部超音波、電腦斷層 掃描或核磁共振掃描檢查均為最佳診斷工具。",
+            "C. 所有的肝內膽管結石都可以使用「經皮穿肝膽道鏡取石 術」（PTCSL)把所有膽管內之結石清除完全。",
+            "D. 肝內膽管結石的發生率，還是以亞洲、遠東、及東南亞 地區為最高。",
+            "E. 肝內膽管結石最佳的治療方式：控制膽道的感染，解決 有問題的膽管，結石的清除完全，以及提供良好的膽汁引 流。"
+        ],
+        "答案": "C",
+        "出處": "1. Subiston Textbook of Surgery,\n2017 20th Edition. Chapter 54,\n2482-1519.\n2. Intrahepatic stones; Blumgart's\nSurgery of the Liver & Biliary Tract.\nNakayama F. 765-774. 1994.\n3. Hepatolithiasis in East Asia.\nDigestive Disease & Science.\nNakayama 1986;30(1): 21-26\n4. Arch Surg. Kazuhisa U.\n2002;137(2); 149-153."
+    },
+    {
+        "題別": "單",
+        "題號": "102",
+        "題目": "肝內結石的形成與治療下列何者為非?",
+        "選項": [
+            "A. 膽道感染、狹窄、膽汁滯留，是形成肝内膽管結石的最 大原因。",
+            "B. 與RPC(repeat pyogenic cholangitis )有關。",
+            "C. 肝内膽管結石合併有膽道狹窄，在治療上若以肝臟部分 切除手術與非手術的方式來做比較：依據膽管的再狹窄 率、結石的復發率、以及長期存活率來說，還是以手術治 療為佳。",
+            "D. 一位高齡的肝内膽管結石的病人，心肺功能不良，又有 手術麻醉上的風儉，其中又無膽管的狹窄，其最佳的治療 方式，還是選擇以「經皮穿肝膽道鏡取石」（PTCSL)最為 恰當。",
+            "E. 肝內結石因左側肝管至總膽管的角度，幾乎不會發生在 左側。"
+        ],
+        "答案": "E",
+        "出處": "1. Subiston Textbook of Surgery, 2017\n20th Edition. Chapter 54, 2482-1519.\n2. Intrahepatic stones; Blumgart's\nSurgery of the Liver & Biliary Tract.\nNakayama F. 765-774. 1994.\n3. Hepatolithiasis in East Asia.\nDigestive Disease & Science. Nakayama\n1986;30(1): 21-26\n4. Arch Surg. Kazuhisa U. 2002;137(2);\n149-153."
+    },
+    {
+        "題別": "單",
+        "題號": "103",
+        "題目": "胰臟囊性腫瘤中, 那一種惡性度最低?",
+        "選項": [
+            "A. mucinous cystadenoma,",
+            "B. Serous cystadenoma,",
+            "C. Solid and papillary neoplasm,",
+            "D. Intraductal papillary-mucinous neoplasms,",
+            "E. mucinous cystic adenocarcinoma."
+        ],
+        "答案": "B",
+        "出處": "Sabiston Textbook of Surgery,\nSabiston & Lyerly. 16th ed. W.B.\nSaunders Co, p1139"
+    },
+    {
+        "題別": "單",
+        "題號": "104",
+        "題目": "一位50歲男性病患, B肝帶原, 併有肝硬化、肝腫瘤 (5cm)及 大量腹水，最好的存活治療方式？",
+        "選項": [
+            "A. 肝切除。",
+            "B. Radiofrequency albation。",
+            "C. Percutaneous ethanol injection。",
+            "D. Trans-arterial chemoembolization。",
+            "E. Liver transplantation。"
+        ],
+        "答案": "E",
+        "出處": "Sabiston Textbook of Surgery,\nSabiston & Lyerly. 16th ed. W.B.\nSaunders Co, p1037-1043"
+    },
+    {
+        "題別": "單",
+        "題號": "105",
+        "題目": "針對肝功能Child-Pugh score的評分不包括下列何者?",
+        "選項": [
+            "A. Bilirubin",
+            "B. Platelet",
+            "C. Albumin",
+            "D. Prothrombin time",
+            "E. Ascites"
+        ],
+        "答案": "B",
+        "出處": "Sabiston Textbook of Surgery 20th\ned, p1436"
+    },
+    {
+        "題別": "單",
+        "題號": "106",
+        "題目": "病人因阻塞性黃膽放置PTCD(percutaneous transhepatic cholangial drainage)後，不幸造成major hemobilia且保守 治療無效，此時first line 處理為何 ？",
+        "選項": [
+            "A. Remove PTCD",
+            "B. Surgery",
+            "C. TAE (transarterial embolization)",
+            "D. ERCP放置biliary stent止血",
+            "E. Radiofrequency ablation"
+        ],
+        "答案": "C",
+        "出處": "Sabiston Textbook of Surgery 19th\ned, p1486"
+    },
+    {
+        "題別": "單",
+        "題號": "107",
+        "題目": "針對HCC (hepatocelluar carcinoma) 的處理, 下列何者非根 治性的治療?",
+        "選項": [
+            "A. Liver transplant",
+            "B. Resection",
+            "C. Ethanol injection",
+            "D. Radiofrequency ablation",
+            "E. Transarterial embolization"
+        ],
+        "答案": "E",
+        "出處": "Sabiston Textbook of Surgery 19th\ned, p1456"
+    },
+    {
+        "題別": "單",
+        "題號": "108",
+        "題目": "根據ISPGS (International Study Group of Pancreatic Surgery)對胰臟手術，術後發生pancreatic fistula的定義為 何？",
+        "選項": [
+            "A. 術後第三天，引流管測得的amylase level > 5 times normal serum level",
+            "B. 術後第三天，引流管測得的lipase level > 5 times normal serum level",
+            "C. 術後第七天，引流管測得的amylase level > 5 times normal serum level",
+            "D. 術後第七天，引流管測得的lipase level > 5 times normal serum level",
+            "E. 術後第三天，引流管測得的amylase level > 3 times normal serum level"
+        ],
+        "答案": "E",
+        "出處": "Sabiston Textbook of Surgery 19th\ned, p1542"
+    },
+    {
+        "題別": "單",
+        "題號": "109",
+        "題目": "針對膽管結石手術處理的方式包括transcystic duct approach 及choledocholithotomy, 下列狀況何者非 transcytic duct approach 方式處理考量之一?",
+        "選項": [
+            "A. 石頭數量多寡",
+            "B. 總膽管直徑大小",
+            "C. 石頭size 大小",
+            "D. Intrahepatic stone的有無",
+            "E. Cystic duct直徑大小"
+        ],
+        "答案": "B",
+        "出處": "Sabiston Textbook of Surgery 19th\ned, p1500"
+    },
+    {
+        "題別": "單",
+        "題號": "110",
+        "題目": "針對肝外膽管癌，下列何者通常只需要做common bile duct excision就能得到足夠的safe margin?",
+        "選項": [
+            "A. Bismuth type I",
+            "B. Bismuth type II",
+            "C. Bismuth type IIIa",
+            "D. Bismuth type IIIb",
+            "E. Bismuth type IV"
+        ],
+        "答案": "A",
+        "出處": "Sabiston Textbook of Surgery 19th\ned, p1511"
+    },
+    {
+        "題別": "單",
+        "題號": "111",
+        "題目": "有關肝臟之pyogenic abscess，下列敘述何者不正確?",
+        "選項": [
+            "A. 在亞洲肝內結石及膽管炎是造成肝膿瘍常見的原因",
+            "B. 因外傷所造成的肝膿瘍往往會延遲數週後才發病",
+            "C. 肝膿瘍在肝內的分布左右葉各占50%",
+            "D. 典型肝膿瘍的症狀為發燒、黃疸、右上腹痛",
+            "E. 只用抗生素治療的話，死亡率可高達50-100%"
+        ],
+        "答案": "C",
+        "出處": "Sabiston: Textbook of Surgery, 18th\ned., p1440-1443"
+    },
+    {
+        "題別": "單",
+        "題號": "112",
+        "題目": "有關一個3公分的肝臟腫瘤，下列何種腫瘤不需要外科處 理？",
+        "選項": [
+            "A. liver cell adenoma",
+            "B. hepatocellular carcinoma",
+            "C. intrahepatic cholangiocarcinoma",
+            "D. focal nodular hyperplasia",
+            "E. hepatoblastoma"
+        ],
+        "答案": "D",
+        "出處": "Sabiston: Textbook of Surgery, 18th\ned., p1451-1459"
+    },
+    {
+        "題別": "單",
+        "題號": "113",
+        "題目": "下列何項描述與Courvoisier's sign無關？",
+        "選項": [
+            "A. A palpable gallbladder in a patient with painless jaundice",
+            "B. Periampullary neoplasm",
+            "C. Pancreatic cancer",
+            "D. Distal common bile duct obstruction",
+            "E. Distal pancreatic duct obstruction"
+        ],
+        "答案": "E",
+        "出處": "Textbook of surgery Sabiston , 18th\ned. P1614"
+    },
+    {
+        "題別": "單",
+        "題號": "114",
+        "題目": "Annular pancreas 造成十二指腸阻塞時，較合適之治療方 式為何？",
+        "選項": [
+            "A. Pancreaticoduodenectomy",
+            "B. Distal pancreatectomy",
+            "C. Duodenojejunostomy",
+            "D. Gastrojejunostomy",
+            "E. Pancreaticojejunostomy"
+        ],
+        "答案": "C",
+        "出處": "Textbook of surgery Sabiston , 18th\ned. P1592"
+    },
+    {
+        "題別": "單",
+        "題號": "115",
+        "題目": "針對mild biliary (gallstone related)pancreatitis 臨床處理上 何者較不為接受?",
+        "選項": [
+            "A. 同一次住院手術切除膽囊比interval cholecystectomy更 能降低併發症的產生",
+            "B. 同一次住院手術會有明顯較高的conversion rate (laparoscopic converted to open approach)",
+            "C. 對於年紀大或co-morbidity多病患，同一次住院手術仍須 審慎評估",
+            "D. 同次住院手術建議於確定胰臟炎已經穩定，腹部症狀明 顯減緩後進行",
+            "E. 同一次住院接受手術完，仍需注意是否有殘餘CBD stone可能。"
+        ],
+        "答案": "B",
+        "出處": "Sabistion Textbook of Surgery, 21th\nedition, P1502"
+    },
+    {
+        "題別": "單",
+        "題號": "116",
+        "題目": "常見肝臟良性腫瘤下列敘述何者錯誤?",
+        "選項": [
+            "A. Liver cell adenoma 兩個危險因子為破裂出血跟惡性轉 變",
+            "B. Focal nodular hyperplasia 影像容易診斷，但是若持續 有症狀或變大時仍須手術切除",
+            "C. Hemangioma是最常見的良性腫瘤，男性多於女性，不 會有惡性可能，臨床觀察即可",
+            "D. Hepatic simple cyst有症狀時才需手術，以 fenestration/unroofing 為主要術式",
+            "E. 有HCC危險因子病患，即便影像顯示高度可能為良性腫 瘤，仍需定期追蹤或是需要切片確診或切除。"
+        ],
+        "答案": "C",
+        "出處": "Sabistion Textbook of Surgery, 21th\nedition, P1464"
+    },
+    {
+        "題別": "單",
+        "題號": "117",
+        "題目": "對於無法切除之肝細胞癌，下列palliative treatment 何者較 不常見?",
+        "選項": [
+            "A. Transarterial embolization/TACE",
+            "B. TARE( Intra-arterial injections of iodine-131 with Ethiodol or yttrium-90 )",
+            "C. Targeted therapy with sorafenib",
+            "D. Whole liver radiotherapy",
+            "E. Individualizd local radiotherapy"
+        ],
+        "答案": "D",
+        "出處": "Sabistion Textbook of Surgery, 21th\nedition, P1469-1470"
+    },
+    {
+        "題別": "單",
+        "題號": "118",
+        "題目": "肝腫瘤病患接受手術評估時，最重要的考量因素之一就是 剩餘肝臟功能可否支撐病患所需，下列何者與殘餘肝功能 無關？",
+        "選項": [
+            "A. Child-Turcotte-Pugh (CTP) classification",
+            "B. Indocyanine green test (ICG test)",
+            "C. Model for end-stage liver disease (MELD) score",
+            "D. 肝臟轉胺酶指數(Transaminase levels)",
+            "E. 胎兒球蛋白指數(Alpha-fetoprotein)"
+        ],
+        "答案": "E",
+        "出處": "Blumgart's Surgery of the liver,\nbiliary tract and pancreas. 5th Ed\np1538-1539"
+    },
+    {
+        "題別": "單",
+        "題號": "119",
+        "題目": "肝臟移植對於肝癌病患在某些嚴格條件下，也是一種標準 治療，下列肝腫瘤狀況，何者肝臟移植是不適合的治療？",
+        "選項": [
+            "A. 單一顆腫瘤，小於5公分",
+            "B. 二至三顆腫瘤，每顆直徑小於3公分",
+            "C. 腫瘤大小或是數量超過上述情形，但是經過射頻燒灼術 (Radiofrequency ablation), 肝動脈化學栓塞(Transarterial chemoembolization)等治療，癌症分期降階到 T2",
+            "D. 肝腫瘤經過治療，影像上完全無可偵測腫瘤",
+            "E. 肝臟有很多顆小於0.5公分的腫瘤"
+        ],
+        "答案": "E",
+        "出處": "Blumgart's Surgery of the liver,\nbiliary tract and pancreas. 5th Ed\np1706-1709"
+    },
+    {
+        "題別": "單",
+        "題號": "120",
+        "題目": "關於胰臟神經內分泌腫瘤（Pancreatic Neuroendocrine Tumors (PNETs)），下列何者為非？",
+        "選項": [
+            "A. 可分成功能性和非功能性",
+            "B. 當中以胃泌性瘤為最常見",
+            "C. 手術切除是主要治療方式",
+            "D. 常見遠處轉移的器官是肝臟",
+            "E. 在電腦斷層上大多表現為富血管性(hypervascular)的病 灶"
+        ],
+        "答案": "B",
+        "出處": "Hepatobiliary and Pancreatic\nSurgery: Companion to Specialist\nSurgical Practice, O. James Garden\n，Rowan W Parks, chapter 16,\np289-303"
+    },
+    {
+        "題別": "單",
+        "題號": "121",
+        "題目": "關於胰臟癌，下列何者為非？",
+        "選項": [
+            "A. 可手術切除之病患，術前若有黃疸，但無膽管炎，仍建 議膽汁引流",
+            "B. 影像學檢查，發現胰臟頭部腫瘤侵犯到上腸繫膜動脈 (Superior mesentery artery)＞180°，則視為無法切除 (UNRESECTABLE)",
+            "C. 內視鏡超音波(Endoscopic ultrasound，簡稱EUS)，可 幫助診斷胰臟癌，必要時亦可藉由細針穿刺來進行組織學 採樣",
+            "D. 胰臟癌最常發生的部位是胰臟的頭部",
+            "E. 化學治療方式，若符合臨床試驗(clinical trial)，應以其為 首選"
+        ],
+        "答案": "A",
+        "出處": "(1) Pancreatic cancer / editors,\nDouglas B. Evans, Peter W.T.\nPisters, James Abbruzzese./ Chapter\n8, p97-106\n(2) NCCN guideline, pancreatic\nadenocarcinoma, version 2, 2016"
+    },
+    {
+        "題別": "單",
+        "題號": "122",
+        "題目": "下列關於膽管癌的敘述何者錯誤？",
+        "選項": [
+            "A. 膽道囊腫(choledochal cyst)是膽管癌的危險因子之一",
+            "B. 超過三分之二的膽管癌侵犯到近端的膽道，靠近總膽管 分枝的地方，稱作Klatskin tumor",
+            "C. 多數患者臨床表現會有阻塞性黃疸",
+            "D. 手術中若無法完全切除腫瘤對預後也沒有影響",
+            "E. 手術前不一定要取得組織病理診斷"
+        ],
+        "答案": "D",
+        "出處": "Sabiston Textbook of Surgery, 20th\ned., chapter 54, p1482-1519"
+    },
+    {
+        "題別": "單",
+        "題號": "123",
+        "題目": "下列關於膽囊切除手術併膽管損傷的敘述何者錯誤？",
+        "選項": [
+            "A. 若術中膽管攝影發現損傷的膽管引流的範圍小於或等於 一個肝段(segment)，可直接將此膽管結紮。",
+            "B. 若膽管損傷為電燒造成，且損傷超過周長二分之一，可 直接放T型管引流即可。",
+            "C. 若膽管損傷為電燒造成，考慮到難以評估熱能傷害的範 圍，最好將此段受損膽管切除，再另行重建。",
+            "D. 若總膽管橫斷(transaction)長度小於一公分，在適當游 離總膽管後，可直接做端對端(end-to-end)吻合。",
+            "E. 主要膽管損傷在Bismuth分類裡，依損傷位置可分為五 型。"
+        ],
+        "答案": "B",
+        "出處": "Sabiston Textbook of Surgery, 21th\ned., p1511-1513"
+    },
+    {
+        "題別": "單",
+        "題號": "124",
+        "題目": "下列關於壺腹周圍癌(Periampullary cancer)的敘述何者錯 誤？",
+        "選項": [
+            "A. 壺腹周圍癌包括胰頭癌、壺腹癌、壺腹周圍十二指腸癌 及總膽管下段癌。",
+            "B. 黃疸是常見初期的表現",
+            "C. 最常見的是胰頭癌，且大部分是腺癌，常有腹腔內散布 或周圍組織浸潤的傾向",
+            "D. 術前阻塞性黃疸會導致凝血、肝功能及營養吸收的異常 ，因此須及早放置膽管膽汁引流管",
+            "E. 壺腹癌在被診斷時，約有20%小於1公分，75%小於4公 分，預後最好，五年存活率約20~45%"
+        ],
+        "答案": "D",
+        "出處": "Blumgart's surgery of the Liver,\nBiliary Tract and Pancreas, 15th ed.\nchapter 56, p882,p894; chapter 62A,\np949; chapter63, p979"
+    },
+    {
+        "題別": "單",
+        "題號": "125",
+        "題目": "關於總膽管囊腫(Choledochal cyst)，下列何者錯誤?",
+        "選項": [
+            "A. 目前認為發生的原因是遠端總膽管與胰管形成long common channel造成胰液逆流至總膽管所致",
+            "B. 三個典型症狀為黃疸、腹部腫塊及發燒",
+            "C. 發生惡性變化的機率與接受囊腫切除手術的年齡有關",
+            "D. 目前標準的手術方式為肝外囊腫切除並進行Roux-en-Y hepaticojejunostomy",
+            "E. Caroli Disease(type V)的長期預後不佳，容易產生肝膿 瘍、肝衰竭、門脈高壓及膽管癌"
+        ],
+        "答案": "B",
+        "出處": "Shackelford's Surgery of the\nAlimentary Tract, Chapter 111,\n1397-1404"
+    },
+    {
+        "題別": "單",
+        "題號": "126",
+        "題目": "關於膽囊癌，下列何者為非？",
+        "選項": [
+            "A. 術前診斷不易，多數是在開刀中或者經由病理才得到診 斷",
+            "B. 較容易發生在女性",
+            "C. 對於T1b的膽囊癌若施行radical cholecystectomy的五年 存活率和Simple cholecystectomy一樣",
+            "D. 80%的原發性膽囊癌是Adenocarcinoma",
+            "E. 0.3-5%膽結石的病患會發生膽囊癌,而膽囊癌的病患有 70-90%有膽結石"
+        ],
+        "答案": "C",
+        "出處": "Maingot 12th, 1061-75"
+    },
+    {
+        "題別": "單",
+        "題號": "127",
+        "題目": "下列何者非Bile duct cancer的危險因子？",
+        "選項": [
+            "A. Choledocholithiasis",
+            "B. Caroli’s disease",
+            "C. Hepatitis C",
+            "D. Hepatolithiasis",
+            "E. Primary sclerosing cholangitis"
+        ],
+        "答案": "A",
+        "出處": "maingot 12th, 1066-75"
+    },
+    {
+        "題別": "單",
+        "題號": "128",
+        "題目": "下列對於胰臟腫瘤的描述何者為非?",
+        "選項": [
+            "A. Serous cystic neoplasm(SCN)大部分多為良性,臨床處理 以觀察為主",
+            "B. Mucinous cystic neoplasm(MCN)易發生於女性, 有 Malignant potential,一般建議做切除手術",
+            "C. Intraductal papillary mucinous neoplasm(IPMN)也易發 生在女性, 有Malignant potential",
+            "D. 對於Main duct IPMN的處理方法以手術為主",
+            "E. 對於< 3cm, no mural nodule, negative cytology, stable size, normal pancreatic duct 和Advanced age的Branch type IPMN可以觀察"
+        ],
+        "答案": "C",
+        "出處": "maingot 12th, 1171-84"
+    },
+    {
+        "題別": "單",
+        "題號": "129",
+        "題目": "下列對於肝癌的描述何者錯誤?",
+        "選項": [
+            "A. 甲型胎兒蛋白(AFP)的測量，對於肝癌診斷很有幫助，無 論敏感度或專一性都很強",
+            "B. 診斷肝癌不一定需要切片，只要影像學檢查、Serum AFP 大於等於 400ng/dL就可以直接診斷",
+            "C. 在臨床上常常使用Indocyanine green retention at 15 minutes來評估肝功能",
+            "D. 若符合Milan criteria, 也可以用肝臟移植來治療肝癌",
+            "E. 和Ablation與chemotherapy比較起來, Surgical resection of HCC有比較好的五年Survival rate"
+        ],
+        "答案": "A",
+        "出處": "Maingot 12th, 933-948"
+    },
+    {
+        "題別": "單",
+        "題號": "130",
+        "題目": "下列何者胰十二指腸切除 (pancreaticoduodenectomy) 較 常見的併發症之描述, 何者不正確?",
+        "選項": [
+            "A. 胃滯留 (gastroparesis)",
+            "B. 胰液滲漏 (PJ leak)",
+            "C. 腹內感染",
+            "D. 再出血",
+            "E. 男性產生併發症的比率比女性高"
+        ],
+        "答案": "E",
+        "出處": "Clinics and Research in Hepatology and\nGastroenterology, Volume 37, Issue 3,\nPages 230-239\nEmilie Lermite, Daniele Sommacale,\nTullio Piardi, Jean-Pierre Arnaud, Alain\nSauvanet, Cornelis H.C. Dejong, Patrick\nPessaux"
+    },
+    {
+        "題別": "單",
+        "題號": "131",
+        "題目": "下列有關急性胰臟炎, 何者不正確?",
+        "選項": [
+            "(A). 診斷 至少要有下列2項以上符合: 腹痛; serum lipase or amylase level 等於或高於 3倍; CT (image)符合.",
+            "(B). 評估 necrotizing pancreatitis 最好的是contrast- enhanced CT 的portal venous phase",
+            "(C). Ranson criteria score 4 的病人是屬於severe acute pancreatitis",
+            "(D). 對Mild acute pancreatitis 的病人, ERCP 是常規處置",
+            "(E). Local complications 包括: peripancreatic fluid collection), pancreatic necrosis, pancreatic pseudocyst, pancreatic ascites, pancreatocutaneous fistula"
+        ],
+        "答案": "D",
+        "出處": "Textbook of Surgery, Sabiston 21th\ned., p1535-1541"
+    },
+    {
+        "題別": "單",
+        "題號": "132",
+        "題目": "有關慢性胰臟炎的敘述，何者為非？",
+        "選項": [
+            "A. 長期酗酒在工業化國家是最常見的原因",
+            "B. 典型的臨床表現包括腹痛、體重減輕、糖尿病與脂肪便",
+            "C. 常規的實驗室檢驗對於診斷非常有幫助",
+            "D. 影像檢查最常見的發現是胰管擴張、胰臟萎縮、鈣化",
+            "E. 對於沒有胰管擴張，疾病主要影響胰臟頭部，可以考慮 做胰十二指腸切除術"
+        ],
+        "答案": "C",
+        "出處": "Textbook of Surgery, Sabiston 21th\ned., p1543-1546"
+    },
+    {
+        "題別": "單",
+        "題號": "133",
+        "題目": "下列何項不是住院時評估非膽結石引起急性胰臟炎的 Ranson's criteria？",
+        "選項": [
+            "A. Age > 70 year",
+            "B. WBC > 16000 cells/mm3",
+            "C. Blood glucose > 200 mg/dL",
+            "D. Serum lactate dehydrogenase >350 IU/L",
+            "E. AST > 250 U/dL"
+        ],
+        "答案": "A",
+        "出處": "Textbook of Surgery, Sabiston 21th\ned., p1536"
+    },
+    {
+        "題別": "單",
+        "題號": "134",
+        "題目": "下列何項不是評估肝功能保留的Child-Pugh criteria？",
+        "選項": [
+            "A. Serum albumin",
+            "B. Serum bilirubin",
+            "C. Neurogeni disorder (hepatoencephalopathy)",
+            "D. Ascites",
+            "E. Thrombin time"
+        ],
+        "答案": "E",
+        "出處": "Textbook of Surgery, Sabiston 16th\ned., p1062"
+    },
+    {
+        "題別": "單",
+        "題號": "135",
+        "題目": "25歲女性清晨因頭暈(dizziness)、意識混亂(confusion)、抽 慉(seizure)被送至急診室，血液檢查血糖40mg/dl，serum C-peptite level 0.9ng/ml，經補充葡萄糖輸液後症狀改善。 下列何者為最不適當的診斷及處置？",
+        "選項": [
+            "A. 最好做72-hour fasting test",
+            "B. 病人最可能診斷為糖尿病",
+            "C. 可安排腹部電腦斷層或核磁共振檢查",
+            "D. 可使用Diazoxide來治療低血糖",
+            "E. 手術是唯一根治的方法"
+        ],
+        "答案": "B",
+        "出處": "Shackelford’s Surgery of the\nAlimentary Tract ,6th edit ion,\nvolume II,p1377-1380"
+    },
+    {
+        "題別": "單",
+        "題號": "136",
+        "題目": "一60歲男性，過去並無上腹部不適的經驗。因健康檢查時 腹部超音波發現膽結石，至門診求診。經詢問病史及家族 史後您建議不必做膽囊切除術，下述之病史及家族史，最 有可能為何者？",
+        "選項": [
+            "A. 病人有換心病史",
+            "B. 病人曾接受減重手術",
+            "C. 病人有糖尿病的家族史",
+            "D. 病人長期服用類固醇藥物",
+            "E. 病人有膽囊癌的家族史"
+        ],
+        "答案": "C",
+        "出處": "Shackelford’s Surgery of the\nAlimentary Tract ,6th edit ion,\nvolume II, p1471-1472"
+    },
+    {
+        "題別": "單",
+        "題號": "137",
+        "題目": "下列何種關於 Liver Focal Nodular Hyperplasia是錯的？",
+        "選項": [
+            "A. benign lesion",
+            "B. typical CT顯示為well circumscribed with a typical central scar",
+            "C. MRI T1 表現為hypointense",
+            "D. MRI T2-weighted images 表現為isointense to hyperintense",
+            "E. 大多會自發性破裂出血，應考慮預防性栓塞"
+        ],
+        "答案": "E",
+        "出處": "Principle of Surgery, Schwartz. 10th\ned. 2014, p1290"
+    },
+    {
+        "題別": "單",
+        "題號": "138",
+        "題目": "下列有關adult Polycystic Liver Disease的敘述，何者正 確？",
+        "選項": [
+            "A. an autosomal recessive disease",
+            "B. 通常伴有肝內結石的存在。",
+            "C. 最常見的肝臟表現為intracystic hemorrhage, infection, and posttraumatic rupture",
+            "D. 由於手術對其治療效果不佳，因此，患者應優先考慮接 受藥物治療。",
+            "E. 在這類病人，肝切除是絕對禁忌"
+        ],
+        "答案": "C",
+        "出處": "Principle of Surgery, Schwartz. 10th\ned. 2014, p1288"
+    },
+    {
+        "題別": "單",
+        "題號": "139",
+        "題目": "有關肝臟移植等候者疾病嚴重度評分標準MELD score ( Model For End-Stage Liver Disease )的評估項目，下列何 者為是？ 1. 血清白蛋白濃度 （albumin） 2. 血清總膽紅素 （serum bilirubin） 3. 凝血時間 （INR） 4. 血清肌酸酐 （serum creatinine） 5. 血清丙胺酸轉胺酶 ( alanine aminotransferanse )",
+        "選項": [
+            "A. (1)+(2)+(3)",
+            "B. (2)+(3)+(4)",
+            "C. (3)+(4)+(5)",
+            "D. (1)+(2)+(3)+(5)",
+            "E. (1)+(2)+(3)+(4)+(5)"
+        ],
+        "答案": "B",
+        "出處": "Shackelford`s Surgery of Alimentary\nTract (7th ed) p1567-1578"
+    },
+    {
+        "題別": "單",
+        "題號": "140",
+        "題目": "林先生，52歲，Ｂ型肝炎帶原者，5年前因肝細胞癌破裂接 受左肝部份切除（left lateral sectionectomy），最近腹部 超音波及電腦斷層發現右肝Ｓ7兩個直徑2公分的肝癌，無 明顯肝硬化。下列關於林先生的診斷與治療之敘述，何者 為非？ 1. 在電腦斷層下，林先生的肝腫瘤很可能呈現arterial phase enhancement，portal phase washout 2. 根據BCLC staging system，林先生的肝細胞癌是stage",
+        "選項": [
+            "B (intermediate stage) 3. 因是復發性肝細胞癌，最佳治癒性治療應先考慮經動脈 化療栓塞（TACE） 4. 索拉非尼（Sorafenib）已被證實對復發性肝細胞癌是有 效的治癒性治療，可延長存活率及減少復發率",
+            "A. (1)+(2)+(3)",
+            "B. (2)+(3)+(4)",
+            "C. (1)+(2)",
+            "D. (2)+(4)",
+            "E. (4)"
+        ],
+        "答案": "B",
+        "出處": "Shackelford`s Surgery of Alimentary\nTract (7th ed) p1567-1578\nSabiston Textbook of Surgery\n(20th ed) p1458-1463"
+    },
+    {
+        "題別": "單",
+        "題號": "141",
+        "題目": "黃女士，50歲，體檢時超音波發現胰臟尾部有直徑4.5公分 的hypoechoic mass，電腦斷層呈現cystic tumor with eggshell calcification，沒有主胰管擴張，EUS-FNA cystic fluid ( CEA 200 ng/ml，amylase 45 U/L)．下列有關黃女士 的胰臟腫瘤，何者正確？ 1. 只有20%腫瘤 CT會呈現eggshell calcification 2. 有特徵性卵巢樣間質（ovarian stroma） 3. 可產生粘蛋白阻塞主胰管 4. 因無症狀，不考慮開刀",
+        "選項": [
+            "A. (1)+(2)",
+            "B. (1)+(3)",
+            "C. (2)+(3)",
+            "D. (2)+(4)",
+            "E. (1)+(4)"
+        ],
+        "答案": "A",
+        "出處": "Shackelford`s Surgery of Alimentary\nTract (7th ed) p 1217-1233"
+    },
+    {
+        "題別": "單",
+        "題號": "142",
+        "題目": "有一位38歲女性病人因為右上腹痛、噁心、嘔吐.至急診室 求診。進急診室時血壓130/80 mmHg，心跳110/min，呼吸 18/min，體溫38.7 ℃。病人5 天前才因為膽結石急性膽囊 炎接受腹腔鏡膽囊切除手術治療，2 天前才剛出院。病人腹 部有壓痛，特別是在右上腹部，但腹腔鏡手術的傷口外觀 乾淨，沒有感染現象。對於這個病人何種檢查有最為正確 診斷：",
+        "選項": [
+            "A. 胃鏡檢查",
+            "B. 腹部X光攝影",
+            "C. 上消化道攝影",
+            "D. 腹部電腦斷層掃描",
+            "E. 血液檢查(CBC 及CRP)"
+        ],
+        "答案": "D",
+        "出處": "Sabiston Textbook of Surgery, 2015"
+    },
+    {
+        "題別": "單",
+        "題號": "143",
+        "題目": "下列對於膽囊結石的描述何者錯誤?",
+        "選項": [
+            "A. 膽囊結石主要可分為色素結石(Pigmented stone)和膽固 醇結石(Cholesterol stone)二大類",
+            "B. 西方國家以色素結石為主,約占80%, 而亞洲國家則以膽 固醇結石為主",
+            "C. 膽固醇結石的成因主要為膽固醇過度分泌",
+            "D. 色素結石可分為黑色素結石(Black pigmented stone)和 褐色素結石(Brown pigmented stone)二大類",
+            "E. 並不是所有膽結石都需要手術治療"
+        ],
+        "答案": "B",
+        "出處": "Schwartz's principle of surgery 11th\nedition, page 1402-1403"
+    },
+    {
+        "題別": "單",
+        "題號": "144",
+        "題目": "下列對於Primary Sclerosing cholangitis 描述何者正確?",
+        "選項": [
+            "(A). Primary Sclerosing Cholangitis 是一個罕見疾病,較好 發於中年女性",
+            "(B). Primary Sclerosing Cholangitis 通常為Self-limited disease, 通常不會造成肝硬化",
+            "(C). Primary Scleroging Cholangitis 和human leukocyte antigen haplotypes HLA-B8, DR3, DQ2 和DRw52A有相關, 同時也會伴隨著其他自體免疫疾病,如 Ulcerative colitis",
+            "(D). Primary Sclerosing Cholangitis 並不會增加 Cholangiocarcinoma的發生率",
+            "(E). Primary sclerosing cholangitis 造成的Cirrhosis of liver 可用Liver transplant 來治療. 且治療完不會再復發"
+        ],
+        "答案": "C",
+        "出處": "Schwartz's principle of surgery 11th\nedition, page 1417-1418"
+    },
+    {
+        "題別": "單",
+        "題號": "145",
+        "題目": "下列對於胰臟內分泌瘤的敘述何者錯誤?",
+        "選項": [
+            "(A). Insulinoma 是最常見的胰臟內分泌瘤,其主要症狀為 Whipple triad,包含symptomatic fasting hypoglycemia, serum glucose level < 50 mg/dL, relief of symptoms with the administration of glucose",
+            "(B). 70-90% insulinoma 發生於Passaro's triangle, 是由 junction of the cystic duct and common bile duct, the 2nd and 3rd portion of the duodenum 和 the neck and body of the pancreas 組成的三角區域",
+            "(C). Zollinger-Ellison syndrome是由Gastrinoma所引起,主 要症狀為abdominal pain, peptic ulcer disease和Severe esophagitis",
+            "(D). 90%的Insulinomas are sporadic, 10% are associated with the multiple endocrine neoplasm type I(MENI) syndrome",
+            "(E). 超過 50%的gastrinomas是惡性的,有可能轉移到淋巴 結和肝臟"
+        ],
+        "答案": "B",
+        "出處": "Schwartz's principle of surgery 11th\nedition, page 1480-1482)"
+    },
+    {
+        "題別": "單",
+        "題號": "146",
+        "題目": "下列對於Pancreatic cystic neoplasms的敘述何者錯誤?",
+        "選項": [
+            "(A). Serous cystadenoma 絕大部分為良性病灶,平均發生在 胰臟各個部分.其特點為well-circumscribed cystic mass, small septations, central scar with calcification.",
+            "(B). Mucinous cystic neoplasms 有較高的惡性變化可能, 較好發於Perimenopasusal women, 較容易出現在 pancreatic body or tail",
+            "(C). Intraductal papillary mucinous neoplasm (IPMNs)可分 為 main-duct type(MD-IPMN) 和 branch-duct type(BD- IPMN)二大類,其中BD-IPMN比MD-IPMN有較高轉化成惡性 的機會",
+            "(D). Solid-pseudopapillary tumor 較為罕見,典型發生於年 輕女性,大部分可以用手術治癒",
+            "(E). Pancreatic pseudocyst 是最常見的Pancreatic cystic lesion, 通常和喝酒有關係"
+        ],
+        "答案": "C",
+        "出處": "Schwartz's principle of surgery 11th\nedition, page 1500-1504"
+    },
+    {
+        "題別": "單",
+        "題號": "147",
+        "題目": "下列對於Cholangiocarcinoma的敘述何者錯誤?",
+        "選項": [
+            "(A). Cholangiocarcinoma 10%發生在intrahepatic, 40%發 生在 distal part, 而其他50%發生於Bifurcation of hepatic duct",
+            "(B). 發生於Bifurcation處的Cholangiocarcinoma 又稱 Klatskin tumor",
+            "(C). Bismuth-Corlette classification Type II 是指僅影響到 common hepatic duct 還未到bifurcation 的 Cholangiocarcinoma",
+            "(D). Distal Cholangiocarcinoma通常以Whipple operation 來處理",
+            "(E). 感染中華肝吸蟲(Clonorchis sinensis)會增加得 Cholangiocarcinoma的機會"
+        ],
+        "答案": "C",
+        "出處": "Schwartz's principle of surgery 11th\nedition, page 1423-1425"
+    },
+    {
+        "題別": "單",
+        "題號": "148",
+        "題目": "急性膽石性胰臟炎的病患，最好的膽囊切除手術的時機 是：",
+        "選項": [
+            "A. 急性嚴重性胰臟炎發生時",
+            "B. 不論胰臟炎程度，一律在住院時，就應接受手術",
+            "C. 最遲不要超過發作後 6 週較佳",
+            "D. 發作後一年後較佳",
+            "E. 以上皆是"
+        ],
+        "答案": "C",
+        "出處": "Sabiston Textbook of Surgery, 21th\ned., p1502"
+    }
+]

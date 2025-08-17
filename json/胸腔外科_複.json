@@ -1,0 +1,828 @@
+[
+    {
+        "題別": "複",
+        "題號": "1",
+        "題目": "關於features of the lower esophageal sphincter下列何者 為是？",
+        "選項": [
+            "A. Cholinergic and hormonal contributions to function",
+            "B. The major barrier to reflux",
+            "C. Specialized intracellular calcium transport system",
+            "D. Intrinsic myogenic resting tone",
+            "E. Located in terminal 2 to 4 cm of esophagus"
+        ],
+        "答案": "ABCDE",
+        "出處": "General thoracic surgery, 5th,\nThomas W. Shield, 2000, p1852"
+    },
+    {
+        "題別": "複",
+        "題號": "2",
+        "題目": "關於Traumatic diaphragmatic hernia，下列敘述何者為 真？",
+        "選項": [
+            "A. 可發生在penetrating injuries，也可發生在blunt injuries",
+            "B. 右側比左側常發生",
+            "C. 在nipples與umbilicus之間的trauma, diaphragmatic injuries應列入考慮",
+            "D. 手術應從腹部approach",
+            "E. 大部分是因為撞擊腹部引起"
+        ],
+        "答案": "ACDE",
+        "出處": "General thoracic surgery, 4th,\nThomas W. Shield, 1994, p805"
+    },
+    {
+        "題別": "複",
+        "題號": "3",
+        "題目": "下列有關後縱膈腔腫瘤，何者是錯誤的？",
+        "選項": [
+            "A. 多為惡性",
+            "B. 多源自神經鞘膜",
+            "C. 切除後復發機率甚高",
+            "D. 有10﹪會深入脊椎孔內",
+            "E. 可考慮以影像輔助胸腔鏡手術"
+        ],
+        "答案": "AC",
+        "出處": "Thomas W Shields, General\nThoracic Surgery, 5th ed. Willams &\nWilkins, p2084"
+    },
+    {
+        "題別": "複",
+        "題號": "4",
+        "題目": "先天性橫膈疝最常見者為Bochdalek type，下列何種情況易 造成高死亡率？",
+        "選項": [
+            "A. 脾臟進入胸腔",
+            "B. 空腸進入胸腔",
+            "C. 結腸進入胸腔",
+            "D. 胃器進入胸腔",
+            "E. 母體羊水過多"
+        ],
+        "答案": "DE",
+        "出處": "Pediatric Surgery, 2th edition, Keith\nW. Ashcraft & Thomas M. Holder,\np208"
+    },
+    {
+        "題別": "複",
+        "題號": "5",
+        "題目": "食道閉鎖的病嬰，下列何者正確？",
+        "選項": [
+            "A. 通常診斷之依據是電腦斷層攝影",
+            "B. 通常診斷之依據是核磁共振",
+            "C. 唾液外流無法進食奶水，醫護人員需警覺此疾病之存在",
+            "D. 通常診斷之依據是食道攝影",
+            "E. 通常診斷之依據是插胃管照胸部X光"
+        ],
+        "答案": "CE",
+        "出處": "Shields. General Thoracic Surgery\n5rd ed. Williams & Wilins, p1785"
+    },
+    {
+        "題別": "複",
+        "題號": "6",
+        "題目": "以下有關Lung cancer之敘述，何者正確？",
+        "選項": [
+            "A. Hypertrophic pulmonary osteoarthropathy最易出現於 femur bone",
+            "B. Paraneoplastic syndromes最常見於adenocarcinoma",
+            "C. Neuromyopathy是最常見的paraneoplastic syndrome",
+            "D. 大部分的高鈣血症與ectopic parathyroid hormone之分 泌無關",
+            "E. 最常合併ectopic parathyroid hormone分泌者為 squamous cell carcinoma"
+        ],
+        "答案": "CDE",
+        "出處": "Thoracic Surgery, p674-677"
+    },
+    {
+        "題別": "複",
+        "題號": "7",
+        "題目": "以下有關primary spontaneous pneumothorax之第一次發 作，何者為手術治療之indication？",
+        "選項": [
+            "A. Prolonged air leak",
+            "B. Non re-expansion of the lung",
+            "C. Single large bulla",
+            "D. Occupational hazard",
+            "E. Hemopneumothorax"
+        ],
+        "答案": "ABCDE",
+        "出處": "Thoracic Surgery, p1045"
+    },
+    {
+        "題別": "複",
+        "題號": "8",
+        "題目": "以下有關Barrett's esophagus之敘述，何者正確？",
+        "選項": [
+            "A. 在EG junction以上之columnar epithelium稱為Barrett's mucosa",
+            "B. 所有在esophagus中之columnar epithelium皆稱為 Barrett's mucosa",
+            "C. 通常與reflux有關",
+            "D. 可分為fundic、junctional，及 specialized三種type",
+            "E. 與squamous cell carcinoma之形成有關"
+        ],
+        "答案": "CD",
+        "出處": "Surgery of the Alimentary Tract,\np244-248"
+    },
+    {
+        "題別": "複",
+        "題號": "9",
+        "題目": "以下有關食道解剖學之敘述，何者正確？",
+        "選項": [
+            "A. 食道沒有serosa，而有adventia",
+            "B. 胸腔內食道之血液供應主要來自intercostal artery",
+            "C. 食道在胃食道交接處上方是偏向右側",
+            "D. 食道之肌肉層分為longitudinal及circular，皆由smooth muscle形成",
+            "E. 食道內之神經叢分佈於黏膜下層及肌肉層內"
+        ],
+        "答案": "AE",
+        "出處": "Esophageal Surgery, p3-12"
+    },
+    {
+        "題別": "複",
+        "題號": "10",
+        "題目": "以下有關呼吸生理學之敘述，何者正確？",
+        "選項": [
+            "A. 在Three-zone model of lung perfusion中，Zone III為 P(arterial) > P(venous) > P(alveolar)",
+            "B. 當胸壁與肺臟之內外彈力（recoil）相當時之volume為 FRC (functional residual capacity)",
+            "C. TLC (total lung capacity) = VC (vital capacity) + FRC (functional residual capacity)",
+            "D. 目前測定Diffusing Capacity是使用carbon monoxide",
+            "E. Surfactant是由type I alveolar cell合成"
+        ],
+        "答案": "ABD",
+        "出處": "Thoracic Surgery, p37-54"
+    },
+    {
+        "題別": "複",
+        "題號": "11",
+        "題目": "以下有關氣管之解剖學敘述，何者正確？",
+        "選項": [
+            "A. 氣管之長度約10-11cm，從thyroid cartilage開始",
+            "B. 氣管包含16~20個軟骨環",
+            "C. 氣管之blood supply，主要為inferior thyroid a.及 bronchial a.",
+            "D. 氣管內襯之上皮為squamous cell epithelium",
+            "E. 氣管之末端為carina，通常略偏向右側"
+        ],
+        "答案": "BCE",
+        "出處": "Thoracic Surgery, p148-153"
+    },
+    {
+        "題別": "複",
+        "題號": "12",
+        "題目": "下列有關急診部門行緊急剖胸術之敘述，何者為正確？",
+        "選項": [
+            "A. 胸部之穿刺性外傷患者較鈍傷患者有較好之預後",
+            "B. 如果傷患在事故現場已無生命跡象，則不應再行剖胸術 急救，因其成效有限",
+            "C. 術前施行CPR之時間愈短，則預後較佳",
+            "D. 整體而言穿刺性外傷患者約有 > 50﹪的機率可因緊急剖 胸術而挽回性命",
+            "E. 效果不彰並儘量避免"
+        ],
+        "答案": "ABC",
+        "出處": "Surgery-Basic Science and Clinical\nEvidence, Norton et al. ed. 2001,\np1224"
+    },
+    {
+        "題別": "複",
+        "題號": "13",
+        "題目": "幼兒行氣管插管時易導致單側肺插管，主肇因於，除了？",
+        "選項": [
+            "A. 氣管較短",
+            "B. 嘴唇到咽部之距離較短",
+            "C. 因使用之氣管插管無氣囊（Cuff）故較易滑入遠端",
+            "D. 兩側主支氣管與氣管之夾角較小之故",
+            "E. 氣管插管與氣管壁之磨擦太少"
+        ],
+        "答案": "BCDE",
+        "出處": "ATLS for Doctors: Student Course\nManual, 2018, 10th edition, p194"
+    },
+    {
+        "題別": "複",
+        "題號": "14",
+        "題目": "做食道鏡時，對有疑問之食道粘膜（mucosa）上皮，可以 下列哪些染劑來染色（staining），且於何種情況下來幫助 切片位置，並可提高判斷惡性食道癌之機率及正確性？",
+        "選項": [
+            "A. Lugol solution : negative staining",
+            "B. Lugol solution : positive staining",
+            "C. Toluidine blue : negative staining",
+            "D. Toluidine blue : positive staining",
+            "E. Methylene blue : positive staining"
+        ],
+        "答案": "AD",
+        "出處": "The Esophagus, Third edition 1999,\nDonald O Castell, p240"
+    },
+    {
+        "題別": "複",
+        "題號": "15",
+        "題目": "對胃食道逆流疾病（gastroesophageal reflux disease）施 行抗逆流手術（anti-reflux procedure）可達到下列何種目 的？",
+        "選項": [
+            "A. 增加食道下括約肌靜止壓力",
+            "B. 增加胃之排空能力",
+            "C. 增加腹腔內食道下括約肌長度",
+            "D. 還原食道裂孔疝氣（Hiatal hernia）",
+            "E. 阻止十二指腸至胃之逆流（Duodenogastric reflux）"
+        ],
+        "答案": "ACD",
+        "出處": "The Esophagus, Third edition 1999,\nDonald O Castell, p514"
+    },
+    {
+        "題別": "複",
+        "題號": "16",
+        "題目": "有關肺臟移植，下列何者為是？",
+        "選項": [
+            "A. 術後免疫抑制的誘發治療（induction therapy），包括 antithymocyte globulin, OKT3, interleukin-2 receptor antagonist",
+            "B. 預防Pneumocystis carini感染，可使用trimethoprim- sulfamethoxazole",
+            "C. 發生early graft dysfunction約20﹪",
+            "D. CMV感染在移植後一週內發生最常見",
+            "E. 肺臟保存使用prostaglandin E1，效果不大"
+        ],
+        "答案": "ABC",
+        "出處": "General thoracic surgery 5th ed.,\np1187-1199"
+    },
+    {
+        "題別": "複",
+        "題號": "17",
+        "題目": "有關肺癌外科手術，何者為是？",
+        "選項": [
+            "A. 做右肺切除比左肺切除風險性較高",
+            "B. 風險性較高的病人，可考慮做楔形切除（wedge resection）",
+            "C. 肺癌切除時，同側縱膈腔淋巴廓清術是必要的",
+            "D. 肺葉切除的死亡率小於5﹪",
+            "E. 袖式肺葉切除有時可取代全肺切除"
+        ],
+        "答案": "ABCDE",
+        "出處": "General Thoracic Surgery 5th ed.,\np1313-1316"
+    },
+    {
+        "題別": "複",
+        "題號": "18",
+        "題目": "氣管切開造口術（Tracheostomy）的併發症，何者為是？",
+        "選項": [
+            "A. 出血",
+            "B. 手術當中低血氧症（hypoxia）",
+            "C. 傷口感染",
+            "D. 氣管狹窄",
+            "E. 無名動脈（innominate artery）受損"
+        ],
+        "答案": "ABCDE",
+        "出處": "General Thoracic Surgery 6th ed.,\np882"
+    },
+    {
+        "題別": "複",
+        "題號": "19",
+        "題目": "下列有關食道生理解剖學的敘述，何者正確？",
+        "選項": [
+            "A. 食道沒有serosa，只有adventitia",
+            "B. 中段食道之血液供應主要來自intercostal artery",
+            "C. 下段食道是較偏向左側胸腔",
+            "D. 食道之肌肉層分為circular及longitudinal layer，皆由平 滑肌構成",
+            "E. 食道的副交感神經支配是由迷走神經提供"
+        ],
+        "答案": "ACE",
+        "出處": "Shields' General Thoracic Surgery,\n8th edition, 2019 ,Pages 3509~3519"
+    },
+    {
+        "題別": "複",
+        "題號": "20",
+        "題目": "下列何者是Squamous cell carcinoma of esophagus的危險 因子？",
+        "選項": [
+            "A. 食道腐蝕性傷害 (Caustic injury)",
+            "B. Plummer-Vinson Syndrome",
+            "C. 食道弛緩不能症 (Achalasia)",
+            "D. Barrett's esophagitis",
+            "E. 抽煙及喝酒"
+        ],
+        "答案": "ABCE",
+        "出處": "Shields' General Thoracic Surgery,\n8th edition, 2019 ,Pages 4206~4207"
+    },
+    {
+        "題別": "複",
+        "題號": "21",
+        "題目": "有關食道破裂(esophageal perforation)之敍述何者正確？",
+        "選項": [
+            "A. 自發性食道破裂 (Boerhaave syndrome)好發於右下胸腔",
+            "B. 最常見原因為醫源性 (iatrogenic)傷害所導致",
+            "C. 胸痛、發燒、縱隔腔氣腫與膿胸是典型特徵",
+            "D. 一旦懷疑食道破裂，就不可做食道內視鏡檢查",
+            "E. 延遲診斷會造成病人的死亡率上升"
+        ],
+        "答案": "BCE",
+        "出處": "Shields' General Thoracic Surgery,\n8th edition, 2019 ,Pages 3511, 3597"
+    },
+    {
+        "題別": "複",
+        "題號": "22",
+        "題目": "下列何者為原發性胸骨及肋骨之惡性腫瘤？",
+        "選項": [
+            "A. 骨軟骨瘤（Osteochondroma）",
+            "B. 軟骨肉瘤（Chondrosarcoma）",
+            "C. 軟骨瘤（Chondroma）",
+            "D. 骨肉瘤（Osteogenic sarcoma）",
+            "E. 尤文氏肉瘤（Ewing sarcoma）"
+        ],
+        "答案": "BDE",
+        "出處": "Shields' General Thoracic Surgery,\n8th edition, 2019 ,Pages 1506"
+    },
+    {
+        "題別": "複",
+        "題號": "23",
+        "題目": "下列何者為氣切手術中的併發症？",
+        "選項": [
+            "A. Pneumothorax",
+            "B. Tracheomalacia",
+            "C. Recurrent laryngeal nerve injury",
+            "D. Esophageal perforation",
+            "E. Tracheal stenosis"
+        ],
+        "答案": "ACD",
+        "出處": "Tracheostomy: A Surgical Guide 1st\ned. 2018 Edition P308-P316"
+    },
+    {
+        "題別": "複",
+        "題號": "24",
+        "題目": "關於Pittsburgh食道破裂嚴重度 perforation severity score (PSS) criteria敘述，下列何者為誤?",
+        "選項": [
+            "A. 年紀大於65歲：Score 1",
+            "B. 影像有肋膜積水： Score 1",
+            "C. 診斷時間大於24小時：Score 2",
+            "D. 病人有癌症病史：Score 3",
+            "E. 呼吸道症狀 (呼吸速率>30下/分鐘、需要氧氣供應、呼吸 器使用)：Score 3"
+        ],
+        "答案": "AE",
+        "出處": "Sabiston, Text book of surgery 21th\nedition, P1034-1035"
+    },
+    {
+        "題別": "複",
+        "題號": "25",
+        "題目": "下列關於食道外傷敘述何者正確?",
+        "選項": [
+            "A. Cervical esophagus injury病人常見症狀為吞嚥疼痛及發 燒",
+            "B. 醫源性外傷為導致食道損傷最常見原因",
+            "C. Boerhaave's syndrome為一自發型食道破裂，常見於嘔 吐後",
+            "D. Boerhaave's syndrome於診斷上，常見於心臟後側可見 一不規則狀patch, 俗稱\"Y sign\"",
+            "E. Achalasia病人食道擴張後導致的食道破裂，於進行手術 過程因將middle third esophagus進行modified Heller myotomy"
+        ],
+        "答案": "ABC",
+        "出處": "General Thoracic Surgery, Edition 7,\nP1851-1860"
+    },
+    {
+        "題別": "複",
+        "題號": "26",
+        "題目": "關於intrathoracic abscess，下列敘述何者為真？",
+        "選項": [
+            "A. 主要分為兩個來源: pleural abscess及intraparenchymal abscess",
+            "B. 上述兩者治療首選皆為抗生素治療及引流管置入，必要 時可考慮手術引流。",
+            "C. 引流管置入後可考慮使用fibrinolytic agent, 溶解fibrinous adhension, 減少loculation的產生。",
+            "D. Chronic empyema病人因為肺部長期擴張不全已經無法 經由手術改善，故不建議手術。",
+            "E. Eloesser flap thoracostomy window (EFTW) 是於兩個 肋間create一個H型切口並將局部肋骨切斷，而後將皮膚及 皮下組織翻成flap。"
+        ],
+        "答案": "AC",
+        "出處": "Sabiston, Text book of surgery 21th\nedition, P230-231"
+    },
+    {
+        "題別": "複",
+        "題號": "27",
+        "題目": "下列關於lung abscess何者敘述為是？",
+        "選項": [
+            "A. 主要成因爲吸入性肺炎，導致口腔細菌菌叢嗆至肺部",
+            "B. 常見菌叢包含S. aureus, Klebsiella pneumoniae及 Streptococcus pyogenes等菌",
+            "C. 大部分病人在一剛開始感染就有明顯呼吸道症狀",
+            "D. 症狀包含發燒、咳嗽有痰、夜間盜汗、體重減輕等",
+            "E. 於手術風險低病人，治療首選為手術引流。"
+        ],
+        "答案": "ABD",
+        "出處": "Adult Chest Surgery Edition 2,\nP849-850"
+    },
+    {
+        "題別": "複",
+        "題號": "28",
+        "題目": "於AJCC肺癌分期中,下列何者屬於N2淋巴結？",
+        "選項": [
+            "A. Segmental",
+            "B. Lobar",
+            "C. Subcarinal",
+            "D. Pulmonary ligament",
+            "E. Upper paratracheal"
+        ],
+        "答案": "CDE",
+        "出處": "Sabiston, Text book of surgery 21th\nedition, P 1601-1602"
+    },
+    {
+        "題別": "複",
+        "題號": "29",
+        "題目": "當肋膜積水分析屬於exudative effusion，常見診斷包含：",
+        "選項": [
+            "A. Empyema",
+            "B. Cirrhosis",
+            "C. Meigs syndrome",
+            "D. Systemic lupus erythematosus",
+            "E. Chylothorax"
+        ],
+        "答案": "ADE",
+        "出處": "Sabiston, Text book of surgery 21th\nedition, P1628-1630"
+    },
+    {
+        "題別": "複",
+        "題號": "30",
+        "題目": "原發性肺癌分期之敘述何者有誤？",
+        "選項": [
+            "A. 經支氣管鏡超音波切片同側paratracheal lymph node診 斷陽性，屬於N2。",
+            "B. 肋膜積水抽吸化驗發現癌細胞，屬於M1c。",
+            "C. 切片診斷supraclavicular lymph node有癌細胞， 屬於 M1a。",
+            "D. 腫瘤侵犯至diaphragm，屬於T4。",
+            "E. 腫瘤大小2.7公分，屬於T1b。"
+        ],
+        "答案": "BCE",
+        "出處": "AJCC NCCN guideline 2022 version\n3 Non-small cell lung cancer"
+    },
+    {
+        "題別": "複",
+        "題號": "31",
+        "題目": "若病人診斷Mycobacterial infeciton, 以下狀況可考慮手術介 入？",
+        "選項": [
+            "(A). Persistant positive sputum culture after 4-6 months medical treatment",
+            "(B). Presence of complications, such as massive hemoptysis or bronchopleural fistula",
+            "(C). Persistant cavity > 3cm",
+            "(D). Fever in immunocompromised patient",
+            "(E). Combined with lung abscess"
+        ],
+        "答案": "AB",
+        "出處": "Sabiston, Text book of surgery 21th\nedition, P1613-1614"
+    },
+    {
+        "題別": "複",
+        "題號": "32",
+        "題目": "關於肺部移植術後產生primary graft dysfuction之敘述何者 正確？",
+        "選項": [
+            "A. 發生率達45%以上",
+            "B. 於術後48小時內診斷",
+            "C. 因嚴重度可分為Grade 0-4",
+            "D. Grade 3是指PaO2/FiO2<200且影像學有panlobar alveolar infiltration",
+            "E. 常見長期併發症包含chronic rejection。"
+        ],
+        "答案": "BDE",
+        "出處": "Pearson's thoracic and esophageal\nsurgery Edition 3, P676-678"
+    },
+    {
+        "題別": "複",
+        "題號": "33",
+        "題目": "關於胸腔引流管置入之敘述何者為非?",
+        "選項": [
+            "(A). Indication 包含Pneumothorax, malignant pleural effusion 及 parapneumonic effusion。",
+            "(B). 常見置放位置為安全三角 \"safe triangle\"。",
+            "(C). Safe triangle是由latissimus dorsi muscle, pectoralis minor muscle及nipple水平連線所組成。",
+            "(D). 相關併發症包含diaphragm perforation、intercostal artery injury及rexpansion pulmonary edema等。",
+            "(E). 置放小號胸管時，因切口小，可直接使用kelly進入後就 將管路放入，不需要先手指探查。"
+        ],
+        "答案": "CE",
+        "出處": "Adult chest surgery, Edition 2, P79-\n82"
+    },
+    {
+        "題別": "複",
+        "題號": "34",
+        "題目": "Mediastinal cyst於小孩及成人皆為臨床常見之先天性病兆 ，下列何者敘述正確？",
+        "選項": [
+            "A. 臨床上最常見的為mesothelial cyst。",
+            "B. Bronchogenic cyst 通常以multiloculated表現，發生率比 unilobular來的高。",
+            "C. 臨床上,eosphageal cyst比bronchogenic cyst來的常見， 有症狀者會建議手術處理。",
+            "D. Bronchogenic cyst之症狀產生通常是因為對附近器官， 如呼吸道、食道造成壓迫或感染。",
+            "E. 即使影像評估手術完整切除不易，也不建議使用 aspiration方式進行cyst處理，因為有高比例復發率及併發 症產生的可能。"
+        ],
+        "答案": "DE",
+        "出處": "General Thoracic Surgery, Edition 7,\nP 2519-2529"
+    },
+    {
+        "題別": "複",
+        "題號": "35",
+        "題目": "下列何者為食道腐蝕性傷害 caustic injury之surgical indication?",
+        "選項": [
+            "A. Fistula formation",
+            "B. Grade 2 or 3 injury",
+            "C. First degree injury",
+            "D. Esophageal carcinoma",
+            "E. Tansmural necrosis"
+        ],
+        "答案": "ABDE",
+        "出處": "Pearson's thoracic and esophageal\nsurgery, Edition 3, P759-763"
+    },
+    {
+        "題別": "複",
+        "題號": "36",
+        "題目": "針對目前已知關於間皮瘤(mesothelioma)細胞及分子遺傳 學之敘述何者正確?",
+        "選項": [
+            "A. Chromosome loss of 1p21-22 and 3p21",
+            "B. Monosomy Chromosomes 4 and 22",
+            "C. Polysomy Chromosomes 9, 13 and 20",
+            "D. Gains detected at 9p21, 4q31-32 and 14q12-24",
+            "E. Extra copies of 1,3,6,7,11 and 15"
+        ],
+        "答案": "ABE",
+        "出處": "Adult Chest Surgery Edition 2,\nP947-955"
+    },
+    {
+        "題別": "複",
+        "題號": "37",
+        "題目": "關於下列影像的敘述，何者正確？",
+        "選項": [
+            "A. Thymic carcinoids通常在T1-weighted images（MRI） 有很亮的顯影",
+            "B. Thymic cysts在CT上的表現通常為nonenhancing, Hounsfield units（HU）介於0~20之間, 但也有> 20 HU的 thymic cysts, 因此易與solid masses搞混",
+            "C. 如果在chest CT上看到amorphous calcified mass而造 成right main bronchus的狹窄, 可能的鑑別診斷包括 fibrosing mediastinitis",
+            "D. Tracheopathia osteochondroplastica的病灶不包含 membranous portion of the trachea, 這特徵有助於我們和 amyloidosis做區分",
+            "E. Cavitaion或是cystic degeneration的表現在lymphoma 很罕見。"
+        ],
+        "答案": "BCDE",
+        "出處": "General Thoracic Surgery (Shields),\n7th edition, 2009 p.2082~2094"
+    },
+    {
+        "題別": "複",
+        "題號": "38",
+        "題目": "在Hodgkin lymphoma被確診之後，往往要做一系列的分期 評估和檢查，請問下列何種方法現今仍是routine？",
+        "選項": [
+            "A. Bone marrow biopsy core and aspirate",
+            "B. Serum LDH",
+            "C. Staging laparotomy with splenectomy and lymph node sampling",
+            "D. Total body computed tomography（CT）scans",
+            "E. Functional imaging with F-FDH positron emission tomography（PET）。"
+        ],
+        "答案": "ABDE",
+        "出處": "General Thoracic Surgery (Shields),\n7th edition, 2009 p.2381"
+    },
+    {
+        "題別": "複",
+        "題號": "39",
+        "題目": "下列關於SVC syndrome的敘述何者正確？",
+        "選項": [
+            "A. 如果病人表現出SVC syndrome的symptoms或signs, 應 做的第一線檢查應是chest X-ray。",
+            "B. (cid:9)Nonmalignant原因造成的SVC obstruction, 往往病人的 chest radiograph是正常的。",
+            "C. 無論是什麼原因造成的SVC syndrome, 治療原則都從 salt restriction, diuretic therapy, 頭部抬高, steroid administration以及systemic anticoagulation開始做起。",
+            "D. Nonmalignant causes造成的SVC syndrome已日漸增 加, 目前大約佔所有cases的60%。",
+            "E. 如果病人表現出SVC syndrome的symptoms或signs, 應 叫病患多運動，以促進血液循環。"
+        ],
+        "答案": "ABC",
+        "出處": "General Thoracic Surgery (Shields),\n7th edition, 2009 p.2249~2250"
+    },
+    {
+        "題別": "複",
+        "題號": "40",
+        "題目": "請問下列關於tumor marker的敘述，何者為正確？",
+        "選項": [
+            "A. a-fetoprotein在患有seminoma的病人大都呈現陽性。",
+            "B. Tumor marker可以協助診斷，反應治療效果，偵測疾病 復發，以及做為早期癌症的篩檢工具。",
+            "C. B-HCG不是一種tumor product。",
+            "D. B-HCG在患有choriocarcionma的病人都呈現陽性。",
+            "E. PLAP（Placental alkaline phosphatase）在患有yolk sac tumor的病人, 可能呈現陽性, 也可能呈現陰性。"
+        ],
+        "答案": "BDE",
+        "出處": "General Thoracic Surgery (Shields),\n7th edition, 2009 p.2131~21234"
+    },
+    {
+        "題別": "複",
+        "題號": "41",
+        "題目": "下列敘述，何者為非？",
+        "選項": [
+            "A. 最常造成acute mediastinal infections的原因為 secondary to VATS（video-assisted thoracoscopic surgery）",
+            "B. 如果病人有loculated pericardial effusion欲做手術處理, 採用left-sided VATS approach較right-sided VATS approach佳。",
+            "C. 因為oropharyngeal infections而造成mediastinal infection最常見的感染路徑為pretracheal space。",
+            "D. 對於Primary pneumomediastinum的病人, 不需要使用 bronchoscopy和esophagoscopy做評估。",
+            "E. 在治療Primary pneumomediastinum的病人時, 抗生素 是必要的。"
+        ],
+        "答案": "ACE",
+        "出處": "General Thoracic Surgery (Shields),\n7th edition, 2009 p.2170~2179"
+    },
+    {
+        "題別": "複",
+        "題號": "42",
+        "題目": "下列有關食道憩室（Esophageal diverticula）之描述，何 者為非？",
+        "選項": [
+            "A. 多為先天性，好發於嬰幼兒時期。",
+            "B. 分為true diverticula與false diverticula兩類。",
+            "C. False diverticula在解剖學尚須包含mucosa, submucosa 與muscle三層。",
+            "D. Pharyngoesophageal (Zenker) diverticulum屬於false diverticula、Supradiaphragmatic diverticula屬於true diverticula",
+            "E. 臨床診斷上以食道鋇劑攝影（barium esophagogram） 最具診斷價值。"
+        ],
+        "答案": "ACD",
+        "出處": "Sabiston, Text book of surgery e21th\nedition, p1028-9"
+    },
+    {
+        "題別": "複",
+        "題號": "43",
+        "題目": "下列有關急食道腐蝕性傷害（caustic injury）之描述，何者 為非？",
+        "選項": [
+            "A. 對於吞食Alkaline solution所引起caustic injury之病患， 應立即給予灌食解毒劑antidote以減輕傷害程度。",
+            "B. 任何情況下都不應給予corticosteroid。",
+            "C. 食道狹窄（Stricture）為最常見之併發症，好發於 caustic injury後之1-2週。",
+            "D. 若因嚴重狹窄而須在食道施行重建手術，最佳施行手術 時機應在caustic injury發生後3個月內。",
+            "E. 受caustic injury後之食道，其產生癌病變之incidence為 正常人之1000倍。"
+        ],
+        "答案": "ABCD",
+        "出處": "Sabiston, Text book of surgery 16th\nedition, p718"
+    },
+    {
+        "題別": "複",
+        "題號": "44",
+        "題目": "有關食道癌之描述，以下何者為非？",
+        "選項": [
+            "A. 煙和酒是 Squamous cell carcinoma 的重要危險因子。",
+            "B. Squamous cell carcinoma最常見於食道之下1/3段（ lower third）",
+            "C. Squamous cell carcinoma為美國地區最常見之食道癌組 織型態。",
+            "D. Barrett's esophagus之病患，較正常人容易罹患 squamous cell carcinoma。",
+            "E. 對於病灶中心在賁門近端2 cm內（Siewert 類型I/II）的 腫瘤也被分期為食道癌。"
+        ],
+        "答案": "BCD",
+        "出處": "Sabiston, Text book of surgery 20th\nedition, p1038-9"
+    },
+    {
+        "題別": "複",
+        "題號": "45",
+        "題目": "下列有關肺部發育與構造之描述，何者正確？",
+        "選項": [
+            "A. 肺部發育約於妊娠後 21-28 天開始。",
+            "B. 出生時大約有 2000 萬個肺泡 ，之後不會增加。",
+            "C. 肺泡約佔一半全肺容積。",
+            "D. 右側上肺葉之Apical segment及Posterior segment於左 側融為Anterior Posterior segment。",
+            "E. 右側下肺葉之Medial (basal) segment及Anterior basal segment於左側融為Anterior-medial basal segment。"
+        ],
+        "答案": "ABCE",
+        "出處": "Sabiston, Text book of surgery 21th\nedition, p1586-7"
+    },
+    {
+        "題別": "複",
+        "題號": "46",
+        "題目": "有關肺部手術之術前評估，以下何者正確？",
+        "選項": [
+            "A. FEV1為評估手術後肺功能之重要因子。",
+            "B. FEV1 大於 60% 預測的患者可以耐受單一全肺葉切除 術。",
+            "C. ppo-FEV1 ≤ 25% 時可能具有氧氣和呼吸器依賴的風 險。",
+            "D. Diffusion capacity for CO (DLCO) level小於50﹪時，會 增加手術之危險性。",
+            "E. Maximal O consumption (VO2 max) <10mL/kg/min時 2 屬於高風險。"
+        ],
+        "答案": "ABDE",
+        "出處": "Sabiston, Text book of surgery 21th\nedition, p1588-9"
+    },
+    {
+        "題別": "複",
+        "題號": "47",
+        "題目": "關於惡性肋膜間質細胞瘤之描述，下列何者為真？",
+        "選項": [
+            "A. 發病機制與石棉接觸密切相關，並且在初次接觸和疾病 發展之間存在較長的潛伏期（15-40 年）",
+            "B. 組織學亞型包括上皮(epithelial)、肉瘤樣(sarcomatoid) 或混合型組織學(mixed histology)，混合型組織學具有更好 的預後。",
+            "C. 胸膜切除術/胸膜剝脫術(extended pleurectomy/decortication) 是一種肺保留手術。",
+            "D. 胸膜外肺切除術(Extrapleural pneumonectomy)是最廣 泛的手術，但它有高死亡率(mortality) 5-20% 和後遺症 (morbidity) 40-60%",
+            "E. 多模式治療(multimodality treatment)後中位生存期 (Median survival period)約為2-3年。"
+        ],
+        "答案": "ACDE",
+        "出處": "Sabiston, Text book of surgery 21th\nedition, p1631-2"
+    },
+    {
+        "題別": "複",
+        "題號": "48",
+        "題目": "關於胸廓畸形之敘述，下列何者為非？",
+        "選項": [
+            "A. 漏斗胸是最常見的先天性胸壁畸形。",
+            "B. 前胸壁凸起畸型(Pectus carinatum)可分為 3 類型： pouter pigeon chest(最常見)、keel chest、lateral precuts carinatum。",
+            "C. 漏斗胸手術矯正最佳時機為1至2歲。",
+            "D. 漏斗胸手術適應症包括明顯的臨床症狀、明顯的身體外 觀問題、Haller index < 3",
+            "E. 波蘭氏症候群(Poland` syndrome)之畸形包括胸大肌發 育不全、胸小肌缺失及合併有手指畸形等問題，通常發生 在不同側。"
+        ],
+        "答案": "BCDE",
+        "出處": "Sabiston, Text book of surgery 21th\nedition, p1620-1"
+    },
+    {
+        "題別": "複",
+        "題號": "49",
+        "題目": "開胸手術術前、後注意事項何者正確？",
+        "選項": [
+            "A. 術前肺功能檢查評估是必需的。",
+            "B. 吸煙會增加術後肺部併發症。",
+            "C. 術前戒菸2-4週對於降低併發症的發生率是必要的。",
+            "D. 雙陽壓呼吸道正壓(bilevel positive airway pressure, BiPAP) 呼吸器對呼吸睡眠中止症病患，可能會降低術後重 新插管的需求。",
+            "E. 早期活動對於術後併發症發生很重要。"
+        ],
+        "答案": "ABDE",
+        "出處": "Sabiston, Text book of surgery 21th\nedition, p1588"
+    },
+    {
+        "題別": "複",
+        "題號": "50",
+        "題目": "在正常食道攝影（esophagogram）下，食道狹窄通常位於 下列何處？",
+        "選項": [
+            "A. 上端入口(cricopharyngeus muscle) 。",
+            "B. 橫過右邊主支氣管及肺動脈。",
+            "C. 經過橫膈裂孔處。",
+            "D. 主動脈弓處。",
+            "E. 橫過左主支氣管。"
+        ],
+        "答案": "ACDE",
+        "出處": "Sabiston, Text book of surgery 21th\nedition, p1016"
+    },
+    {
+        "題別": "複",
+        "題號": "51",
+        "題目": "關於支氣管鏡之敘述何者為誤？",
+        "選項": [
+            "A. 軟式及硬式支氣管鏡檢查為胸腔外科醫師呼吸道評估之 重要工具。",
+            "B. 對於呼吸道異物處理，軟式支氣管鏡會比硬式支氣管鏡 適合。",
+            "C. 於小孩子呼吸道評估，因硬式支氣管鏡可能導致細小呼 吸道受傷，僅建議使用軟式支氣管鏡評估。",
+            "D. 評估良性狹窄首要工具為硬式支氣管鏡。",
+            "E. 對於airway obstruction個案，若於檢查過程中血氧低下 ，無法順利建立呼吸道，須考慮置放葉克膜。"
+        ],
+        "答案": "BC",
+        "出處": "Pearson's thoracic and esophageal\nsurgery Edition 3, P89-94"
+    },
+    {
+        "題別": "複",
+        "題號": "52",
+        "題目": "以下有關游離肺(pulmonary sequestration)之敘述，下列何 者正確？",
+        "選項": [
+            "A. 其血液供應來至體循環(systemic circulation)，以發生在 右下肺葉為最常見。",
+            "B. 可分成肺葉內型(intralobar type)及肺葉外型(extralobar type)；肺葉內型通常引流至肺循環(pulmonary circulation) 且有正常的支氣管交通(bronchial communication)；肺葉外 型通常引流至體循環靜脈且無正常的支氣管交通，常合併 其他先天性異常。",
+            "C. 合併有發燒或急性感染，應緊急手術避免術後膿胸 (empyema)。",
+            "D. 肺葉外型有時會合併有adenoid cyst malformations，因 此即時沒有症狀，應建議手術切除。",
+            "E. 肺葉內型(intralobar type)較為常見。"
+        ],
+        "答案": "BDE",
+        "出處": "General Thoracic Surgery, 8th\nEdition, page 940-943"
+    },
+    {
+        "題別": "複",
+        "題號": "53",
+        "題目": "應用PET-CT scan於肺癌的敘述，以下何者正確？",
+        "選項": [
+            "A. PET-CT可以取代骨骼掃描來診斷骨轉移。",
+            "B. PET-CT可以取代磁振造影來診斷腦轉移。",
+            "C. 病人接受PET-CT檢查必須空腹，但可靜脈給葡萄糖水 以防血糖變化。",
+            "D. 小於0.8公分的肺內病灶常出現false-negative。",
+            "E. PET-CT 對於診斷肺癌淋巴結之準確性與縱膈腔鏡診斷 相當。"
+        ],
+        "答案": "AD",
+        "出處": "Shields’General Thoracic Surgery,\n8th ed.,2019 chapter 15"
+    },
+    {
+        "題別": "複",
+        "題號": "55",
+        "題目": "關於食道破裂之敘述，以下何者正確？",
+        "選項": [
+            "A. 食道破裂最常見的原因為外物(foreign body)引起。",
+            "B. 食道破裂最常見的部位為胸腔。",
+            "C. 食道破裂之治療原則包括建立腸道營養及抗生素之使 用。",
+            "D. 食道破裂之病患均應接受緊急手術縫補食道破裂處。",
+            "E. 腹腔內之食道破裂應從正中腹部切開術進行手術縫補。"
+        ],
+        "答案": "BCE",
+        "出處": "Shield’s General Thoracic Surgery,\n8th edition, page 1487-9, TABLE\n115.1"
+    },
+    {
+        "題別": "複",
+        "題號": "56",
+        "題目": "關於惡性縱膈腔生殖瘤GCT(malignant germ cell tumor)的 敘述，下列何者正確？",
+        "選項": [
+            "A. Metastatic nonseminoma GCT之預後較seminoma好。",
+            "B. Seminoma的AFP 及beta-HCG 都會升高。",
+            "C. Teratoma中若含有其他germ cell tumor的組成，預後較 差且容易recurrence，對chemotherapy的效果也較差，因 此需要更積極的手術切除治療。",
+            "D. Seminoma 對chemotherapy效果不佳。",
+            "E. Nonseminomatous malignant germ cell tumor的第一線 治療為chemotherapy之後手術切除。"
+        ],
+        "答案": "CE",
+        "出處": "Shield’s General Thoracic Surgery,\n8th edition, Chapter 169, page 2179-\n80"
+    },
+    {
+        "題別": "複",
+        "題號": "57",
+        "題目": "關於thymoma 敘述，下列何者正確？",
+        "選項": [
+            "A. Thymoma 為chemosensitive tumor, 故對於手術切除乾 淨(R0)之晚期胸腺瘤，應考慮做adjuvant chemotherapy。",
+            "B. Induction chemoradiation 可提升pathological response rate，並提升long-term survival。",
+            "C. 手術切除後的stage III thymoma，adjuvant radiotherapy可有效提升病人存活。",
+            "D. 手術切除後的stage II thymoma，術後放射線治療的角 色仍有爭議，但一般認為incomplete resection，positive margin 是放射線治療的適應症。",
+            "E. 除非是stage IVB(有肺外擴散之病患)，胸腺腫瘤仍應考 慮盡量手術切除。"
+        ],
+        "答案": "DE",
+        "出處": "Shield’s General Thoracic Surgery,\n8th edition, page 2155"
+    },
+    {
+        "題別": "複",
+        "題號": "58",
+        "題目": "Sarcoidosis為常見之良性縱隔腔淋巴腫大疾病，下列有關 敘述何者正確？",
+        "選項": [
+            "A. 大部分患者會有肺部之異常。",
+            "B. Stage I sarcoidosis指hilar adenopathy without pulmonary infiltrates，大多會自行緩解無需類固醇治療。",
+            "C. Bronchoalveolar lavage fluid會出現lymphocytosis 及 CD4/CD8 > 1。",
+            "D. 男性居多。",
+            "E. 預後不好之原因包括年輕時發病、病程大於6個月、其 他器官影響之範圍等。"
+        ],
+        "答案": "ABC",
+        "出處": "Shield’s General Thoracic Surgery,\n8th edition, page 2163-4"
+    },
+    {
+        "題別": "複",
+        "題號": "59",
+        "題目": "有關胃食道逆流(gastroesophageal reflux disease, GERD) 的相關敘述，以下何者錯誤？",
+        "選項": [
+            "A. GERD的典型症狀為heartburn 與regurgitation。",
+            "B. 對內科治療無效而導致疾病惡化之病患可考慮手術治 療。",
+            "C. 手術(antireflux surgery)可以避免食道dysplasia之程度惡 化。",
+            "D. 最可靠診斷方式為 ambulatory 24-hour esophageal PH monitoring。",
+            "E. 一般proton pump inhibitor(PPI)不影響GERD病人之24- hour esophageal PH monitoring之檢查結果，檢查前數天 不需停藥。"
+        ],
+        "答案": "CE",
+        "出處": "Shield’s General Thoracic Surgery,\n8th edition, page1648-50"
+    },
+    {
+        "題別": "複",
+        "題號": "60",
+        "題目": "85歲男性因吞嚥困難及食物逆流等症狀就醫，經診斷為 Zenker’s diverticulum，以下敘述何者錯誤？",
+        "選項": [
+            "A. Zenker's diverticulum與Epiphrenic diverticulum一樣均 為Pulsion diverticula。",
+            "B. 診斷主要根據食道攝影。",
+            "C. Zenker's diverticulum發生之位置與Killian-Jameison diverticulum一樣均位於Cricopharyngeus的下方。",
+            "D. 手術治療一般需做Cricopharyngeal myotomy。",
+            "E. Zenker's diverticulum比Epiphrenic diverticulum少見。"
+        ],
+        "答案": "CE",
+        "出處": "General Thoracic Surgery, Thomas\nW. Shields, 8th Edition, Page 1830-3"
+    }
+]

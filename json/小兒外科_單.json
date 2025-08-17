@@ -1,0 +1,1262 @@
+[
+    {
+        "題別": "單",
+        "題號": "1",
+        "題目": "兒童Wilms氏腫瘤（Wilms' tumor）最易發生轉移的器官， 是下列那一種？",
+        "選項": [
+            "A. 腦部",
+            "B. 肺臟",
+            "C. 肝臟",
+            "D. 骨骼",
+            "E. 皮膚"
+        ],
+        "答案": "B",
+        "出處": "Holcomb and Ashcraft's pediatric\nSurgery, 7th ed., p986; Pediatric\nSurgery 7th ed, Arnold G. Coran,\np423-435"
+    },
+    {
+        "題別": "單",
+        "題號": "2",
+        "題目": "下列何項，不是影響兒童Wilms氏腫瘤（Wilms' tumor）預 後的主要因素？",
+        "選項": [
+            "A. 病理組織類型",
+            "B. 診斷年齡",
+            "C. 腫瘤大小",
+            "D. 左右側別",
+            "E. NWTS腫瘤分期"
+        ],
+        "答案": "D",
+        "出處": "Holcomb and Ashcraft's pediatric\nSurgery, 7th ed., p993; Pediatric\nSurgery 7th ed, Arnold G. Coran,\np423-435"
+    },
+    {
+        "題別": "單",
+        "題號": "3",
+        "題目": "小兒畸胎瘤（teratoma）最好發的部位，是在？",
+        "選項": [
+            "A. 睪丸（testicular）",
+            "B. 縱膈部（mediastinal region）",
+            "C. 卵巢（ovarian）",
+            "D. 薦尾椎部（sacrococcygeal region）",
+            "E. 腦部"
+        ],
+        "答案": "D",
+        "出處": "Pediatric Surgery 7th ed, Arnold G.\nCoran, p511"
+    },
+    {
+        "題別": "單",
+        "題號": "4",
+        "題目": "畸胎瘤（teratoma）病童，如果血中胎兒蛋白（α- fetoprotein）昇高時，必須考慮有惡性的成分，尤其是下列 哪一種腫瘤？",
+        "選項": [
+            "A. 合併消化道腺癌（adenocarcinoma）",
+            "B. 合併肝癌（hepatoma）",
+            "C. 合併卵黃囊瘤（yolk sac tumor）",
+            "D. 合併神經母細胞瘤（neuroblastoma）",
+            "E. 合併Wilms氏腫瘤"
+        ],
+        "答案": "C",
+        "出處": "Pediatric Surgery 7th ed, Arnold G.\nCoran, p507"
+    },
+    {
+        "題別": "單",
+        "題號": "5",
+        "題目": "下列何項不是影響神經母細胞瘤（neuroblastoma）預後之 主要因素？",
+        "選項": [
+            "A. neuron-specific enolase (NSE)",
+            "B. ferritin",
+            "C. 患者性別",
+            "D. 患者年齡",
+            "E. 腫瘤分期"
+        ],
+        "答案": "C",
+        "出處": "Pediatric Surgery 7th ed, Arnold G.\nCoran, p442-452"
+    },
+    {
+        "題別": "單",
+        "題號": "6",
+        "題目": "兒童肝母細胞瘤（hepatoblastoma），好發於？",
+        "選項": [
+            "A. 3歲以下",
+            "B. 3歲到6歲",
+            "C. 6歲到9歲",
+            "D. 9歲到12歲",
+            "E. 12歲到18歲"
+        ],
+        "答案": "A",
+        "出處": "Pediatric Surgery 7th ed, Arnold G.\nCoran, p466"
+    },
+    {
+        "題別": "單",
+        "題號": "7",
+        "題目": "有關兒童肝母細胞瘤（hepatoblastoma），下列何者為 非？",
+        "選項": [
+            "A. 男孩比女孩多",
+            "B. 常有黃疸（jaundice）",
+            "C. Beckwith-Wiedemann氏症候者易得hepatoblastoma",
+            "D. 外科手術切除合併化學治療是最佳方法",
+            "E. 預後一般比肝細胞癌要好"
+        ],
+        "答案": "B",
+        "出處": "Pediatric Surgery 7th ed, Arnold G.\nCoran, p466"
+    },
+    {
+        "題別": "單",
+        "題號": "8",
+        "題目": "有關兒童橫紋肌瘤（rhabdomyosarcoma），下列何者為 非？",
+        "選項": [
+            "A. 四肢最常見",
+            "B. 可經由血路轉移",
+            "C. 眼眶處橫紋肌瘤預後最好",
+            "D. 手術切除合併放射及化學治療是最佳治療方法",
+            "E. 預後和病灶發生的部位相關"
+        ],
+        "答案": "A",
+        "出處": "Pediatric Surgery 7th ed, Arnold G.\nCoran, p491"
+    },
+    {
+        "題別": "單",
+        "題號": "9",
+        "題目": "陰囊水腫之陳述何者為是？",
+        "選項": [
+            "A. 作過腦室腹膜引流ventriculoperitoneal shunt手術後並不 常發生陰囊水腫",
+            "B. 可以抽出其中水份並注射葯物治療",
+            "C. 一歲以上才應手術治療",
+            "D. 應早期治療並雙側均加以探查",
+            "E. 由陰囊處切開修復"
+        ],
+        "答案": "C",
+        "出處": "Pediatric Surgery 7th ed, Arnold G.\nCoran, p985"
+    },
+    {
+        "題別": "單",
+        "題號": "10",
+        "題目": "有一位兩個月大的孩童，自出生後即被發現在右側胸鎖乳 突肌之下三分之一處的前緣有一小孔，會流出透明黏液， 其最可能診斷為？",
+        "選項": [
+            "A. 第一對鰓裂廔管（branchial cleft sinus）",
+            "B. 第二對鰓裂廔管",
+            "C. 第三對鰓裂廔管",
+            "D. 第四對鰓裂廔管",
+            "E. 甲狀腺舌管囊腫"
+        ],
+        "答案": "B",
+        "出處": "Pediatric Surgery 7th ed, Arnold G.\nCoran, p757"
+    },
+    {
+        "題別": "單",
+        "題號": "11",
+        "題目": "最常見的小兒斜頸原因為？",
+        "選項": [
+            "A. 斜視所引起",
+            "B. 因胃食道反芻造成肌肉痙縮所引起",
+            "C. 頸骨異常所引起",
+            "D. 胸鎖乳突肌纖維化所引起",
+            "E. 後頸肌肉纖維化所引起"
+        ],
+        "答案": "D",
+        "出處": "Pediatric Surgery 7th ed, Arnold G.\nCoran, p763"
+    },
+    {
+        "題別": "單",
+        "題號": "12",
+        "題目": "關於十二指腸閉鎖下列何者為非？",
+        "選項": [
+            "A. 可合併有環狀胰臟",
+            "B. 十二指腸多重閉鎖非常罕見",
+            "C. 好發於乏特氏壺腹的近端（Ampulla of vater）",
+            "D. 30﹪的病嬰合併有蒙古症",
+            "E. 十二指腸閉鎖通常可以在產檢超音波檢查出"
+        ],
+        "答案": "C",
+        "出處": "Pediatric Surgery 7th ed, Arnold G.\nCoran, p1051-1057"
+    },
+    {
+        "題別": "單",
+        "題號": "13",
+        "題目": "一個三週大的男嬰，從出生起就常腹脹，便秘，鋇劑灌腸 攝影顯現直腸緊縮變小，到乙狀結腸則變粗大，您的診斷 是？",
+        "選項": [
+            "A. 胎糞栓塞症候群（Meconium plug syndrome）",
+            "B. 細小左結腸症（Small left colon syndrome）",
+            "C. 無神經節細胞巨結腸症（Aganglionic megacolon）",
+            "D. 直腸閉鎖症（Rectal atresia）",
+            "E. 假性腸阻塞（Intestinal pseudo-obstruction）"
+        ],
+        "答案": "C",
+        "出處": "Pediatric Surgery 7th ed, Arnold G.\nCoran, p1265-1277"
+    },
+    {
+        "題別": "單",
+        "題號": "14",
+        "題目": "一男性新生兒,黑綠胎便出現在尿液的肛門閉鎖，應給於何 種即時之治療？",
+        "選項": [
+            "A. 導尿灌洗",
+            "B. 會陰肛門成形術",
+            "C. 結腸造口術",
+            "D. 膀胱造口術",
+            "E. 肛門直腸成形術"
+        ],
+        "答案": "C",
+        "出處": "Pediatric Surgery 7th ed, Arnold G.\nCoran, p1289"
+    },
+    {
+        "題別": "單",
+        "題號": "15",
+        "題目": "裂腹畸形（gastroschisis）之開口多位於？",
+        "選項": [
+            "A. 在臍右側",
+            "B. 在臍左側",
+            "C. 在臍部上方",
+            "D. 平均圍繞在臍周圍",
+            "E. 在臍下方"
+        ],
+        "答案": "A",
+        "出處": "Pediatric Surgery 7th ed, Arnold G.\nCoran, p87"
+    },
+    {
+        "題別": "單",
+        "題號": "16",
+        "題目": "橫膈疝患者之急救不包括下列何者？",
+        "選項": [
+            "A. 氣管內插管",
+            "B. 放置胃管",
+            "C. 面罩呼吸",
+            "D. 動脈及靜脈導管",
+            "E. 血氧濃度監測"
+        ],
+        "答案": "C",
+        "出處": "Pediatric Surgery 7th ed, Arnold G.\nCoran, p 817-819"
+    },
+    {
+        "題別": "單",
+        "題號": "17",
+        "題目": "兩歲大的幼兒誤食硬幣，X光檢查發現硬幣在胃內，請問您 應採取何種處置方式？",
+        "選項": [
+            "A. 以催吐劑讓病患吐出硬幣",
+            "B. 以胃鏡摘除硬幣",
+            "C. 手術打開胃部取出硬幣",
+            "D. 處方瀉劑讓硬幣排出",
+            "E. 讓病人返家觀察，靜待硬幣自然排出，若有腹痛、嘔 吐、血便再回診"
+        ],
+        "答案": "E",
+        "出處": "Pediatric Surgery 7th ed, Arnold G.\nCoran, p885"
+    },
+    {
+        "題別": "單",
+        "題號": "18",
+        "題目": "治療幼兒呼吸道異物吸入症之方法，下列何者為最好之選 擇？",
+        "選項": [
+            "A. 以姿勢引流出異物（postural drainage）",
+            "B. 以硬式氣管鏡摘除異物",
+            "C. 開胸取出異物",
+            "D. 以軟式氣管鏡摘除異物",
+            "E. 施行肺葉切除術"
+        ],
+        "答案": "B",
+        "出處": "Holcomb and Ashcraft's pediatric\nSurgery, 7th ed., p177"
+    },
+    {
+        "題別": "單",
+        "題號": "19",
+        "題目": "胃食道逆流，最初的診斷方式以何者為佳？",
+        "選項": [
+            "A. 胃酸分析",
+            "B. 上消化道鋇劑攝影，特別注意食道與胃的交接處",
+            "C. 上消化道鋇劑攝影，特別注意胃幽門處",
+            "D. 主動脈攝影",
+            "E. 食道攝影"
+        ],
+        "答案": "B",
+        "出處": "Pediatric Surgery 7th ed, Arnold G.\nCoran, p947"
+    },
+    {
+        "題別": "單",
+        "題號": "20",
+        "題目": "有關先天性膽道閉鎖症（Biliary atresia）之敘述，下列何 者不正確？",
+        "選項": [
+            "A. 長期性黃疸",
+            "B. 須與新生兒肝炎鑑別診斷",
+            "C. 預後良好",
+            "D. 大便呈灰白色",
+            "E. Kasai手術若無效，需考慮肝臟移植"
+        ],
+        "答案": "C",
+        "出處": "Holcomb and Ashcraft's pediatric\nSurgery, 7th ed., p679"
+    },
+    {
+        "題別": "單",
+        "題號": "21",
+        "題目": "有關小兒肝臟移植，下列何者不正確？",
+        "選項": [
+            "A. 多為先天膽道閉鎖症之病患",
+            "B. 成功率在75﹪以上",
+            "C. 病患移植前因肝功能差及膽汁不順暢，脂溶性維他命 B6、B12均大量缺乏",
+            "D. 病患移植前服用中鏈三甘油脂（Medium-chain triglyceride）之奶粉較好",
+            "E. 小兒捐肝者甚少，病患常在待肝過程中死亡"
+        ],
+        "答案": "C",
+        "出處": "Holcomb and Ashcraft's pediatric\nSurgery, 7th ed., p690"
+    },
+    {
+        "題別": "單",
+        "題號": "22",
+        "題目": "總膽管囊腫（Choledochal cyst）之病理原因，可能與下列 何者無關？",
+        "選項": [
+            "A. Common channel太長",
+            "B. 胚胎期總膽管表皮細胞增生阻塞",
+            "C. 胰液倒流入膽道",
+            "D. 總膽管肌肉層較鬆弛無力",
+            "E. 胰臟腫瘤造成"
+        ],
+        "答案": "E",
+        "出處": "Holcomb and Ashcraft's pediatric\nSurgery, 7th ed., p696"
+    },
+    {
+        "題別": "單",
+        "題號": "23",
+        "題目": "因氣管插管傷害引起的氣管狹窄，在兒童多發生在何部 位？",
+        "選項": [
+            "A. vocal cord",
+            "B. subglottic",
+            "C. left bronchus",
+            "D. right bronchus",
+            "E. epiglottis"
+        ],
+        "答案": "B",
+        "出處": "Holcomb and Ashcraft's pediatric\nSurgery, 7th ed., p341"
+    },
+    {
+        "題別": "單",
+        "題號": "24",
+        "題目": "一初生男嬰，在腹部X-光影像顯示有Double-bubble sign， 最可能的診斷為何？",
+        "選項": [
+            "A. 巨腸症",
+            "B. 無肛症",
+            "C. 十二指腸閉鎖",
+            "D. 小腸閉鎖",
+            "E. 膽道閉鎖窄"
+        ],
+        "答案": "C",
+        "出處": "Pediatric Surgery 7th ed, Arnold G.\nCoran, p1051-1057"
+    },
+    {
+        "題別": "單",
+        "題號": "25",
+        "題目": "Ladd's procedure是下列何種疾病的手術方法？",
+        "選項": [
+            "A. 小腸閉鎖",
+            "B. 十二指腸閉鎖",
+            "C. 腸道扭轉不全（Malrotation）",
+            "D. 巨腸症",
+            "E. 先天性橫膈膜疝氣"
+        ],
+        "答案": "C",
+        "出處": "Pediatric Surgery 7th ed, Arnold G.\nCoran, p1113-1117"
+    },
+    {
+        "題別": "單",
+        "題號": "26",
+        "題目": "兒童眼眶外上側之腫塊最可能是下列何者？",
+        "選項": [
+            "A. Dermoid cyst",
+            "B. 血管瘤",
+            "C. 淋巴管瘤",
+            "D. 畸胎瘤",
+            "E. 脂肪瘤"
+        ],
+        "答案": "A",
+        "出處": "Pediatric Surgery 7th ed, Arnold G.\nCoran, p760"
+    },
+    {
+        "題別": "單",
+        "題號": "27",
+        "題目": "新生兒出生後四小時被發現腹部腫脹，吐出泡沫唾液，則 以下列何項診斷最為可能？",
+        "選項": [
+            "A. 十二指腸閉鎖",
+            "B. 中腸扭結",
+            "C. 巨結腸症",
+            "D. 食道閉鎖合併氣管食道廔管",
+            "E. 橫膈疝"
+        ],
+        "答案": "D",
+        "出處": "Holcomb and Ashcraft's pediatric\nSurgery, 7th ed., p438"
+    },
+    {
+        "題別": "單",
+        "題號": "28",
+        "題目": "甲狀舌管囊腫thyroglossal duct cyst之手術為避免復發，應 將下列何者一併切除？",
+        "選項": [
+            "A. 同側鎖骨clevicle內側",
+            "B. 兩側鎖骨clevicle內側",
+            "C. 舌骨hyoid中央部分",
+            "D. 副甲狀腺",
+            "E. 甲狀軟骨"
+        ],
+        "答案": "C",
+        "出處": "Pediatric Surgery 7th ed, Arnold G.\nCoran, p755"
+    },
+    {
+        "題別": "單",
+        "題號": "29",
+        "題目": "一月大男性嬰兒臍部有腸道內容物及膽汁流出，則最可能 的診斷是？",
+        "選項": [
+            "A. 開放性臍尿管patent urachus",
+            "B. 開放性臍腸管patent omphalomesenteric duct",
+            "C. 臍疝umbilical hernia",
+            "D. 臍膨出畸形omphalocele",
+            "E. 裂腹畸形gastroschisis"
+        ],
+        "答案": "B",
+        "出處": "Pediatric Surgery 7th ed, Arnold G.\nCoran, p964"
+    },
+    {
+        "題別": "單",
+        "題號": "30",
+        "題目": "出生第一天之嬰兒胸廓前後徑增大，腹部凹陷明顯，而且 有呼吸窘迫情形，則最可能的診斷為？",
+        "選項": [
+            "A. 食道閉鎖合併氣管食道廔管",
+            "B. 胸廓凸起異常（pectus carinatum）",
+            "C. 橫膈疝",
+            "D. 肥厚性幽門狹窄",
+            "E. 肺氣腫"
+        ],
+        "答案": "C",
+        "出處": "Pediatric Surgery 7th ed, Arnold G.\nCoran, p 817-819"
+    },
+    {
+        "題別": "單",
+        "題號": "31",
+        "題目": "囊性水瘤（Cystic hygroma）最好發生的部位是在何處？",
+        "選項": [
+            "A. 縱膈腔",
+            "B. 後腹腔",
+            "C. 骨盆腔",
+            "D. 腋窩",
+            "E. 頸部"
+        ],
+        "答案": "E",
+        "出處": "Pediatric Surgery 7th ed, Arnold G.\nCoran, p1165"
+    },
+    {
+        "題別": "單",
+        "題號": "32",
+        "題目": "併指症（syndactyly）開刀治療最適當的年齡是何時？",
+        "選項": [
+            "A. 出生",
+            "B. 1/2-2歲",
+            "C. 5-6歲",
+            "D. 7-10歲",
+            "E. 15歲"
+        ],
+        "答案": "B",
+        "出處": "Sabiston Textbook 20th edition,\np2014"
+    },
+    {
+        "題別": "單",
+        "題號": "33",
+        "題目": "病童發生嘔吐等急性腸阻塞現象，經診斷為腸道扭轉不全 （malrotation），常需要緊急手術，其原因主要是為了矯 正？",
+        "選項": [
+            "A. 脫水",
+            "B. 中腸扭轉（Midgut volvulus）",
+            "C. 敗血症",
+            "D. 電解質不平衡",
+            "E. 閉鎖食道"
+        ],
+        "答案": "B",
+        "出處": "Pediatric Surgery 7th ed, Arnold G.\nCoran, p1113-1117"
+    },
+    {
+        "題別": "單",
+        "題號": "34",
+        "題目": "施行空迴腸閉鎖手術（Jejunoileal atresia），吻合前對遠 端小腸灌注生理食鹽水，其目的在於？",
+        "選項": [
+            "A. 使遠端內的胎便變稀，以便利排出",
+            "B. 碓認遠端腸道的通暢",
+            "C. 使遠端腸道變寬以便吻合",
+            "D. 其實不必灌注生理食鹽水，直接吻合即可",
+            "E. 補充水份"
+        ],
+        "答案": "B",
+        "出處": "Pediatric Surgery 7th ed, Arnold G.\nCoran, p1059-1070"
+    },
+    {
+        "題別": "單",
+        "題號": "35",
+        "題目": "下列何種肚臍附近的疾病與Meckel's diverticulum在胚胎發 育上來源不同？",
+        "選項": [
+            "A. Patent omphalomesenteric duct",
+            "B. Vitelline cyst",
+            "C. Urachal cyst",
+            "D. Vitelline sinus tract",
+            "E. Fibrous band between the umbilicus and the Meckel’s diverticulum"
+        ],
+        "答案": "C",
+        "出處": "Pediatric Surgery 7th ed, Arnold G.\nCoran, p1085-1092"
+    },
+    {
+        "題別": "單",
+        "題號": "36",
+        "題目": "下列何者不是先天性膽道閉鎖之症狀？",
+        "選項": [
+            "A. 一出生時，胎便即為灰白色",
+            "B. 深色尿",
+            "C. 黃疸",
+            "D. 肝腫大",
+            "E. 脾腫大"
+        ],
+        "答案": "A",
+        "出處": "Holcomb and Ashcraft's pediatric\nSurgery, 7th ed., p679"
+    },
+    {
+        "題別": "單",
+        "題號": "37",
+        "題目": "有關兒童肛裂之陳述，何者為非？",
+        "選項": [
+            "A. 兒童大多是急性、表淺的肛裂",
+            "B. 肛裂位置多在後方中線（posterior midline）",
+            "C. 便秘、腹瀉都可能肛裂的原因",
+            "D. 肛門鏡檢查才能確定診斷",
+            "E. 衹有少數患者需要sphincterotomy"
+        ],
+        "答案": "D",
+        "出處": "Pediatric Surgery 7th ed, Arnold G.\nCoran, p1317"
+    },
+    {
+        "題別": "單",
+        "題號": "38",
+        "題目": "有關嬰兒臍疝氣（umbilical hernia）之敘述，下列何者正 確？",
+        "選項": [
+            "A. 好發於男孩",
+            "B. 好發於白種人",
+            "C. 絕大部份會自行癒合",
+            "D. 外觀越突出的病例越需要手術",
+            "E. 嵌頓型疝氣（incarceration）很常見"
+        ],
+        "答案": "C",
+        "出處": "Pediatric Surgery 7th ed, Arnold G.\nCoran, p968"
+    },
+    {
+        "題別": "單",
+        "題號": "39",
+        "題目": "有關隱睪症（undescended testis）之敘述，下列何者正 確？",
+        "選項": [
+            "A. 早產兒發生機率和足月兒相似",
+            "B. 手術以睪丸切除（orchiectomy）為主",
+            "C. 手術時機為六個月到兩歲最佳",
+            "D. 沒有處理之隱睪，日後發生惡性腫瘤機會1000倍於正常 睪丸",
+            "E. 不會合併腹股溝疝氣（inguinal hernia）"
+        ],
+        "答案": "C",
+        "出處": "Pediatric Surgery 7th ed, Arnold G.\nCoran, p1003"
+    },
+    {
+        "題別": "單",
+        "題號": "40",
+        "題目": "有關嬰兒幽門肥厚性狹窄（infantile hypertrophic pyloric stenosis）之敘述，下列何者正確？",
+        "選項": [
+            "A. 大多出生即出現噴射性嘔吐（projectile vomiting）",
+            "B. 嘔吐物以膽汁為主",
+            "C. 手術為胃空腸接合術（gastrojejunostomy）",
+            "D. 診斷主要依賴完整病史詢問，身體檢查及腹部超音波幫 助確定",
+            "E. 男女發生機率相同"
+        ],
+        "答案": "D",
+        "出處": "Pediatric Surgery 7th ed, Arnold G.\nCoran, p1021-1028"
+    },
+    {
+        "題別": "單",
+        "題號": "41",
+        "題目": "先天性無神經節巨結腸症（congenital aganglionsis megacolon）最常見之轉變區（transition zone）為？",
+        "選項": [
+            "A. 直腸中段",
+            "B. 直腸與乙狀結腸交界",
+            "C. 乙狀結腸與降結腸交界",
+            "D. 橫結腸與降結腸交界",
+            "E. 橫結腸與升結腸交界"
+        ],
+        "答案": "B",
+        "出處": "Pediatric Surgery 7th ed, Arnold G.\nCoran, p1265-1277"
+    },
+    {
+        "題別": "單",
+        "題號": "42",
+        "題目": "Alpha-fetoprotein在出生後多久，其正常血中濃度與成人相 同？",
+        "選項": [
+            "A. 1個月",
+            "B. 3個月",
+            "C. 5個月",
+            "D. 8個月",
+            "E. 一歲後"
+        ],
+        "答案": "D",
+        "出處": "Pediatric Surgery 7th ed, Arnold G.\nCoran, p510"
+    },
+    {
+        "題別": "單",
+        "題號": "43",
+        "題目": "下列何種neuroblastoma預後最差？",
+        "選項": [
+            "A. 患者小於一歲",
+            "B. Stage II",
+            "C. Stage III",
+            "D. Stage IV",
+            "E. Stage IV-S"
+        ],
+        "答案": "D",
+        "出處": "Pediatric Surgery 7th ed, Arnold G.\nCoran, p450"
+    },
+    {
+        "題別": "組合題",
+        "題號": "44",
+        "題目": "【組合題44-45】一男性嬰兒出生時健康情況良好，於第二 週大時開始發生餵乳後嘔吐之情形，嘔吐呈噴射性，不含 膽汁，吐後又想再吃，上腹部經觸診發現有一個約二公分 之硬塊。處置應不包括下列何項？",
+        "選項": [
+            "A. 放入胃管",
+            "B. 行腹部超音波檢查",
+            "C. 經胃管餵食",
+            "D. 行上腸胃道造影檢查",
+            "E. 建立週邊靜脈導管並補充水份及電解質"
+        ],
+        "答案": "C",
+        "出處": "Pediatric Surgery 7th ed, Arnold G.\nCoran, p1021-1028"
+    },
+    {
+        "題別": "組合題",
+        "題號": "45",
+        "題目": "【組合題44-45】承上題，最可能的檢驗結果？",
+        "選項": [
+            "(A). pH 7.35, Na+ 148 mEq/L, K+ 5 mEq/L, Cl - 102 mEq/L",
+            "(B). pH 7.35, Na+ 138 mEq/L, K+ 4.4 mEq/L, Cl - 98 mEq/L",
+            "(C). pH 7.30, Na+ 148 mEq/L, K+ 4.4 mEq/L, Cl - 102 mEq/L",
+            "(D). pH 7.45, Na+ 148 mEq/L, K+ 5 mEq/L, Cl - 102 mEq/L",
+            "(E). pH 7.45, Na+ 132 mEq/L, K+ 4.4 mEq/L, Cl - 98 mEq/L"
+        ],
+        "答案": "E",
+        "出處": "Pediatric Surgery 7th ed, Arnold G.\nCoran, p1021-1028"
+    },
+    {
+        "題別": "組合題",
+        "題號": "46",
+        "題目": "【組合題46-47】一歲大之女嬰原有右側腹股溝疝氣，今日 有陣發哭鬧已三小時，腹部脹，右側腹股溝有一疼痛性腫 塊。最可能的診斷為？",
+        "選項": [
+            "A. 胃幽門狹窄",
+            "B. 結腸息肉",
+            "C. 中腸扭結",
+            "D. 嵌閉性疝氣",
+            "E. 腸套疊"
+        ],
+        "答案": "D",
+        "出處": "Pediatric Surgery 7th ed, Arnold G.\nCoran, p1165"
+    },
+    {
+        "題別": "組合題",
+        "題號": "47",
+        "題目": "【組合題46-47】承上題，最不適宜之處置為？",
+        "選項": [
+            "A. 胃管減壓",
+            "B. 口服抗生素",
+            "C. 腹股溝手術探查",
+            "D. 超音波檢查",
+            "E. 腹塊推回復位"
+        ],
+        "答案": "B",
+        "出處": "Pediatric Surgery 7th ed, Arnold G.\nCoran, p1165"
+    },
+    {
+        "題別": "組合題",
+        "題號": "48",
+        "題目": "【組合題48-50】一體重約2500克之男嬰，出生後3小時發 現有發紺，呼吸急促，嘴角不時有泡沫狀透明液流出，其 最可能診斷為？",
+        "選項": [
+            "A. 十二指腸閉鎖（Duodenal atresia）",
+            "B. 肥厚性幽門狹窄（Hypertrophic pyloric stenosis）",
+            "C. 食道閉鎖（Esophageal atresia）",
+            "D. 橫膈膜疝氣（Diaphragmatic hernia）",
+            "E. 腹股溝疝氣（Inguinal hernia）"
+        ],
+        "答案": "C",
+        "出處": "Holcomb and Ashcraft's pediatric\nSurgery, 7th ed., p438"
+    },
+    {
+        "題別": "組合題",
+        "題號": "49",
+        "題目": "【組合題48-50】前題病人，最急迫的處置為？",
+        "選項": [
+            "A. 立即做胸部之電腦斷層攝影（chest CT scan）",
+            "B. 立即給予抗生素",
+            "C. 立即作食道攝影（esophagography）",
+            "D. 立即經口或鼻放置引流管，不停地給予抽吸",
+            "E. 立即作胃造口術（gastrostomy）"
+        ],
+        "答案": "D",
+        "出處": "Holcomb and Ashcraft's pediatric\nSurgery, 7th ed., p438"
+    },
+    {
+        "題別": "組合題",
+        "題號": "50",
+        "題目": "【組合題48-50】前題病人，胸部X-光檢查無肺炎，包括心 臟超音波在內之檢查，未發現有顯著合併之異常，其最適 合之處置為？",
+        "選項": [
+            "A. 立即給予該異常之手術矯正",
+            "B. 先做胃造口術，再矯正",
+            "C. 繼續做更詳盡之檢查再手術",
+            "D. 不需手術矯正",
+            "E. 先給予靜脈營養，以後再手術"
+        ],
+        "答案": "A",
+        "出處": "Holcomb and Ashcraft's pediatric\nSurgery, 7th ed., p438"
+    },
+    {
+        "題別": "單",
+        "題號": "51",
+        "題目": "一例8個月大的健康男嬰，有突發的間歇性腹痛、嘔吐，並 解出黏液血便，最可能診斷為下列何種疾病？",
+        "選項": [
+            "A. 急性腸炎（acute enteritis）",
+            "B. 急性闌尾炎（Acute appendicitis）",
+            "C. 腹股溝疝氣（inguinal hernia）",
+            "D. 腸道旋轉異常（malrotation）",
+            "E. 腸套疊（intussusception）"
+        ],
+        "答案": "E",
+        "出處": "Pediatric Surgery 7th ed, Arnold G.\nCoran, p1093-1110"
+    },
+    {
+        "題別": "單",
+        "題號": "52",
+        "題目": "孕期二十四週體重1800克之早產兒，出生後三天開始餵食 ，餵食十天後發現腹脹明顯，有嘔吐情形，解血便，生命 徵象不穩定，不久活動力逐漸變差。請問最可能的診斷 是？",
+        "選項": [
+            "A. 先天性小腸閉鎖",
+            "B. 肛門周邊廔管",
+            "C. 橫隔膜疝氣",
+            "D. 壞死性腸炎",
+            "E. 急性闌尾炎"
+        ],
+        "答案": "D",
+        "出處": "Pediatric Surgery 7th ed, Arnold G.\nCoran, p1187-1204"
+    },
+    {
+        "題別": "單",
+        "題號": "53",
+        "題目": "漏斗胸Pectus excavatum患者最常合併的肌肉骨骼異常 為？",
+        "選項": [
+            "A. 脊柱側彎",
+            "B. 脊柱後彎",
+            "C. 脊柱前彎",
+            "D. 肌病myopathy",
+            "E. Poland症候群"
+        ],
+        "答案": "A",
+        "出處": "Holcomb and Ashcraft's pediatric\nSurgery, 7th ed., p302"
+    },
+    {
+        "題別": "單",
+        "題號": "54",
+        "題目": "造成嬰幼兒短腸症（Short Bowel Syndrome）最常見的原 因為何？",
+        "選項": [
+            "A. 腹裂（Gastroschisis）",
+            "B. 壞死性腸炎（Necrotizing Enterocolitis）",
+            "C. 先天性巨結腸症（Hirschspring’s Disease）",
+            "D. 先天性短腸症（Congenital Short Bowel）",
+            "E. 多發性小腸閉鎖（Multiple Atresia of Intestine）"
+        ],
+        "答案": "B",
+        "出處": "Pediatric Surgery 7th ed, Arnold G.\nCoran, p1187-1204"
+    },
+    {
+        "題別": "單",
+        "題號": "55",
+        "題目": "小腸閉鎖分類, 右圖為第幾類型？",
+        "選項": [
+            "A. Type I",
+            "B. Type II",
+            "C. Type III a",
+            "D. Type III b",
+            "E. Type IV"
+        ],
+        "答案": "D",
+        "出處": "Pediatric Surgery 7th ed, Arnold G.\nCoran, p1059-1070"
+    },
+    {
+        "題別": "單",
+        "題號": "56",
+        "題目": "急性闌尾炎之敘述，下列何者為非？",
+        "選項": [
+            "A. 典型的急性闌尾炎疼痛的位置一開始會在肚臍週邊，幾 小時之後會轉移至右下腹",
+            "B. 早期易見噁心嘔吐,腹瀉及發燒",
+            "C. 診斷最主要是依據病史及理學檢查(觸診)及血液檢查",
+            "D. 手術治療為最主要的治療方式",
+            "E. 闌尾炎發生已超過5~7天，形成腫塊時，可能不適宜立 即進行手術治療"
+        ],
+        "答案": "B",
+        "出處": "Pediatric Surgery 7th ed, Arnold G.\nCoran, p1085-1255"
+    },
+    {
+        "題別": "單",
+        "題號": "57",
+        "題目": "小兒梅克爾憩室Meckel’s Diverticulum之最常見的臨床表現 為 ?",
+        "選項": [
+            "A. 右下腹痛",
+            "B. 梅克爾憩室穿孔引起腹膜炎",
+            "C. 腸阻塞",
+            "D. 上消化道出血",
+            "E. 下消化道出血"
+        ],
+        "答案": "E",
+        "出處": "Pediatric Surgery 7th ed, Arnold G.\nCoran, p1085-1092"
+    },
+    {
+        "題別": "單",
+        "題號": "58",
+        "題目": "腸套疊處理之敘述，下列何者不正確？",
+        "選項": [
+            "A. 可應用鋇劑，水或空氣，灌腸復位法",
+            "B. 目前手術多用腹腔鏡， 由遠端把套進去的腸子拉出",
+            "C. 如有致病之“lead point”，應切除",
+            "D. 縱使手術復位成功，仍有10-20%復發之情形",
+            "E. 手術前需先補充病人之水份及電解質"
+        ],
+        "答案": "D",
+        "出處": "Pediatric Surgery 7th ed, Arnold G.\nCoran, p1093-1110"
+    },
+    {
+        "題別": "單",
+        "題號": "59",
+        "題目": "一個新生兒男嬰出生後被發現沒有正常肛門開口， 為診斷 病人之直肠之高低位，X光片(cross table lateral view) 應該 在什麼時候做？",
+        "選項": [
+            "A. 出生後 6 小時",
+            "B. 出生後 12 小時",
+            "C. 出生後 24 小時",
+            "D. 出生後 36 小時",
+            "E. 出生後 48 小時"
+        ],
+        "答案": "C",
+        "出處": "Pediatric Surgery 7th ed, Arnold G.\nCoran, p1289"
+    },
+    {
+        "題別": "單",
+        "題號": "60",
+        "題目": "下圖VCUG為幾度輸尿管逆流?",
+        "選項": [
+            "A. Grade I",
+            "B. Grade II",
+            "C. Garde III",
+            "D. Garde IV",
+            "E. Grade V"
+        ],
+        "答案": "E",
+        "出處": "Pediatric urology 2nd ed, John P.\nGearhart, P301"
+    },
+    {
+        "題別": "單",
+        "題號": "61",
+        "題目": "有關兒童ureteropelvic obstruction的敍述，以下何項為 非？",
+        "選項": [
+            "A. 男生比女生常見",
+            "B. 在兒童病人左側比右側常見",
+            "C. Intrinsic type 比 extrinsic type常見",
+            "D. 較大兒童出現症狀(如腹痛、腰痛)比嬰兒常見",
+            "E. 完全阻塞比較常見"
+        ],
+        "答案": "E",
+        "出處": "Pediatric surgery 7th ed. Arnold G.\nCoran 2012 Chapter 113 p1411-1443"
+    },
+    {
+        "題別": "單",
+        "題號": "62",
+        "題目": "尿道下裂的兒童,通常不會發生下列何種情形？",
+        "選項": [
+            "A. 尿道開口異常",
+            "B. 陰莖彎曲",
+            "C. 包莖",
+            "D. 陰囊異常",
+            "E. 同時發生隱睪或腹股溝疝氣"
+        ],
+        "答案": "C",
+        "出處": "Pediatric surgery 7th ed. Arnold G.\nCoran 2012 Chapter 121 p153"
+    },
+    {
+        "題別": "單",
+        "題號": "63",
+        "題目": "以下何種核子醫學的檢查較適合診斷pyelonephritis及renal scarring？",
+        "選項": [
+            "A. Mercaptoacetyltriglycine (MAG3)",
+            "B. Diethylenetriamine pentaacetic acid (DTPA)",
+            "C. Dimercaptosuccinic acid (DMSA)",
+            "D. 選項 1及2皆可",
+            "E. 以上皆不適合"
+        ],
+        "答案": "C",
+        "出處": "Pediatric surgery 7th ed. Arnold G.\nCoran 2012 Chapter 114 p1431"
+    },
+    {
+        "題別": "單",
+        "題號": "64",
+        "題目": "以下何種情形是primary vesicoureteral reflux的原因？",
+        "選項": [
+            "A. 膀胱内ureteral tunnel太短",
+            "B. 後尿道瓣膜 (Posterior urethral valves)",
+            "C. 神經性膀胱功能異常(Neuropathic bladder)",
+            "D. 膀胱憩室(Diverticulum)",
+            "E. 輸尿管開口異位(Ectopic ureter)"
+        ],
+        "答案": "A",
+        "出處": "Pediatric surgery 7th ed. Arnold G.\nCoran 2012 Chapter 114 p1433"
+    },
+    {
+        "題別": "單",
+        "題號": "65",
+        "題目": "有關後尿道瓣膜 (Posterior urethral valves)的敍述，何者為 非？",
+        "選項": [
+            "A. 超音波檢查可見水腎",
+            "B. 超音波可見膀胱壁變薄",
+            "C. 可發生尿路感染",
+            "D. Voiding cystourethrogram (VCUG)是診斷方法之一",
+            "E. 男:女發生率為2:1"
+        ],
+        "答案": "E",
+        "出處": "Pediatric surgery 7th ed. Arnold G.\nCoran 2012 Chapter 112 p1555"
+    },
+    {
+        "題別": "單",
+        "題號": "66",
+        "題目": "下列有關睾丸扭轉的陳述,何者為非？",
+        "選項": [
+            "A. 噁心嘔吐是可遇到的症狀",
+            "B. 患側的睾丸會紅腫而且下垂",
+            "C. 患側的提睪肌反射消失",
+            "D. 超音波是可靠的檢查",
+            "E. 六小時內手術可挽救約90%的睪丸"
+        ],
+        "答案": "B",
+        "出處": "Ashcraft's pediatric surgery 6th ed,\n2014 chapter 52, p702-703"
+    },
+    {
+        "題別": "單",
+        "題號": "67",
+        "題目": "一位一歲半的小男生因左側陰囊扁扁的到門診就醫。經驗 豐富的醫師身體診察後,在鼠蹊及陰囊皆無法觸診到睪丸,故 診斷為左側隱睪症。下一步最有效的處理是：",
+        "選項": [
+            "A. 睪丸仍有機會下降，所以繼續觀察到兩歲",
+            "B. 安排磁振造影(MRI)確定睪丸位置",
+            "C. 安排腹腔鏡檢查,如有需要時,同時執行手術",
+            "D. 開始荷爾蒙治療,加速左側睪丸下降",
+            "E. 檢查血中follicle stimulating hormone (FSH)及 luteinizing hormone (LH)"
+        ],
+        "答案": "C",
+        "出處": "Ashcraft's pediatric surgery 6th ed,\n2014 chapter 51, p692"
+    },
+    {
+        "題別": "單",
+        "題號": "68",
+        "題目": "在進行腹腔鏡嬰兒肥厚性幽門狹窄(IHPS)手術中，若發生 黏膜破裂，採取補救措施，以下那一項術式較不建議？",
+        "選項": [
+            "A. 以大網膜覆蓋Omental patch",
+            "B. 縫合黏膜並繼續肌肉切開術",
+            "C. 縫合肌肉及黏膜，旋轉90度並進行肌肉切開術",
+            "D. 轉為傳統開腹手術",
+            "E. 進行胃空腸吻合術gastrojejunostomy"
+        ],
+        "答案": "E",
+        "出處": "Nigel J. Hall, et al. Risk of incomplete\npyloromyotomy and mucosal\nperforation in open and laparoscopic\npyloromyotomy, Journal of Pediatric\nSurgery, Volume 49, Issue 7, 2014,\nPages 1083-1086,\nhttps://doi.org/10.1016/j.jpedsurg.2013.1\n0.014."
+    },
+    {
+        "題別": "單",
+        "題號": "69",
+        "題目": "以下那一項是腹腔鏡膀胱外輸尿管重植術(Laparoscopic extra-vesical ureteral reimplantation) 最常見的術後併發 症？",
+        "選項": [
+            "A. 急性尿滯留",
+            "B. 腎積水",
+            "C. 膀胱黏膜穿孔",
+            "D. 輸尿管阻塞",
+            "E. 子宮動脈損傷"
+        ],
+        "答案": "A",
+        "出處": "Ciro Esposito, et al .Pediatric robot-\nassisted extravesical ureteral\nreimplantation (revur) in simple and\ncomplex ureter anatomy: Report of a\nmulticenter experience, Journal of\nPediatric Urology, Volume 19, Issue 1,\n2023, Pages 136.e1-136.e7,\nhttps://doi.org/10.1016/j.jpurol.2022.10.\n024"
+    },
+    {
+        "題別": "單",
+        "題號": "70",
+        "題目": "腦性麻痹兒童常須放置PEG (Percutaneous Endoscopic Gastrostomy)餵食，放置後最常見以下那一項併發症？",
+        "選項": [
+            "A. 蜂窩性組織炎",
+            "B. 胃結腸瘻管",
+            "C. 肉芽增生",
+            "D. 傷口感染",
+            "E. 意外移除"
+        ],
+        "答案": "C",
+        "出處": "Mona Takalo, Tarja Iber, Reija Autio,\nTopi Luoto - Complications after\npediatric percutaneous endoscopic\ngastrostomy: comparison of the push\nand pull technique: World Journal of\nPediatric Surgery 2024;7:e000687."
+    },
+    {
+        "題別": "單",
+        "題號": "71",
+        "題目": "請問胎兒手術將氣管塞住(Tracheal Occlusion)是針對以下 那一種疾病的治療策略？",
+        "選項": [
+            "A. 食道閉鎖",
+            "B. 橫膈膜疝氣",
+            "C. 腹裂",
+            "D. 先天性高氣道阻塞綜合症 (CHAOS)",
+            "E. 先天性肺氣道畸形 (CPAM)"
+        ],
+        "答案": "B",
+        "出處": "M.R. Harrison, R.L. Keller, S.B.\nHawgood, et al.\nA randomized trial of fetal endoscopic\ntracheal occlusion for severe fetal\ncongenital diaphragmatic hernia\nN Engl J Med, 349 (2003), pp. 1916-\n1924, 10.1056/NEJMoa035005"
+    },
+    {
+        "題別": "單",
+        "題號": "72",
+        "題目": "對於兒童血管瘤、淋巴管瘤，那一項敘述是正確的？",
+        "選項": [
+            "A. 動靜脈畸形通常在出生時不可見，隨後在接下來的6個月 內迅速生長，直至達到穩定期。",
+            "B. 嬰兒血管瘤中發現GLUT-1組織化學標記。",
+            "C. 卡薩巴赫-梅里特症候群(Kasabach-Merritt-Syndrom)與 血小板增多導致血栓形成有關。",
+            "D. 約80%的淋巴管畸形對propranolol治療有反應。",
+            "E. 介入性栓塞治療是嬰兒血管瘤的首選治療方法。"
+        ],
+        "答案": "B",
+        "出處": "Kowalska M, Dębek W, Matuszczak E.\nInfantile Hemangiomas: An Update on\nPathogenesis and Treatment. J Clin\nMed. 2021 Oct 9;10(20):4631. doi:\n10.3390/jcm10204631. PMID:\n34682753; PMCID: PMC8539430."
+    },
+    {
+        "題別": "單",
+        "題號": "73",
+        "題目": "關於兒童膽道囊腫(Choledochal Cysts)的術後併發症，那 一項最不常見？",
+        "選項": [
+            "A. 急性膽管炎",
+            "B. 吻合處狹窄",
+            "C. 膽道結石",
+            "D. Peterson’s hernia",
+            "E. 腸套疊"
+        ],
+        "答案": "E",
+        "出處": "Surgical outcomes after re-operation for\nexcision of choledochal cyst with\ndelayed biliary complications: A\nretrospective study on 40 patients\nRay, Sukanta et al.\nThe American Journal of Surgery,\nVolume 226, Issue 1, 93 - 98"
+    },
+    {
+        "題別": "單",
+        "題號": "74",
+        "題目": "您正在評估一名患有腹股溝疝氣的3歲兒童。媽媽說他常流 鼻血且也容易瘀青。抽血檢查凝血(PT)、凝血活酶時間 (PTT) 和(INR) 均正常。該兒童最有可能患有那種血液系統 疾病？",
+        "選項": [
+            "A. 凝血因子Ⅴ萊頓症候群（Factor V Leiden）",
+            "B. 血友病A （Hemophilia A）",
+            "C. 血友病 B （Hemophilia B）",
+            "D. 血管性血友病 (Von Willebrand Disease)",
+            "E. 特發性血小板減少性紫斑 (Idiopathic thrombocytopenic purpura )"
+        ],
+        "答案": "D",
+        "出處": "Neutze D, Roque J. Clinical Evaluation\nof Bleeding and Bruising in Primary\nCare. Am Fam Physician. 2016 Feb\n15;93(4):279-86. PMID: 26926815."
+    },
+    {
+        "題別": "單",
+        "題號": "75",
+        "題目": "一名一個月大的嬰兒因肥厚性幽門狹窄而住院。該患童明 顯脫水且嗜睡。下列那項生化檢查結果最不合於此患者病 情的嚴重程度？",
+        "選項": [
+            "A. 低鈉血症",
+            "B. 低血鉀",
+            "C. pH 7.35",
+            "D. 反向性酸尿症 (Paradoxical aciduria)",
+            "E. 低氯血症"
+        ],
+        "答案": "C",
+        "出處": "Yao-Hung Chuang, Hsun-Chin Chao,\nHung-Yu Yeh, Ming-Wei Lai, Chien-\nChang Chen, Factors associated with\npyloric hypertrophy severity and post-\noperative feeding and nutritional\nrecovery in infantile hypertrophic\npyloric stenosis,\nBiomedical Journal, Volume 45, Issue\n6, 2022, Pages 948-956,\nhttps://doi.org/10.1016/j.bj.2021.12.011."
+    },
+    {
+        "題別": "單",
+        "題號": "76",
+        "題目": "下列那一項關於兒童急性闌尾炎的陳述是正確的？",
+        "選項": [
+            "A. 急性闌尾炎進展迅速，若未盡快手術，可能導致死亡。",
+            "B. 急性闌尾炎進展緩慢，白天尚有時間進行半選擇性手術 ，但如果不在24小時內手術，則可能轉為慢性闌尾炎。",
+            "C. 若超音波檢查發現糞石,則代表非手術治療效果良好。",
+            "D. 採用抗生素進行的非手術治療，其成功率約為85%。",
+            "E. 到院時約有35-40%已穿孔。"
+        ],
+        "答案": "E",
+        "出處": "AUTHORS:Mary L Brandt, MD,\nMDivMonica Esperanza Lopez, MD,\nMS Literature review current through:\nMay 2025.\nThis topic last updated: Aug 26, 2024.\nhttps://www.uptodate.com/contents/acut\ne-appendicitis-in-children-clinical-\nmanifestations-and-diagnosis"
+    },
+    {
+        "題別": "單",
+        "題號": "77",
+        "題目": "一名4歲兒童主訴排尿時包皮鼓脹像吹氣球。最可能的診斷 是：",
+        "選項": [
+            "A. 生理性包莖。",
+            "B. 乾燥閉塞性包莖 (Balanitis Xerotica Obliterans)",
+            "C. 尿道口狹窄",
+            "D. 嵌頓包莖",
+            "E. 病理性包莖"
+        ],
+        "答案": "A",
+        "出處": "Canning DA. Ballooning of the Foreskin\nand Physiological Phimosis: Is There\nany Objective Evidence of Obstructed\nVoiding? Journal of Urology [Internet].\n2005 Oct 1 [cited 2025 Jun 18];174(4\nPart 1):1445–6. Available from:\nhttps://doi.org/10.1097/01.ju.000017587\n2.17368.f9"
+    },
+    {
+        "題別": "單",
+        "題號": "78",
+        "題目": "新生兒疑似先天性巨結腸症的最佳確診方法為何？",
+        "選項": [
+            "A. 肛門直腸測壓。Anorectal manometry.",
+            "B. 至手術室麻醉下進行直腸全層切片 (Full- thickness biopsy )",
+            "C. 直腸黏膜下切片及乙醯膽鹼酶組織化學檢查 (Submucosal rectal biopsy and Ach-enzyme histochemistry)",
+            "D. 鋇劑灌腸檢查。Barium enema",
+            "E. 肛門指診（gush of feces）"
+        ],
+        "答案": "C",
+        "出處": "Samuel Hwang, Raj P. Kapur,\nAdvances and Pitfalls in the Diagnosis\nof Hirschsprung Disease, Surgical\nPathology Clinics, Volume 13, Issue 4,\n2020,\nPages 567-579,\nhttps://doi.org/10.1016/j.path.2020.07.00\n1."
+    },
+    {
+        "題別": "單",
+        "題號": "79",
+        "題目": "兒童脾臟外傷的病童在有小兒外科專科醫師的外傷醫學中 心接受治療，下列何者正確？",
+        "選項": [
+            "A. 早期手術的可能性較高",
+            "B. 接受栓塞治療的可能性較高",
+            "C. 與在社區醫院接受治療的兒童相比，死亡率無差異",
+            "D. 非手術治療的可能性較高",
+            "E. 整體死亡率高於在成人創傷中心接受治療的兒童"
+        ],
+        "答案": "D",
+        "出處": "Lyttle BD, Williams RF, Stylianos S.\nManagement of Pediatric Solid Organ\nInjuries. Children (Basel). 2024 May\n30;11(6):667. doi:\n10.3390/children11060667. PMID:\n38929246; PMCID: PMC11202015."
+    },
+    {
+        "題別": "單",
+        "題號": "80",
+        "題目": "下列何者並非隱睪症開刀矯正後之益處？",
+        "選項": [
+            "A. 確保正常外觀",
+            "B. 預防不孕症",
+            "C. 免除睪丸惡性腫瘤之危險",
+            "D. 方便日後追蹤檢查",
+            "E. 身心健康"
+        ],
+        "答案": "C",
+        "出處": "Mathers, Michael & Sperling, Herbert &\nRübben, Herbert & Roth, Stephan.\n(2009). The Undescended Testis:\nDiagnosis, Treatment and Long-Term\nConsequences. Deutsches Ärzteblatt\ninternational. 106. 527-32.\n10.3238/arztebl.2009.0527."
+    },
+    {
+        "題別": "單",
+        "題號": "81",
+        "題目": "關於新生兒壞死性腸炎NEC(Necrotizing Enterocolitis)之診 斷與處置，下列何者為是？",
+        "選項": [
+            "A. 需與單純腸穿孔(isolated perforation)作鑑別診斷",
+            "B. 診斷時應以影像檢查結果為主、臨床症狀表現為輔助",
+            "C. 疾病早期可在腹部Ｘ光片看到腸壁積氣(Pneumatosis intestinalis)",
+            "D. 喝配方奶粉之新生兒發生NEC機率較低",
+            "E. 建議做造口"
+        ],
+        "答案": "A",
+        "出處": "Ginglen JG, Butki N. Necrotizing\nEnterocolitis. [Updated 2023 Aug 8]. In:\nStatPearls [Internet]. Treasure Island\n(FL): StatPearls Publishing; 2025 Jan-.\nAvailable from:\nhttps://www.ncbi.nlm.nih.gov/books/NB\nK513357/"
+    },
+    {
+        "題別": "單",
+        "題號": "82",
+        "題目": "無肛症的病童常合併其他先天性異常，以下何者除外？",
+        "選項": [
+            "A. 食道閉鎖與食道氣管瘺管",
+            "B. 心室中膈缺損",
+            "C. 前臂發育異常Malformation of the forearm。",
+            "D. 將來發生Wilm’s tumor的機會",
+            "E. 半脊椎Hemi-vertebra"
+        ],
+        "答案": "D",
+        "出處": "Classification and Surgical Management\nof Anorectal Malformations: A\nSystematic Review and Evidence-based\nGuideline From the APSA Outcomes\nand Evidence-based Practice Committee\nSmith, Caitlin A. et al.\nJournal of Pediatric Surgery, Volume\n59, Issue 10, 161598"
+    },
+    {
+        "題別": "單",
+        "題號": "83",
+        "題目": "請問以下那一種手術不是治療Hirschsprung disease (HD) 的方法？",
+        "選項": [
+            "A. Duhamel。",
+            "B. Swenson。",
+            "C. Soave。",
+            "D. PSARP。",
+            "E. De La Torre transanal pullthrough"
+        ],
+        "答案": "D",
+        "出處": "Jacob C. Langer, Surgical approach to\nHirschsprung disease, Seminars in\nPediatric Surgery, Volume 31, Issue 2,\n2022, 151-156,\nhttps://doi.org/10.1016/j.sempedsurg.20\n22.151156."
+    },
+    {
+        "題別": "單",
+        "題號": "84",
+        "題目": "一位小男嬰出生時，醫生發現接近陰囊附近有一個廔管 (fistula)並可見胎便 (meconium)，診斷為低位型無肛症，請 問接下來如何處置？",
+        "選項": [
+            "A. 安排做invertogram。",
+            "B. 先做暫時性的人工肛門(colostomy)。",
+            "C. 直接安排手術做肛門直腸重建手術 (minimal PSARP)。",
+            "D. 觀察。",
+            "E. 安排VCUG"
+        ],
+        "答案": "C",
+        "出處": "Levitt, M.A., Peña, A. Anorectal\nmalformations. Orphanet J Rare Dis 2,\n33 (2007). https://doi.org/10.1186/1750-\n1172-2-33"
+    },
+    {
+        "題別": "單",
+        "題號": "85",
+        "題目": "關於兒童橫膈膜疝氣(posterolateral diaphragmatic Hernia) 的術後可能併發症，以下何者為非？",
+        "選項": [
+            "A. 橫膈膜疝氣復發。",
+            "B. 胃食道逆流病症GERD。",
+            "C. 持續肺高壓Persistent pulmonary Hypertension。",
+            "D. 胸廓發育畸形Thoracic deformity",
+            "E. 腹股溝疝氣"
+        ],
+        "答案": "E",
+        "出處": "Yamoto M, Nagata K, Terui K,\nHayakawa M, Okuyama H, Amari S,\nYokoi A, Masumoto K, Okazaki T,\nInamura N, Toyoshima K, Koike Y,\nYazaki Y, Furukawa T, Usui N. Long-\nTerm Outcomes of Congenital\nDiaphragmatic Hernia: Report of a\nMulticenter Study in Japan. Children\n(Basel). 2022 Jun 8;9(6):856. doi:\n10.3390/children9060856. PMID:\n35740795;"
+    },
+    {
+        "題別": "單",
+        "題號": "86",
+        "題目": "關於食道閉鎖合併食道氣管廔管的術後長期併發症，以下 何者最常見？",
+        "選項": [
+            "A. 食道狹窄",
+            "B. 食道氣管廔管復發",
+            "C. 氣胸",
+            "D. 食道吻合處滲漏",
+            "E. 胃食道逆流"
+        ],
+        "答案": "E",
+        "出處": "Almog A, Zani A. Postoperative\ncomplications and long-term outcomes\nof tracheoesophageal fistula repair. Curr\nChall Thorac Surg 2022;4:30."
+    },
+    {
+        "題別": "單",
+        "題號": "87",
+        "題目": "下列何者為兒童腹股溝疝氣術後復發的主要原因？",
+        "選項": [
+            "A. 高位結紮不良",
+            "B. 腹膜缺失",
+            "C. 箝頓性疝氣",
+            "D. 骨盆腔底結構太弱",
+            "E. 人工網膜(Mesh)尺寸不當"
+        ],
+        "答案": "A",
+        "出處": "He, Chao-Sheng & Liu, Ming-Xue & Qin,\nYu-Bing & Ji, Yan-Hui & Huang, Wen-\nQian & Huang, Gui-Zhen & Yang, Guo-Zhu\n& Hu, Zeng-Long & Li, Suo-Lin. (2024).\nCauses of recurrence of paediatric inguinal\nhernia after single-port laparoscopic closure.\nPediatric Surgery International. 40.\n10.1007/s00383-023-05573-0."
+    },
+    {
+        "題別": "單",
+        "題號": "88",
+        "題目": "在非排尿時,兒童膀胱內的壓力最低超過多少，即可能造成 腎傷害？",
+        "選項": [
+            "A. 10 cm H 0 2",
+            "B. 20 cm H 0 2",
+            "C. 30 cm H 0 2",
+            "D. 40 cm H 0 2",
+            "E. 50 cm H 0 2"
+        ],
+        "答案": "D",
+        "出處": "Pediatric surgery 7th ed. Arnold G.\nCoran 2012 Chapter 116 p1455"
+    },
+    {
+        "題別": "單",
+        "題號": "89",
+        "題目": "關於兒童吞食異物，下列敘述何者有誤？",
+        "選項": [
+            "A. 常常是無症狀，因其他疾病就診而意外發現。",
+            "B. 能通過食道到達胃部的異物，即使是尖銳物也多能自行 排出。",
+            "C. 鈕扣電池不論在腸道的哪個部分都應該積極手術取出。",
+            "D. Rapunzel syndrome是特指異食癖吞毛髮所造成的胃腸 阻塞。",
+            "E. 多顆巴克球吞入容易造成腸道破裂，應積極移除。"
+        ],
+        "答案": "C",
+        "出處": "Holcomb and Ashcraft's pediatric\nSurgery, 7th ed. 2019, p486"
+    },
+    {
+        "題別": "單",
+        "題號": "90",
+        "題目": "關於甲狀腺舌骨囊腫，何者有誤？",
+        "選項": [
+            "A. 是兒童前頸部中線最常見的囊腫。",
+            "B. 絕大部分都是無症狀、會隨伸舌頭的動作而往下移動的 腫塊。",
+            "C. 為了避免復發感染以及癌症風險，建議手術切除。",
+            "D. 絕大部分感染的甲狀腺舌骨囊腫病原體都來自於口腔 菌。",
+            "E. 手術前須安排甲狀腺影像檢查，排除異位甲狀腺。"
+        ],
+        "答案": "B",
+        "出處": "Holcomb and Ashcraft's pediatric\nSurgery, 7th ed. 2019, p1171"
+    }
+]

@@ -1,0 +1,1066 @@
+[
+    {
+        "題別": "單",
+        "題號": "1",
+        "題目": "最常引起高血鈣症之危象（Hypercalcemic crisis）之原因 為？",
+        "選項": [
+            "A. 原發性副甲狀腺亢進症（Primary hyperparathyroidism）",
+            "B. 溶解性骨轉移（Lytic bone metastasis）",
+            "C. 肉狀瘤病（Sarcoidosis）",
+            "D. 牛乳鹼症候群（Milk alkali syndrome）",
+            "E. 副甲狀腺癌（Parathyroid carcinoma）"
+        ],
+        "答案": "B",
+        "出處": "Sabiston Textbook of Surgery 14th\ned., p606"
+    },
+    {
+        "題別": "單",
+        "題號": "2",
+        "題目": "下列有關hyperaldosteronism之症狀，哪一項不正確？",
+        "選項": [
+            "A. hypernatremia",
+            "B. hyperkalemia",
+            "C. metabolic alkalosis",
+            "D. polyuria",
+            "E. polydipsia"
+        ],
+        "答案": "B",
+        "出處": "General Surgery Board Review 2nd\ned, p206"
+    },
+    {
+        "題別": "單",
+        "題號": "3",
+        "題目": "造成Cushing disease之原因以下列何種原因最常見？",
+        "選項": [
+            "A. 原發性腎上腺腺瘤",
+            "B. 原發性腎上腺增生",
+            "C. 腎上腺癌",
+            "D. ectopic ACTH-producing tumor",
+            "E. ACTH-producing pituitary microadenoma"
+        ],
+        "答案": "E",
+        "出處": "General Surgery Board Review 2nd\ned., p207"
+    },
+    {
+        "題別": "單",
+        "題號": "4",
+        "題目": "對於extra-adrenal pheochromocytoma之術前定位，以下 列何法為優？",
+        "選項": [
+            "A. 超音波",
+            "B. 電腦斷層",
+            "C. I131-MIBG scan",
+            "D. Tc99-MIBI scan",
+            "E. ERI"
+        ],
+        "答案": "C",
+        "出處": "General Surgery Board Review 2nd\ned., p209"
+    },
+    {
+        "題別": "單",
+        "題號": "5",
+        "題目": "診斷胰導素瘤最可靠的試驗是下列何者？",
+        "選項": [
+            "A. 72小時饑餓試驗",
+            "B. C-peptide抑制試驗",
+            "C. Tolubutamide激發試驗",
+            "D. Glucagon激發試驗",
+            "E. 鈣質灌流試驗（Calcium infusion test）"
+        ],
+        "答案": "A",
+        "出處": "Textbook of Endocrine Surgery,\np580"
+    },
+    {
+        "題別": "單",
+        "題號": "6",
+        "題目": "胰尾胰島素瘤病患於切除胰尾後血糖監測半小時仍不見反 彈上升，又在胰頭發現另一腫瘤，則術者應採步驟下列何 者除外？",
+        "選項": [
+            "A. 應搜索整個胰臟以免遺漏更多腫瘤",
+            "B. 應考慮此病患為多發性內分泌瘤第一型（MEN-1）",
+            "C. 應準備進行胰十二指腸切除",
+            "D. 應再剜除（enucleate）此胰頭腫瘤",
+            "E. 應以術中超音波檢查確定此胰頭腫瘤與胰管之關係位置 以免誤傷"
+        ],
+        "答案": "C",
+        "出處": "Textbook of Endocrine Surgery,\np588"
+    },
+    {
+        "題別": "單",
+        "題號": "7",
+        "題目": "下列何種血液檢查可用以區別胰島素瘤或注射過量胰島素 所引起之低血糖症？",
+        "選項": [
+            "A. 胰島素",
+            "B. 胰島素抗體",
+            "C. Sulfourea",
+            "D. C-peptide",
+            "E. HBA1C"
+        ],
+        "答案": "D",
+        "出處": "Textbook of Endocrine Surgery,\np658"
+    },
+    {
+        "題別": "單",
+        "題號": "8",
+        "題目": "根據統計80﹪-90﹪之胃泌素瘤位於胃泌素瘤三角區內，此 三角區是由下列解剖構造所成？",
+        "選項": [
+            "A. 肝下緣、膽囊與總肝管",
+            "B. 肝動脈、肝門靜脈與肝下緣",
+            "C. 下腔靜脈、上腸系動脈與胰臟",
+            "D. 由膽囊管沿十二指腸第二部份側緣至第三部始處連向胰 頸部；包括肝、十二指腸韌帶、胰頭及十二指腸",
+            "E. 胰尾部"
+        ],
+        "答案": "D",
+        "出處": "Textbook of Endocrine Surgery,\np595"
+    },
+    {
+        "題別": "單",
+        "題號": "9",
+        "題目": "下列何者最適合用於胃泌素瘤之鑑別診斷？",
+        "選項": [
+            "A. 高蛋白餐試驗（High protein meal test）",
+            "B. 鈣質灌流試驗（Calcium infusion test）",
+            "C. 基礎胃酸/最高胃酸比值",
+            "D. Secretin激發試驗",
+            "E. 胃粘膜切片生檢（biopsy）"
+        ],
+        "答案": "D",
+        "出處": "Textbook of Endocrine Surgery,\np610"
+    },
+    {
+        "題別": "單",
+        "題號": "10",
+        "題目": "C-細胞過度增生可見於甲狀腺髓質癌（MTC）患者，何者 除外？",
+        "選項": [
+            "A. 家族性(familial)非MEN-MTC患者",
+            "B. MEN-2A綜合症患者",
+            "C. MEN-2B綜合症患者",
+            "D. 散發性(sporatic)MTC患者",
+            "E. MEN2A或2B之帶基因（Gene carrier）"
+        ],
+        "答案": "D",
+        "出處": "Textbook of Endocrine Surgery,\np620"
+    },
+    {
+        "題別": "單",
+        "題號": "11",
+        "題目": "高血鈣危機（Hypercalcemic crisis）最常見的原因是？",
+        "選項": [
+            "A. 原發性副甲狀腺高能症",
+            "B. 惡性腫瘤",
+            "C. 維他命D中毒",
+            "D. 次發性副甲狀腺高能症",
+            "E. Sarcoidosis"
+        ],
+        "答案": "B",
+        "出處": "Textbook of Endocrine Surgery,\np437"
+    },
+    {
+        "題別": "單",
+        "題號": "12",
+        "題目": "治療高血鈣危機，以下列何種組合最迅速有效而持久？",
+        "選項": [
+            "A. Bisphosphonate + Gallium",
+            "B. Bisphosphonate + 類固醇 + Mithramycin",
+            "C. 大量生理食鹽水 + Calcitonin + Bisphosphonate",
+            "D. 腹膜透析",
+            "E. 血液透析"
+        ],
+        "答案": "C",
+        "出處": "Textbook of Endocrine Surgery,\np436-437"
+    },
+    {
+        "題別": "單",
+        "題號": "13",
+        "題目": "某甲平日無高血壓病史，今因故需手術，全身麻醉誘導時 ，血壓竄升至270/160 mmHg因而中止麻醉，送回恢復室時 ，高血壓又發作幾次，為正確診斷需做下列何種檢查？",
+        "選項": [
+            "A. 血鉀及Aldosterone",
+            "B. 血中Cortisole",
+            "C. 血中24小時metanephrine及Vallinyl mandelic acid",
+            "D. 血中renin",
+            "E. 24小時心電圖記錄"
+        ],
+        "答案": "C",
+        "出處": "Textbook of Endocrine Surgery,\np514"
+    },
+    {
+        "題別": "單",
+        "題號": "14",
+        "題目": "對單一甲狀腺結節診斷良性或惡性，最準確的方法是？",
+        "選項": [
+            "A. 甲狀腺超音波",
+            "B. 核子醫學影像掃描",
+            "C.電腦斷層",
+            "D. 核磁共振檢查",
+            "E. 細針細胞穿吸術"
+        ],
+        "答案": "E",
+        "出處": "Principle of Surgery, 5th ed., p1632"
+    },
+    {
+        "題別": "單",
+        "題號": "15",
+        "題目": "一位四十歲女性，甲狀腺長硬塊，血中calcitonin及CEA上 升，最可能的診斷為何種甲狀腺疾病？",
+        "選項": [
+            "A. 乳突癌",
+            "B. 濾泡癌",
+            "C. 髓質癌",
+            "D. 未分化癌",
+            "E. 淋巴癌"
+        ],
+        "答案": "C",
+        "出處": "Principle of Surgery, 5th ed., p1637"
+    },
+    {
+        "題別": "單",
+        "題號": "16",
+        "題目": "一位病人患有甲狀腺髓質癌，舌頭粘膜上有神經瘤，腎上 腺長嗜鉻細胞瘤（Pheochrom-ocytoma），則最可能診斷 應為？",
+        "選項": [
+            "A. 原發性甲狀腺機能亢進",
+            "B. MENⅠ",
+            "C. MENⅡa",
+            "D. MENⅡb",
+            "E. Sporadic甲狀腺髓質癌"
+        ],
+        "答案": "D",
+        "出處": "Malignant Tumors of the Thyroid,\np126"
+    },
+    {
+        "題別": "單",
+        "題號": "17",
+        "題目": "有關Medullary thyroid cancer，下述中何者為非？",
+        "選項": [
+            "A. 可能有家族遺傳性",
+            "B. 可能合併MENⅡa",
+            "C. 可利用calcitonin screening發現家族罹患者",
+            "D. 放射碘131治療效果極佳",
+            "E. 可能合併MENⅡb"
+        ],
+        "答案": "D",
+        "出處": "Principle of Surgery, 5th ed., p1636-\n1637"
+    },
+    {
+        "題別": "單",
+        "題號": "18",
+        "題目": "甲狀腺乳突癌(papillary thyroid cancer)接受全甲狀腺切除 ，下列中何項不是？",
+        "選項": [
+            "A. 復發率低",
+            "B. 術後可利用Thyroglobulin偵測疾病復發",
+            "C. 術後可用碘131治療轉移病灶",
+            "D. 暫時性副甲狀腺機能低下發生率極低",
+            "E. 喉返神經受傷機會高"
+        ],
+        "答案": "D",
+        "出處": "Textbook of Surgery 15th ed., p634"
+    },
+    {
+        "題別": "單",
+        "題號": "19",
+        "題目": "治療小於2公分的甲狀腺髓質癌，患者側頸部無淋巴腺轉移 則下述中何法為佳？",
+        "選項": [
+            "A. 全甲狀腺切除即可",
+            "B. 全甲狀腺切除加上中央頸部淋巴腺清除",
+            "C. 全甲狀腺切除加上Modified radical neck dissection",
+            "D.只用碘131治療",
+            "E. 放射線治療"
+        ],
+        "答案": "B",
+        "出處": "Malignant Tumors of the Thyroid,\np131"
+    },
+    {
+        "題別": "單",
+        "題號": "20",
+        "題目": "甲狀腺濾泡癌（Follicular Carcinoma），下述中何者為 非？",
+        "選項": [
+            "A. 屬於分化良好型",
+            "B. 頸部淋巴腺感染比例極高",
+            "C. 大部份可製造thyroglobulin",
+            "D. 大部份術後利用碘131療效佳",
+            "E. 容易轉移到骨骼、肺"
+        ],
+        "答案": "B",
+        "出處": "Surgery Scientific Principle and\nPractice, p1183"
+    },
+    {
+        "題別": "單",
+        "題號": "21",
+        "題目": "那一種類甲狀腺癌，其預後極差，大部份患者於一年內死 亡？",
+        "選項": [
+            "A. 乳突癌",
+            "B. 濾泡癌",
+            "C. 髓質癌",
+            "D. 未分化型癌",
+            "E. 惡性肉瘤"
+        ],
+        "答案": "D",
+        "出處": "Principle of Surgery, 5th ed., p1638"
+    },
+    {
+        "題別": "單",
+        "題號": "22",
+        "題目": "甲狀腺乳突癌或濾泡癌在接受全甲狀腺切除術後，可利用 下列何項來偵測復發或轉移？",
+        "選項": [
+            "A. CEA",
+            "B. Calcitonin",
+            "C. Thyroglobulin+ anti-Tg Ab",
+            "D. TSH-receptor Ab",
+            "E. Microsomal Ab"
+        ],
+        "答案": "C",
+        "出處": "Malignant Tumors of the Thyroid,\np77"
+    },
+    {
+        "題別": "單",
+        "題號": "23",
+        "題目": "放射性碘對下列何種類的甲狀腺癌術後療效不佳？",
+        "選項": [
+            "A. Papillary cancer",
+            "B. Follicular cancer",
+            "C. Medullary cancer",
+            "D. Mixed papillary follicular cancer",
+            "E. Follicular variant of papillary cancer"
+        ],
+        "答案": "C",
+        "出處": "Malignant Tumors of the Thyroid,\np77"
+    },
+    {
+        "題別": "單",
+        "題號": "24",
+        "題目": "那一種型的甲狀腺癌，須同時考慮病人可能合併 Hyperparathyroidism或Pheochromo- cytoma？",
+        "選項": [
+            "A. 乳突癌",
+            "B. 濾泡癌",
+            "C. 髓質癌",
+            "D. 未分化癌",
+            "E. 轉移性甲狀腺癌"
+        ],
+        "答案": "C",
+        "出處": "Principle of Surgery, 5th ed., p1636"
+    },
+    {
+        "題別": "單",
+        "題號": "25",
+        "題目": "下列何種甲狀腺癌，可能有家族遺傳傾向並與C-cell hyperplasia有關？",
+        "選項": [
+            "A. 乳突癌",
+            "B. 髓質癌",
+            "C. 轉移性甲狀腺癌",
+            "D. 濾泡癌",
+            "E. 淋巴癌"
+        ],
+        "答案": "B",
+        "出處": "Malignant Tumors of the Thyroid,\np126"
+    },
+    {
+        "題別": "單",
+        "題號": "26",
+        "題目": "一位病患小時候頭頸部曾接受低劑量放射線照射治療，現 細針穿刺診斷為甲狀腺乳突癌，最好治療方法為何？",
+        "選項": [
+            "A. 單側甲狀腺葉切除",
+            "B. 化學治療",
+            "C. 放射線治療",
+            "D. 全甲狀腺切除",
+            "E. 只切腫瘤即可"
+        ],
+        "答案": "D",
+        "出處": "Malignant Tumors of the Thyroid,\np77"
+    },
+    {
+        "題別": "單",
+        "題號": "27",
+        "題目": "下述何種情形較像良性甲狀腺結節腫？",
+        "選項": [
+            "A. 頭頸部曾接受低劑量放射線照射，而後產生甲狀腺結節",
+            "B. 小孩生長單一堅硬甲狀腺瘤",
+            "C. 單一堅硬，快速生長的甲狀腺結節",
+            "D. 超音波下呈現祇是CYST的結節",
+            "E. 甲狀腺腫瘤合併聲音沙啞"
+        ],
+        "答案": "D",
+        "出處": "Principle of Surgery, 5th ed., p1632"
+    },
+    {
+        "題別": "單",
+        "題號": "28",
+        "題目": "Right recurrent laryngeal nerve經過：",
+        "選項": [
+            "A. subclavian artery",
+            "B. aortic arch",
+            "C. superior thyroid artery",
+            "D. ductus arteriosus",
+            "E. thyroidal ima artery"
+        ],
+        "答案": "A",
+        "出處": "Text book of surgery 15th ed., p611-\n625"
+    },
+    {
+        "題別": "單",
+        "題號": "29",
+        "題目": "Antithyroid drug的不良反應不包括：",
+        "選項": [
+            "A. drug allergy",
+            "B. heart failure",
+            "C. agranulocytosis",
+            "D. peripheral neuritis",
+            "E. skin itching"
+        ],
+        "答案": "B",
+        "出處": "Text book of surgery 15th ed., p611-\n625"
+    },
+    {
+        "題別": "單",
+        "題號": "30",
+        "題目": "若甲狀腺腫瘤病患有tracheomalasia的問題，其症狀大多發 生在手術後什麼時間？",
+        "選項": [
+            "A. 馬上開完刀後",
+            "B. 當天晚上",
+            "C. 第三天",
+            "D. 一星期",
+            "E. 一個月"
+        ],
+        "答案": "B",
+        "出處": "Text book of surgery 15th ed., p611-\n625"
+    },
+    {
+        "題別": "單",
+        "題號": "31",
+        "題目": "Hypothyroidism：下列何者不會發生？",
+        "選項": [
+            "A. T3↓",
+            "B. cholesterol↓",
+            "C. TSH↑",
+            "D. Myxedema",
+            "E. Free T4↓"
+        ],
+        "答案": "B",
+        "出處": "Text book of surgery 15th ed., p611-\n625"
+    },
+    {
+        "題別": "單",
+        "題號": "32",
+        "題目": "Lugol's solution for hyperthyroidism取主要的目的是為了什 麼？",
+        "選項": [
+            "A. 減少T3 T 4",
+            "B. 減少TSH",
+            "C. 增加Thyrotropin inhibitory immunoglobulin",
+            "D. 減少vascularity",
+            "E. 使甲狀腺變軟"
+        ],
+        "答案": "D",
+        "出處": "Text book of surgery 15th ed., p611-\n625"
+    },
+    {
+        "題別": "單",
+        "題號": "33",
+        "題目": "一般測定T4、T3值時，下列何者最易造成假像的T4、T3高 值（即free T3 free T4正常）？",
+        "選項": [
+            "A. 服用Glucocorticoid",
+            "B. Nephrotic syndrome",
+            "C. Malnutrition",
+            "D. Liver cirrhosis",
+            "E. Pregnancy"
+        ],
+        "答案": "E",
+        "出處": "Basic & Clinical Endocrinology,\np202"
+    },
+    {
+        "題別": "單",
+        "題號": "34",
+        "題目": "甲狀腺Hormone T4、T3在血液中時，何者佔最大的比例？",
+        "選項": [
+            "A. 與Albumuin結合型",
+            "B. 與Thyroxine-binding prealbumin結合型",
+            "C. 與Thyroid-hormone binding globulin結合型",
+            "D. 與Ferritin結合型",
+            "E. 自由型（Free form）"
+        ],
+        "答案": "C",
+        "出處": "Basic & Clinical Endocrinology,\np202"
+    },
+    {
+        "題別": "單",
+        "題號": "35",
+        "題目": "T4的半衰期大約多久？",
+        "選項": [
+            "A. 一天",
+            "B. 三天",
+            "C. 七天",
+            "D. 十四天",
+            "E. 二十一天"
+        ],
+        "答案": "C",
+        "出處": "Basic & Clinical Endocrinology,\np207"
+    },
+    {
+        "題別": "單",
+        "題號": "36",
+        "題目": "T3的半衰期大約多久？",
+        "選項": [
+            "A. 一天",
+            "B. 三天",
+            "C. 七天",
+            "D. 十四天",
+            "E. 二十一天"
+        ],
+        "答案": "A",
+        "出處": "Basic & Clinical Endocrinology,\np207"
+    },
+    {
+        "題別": "單",
+        "題號": "37",
+        "題目": "下列何者可以增加甲狀腺細胞Na+/ I- symporter的功能？",
+        "選項": [
+            "A. rT3",
+            "B. TSH",
+            "C. CLO4 -",
+            "D. SCN -",
+            "E. NO3-"
+        ],
+        "答案": "B",
+        "出處": "Basic & Clinical Endocrinology,\np198"
+    },
+    {
+        "題別": "單",
+        "題號": "38",
+        "題目": "下列何種Cell，其Thyroglobulin的Special stain最可能呈 Negative？",
+        "選項": [
+            "A. Thyroid papillary cancer cell",
+            "B. Thyroid medullary cancer",
+            "C. Thyroid follicular cancer cell",
+            "D. Thyroid follicullar adenoma cell",
+            "E. Thyroid Hurthle cell"
+        ],
+        "答案": "B",
+        "出處": "Basic & Clinical Endocrinology,\np252-259"
+    },
+    {
+        "題別": "單",
+        "題號": "39",
+        "題目": "下列何種甲狀腺細胞對I131的Uptake可能最好？",
+        "選項": [
+            "A. Thyroid Hurthle cell",
+            "B. Thyroid anaplastic cell",
+            "C. Thyroid C cell",
+            "D. Thyroid lymphoma cell",
+            "E. Thyroid papillary cancer cell"
+        ],
+        "答案": "E",
+        "出處": "Basic & Clinical Endocrinology,\np252-259"
+    },
+    {
+        "題別": "單",
+        "題號": "40",
+        "題目": "下列何種甲狀腺癌，最易呈現Loss of P53 Suppression gene？",
+        "選項": [
+            "A. Thyroid anaplastic cancer cell",
+            "B. Thyroid follicullar adenoma cell",
+            "C. Thyroid follicullar cancer cell",
+            "D. Thyroid Hurthle cancer cell",
+            "E. Thyroid Papillary cancer cell"
+        ],
+        "答案": "A",
+        "出處": "Basic & Clinical Endocrinology,\np252-259"
+    },
+    {
+        "題別": "單",
+        "題號": "41",
+        "題目": "Inferior Thyroid artery最常源於？",
+        "選項": [
+            "A. Common carotid artery",
+            "B. Internal carotid artery",
+            "C. External carotid artery",
+            "D. Vertebral artery",
+            "E. Subclavian artery"
+        ],
+        "答案": "E",
+        "出處": "中華現代外科學全書第八冊，一\n般外科學（下），p3"
+    },
+    {
+        "題別": "單",
+        "題號": "42",
+        "題目": "下列何種神經，其作用特別在於持續維持高音時，但在甲 狀腺手術時易受傷害？",
+        "選項": [
+            "A. Ansa hypoglossi N",
+            "B. Inferior laryngeal N",
+            "C. Superior laryngeal N之 internal branch",
+            "D. Superior laryngeal N之external branch",
+            "E. Non-recurrent N"
+        ],
+        "答案": "D",
+        "出處": "中華現代外科學全書第八冊，一\n般外科學（下），p8-9"
+    },
+    {
+        "題別": "單",
+        "題號": "43",
+        "題目": "下列解剖上的描述，何者為正確？",
+        "選項": [
+            "A. Non-recurrent nerve常出現在病人之左側",
+            "B. Vagus nerve常位於Carotid artery之內側",
+            "C. 大多數人有mid thyroid artery無mid-thyroid vein",
+            "D. 在thyroid之Isthmus的高度時，esophagus是在病人之 trachea的後面，略偏於右側",
+            "E. 甲狀腺為一Lymphatic-rich的組織"
+        ],
+        "答案": "E",
+        "出處": "中華現代外科學全書第八冊，一\n般外科學（下），p2-9"
+    },
+    {
+        "題別": "單",
+        "題號": "44",
+        "題目": "在原發性副甲狀腺機能亢進病人，作頸部探查術時，若無 法找到右上副甲狀腺，則此時應先檢查何部位？",
+        "選項": [
+            "A. 胸腺內",
+            "B. 食道後、頸椎前",
+            "C. 頸動脈鞘（carotid sheath）",
+            "D. 甲狀腺內",
+            "E. 作胸骨切開術（mediastinotomy）"
+        ],
+        "答案": "B",
+        "出處": "Surgical endocrinology, p384"
+    },
+    {
+        "題別": "單",
+        "題號": "45",
+        "題目": "繼發性副甲狀腺機能亢進之病理組織觀察，以何種細胞增 生為主？",
+        "選項": [
+            "A. chief cell",
+            "B. oxyphil cell",
+            "C. water-clear cell",
+            "D. fat cell",
+            "E. lymphocyte"
+        ],
+        "答案": "A",
+        "出處": "Surgical endocrinology, p377"
+    },
+    {
+        "題別": "單",
+        "題號": "46",
+        "題目": "原發性副甲狀腺機能亢進手術，最好的定位檢查（ localization procedure）為何？",
+        "選項": [
+            "A. 頸部超音波",
+            "B. 電腦斷層",
+            "C. 有經驗外科醫師頸部探查術（neck exploration）",
+            "D. 核磁共振",
+            "E. methylene blue注射"
+        ],
+        "答案": "C",
+        "出處": "Surgical endocrinology, p386"
+    },
+    {
+        "題別": "單",
+        "題號": "47",
+        "題目": "NP59核醫影像檢查臨床上懷疑Cushing's syndrome下列之 敘述何者為非？",
+        "選項": [
+            "A. 腎上腺兩側顯像代表adrenal hyperplasia",
+            "B. 單側影像代表adrenal adenoma",
+            "C. 兩側不顯影代表正常",
+            "D. 膽固醇過高時不顯影",
+            "E. 使用glucocorticoid時要排除此項檢查"
+        ],
+        "答案": "C",
+        "出處": "Textbook of Endocrine Surgery, 1st\ned., p468"
+    },
+    {
+        "題別": "單",
+        "題號": "48",
+        "題目": "大約百分之幾的甲狀舌骨囊腫含有甲狀腺乳突癌（papillary thyroid cancers）？",
+        "選項": [
+            "A. 1﹪",
+            "B. 5﹪",
+            "C. 10﹪",
+            "D. 15﹪",
+            "E. 20﹪"
+        ],
+        "答案": "A",
+        "出處": "Textbook of Endocrine Surgery, 1st\ned, p9"
+    },
+    {
+        "題別": "單",
+        "題號": "49",
+        "題目": "上副甲腺源於第幾鰓囊之背部（dorsal part of branchial pouches）？",
+        "選項": [
+            "A. 第一",
+            "B. 第二",
+            "C. 第三",
+            "D. 第四",
+            "E. 第五"
+        ],
+        "答案": "D",
+        "出處": "Textbook of Endocrine Surgery, 1st\ned, p9"
+    },
+    {
+        "題別": "單",
+        "題號": "50",
+        "題目": "甲狀腺手術時，如果需要橫斷胸甲狀肌（sternothyroid m.）及胸舌骨肌（stenohyoid m.）時，最好打斷的位置接 近環狀軟骨水平（cricoid level）位置，以保留何運動神 經？",
+        "選項": [
+            "A. superior laryngeal nerve上喉神經",
+            "B. recurrent laryngeal nerve喉返神經",
+            "C. ansa hypoglossi舌下神經襻",
+            "D. spinal nerve",
+            "E. accessory nerve"
+        ],
+        "答案": "C",
+        "出處": "Textbook of Endocrine Surgery, 1st\ned, p10"
+    },
+    {
+        "題別": "單",
+        "題號": "51",
+        "題目": "下列關於insulinoma之敘述何者為非？",
+        "選項": [
+            "A. 過度分泌胰島素所以臨床上以低血糖表現",
+            "B. 臨床上常以Whipple’s triad作為診斷依據",
+            "C. 一般正常人insulin-glucose ratio >1",
+            "D. proinsulin及C peptide值皆升高",
+            "E. Glucagon test為懷疑insulinoma之激發試驗"
+        ],
+        "答案": "C",
+        "出處": "Textbook of Endocrine Surgery, 1st\ned., p580"
+    },
+    {
+        "題別": "單",
+        "題號": "52",
+        "題目": "有關Intact PTH (parathyroid hormone)之敘述何者為非？",
+        "選項": [
+            "A. 為84 amino-acid polypeptide",
+            "B. 半衰期少於5分鐘",
+            "C. 可以radioimmunologic及immunometric的方法測其活性",
+            "D. 進入血液循環很容易斷裂，C-terminal為其有活性N- terminal不具活性",
+            "E. 因為半衰期短，已經運用在手術中測量，以達到預測手 術是否成功"
+        ],
+        "答案": "D",
+        "出處": "Textbook of Endocrine Surgery, 1st\ned., p290-291"
+    },
+    {
+        "題別": "單",
+        "題號": "53",
+        "題目": "放射性碘（I131）用於治療Graves’ disease下述何者有 誤？",
+        "選項": [
+            "A. 在美國普遍用於成人患者",
+            "B. 可普遍用於小孩及生殖年齡女性",
+            "C. 長期後，有高比率的病患會產生甲狀腺機能低下",
+            "D. 欲在短期間內快速達到機能控制，不適合利用此法治療",
+            "E. 極大甲狀腺体者，不太適合以此治療"
+        ],
+        "答案": "B",
+        "出處": "Surgery: Scientific principles and\npractice, p1176"
+    },
+    {
+        "題別": "單",
+        "題號": "54",
+        "題目": "下述何者的血中數值可診斷為原發性副甲狀腺機能亢進？",
+        "選項": [
+            "A. 低血鈣，高副甲狀腺荷爾蒙",
+            "B. 高血鈣，高副甲狀腺荷爾蒙",
+            "C. 高尿素氮（BUN），高肌氨酸（Creatinine），高副甲 狀腺荷爾蒙",
+            "D. 高血鈣，高CEA，正常副甲狀腺荷爾蒙",
+            "E. 低血鈣，低副甲狀腺荷爾蒙"
+        ],
+        "答案": "B",
+        "出處": "Textbook of endocrine surgery, p300"
+    },
+    {
+        "題別": "單",
+        "題號": "55",
+        "題目": "下列何者有誤？",
+        "選項": [
+            "A. 目前用來檢查Parathyroid Hormone (PTH)，大都檢測血 中Intact – PTH",
+            "B. 目前檢查PTH，大都祇檢測C-terminal PTH即可，其不 受腎機能障礙而影響",
+            "C. 病理化驗結果，原發性副甲狀腺機能亢進，因腺瘤（ Adenoma）而導致的比例比腺体增生（Hyperplasia）者為 多",
+            "D. 原發性副甲狀腺機能亢進手術成功率極高，可達95﹪以 上",
+            "E. 生化血清檢查可準確診斷原發性副甲狀腺機能亢進"
+        ],
+        "答案": "B",
+        "出處": "Surgery of the thyroid and\nparathyroid gland 3th ed., p248"
+    },
+    {
+        "題別": "單",
+        "題號": "56",
+        "題目": "下列何種甲狀腺癌可於外科手術後有效使用放射碘131治 療？",
+        "選項": [
+            "A. 只有乳突癌有效，其他無效",
+            "B. 只有髓質癌有效",
+            "C. 所有甲狀腺癌皆有效",
+            "D. 大部份乳突癌及濾泡癌皆有效",
+            "E. 只有濾泡癌才有效"
+        ],
+        "答案": "D",
+        "出處": "Surgery: Scientific Principle and\nPractice, p1185"
+    },
+    {
+        "題別": "單",
+        "題號": "57",
+        "題目": "最近幾年因為影像學之進步，發現很多腎上腺腫瘤，這些 腫瘤之特性，以下何者為非？",
+        "選項": [
+            "A. 絕大多數為非功能性良性腫瘤",
+            "B. 電腦斷層（CT）之發現率約為0.35﹪至4.4﹪",
+            "C. 大多數不需要治療觀察即可",
+            "D. 不需去了解其家族史，因為絕大多數為單獨發生之事件",
+            "E. 近年來發展出之分子生物學技術對這些腫瘤之診斷有相 當大幫助"
+        ],
+        "答案": "D",
+        "出處": "Diagnosis and Management of\nAdrenal Incidentoloma. J. Urol.,\n163: 398-407,2000"
+    },
+    {
+        "題別": "單",
+        "題號": "58",
+        "題目": "腎上腺腫瘤之影像學檢查，近年來有大幅進步，有關此之 敘述以下何者為非？",
+        "選項": [
+            "A. 核磁共振可利用質子旋轉之特性，精確地區分脂肪成分 ，可對良性腫瘤達到百分之九十八之診斷率",
+            "B. 電腦斷層檢查仍為診斷之最主要工具，但已日漸為核磁 共振代替",
+            "C. 核磁共振影像發現T1-weighted為hyperdense而T2- weighted為intermediate density應考慮為myelolipoma",
+            "D. 核磁共振影像之Phase-In及Phase-out技術為鑑別良性與 惡性腫瘤之重要發現",
+            "E. 核磁共振影像之Phase-In及Phase-out技術無法鑑別良性 與嗜鉻細胞瘤"
+        ],
+        "答案": "E",
+        "出處": "Benign adrenocortical\nmasses:diagnosis with chemical shift\nMRI imaging. Radiology 185: 345,\n992."
+    },
+    {
+        "題別": "單",
+        "題號": "59",
+        "題目": "有關腎上腺Incidentoloma之治療，以下何者為非？",
+        "選項": [
+            "A. 利用酒精溶解腫瘤已日漸取代手術來治療此類病患",
+            "B. 若要手術應考慮腹腔鏡手術切除",
+            "C. 腹腔鏡手術不論由後腹腔或腹腔其效果皆相當理想，差 異不大",
+            "D. 腹腔鏡手術之風行不應改變了此類腫瘤之手術適應症",
+            "E. 腹腔鏡手術仍可利用來切除嗜鉻細胞瘤，唯最好由腹腔 內進行"
+        ],
+        "答案": "A",
+        "出處": "Use of laparoscopic techniques\nimproves outcome from\nadenalectomy Am J Surg. 173: 373,\n1997."
+    },
+    {
+        "題別": "單",
+        "題號": "60",
+        "題目": "甲狀腺癌中發展緩慢，比較容易由淋巴轉移，預後良好， 好發於年齡屬較低的是以下哪一種癌？",
+        "選項": [
+            "A. 濾胞癌（Follicular carcinoma）",
+            "B. 乳突癌（Papillary carcinoma）",
+            "C. 髓質癌（Medullary carcinoma）",
+            "D. 未分化癌（Anaplastic carcinoma）",
+            "E. 類表皮癌（Epidermoid carcinoma）"
+        ],
+        "答案": "B",
+        "出處": "日文版，外科MOOK甲狀腺。上\n皮小体之外科，p168-170"
+    },
+    {
+        "題別": "單",
+        "題號": "61",
+        "題目": "影嚮乳突狀甲狀腺癌（Papillary thyroid cancer）的因素， 那一項最不重要？",
+        "選項": [
+            "A. 年齡",
+            "B. 細胞分化程度",
+            "C. 腫瘤侵犯程度",
+            "D. 腫瘤大小",
+            "E. 淋巴轉移"
+        ],
+        "答案": "E",
+        "出處": "Sungical Endocrinology, John Lynn,\nBH 出版社，p243"
+    },
+    {
+        "題別": "單",
+        "題號": "62",
+        "題目": "七十五歲老先生，平常有便秘現象，突發嘔吐、頻尿、四 肢無力、呼吸急促，送至急診室呈現半昏迷狀態，抽血結 果發現血鈣15.2 mg/dl，血磷2.1 mg/dl, EKG呈現PR延長， T波高，及ST縮短。其處置順序那項最優先？",
+        "選項": [
+            "A. 降鈣藥物使用",
+            "B. 改正電解質不平衡",
+            "C. 查明原因",
+            "D. 利尿劑使用",
+            "E. 強迫水份補充"
+        ],
+        "答案": "E",
+        "出處": "Surgical Endocrinology, John Lynn,\nBH 出版社，p341-348"
+    },
+    {
+        "題別": "單",
+        "題號": "63",
+        "題目": "對於原發性高醛酮素症之描述何者為誤？",
+        "選項": [
+            "A. 病理上大多小於兩公分",
+            "B. 切面常呈金黃色",
+            "C. 兩側結節性增殖NP59核醫攝影時呈兩側不顯影",
+            "D. 超過50歲，且開刀前已患長期高血壓者，術後血壓下降 效果較差",
+            "E. 兩側結節性增生，主要以Spironolactonne治療"
+        ],
+        "答案": "C",
+        "出處": "Manual of Surgery 2nd edition,\np172-181"
+    },
+    {
+        "題別": "單",
+        "題號": "64",
+        "題目": "對於嗜鉻細胞瘤,何者為錯誤描述？",
+        "選項": [
+            "A. 腎上腺的嗜鉻細胞瘤可分泌Epinephrine，及Non- epinephrine",
+            "B. 大多有10﹪在extra adrenal發生，其惡性機會較大",
+            "C. 術前治療是先給予β-blocker一段時間後，再給予α- blocker",
+            "D. α-methylparatyrosine可以抑制Catecholamine的合成",
+            "E. MEN 2A的病人，不一定需要兩側腎上腺同時切除"
+        ],
+        "答案": "C",
+        "出處": "Manual of Surgery 2nd edition,\np155-172"
+    },
+    {
+        "題別": "單",
+        "題號": "65",
+        "題目": "對於單側腎上腺的意外瘤（Incidentaloma）以下描述何者 為誤？",
+        "選項": [
+            "A. 若單側腫瘤大於6cm應考慮手術治療",
+            "B. 應先確定是否為功能性，若具功能者，應考慮手術治療",
+            "C. 4cm大小的薄壁水瘤，不可以使用細針抽取及細胞檢查",
+            "D. 3cm大小之腫瘤，若每年加大2cm，應考慮手術治療",
+            "E. 近年來因電腦斷層普遍使用，使Incidentaloma發現率提 昇約至2﹪"
+        ],
+        "答案": "C",
+        "出處": "Manual of Surgery 2nd edition,\np203-205"
+    },
+    {
+        "題別": "組合題",
+        "題號": "66",
+        "題目": "【組合題66-68】60歲患者10多年來反覆性腎結石接受多次 體外震波碎石術，最近一個月因為容易疲倦，關節及骨頭 疼痛接受一系列健康檢查，發現肝臟右葉有一顆3公分腫瘤 ，兩側腎結石，血清尿酸值8.0 mg/dl；鈣值12 mg/dl，下 一步應做什麼檢查以鑑別診斷，那一項檢查有誤？",
+        "選項": [
+            "A. 胎兒蛋白（α-Feto protein）",
+            "B. Intact PTH（Parathyroid Hormone）",
+            "C. PTHrP（Parathyroid hormone related protein）",
+            "D. 甲狀腺蛋白（Thyroglobulin）",
+            "E. 宜收集24小時尿液檢查尿鈣值"
+        ],
+        "答案": "D",
+        "出處": "Surgery of The Thyroid and\nParathyroid Glands RANDOLPH,\n2003, p489,492"
+    },
+    {
+        "題別": "組合題",
+        "題號": "67",
+        "題目": "【組合題66-68】承上題，收集24小時尿液檢查尿鈣值之目 的，那一項描述有誤？",
+        "選項": [
+            "A. 無法確定是否與遺傳有關",
+            "B. 鑑別familial hypocalciuric hypercalcemia",
+            "C. 尿鈣值偏低可能是原發性副甲腺高能症",
+            "D. 泌尿道結石與此有關",
+            "E. 大約40﹪原發性副甲腺高能症的病患有高尿鈣（＞ 400mg/day）的情形。"
+        ],
+        "答案": "C",
+        "出處": "Surgery of The Thyroid and\nParathyroid Glands RANDOLPH,\n2003, p492"
+    },
+    {
+        "題別": "組合題",
+        "題號": "68",
+        "題目": "【組合題66-68】承上題，如果病患是原發性副甲腺高能症 ，那一項描述是正確的？",
+        "選項": [
+            "A. 肝臟腫瘤絕不是惡性的",
+            "B. 超過90﹪頸部超音波可以發現四顆副甲腺都不正常",
+            "C. 異位性副甲腺腺瘤，頸部超音波100﹪可以偵測",
+            "D. Tl-201-Tc99m subtraction Scan定位優於Tc99m sestamibi scan",
+            "E. 手術是最好治癒的方法"
+        ],
+        "答案": "E",
+        "出處": "Surgery of The Thyroid and\nParathyroid Glands RANDOLPH,\n2003, p498-502, 549"
+    },
+    {
+        "題別": "組合題",
+        "題號": "69",
+        "題目": "【組合題69-70】30歲張小姐因為甲狀腺3公分單一結節接 受檢查，包括血清甲狀腺功能檢查，頸部超音波，Tc-99m Thyroid Scan及FNA（Fine Needle Aspiration）細胞學檢 查，那一項描述是正確的？",
+        "選項": [
+            "A. Tc99m thyroid Scan，若nodule的uptake增加代表惡性 機率高",
+            "B. 頸部超音波只能區別cyst或solid，無法鑑別良性或惡性",
+            "C. FNA細胞學檢查可以看出分化良好濾泡型甲狀腺癌（ well-differentiated Follicular Thyroid Cancer）",
+            "D. FNA的診斷率一般低於50﹪",
+            "E. FNA如果是Follicular Neoplasm，最好建議病患接受手 術"
+        ],
+        "答案": "E",
+        "出處": "Surgery of The Thyroid and\nParathyroid Glands RANDOLPH,\n2003, p30-38, 141-143, 154-157"
+    },
+    {
+        "題別": "組合題",
+        "題號": "70",
+        "題目": "【組合題769-70】承上題，此腫瘤如果是濾泡型甲狀腺癌 哪一項描述有誤？",
+        "選項": [
+            "A. 有明顯包膜（Capsule）及血管（Vessels）侵犯",
+            "B. 按照AGES Score（Age, grade, Extension, Size），應 屬於low risk（低於4）",
+            "C. 接受甲狀腺全切除後，可用甲狀腺蛋白（ Thyroglobulin）來追蹤",
+            "D. 若接受甲狀腺次全切除，可用131I來追蹤",
+            "E. 與Hürthle cell thyroid cancer病理診斷依據相同"
+        ],
+        "答案": "D",
+        "出處": "Surgery of The Thyroid and\nParathyroid Glands RANDOLPH,\n2003, p140, 212, 220-224, 207, 216-\n217"
+    },
+    {
+        "題別": "單",
+        "題號": "71",
+        "題目": "50歲女性甲狀腺腫大約一年沒有心悸怕熱，理學檢查甲狀 腺稍硬，你的下一步檢查應不包括？",
+        "選項": [
+            "A. serum T3, TSH, T4, 及Echography of thyroid",
+            "B. aspiration biopsy / cytology",
+            "C. serum calcitonin",
+            "D. serum CEA",
+            "E. serum CA-199"
+        ],
+        "答案": "E",
+        "出處": "Surgery Jeffrey A Norton, p891"
+    },
+    {
+        "題別": "單",
+        "題號": "72",
+        "題目": "25歲女性在門診甲狀腺泛發性腫大，serum T3↑, T4↑, TSH↓，眼睛突出，最好的治療方法為？",
+        "選項": [
+            "A. antithyroid medication",
+            "B. I131 治療",
+            "C. antithyroid medication, then surgery",
+            "D. Iodine 製劑（Lugol’s solution）",
+            "E. Occuloplasty"
+        ],
+        "答案": "C",
+        "出處": "Surgery Jeffrey A Norton, p882"
+    },
+    {
+        "題別": "組合題",
+        "題號": "73",
+        "題目": "【組合題73-74】45歲女性病人，10年前有右側乳癌接受過 乳房保存手術及輔助性放射治療，目前發現甲狀腺右側硬 塊約一個月，你的檢查建議是？",
+        "選項": [
+            "A. 檢查serum T3, T4, TSH",
+            "B. Echo, aspiration biopsy cytology",
+            "C. CT",
+            "D. MRI",
+            "E. angiography"
+        ],
+        "答案": "B",
+        "出處": "Surgery Jeffrey A Norton, p886"
+    },
+    {
+        "題別": "組合題",
+        "題號": "74",
+        "題目": "【組合題73-74】承上題，上述病人接受手術，最可能的診 斷是？",
+        "選項": [
+            "A. papillary thyroid cancer",
+            "B. follicular carcinoma",
+            "C. medullary cancer",
+            "D. undifferentiated cancer",
+            "E. Hurthel cell cancer"
+        ],
+        "答案": "A",
+        "出處": "Surgery Jeffrey A Norton, p886"
+    },
+    {
+        "題別": "單",
+        "題號": "75",
+        "題目": "Calcitonin之敘述何者有誤？",
+        "選項": [
+            "A. 由Para follicular Cells分泌",
+            "B. 32-amino and Polypeptide",
+            "C. 可昇高血鈣質",
+            "D. Medullay Thyroid Cancer 有關",
+            "E. MEN-2 有關"
+        ],
+        "答案": "C",
+        "出處": "Sabiston Textbook of Surgery 16th\nEdition, p609"
+    },
+    {
+        "題別": "單",
+        "題號": "76",
+        "題目": "一位37歲男性反覆性腎結石，骨頭疼痛，生化檢查顯示高 血鈣11.5mg/dl (Na 8.6-10.5 mg/dl)副甲腺荷爾蒙 (PTH)115pg/ml(15-65 pg/ml)定位大的副甲狀腺腺體最好的 檢查是：",
+        "選項": [
+            "A. 術前MRI",
+            "B. 術前超音波",
+            "C. 術前sestamibi scan",
+            "D. 細針抽吸",
+            "E. 術中探查4顆腺體"
+        ],
+        "答案": "C",
+        "出處": "Surgery: A case base clinical review\n2nd edition2021. p.131-133"
+    }
+]
