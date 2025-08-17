@@ -113,7 +113,7 @@
                 <div class="file-list">
                     {% for f in files %}
                     <label>
-                        <input type="checkbox" name="question_sets" value="{{ f }}"> {{ f }}
+                        <input type="checkbox" name="question_sets" value="{{ f.stem }}"> {{ f.name }}
                     </label>
                     {% endfor %}
                 </div>
