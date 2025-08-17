@@ -1,23 +1,15 @@
-from flask import Flask, render_template, request, jsonify, Response
+from flask import Flask, render_template, request, jsonify, Response, redirect, url_for, session
 import json
 import random
 from pathlib import Path
-# import google.generativeai as genai # 引入 Gemini SDK
 from google import genai
-
-# --- 設定 Gemini API ---
-# ⚠️ 注意：將你的 API 金鑰存在環境變數中，而非直接寫在程式碼裡
 import os
-# 如果沒有設定環境變數，這裡會出錯，所以要先設定好
-# genai.configure(api_key=os.environ.get("GEMINI_API_KEY")) 
-# 選擇一個適合的模型，例如 'gemini-1.5-flash-latest'
-# model = genai.GenerativeModel('gemini-2.5-flash')
-# ---
-
-client = genai.Client()
-MODEL = "gemini-2.5-flash"
 
 app = Flask(__name__)
+
+APP_PASSWORD = os.environ.get("APP_PASSWORD")
+app.secret_key = os.environ.get("APP_SECRET_KEY")
+MODEL = "gemini-2.5-flash"
 
 # 模擬一個儲存累積 token 數的變數
 total_tokens_used = 0
@@ -37,8 +29,60 @@ answered_questions = set()
 # 新增：建立一個全域快取字典來儲存 AI 詳解
 ai_explanation_cache = {}
 
+# 儲存題庫路徑，啟動時從參數取得
+AVAILABLE_JSONS = []
+
+# --- 登入頁 ---
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    if request.method == "POST":
+        password = request.form.get("password")
+        api_key = request.form.get("api_key")
+
+        if password != APP_PASSWORD:
+            return render_template("login.html", error="密碼錯誤")
+        if not api_key:
+            return render_template("login.html", error="請輸入 Gemini API Key")
+
+        # 記錄 session
+        session["logged_in"] = True
+        session["gemini_api_key"] = api_key
+
+        return redirect(url_for("select"))
+
+    return render_template("login.html")
+
+@app.route("/logout")
+def logout():
+    session.pop("logged_in", None)
+    return redirect(url_for("login"))
+
+# --- 題庫選擇頁 ---
+@app.route("/select", methods=["GET", "POST"])
+def select():
+    global AVAILABLE_JSONS
+    if not session.get("logged_in"):
+        return redirect(url_for("login"))
+
+    if request.method == "POST":
+        selected = request.form.getlist("question_sets")
+        if not selected:
+            return render_template("select.html", files=AVAILABLE_JSONS, error="請至少選擇一個題庫")
+
+        load_questions(selected)
+        reset_questions()
+        return redirect(url_for("index"))
+
+    return render_template("select.html", files=AVAILABLE_JSONS)
+
 @app.route("/")
 def index():
+    # 檢查是否已登入
+    if not session.get("logged_in"):
+        return redirect(url_for("login"))
+    if not questions:
+        return redirect(url_for("select"))
+
     # 傳遞所有題號給前端，以便生成下拉選單
     all_question_ids = [q.get("題號") for q in questions]
     return render_template("index.html", all_question_ids=all_question_ids, total_questions=len(questions))
@@ -166,6 +210,18 @@ def reset_questions():
 @app.route("/get_ai_explanation", methods=["POST"])
 def get_ai_explanation():
     global total_tokens_used
+
+    # 檢查是否已登入，並且設定api key
+    if not session.get("logged_in"):
+        return jsonify({"error": "未登入"}), 403
+
+    api_key = session.get("gemini_api_key")
+    if not api_key:
+        return jsonify({"error": "缺少 API Key"}), 403
+
+    client = genai.Client(api_key=api_key)
+
+    # 取得題目
     is_detail = request.args.get("detail", "false").lower() == "true"
     data = request.json
     question = data.get("question")
@@ -227,6 +283,19 @@ def get_ai_explanation():
 @app.route("/stream_ai_explanation", methods=["POST"])
 def stream_ai_explanation():
     global total_tokens_used
+
+    # 檢查是否已登入，並且設定api key
+    if not session.get("logged_in"):
+        return jsonify({"error": "未登入"}), 403
+
+    api_key = session.get("gemini_api_key")
+    if not api_key:
+        return jsonify({"error": "缺少 API Key"}), 403
+
+    client = genai.Client(api_key=api_key)
+
+    # 取得題目
+    is_detail = request.args.get("detail", "false").lower() == "true"
     data = request.json
     question = data.get("question")
 
@@ -245,7 +314,9 @@ def stream_ai_explanation():
             "total_tokens": total_tokens_used
         })
 
-    prompt = f"請以繁體中文，針對以下問題提供詳細的解釋：\n\n題目：{question['題目']}\n選項：{' '.join(question['選項'])}\n答案：{question['答案']}"
+    prompt = f"請以繁體中文，針對以下問題，生成 1 分鐘內可以閱讀完的詳解，包含關鍵概念和每個選項解釋，文字簡明，重點清楚：\n\n題目：{question['題目']}\n選項：{' '.join(question['選項'])}\n答案：{question['答案']}"
+    if is_detail:
+        prompt = f"請以繁體中文，針對以下問題提供詳細的解釋：\n\n題目：{question['題目']}\n選項：{' '.join(question['選項'])}\n答案：{question['答案']}"
     
     # 確保 prompt_tokens 在串流開始前計算一次
     # 因為 prompt tokens 在發送請求時就已確定
@@ -331,12 +402,30 @@ def load_questions(json_paths):
 if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser(description="國考出題機（支援多題庫與模式切換）")
-    parser.add_argument("json_files", nargs="+", help="一個或多個題庫 JSON 檔案或資料夾")
+    # parser.add_argument("json_files", nargs="+", help="一個或多個題庫 JSON 檔案或資料夾")
     parser.add_argument("--host", default="127.0.0.1")
     parser.add_argument("--port", default=5000, type=int)
     args = parser.parse_args()
 
-    load_questions(args.json_files)
+    default_path = ["./json"]
+
+    for path_str in default_path:
+        p = Path(path_str)
+        if not p.exists():
+            print(f"❌ 找不到路徑：{path_str}")
+            continue
+
+        if p.is_dir():
+            # 如果是資料夾，尋找所有 .json 檔案
+            print(f"📂 正在載入資料夾：{p}")
+            AVAILABLE_JSONS.extend(p.glob("*.json"))
+        else:
+            # 如果是單一檔案，直接加入列表
+            AVAILABLE_JSONS.append(p)
+
+    # AVAILABLE_JSONS = [str(Path(f)) for f in args.json_files]
+
+    # load_questions(args.json_files)
     print(f"✅ 題庫已載入，總題數：{len(questions)}")
     print(f"🌐 網頁出題機：http://{args.host}:{args.port}")
     app.run(host=args.host, port=args.port, debug=True)

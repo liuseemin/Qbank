@@ -1,0 +1,422 @@
+[
+    {
+        "題別": "複",
+        "題號": "1",
+        "題目": "有關存開性動脈導管(Patent ductus arteriosus)的敘述，下 列何者是錯的？",
+        "選項": [
+            "A. 導管出自第六動脈弓",
+            "B. 在正常嬰兒出生後2-3週後會完全閉鎖",
+            "C. 存開性動脈導管導致右心室過量負荷",
+            "D. 胎兒時期是閉鎖的",
+            "E. 連接肺主動脈與降主動脈"
+        ],
+        "答案": "CD",
+        "出處": "Sabiston Text Book of Surgery 20th\ned., p1625"
+    },
+    {
+        "題別": "複",
+        "題號": "2",
+        "題目": "發生急性主動脈剝離（Acute aortic dissection），臨床的 症狀有哪些？",
+        "選項": [
+            "A. 胸痛",
+            "B. 低血壓",
+            "C.下肢痲痺",
+            "D. 腦中風",
+            "E. 小便減少"
+        ],
+        "答案": "ABCDE",
+        "出處": "Sabiston Text Book of Surgery 20th\ned., p1747"
+    },
+    {
+        "題別": "複",
+        "題號": "3",
+        "題目": "主動脈弓上分枝有哪幾條重要血管以供應腦部及上肢體？",
+        "選項": [
+            "A. 右側頸總動脈 (Right commone carotid artery)",
+            "B. 無名動脈（Innominate artery）",
+            "C. 左側頸總動脈 (Left common carotid artery)",
+            "D. 左側鎖骨下動脈 (Left subclavian artery)",
+            "E. 右側鎖骨下動脈 (Right subclavian artery)"
+        ],
+        "答案": "BCD",
+        "出處": "Rutherford vascular surgery 5th\nEdition, p1744"
+    },
+    {
+        "題別": "複",
+        "題號": "4",
+        "題目": "下列哪項敘述有關主動脈剝離動脈痛是錯誤的？",
+        "選項": [
+            "A. 對type A的急性主動脈剝離動脈瘤因手術危險性高，故 以保守治療為主",
+            "B. 有20﹪剝離性動脈瘤患者合併有cystic medial necrosis",
+            "C. 高血壓是一主要危險因子",
+            "D. 對type B的主動脈剝離的動脈瘤的外科手術適應症為血 壓控制不好，且動脈瘤逐漸擴大，假腔中並無栓塞現象",
+            "E. 腹主動脈為最常見的剝離部位"
+        ],
+        "答案": "AE",
+        "出處": "Glenn’s Thoracic and\nCardiovascular Surgery 6th Edition,\np2273"
+    },
+    {
+        "題別": "複",
+        "題號": "5",
+        "題目": "提出靜脈栓塞的三個原因，即所謂的Virchow's triad是？",
+        "選項": [
+            "A. 血流速減緩 (Venous stasis)",
+            "B. 血管損傷 (Endothelial injury)",
+            "C. 感染 (Infection)",
+            "D. 血液凝固功能改變 (Hypercoagulable state)",
+            "E. 放射線照射 (Radiation)"
+        ],
+        "答案": "ABD",
+        "出處": "Sabiston Text Book of Surgery 20th\ned., p1841"
+    },
+    {
+        "題別": "複",
+        "題號": "6",
+        "題目": "腹主動脈栓塞或稱Lerich's Symdrome有下列症狀，何者是 正確的？",
+        "選項": [
+            "A. 陽萎",
+            "B. 雙側下肢極易疲勞無力",
+            "C. 雙側下肢對稱性的肌肉萎縮",
+            "D. 雙側間竭性跛行出現",
+            "E. 雙側下腿和足部蒼白"
+        ],
+        "答案": "ABCDE",
+        "出處": "Sabiston Text of Surgery 15th ed.,\np1689\nSchwartz's Principles of surgery, 8th\nedition,2005, p764"
+    },
+    {
+        "題別": "複",
+        "題號": "7",
+        "題目": "有關於Traumatic disruption of the thoracic aorta之胸部X- 光片發現，下列何者為是？",
+        "選項": [
+            "A. Widening of the mediastinum",
+            "B. Obscuration of aortic knob",
+            "C. Fluid accumulation in the left pleural cavity",
+            "D. Depression of the left main bronchus > 140°",
+            "E. Rightward deviation of the trachea"
+        ],
+        "答案": "ABCDE",
+        "出處": "Glenn’s thoracic and\ncardiovascular surgery 7th Edition,\np2215"
+    },
+    {
+        "題別": "複",
+        "題號": "8",
+        "題目": "有關於Type A及Type B Aortic dissection之比較，下列何 者為是？",
+        "選項": [
+            "A. 兩者皆以男性病患居多",
+            "B. Type A死亡率較高",
+            "C. Type B發病年齡較高",
+            "D. Type A可引起Aortic Regurgitation",
+            "E. Type B通常合併高血壓疾病較多"
+        ],
+        "答案": "ABCDE",
+        "出處": "Glenn’s Thoracic and\nCardiovascular Surgery 7th Edition,\np2275, Table 138-1"
+    },
+    {
+        "題別": "複",
+        "題號": "9",
+        "題目": "有關非侵襲性週邊動脈檢查的敘述，何者正確？",
+        "選項": [
+            "A. Ankle/Brachial index (ABI)，<0.9即表示肢動脈有狹窄",
+            "B. 對於糖尿病或末期腎病變的患者，由於血管鈣化，因此 測量ankle pressure比plethysmography （波形變化）還準 確",
+            "C. ABI < 0.4的患者，通常會有ischemia resting pain或者 tissue loss",
+            "D. 間歇性跛行患者的ABI多介於0.5 ~ 0.7",
+            "E. 亦可用於血管繞道術後的追蹤檢查"
+        ],
+        "答案": "ACDE",
+        "出處": "Sabiston Text Book of Surgery 20th\ned., p1758"
+    },
+    {
+        "題別": "複",
+        "題號": "10",
+        "題目": "有關股動脈血管攝影檢查的敘述，何者正確？",
+        "選項": [
+            "A. 顯影劑由於要經由腎臟排泄，因此腎功能異常（serum creatinine >2.0 mg/de）的患者要注意檢查前的well hydration",
+            "B. 在股動脈穿刺之後，可能的併發症如pseudoaneurysm ，常見於瘦小的患者",
+            "C. 對於疑似間歇性跛行的患者，可以優先安排此種檢查",
+            "D. 常見的醫源性（iatrogenic）損傷約佔診斷性血管攝影的 1-2﹪",
+            "E. 亦可經由肱動脈（brachial a.）進行，但在女性糖尿病患 者，其併發症較高"
+        ],
+        "答案": "ADE",
+        "出處": "Principles of Surgery, 7th ed.\nSchwartz, SI, etal, 1999, p937"
+    },
+    {
+        "題別": "複",
+        "題號": "11",
+        "題目": "有關急性動脈阻塞及缺血的敘述，何者正確？",
+        "選項": [
+            "A. Embolic occlusion最常見的原因是心臟來的血塊造成的 ，其手術治療的方式為Embolectomy",
+            "B. 對於Arterial Thrombosis所造成的急性缺血，逕行 Embolectomy即可，不需再做其他血管手術",
+            "C. Arterial atheroemboli是產生blue-toe syndrome最常見的 例子",
+            "D. 當thoracic upper abdominal aorta是atheroemboli的來 源時，可合併renal failure或mesenteric ischemia",
+            "E. 股淺動脈阻塞的嚴重性大於膝膕動脈（popliteal a.）"
+        ],
+        "答案": "ACD",
+        "出處": "Principles of Surgery, 7th ed.\nSchwartz, SI, etal, 1999, p955"
+    },
+    {
+        "題別": "複",
+        "題號": "12",
+        "題目": "下列有關Diabetic foot的敘述，何者為正確？",
+        "選項": [
+            "A. 造成gangrene的發生率為non-diabetics的50倍",
+            "B. 下肢血管病變，主要是small vessels受侵犯，因此無法 接受足部的血管繞道手術",
+            "C. 常合併多種細菌（multimicrobial）的感染",
+            "D. 糖尿病患者一旦足部有感染，病程進展很快常合併 gangrene而導致截肢",
+            "E. 趾壓力（toe pressure）的測量在評估動脈缺血與否有助 益"
+        ],
+        "答案": "ACDE",
+        "出處": "Principles of Surgery, 7th ed.\nSchwartz, SI, etal, 1999, p964"
+    },
+    {
+        "題別": "複",
+        "題號": "13",
+        "題目": "下列何者是洗腎用動靜脈瘻管可能發生的併發症？",
+        "選項": [
+            "A. 沒辦法成熟使用",
+            "B. 形成動脈瘤",
+            "C. 血栓阻塞",
+            "D. 靜脈高壓症候群",
+            "E. 肢體盜血症候群"
+        ],
+        "答案": "ABCDE",
+        "出處": "Sabinston 16th edition. 2001. P.1456"
+    },
+    {
+        "題別": "複",
+        "題號": "14",
+        "題目": "下列有關腹主動脈瘤的敘述，何者為錯誤？",
+        "選項": [
+            "A. 腹主動脈瘤直徑6.5公分時，尚不需考慮手術。",
+            "B. 腹主動脈瘤手術時，可由後腹腔進入(retroperitoneal appraoch)",
+            "C. 血管內支架(endovascular stent)對腹主動脈瘤治療是無 效的",
+            "D. 嚴重的腹痛或背痛是腹主動脈瘤手術的適應症之一。",
+            "E. 腹主動脈瘤可能伴隨總腸骨動脈瘤 (aneurysm of common iliac artery)"
+        ],
+        "答案": "AC",
+        "出處": "Sabiston Text of Surgery, 2004, 17th\nEd, p1937"
+    },
+    {
+        "題別": "複",
+        "題號": "15",
+        "題目": "關於血管腔內支架放置手術的併發症何者正確？",
+        "選項": [
+            "A. Type I--支架近端和遠端接觸主動脈壓力太大造成破裂。",
+            "B. Type II--主動脈分之的血流回流到主動脈瘤內，使得主 動脈瘤內仍有血流。",
+            "C. Type IV--支架血管的孔性缺陷使血液滲出，通常在血管 腔內手術30天後發生",
+            "D. Type III--支架血管本身出問題，如織物破損。",
+            "E. 任何一種併發症發生時都應該立即執行傳統手術，以免 錯失補救時機。"
+        ],
+        "答案": "ABD",
+        "出處": "Surgery(NMS)\n3rd edition\np.101-102"
+    },
+    {
+        "題別": "複",
+        "題號": "16",
+        "題目": "在四肢急性動脈阻塞性疾病，若阻塞時間太長(如超過24小 時)，仍勉強以外科手術治療回復血流，可能會造成再度灌 流症候群(Revascularization syndrome)，它可能包括那些 症候？",
+        "選項": [
+            "A. lactic acidosis",
+            "B. Myoglobinuria",
+            "C. Bilateral upper lobe pneumonia",
+            "D. Myocardium depression",
+            "E. Hyperkalemia"
+        ],
+        "答案": "ABDE",
+        "出處": "P.1955. Sabiston's Textbook of\nSurgery. 18th edition, 2008."
+    },
+    {
+        "題別": "複",
+        "題號": "17",
+        "題目": "在原本正常的四肢動脈血管，常因栓子(Embolus)的掉落而 造成急性動脈阻塞性疾病，這些栓子的發生和下列那些情 形有關連？",
+        "選項": [
+            "A. 心房振顫(Atrial fibrillation)造成的左心房血栓掉落",
+            "B. 心肌梗塞後，造成的左心室血栓掉落",
+            "C. 腹部主動脈脈瘤內的血栓掉落",
+            "D. 下肢深部靜脈血栓掉落",
+            "E. 三尖瓣瓣葉上的菌塊掉落"
+        ],
+        "答案": "ABC",
+        "出處": "P.1955. Sabiston's Textbook of\nSurgery. 18th edition, 2008."
+    },
+    {
+        "題別": "複",
+        "題號": "18",
+        "題目": "使用血管腔內支架血管置放(Endovascular graft)治療腹部 主動脈瘤時，手術及術後早期可能發生的併發症有那些？",
+        "選項": [
+            "A. 導管插入時，由於導管太大，造成股動脈裂傷",
+            "B. 導管在操作時，鬆掉動脈瘤內的血栓造成遠端血管的栓 塞(embolization)",
+            "C. 支架血管置放位置太高，造成腎動脈阻塞",
+            "D. 支架血管置放後，發生再移動現象(Displacement)",
+            "E. 需處理的管漏(Endoleak)"
+        ],
+        "答案": "ABCDE",
+        "出處": "P.793. Rutherford's Vascular\nSurgery. 6th edition, 2005."
+    },
+    {
+        "題別": "複",
+        "題號": "19",
+        "題目": "關於Buerger's disease，以下何者錯誤？",
+        "選項": [
+            "A. 與動脈粥狀硬化有關。",
+            "B. 主要於大血管造成病變。",
+            "C. 好發於70歲以上之病患。",
+            "D. 好發於抽煙之病患。",
+            "E. 常以bypass syrgery治療此病，效果不錯。"
+        ],
+        "答案": "ABCE",
+        "出處": "Schartz's Principles of Surgery 9th\nedition, 2010, page 771"
+    },
+    {
+        "題別": "複",
+        "題號": "20",
+        "題目": "下肢急性深部靜脈栓塞(deep vein thrombosis, DVT)有許多 危險因子,下列敘述何者為是?",
+        "選項": [
+            "A. 年紀越大,acute DVT的發生率(Incidence)不見得隨之增 加",
+            "B. 有約20%的acute DVT是因為惡性腫瘤所引起",
+            "C. \"經濟艙症候群\"指的就是acute DVT",
+            "D. 有acute DVT病史的患者,再度發生 acute DVT的機會也 會較高",
+            "E. 膝關節置換後數周內罹患此病的機會也較高"
+        ],
+        "答案": "BCDE",
+        "出處": "Rutherford's Vascular Surgery, 7th\ned. 2010, P1578-1581"
+    },
+    {
+        "題別": "複",
+        "題號": "21",
+        "題目": "下列何者為主動脈剝離的危險因子?",
+        "選項": [
+            "A. Hypertension",
+            "B. Connective tissue disorders",
+            "C. Bicuspid aortic valve",
+            "D. Aortic aneurysm",
+            "E. Smoking"
+        ],
+        "答案": "ABCDE",
+        "出處": "Cardaic Aurgery in The Adult, 3rd\nedition, P.1197"
+    },
+    {
+        "題別": "複",
+        "題號": "22",
+        "題目": "下列何者為深部靜脈栓塞的危險因子?",
+        "選項": [
+            "A. Major hip or knee surgery",
+            "B. Recent major surgery",
+            "C. Cancer history",
+            "D. Pelvic or hip fracture",
+            "E. High-dose estrogen therapy"
+        ],
+        "答案": "ABCDE",
+        "出處": "Cardaic Aurgery in The Adult, 3rd\nedition, P.1311"
+    },
+    {
+        "題別": "複",
+        "題號": "23",
+        "題目": "下列何種狀況建議採native autogenous arterovenous fistula，不建議採 prosthetic graft?",
+        "選項": [
+            "A. artery>2.0mm, vein>3.0mm",
+            "B. Immunosuppression",
+            "C. Hypercoagulability",
+            "D. Chronic skin diseases",
+            "E. Multiple prior prosthetic access failure"
+        ],
+        "答案": "ABCDE",
+        "出處": "Rutherford's Vascular Surgery, 8th\nedition, P1088"
+    },
+    {
+        "題別": "複",
+        "題號": "24",
+        "題目": "下列那些是 postcatheterization pseudoaneurysm formation的危險因子?",
+        "選項": [
+            "A. Young age",
+            "B. Hypertension",
+            "C. Hemodialysis",
+            "D. Calcified vessels",
+            "E. Large sheath size (≥7F)"
+        ],
+        "答案": "BCDE",
+        "出處": "Rutherford's Vascular Surgery, 8th\nedition, P 708"
+    },
+    {
+        "題別": "複",
+        "題號": "25",
+        "題目": "頸動脈狹窄之手術（Carotid endarterectomy），下列考量 何者為正確？",
+        "選項": [
+            "A. 過去六個月內有暫時性缺血發作(transient ishcemic attack)，合併頸動脈狹窄超過70%，考慮開刀",
+            "B. 過去六個月內有暫時性缺血發作，頸動脈狹窄低於50% ，考慮開刀",
+            "C. 輕度中風(mild stroke)，合併頸動脈狹窄超過70%，考慮 開刀",
+            "D. 輕度中風(mild stroke)，合併頸動脈狹窄低於50%，考慮 開刀",
+            "E. 中度中風(moerate stroke)，合併頸動脈狹窄低於50%， 沒有使用Aspirin，考慮開刀"
+        ],
+        "答案": "AC",
+        "出處": "Sabiston Text Book of Surgery 20th\ned., p1792"
+    },
+    {
+        "題別": "複",
+        "題號": "26",
+        "題目": "下列何者為發生腹主動脈瘤(Abdominal aortic aneurysm ) 危險因子？",
+        "選項": [
+            "A. Tobacco use",
+            "B. Hypercholesterolemia",
+            "C. Hypertension",
+            "D. Female gender",
+            "E. Family history"
+        ],
+        "答案": "ABCE",
+        "出處": "Sabiston Text Book of Surgery 20th\ned., p1723"
+    },
+    {
+        "題別": "複",
+        "題號": "27",
+        "題目": "下列何者為腹主動脈瘤(Abdominal aortic aneurysm)破裂的 危險因子？",
+        "選項": [
+            "A. Male gender",
+            "B. Larger initial abdominal aorta diameter",
+            "C. Higher mean blood pressure",
+            "D. Current tobacco use",
+            "E. Cardiac or renal transplantation"
+        ],
+        "答案": "BCDE",
+        "出處": "Sabiston Text Book of Surgery 20th\ned., p1723"
+    },
+    {
+        "題別": "複",
+        "題號": "28",
+        "題目": "關於主動脈剝離 (aortic dissection) 的敘述，下列何者正 確？",
+        "選項": [
+            "A. type A較type B多，比例約為2:1",
+            "B. type A aortic dissection主要的處理方法為藥物治療",
+            "C. type B aortic dissection主要的處理方法為藥物治療",
+            "D. 胸部X光可以用來確定type A aortic dissection的診斷",
+            "E. type B aortic dissection 病人若未及時獲得處置，24小 時內的死亡率為1-2%/hr"
+        ],
+        "答案": "AC",
+        "出處": "Sabiston Textbook of Surgery, 21\ned, Chapter 60, page 1752"
+    },
+    {
+        "題別": "複",
+        "題號": "29",
+        "題目": "關於周邊動脈疾病 (peripheral arterial disease) 的敘述，下 列何者正確？",
+        "選項": [
+            "A. 血管性跛行 (vasculogenic claudication) 發生的時機不一 定，不是每次跑步或快走都會造成下肢肌肉痠痛",
+            "B. 若 ankle-brachial index <1.1，就要懷疑有周邊動脈疾病",
+            "C. 高齡、吸菸、高血壓、糖尿病皆為周邊動脈疾病的危險 因子",
+            "D. 周邊動脈疾病的症狀與血管阻塞的位置有關，例如 aortoiliac disease會造成小腿痠痛",
+            "E. 周邊動脈疾病可能造成傷口癒合不良及組織缺損 (tissue loss)"
+        ],
+        "答案": "CE",
+        "出處": "Sabiston Textbook of Surgery, 21\ned, Chapter 63, page 1768"
+    },
+    {
+        "題別": "複",
+        "題號": "30",
+        "題目": "在血管外傷的處置中，結紮(ligation)可以控制出血，但是可 能造成遠端的組織壞死，下列那些血管不宜直接結紮？",
+        "選項": [
+            "A. superficial femoral artery",
+            "B. posterior tibial artery",
+            "C. brachial artery",
+            "D. ulnar artery",
+            "E. radial artery"
+        ],
+        "答案": "AC",
+        "出處": "Sabiston Textbook of Surgery, 21\ned, Chapter 64, page 1800"
+    }
+]

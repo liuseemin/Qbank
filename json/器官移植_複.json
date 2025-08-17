@@ -1,0 +1,842 @@
+[
+    {
+        "題別": "複",
+        "題號": "1",
+        "題目": "下列何者是免疫抑制藥物tacrolimus的副作用？",
+        "選項": [
+            "A. 糖尿病。",
+            "B. 腎臟毒性。",
+            "C. 高血鉀症。",
+            "D. 高血鎂症。",
+            "E. 高尿酸症。"
+        ],
+        "答案": "ABCE",
+        "出處": "Morris. Kidney Transplantation, 6th\ned., 2020, chap 17"
+    },
+    {
+        "題別": "複",
+        "題號": "2",
+        "題目": "有關活體腎臟移植捐贈者的腎切除手術原則，下列何者正 確？",
+        "選項": [
+            "A. 一般摘取右腎多於左腎。",
+            "B. 一般選擇單一腎動脈的一側。",
+            "C. 左側腎切除時，腎上腺靜脈須綁緊。",
+            "D. 避免拉扯腎動脈。",
+            "E. 取輸尿管須儘量清除其周邊組織及血管。"
+        ],
+        "答案": "BCD",
+        "出處": "Sabiston Textbook of Surgery, 21th\ned., 2021. chap 27"
+    },
+    {
+        "題別": "複",
+        "題號": "3",
+        "題目": "有關臨危屍腎捐贈的腎臟移植手術，下列實驗室檢查中那 些是必要的？",
+        "選項": [
+            "A. ABO血型鑑定。",
+            "B. 淋巴球毒殺性交叉試驗（T and B cell cross matching）。",
+            "C. 混合淋巴球培養試驗（mixed lymphocyte culture）。",
+            "D. Ｂ型肝炎病毒篩檢。",
+            "E. 組織符合抗原測定。"
+        ],
+        "答案": "ABDE",
+        "出處": "Sabiston Textbook of Surgery, 21th\ned., 2021. chap 27"
+    },
+    {
+        "題別": "複",
+        "題號": "4",
+        "題目": "有關腎臟移植手術後併發症淋巴囊腫（lymphocele）的敘 述，下列何者正確？",
+        "選項": [
+            "A. 好發於手術後2-3個月",
+            "B. 會導致水腎",
+            "C. 會引起頻尿",
+            "D. 以空針吸取術為最適當的治療方式",
+            "E. 以超音波診斷極不可靠"
+        ],
+        "答案": "ABC",
+        "出處": "Sabiston Textbook of Surgery, 21th\ned., 2021. chap 27"
+    },
+    {
+        "題別": "複",
+        "題號": "5",
+        "題目": "下列那些情況於腎臟移植手術時應考慮切除受贈者原來的 腎臟？",
+        "選項": [
+            "A. 惡性高血壓",
+            "B. 重度貧血",
+            "C. 多囊腎過大合併腹部症狀",
+            "D. 糖尿病",
+            "E. 紅斑性狼瘡"
+        ],
+        "答案": "AC",
+        "出處": "Schwartz's Principle of Surgery, 11th\ned. 2019, chap 11"
+    },
+    {
+        "題別": "複",
+        "題號": "6",
+        "題目": "一般換腎移植手術組織符合抗原的配對主要考慮六個抗原 包括：",
+        "選項": [
+            "A. HLA-A 。",
+            "B. HLA-B 。",
+            "C. HLA-C 。",
+            "D. HLA-DR 。",
+            "E. HLA-F 。"
+        ],
+        "答案": "ABD",
+        "出處": "Morris. Kidney Transplantation, 6th\ned., 2008, chap 10"
+    },
+    {
+        "題別": "複",
+        "題號": "7",
+        "題目": "與血液透析治療比較，腎臟移植具有以下那些優點？",
+        "選項": [
+            "A. 女性患者懷孕成功率增加。",
+            "B. 惡性腫瘤機率減少。",
+            "C. CMV病毒發病率下降。",
+            "D. 飲食較不受限制。",
+            "E. 發生糖尿病的機率減少。"
+        ],
+        "答案": "AD",
+        "出處": "Schwartz's Principle of Surgery, 11th\ned. 2019, chap 11"
+    },
+    {
+        "題別": "複",
+        "題號": "8",
+        "題目": "有關腦死之臨床診斷，下列何者為是？",
+        "選項": [
+            "A. 必須排除酒精和藥物對中樞神經的影響。",
+            "B. 必須排除代謝異常（如：血中鈉離子過高）的影響。",
+            "C. 必須排除體溫過低的影響。",
+            "D. 腦死病患不可能有spinal reflexes 。",
+            "E. 腦死病患不可能有seizures 。"
+        ],
+        "答案": "ABCE",
+        "出處": "Gabriel M, Handbook of Kidney\nTransplantation, 6th ed, 2017. chap 4"
+    },
+    {
+        "題別": "複",
+        "題號": "9",
+        "題目": "依現行法律、醫學倫理及經驗法則，下列何者不適宜活體 捐贈腎臟？",
+        "選項": [
+            "A. 年齡16歲。",
+            "B. 受腎者的配偶。",
+            "C. 腎結石多次病史者。",
+            "D. 實際體重大於標準體重50%者。",
+            "E. 精神分裂患者。"
+        ],
+        "答案": "ACDE",
+        "出處": "Gabriel M, Handbook of Kidney\nTransplantation, 6th ed, 2017. chap 4"
+    },
+    {
+        "題別": "複",
+        "題號": "10",
+        "題目": "有關免疫抑制藥物，何者為是？",
+        "選項": [
+            "A. Cyclosporine與FK506皆是Calcineurin inhibitor且皆具 腎毒性的副作用，二者不合併使用",
+            "B. Cyclosporine與Sirolimus皆是Cytochrome P450代謝且 皆具高脂血症的副作用，二者不合併使用",
+            "C. 糖尿病是FK506主要的副作用之一",
+            "D. 腹瀉及胃腸不適是Myoephenolate Mofetil主要的副作用 之一",
+            "E. 腎毒性是Sirolimus主要的副作用之一"
+        ],
+        "答案": "ACD",
+        "出處": "Gabriel M, Handbook of Kidney\nTransplantation, 6th ed, 2017. chap 6"
+    },
+    {
+        "題別": "複",
+        "題號": "11",
+        "題目": "有關腎臟移植前之評估，下列何者為是？",
+        "選項": [
+            "A. 抗HLA Class II的IgG antibody是最嚴重的anti-HLA antibody 。",
+            "B. Anti-T warm antibody: 1:8（＋）表示有anti-HLA Class II antibody 。",
+            "C. Crossmatch之目的在於檢驗是否有preformed anti- donor antibody 。",
+            "D. Panel-reactive antibody（PRA）之檢驗值：80%，則 該人不易找到合適的器官捐贈者。",
+            "E. IgM antibody通常是auto-antibody，可以忽略不管。"
+        ],
+        "答案": "CDE",
+        "出處": "Gabriel M, Handbook of Kidney\nTransplantation, 6th ed, 2017. chap 8"
+    },
+    {
+        "題別": "複",
+        "題號": "12",
+        "題目": "有人要捐贈器官。因捐贈者有限，公正公平的器官分配， 在心臟方面必須考慮：",
+        "選項": [
+            "A. 捐贈者的地理位置不致使缺血時間超長。",
+            "B. 接受者病情的嚴重度，使用ECMO者優先。",
+            "C. 接受者移植後的益處，存活期長者優先。",
+            "D. 接受者政治地位的高低，官高者優先。",
+            "E. 捐贈者和接受者ABO血型相配合。"
+        ],
+        "答案": "ABCE",
+        "出處": "Sabiston Textbook of Surgery, 21th\ned., 2021. chap 25"
+    },
+    {
+        "題別": "複",
+        "題號": "13",
+        "題目": "下列那些是屬於同種移植（Allografting）？",
+        "選項": [
+            "A. 一位亞洲黃種人將心臟捐給陌生的非洲黑人。",
+            "B. 一位媽媽將大腿的皮膚捐給三度燒傷的寶貝兒子。",
+            "C. 一位老夫子將大腿的大隱靜脈捐做自己冠狀動脈繞道手 術的移植物。",
+            "D. 一位B肝衰竭的中國人接受來自非洲之狒狒的肝移植。",
+            "E. 一位心肌衰竭的台灣人接受來自非洲之黑猩猩的心臟移 植。"
+        ],
+        "答案": "AB",
+        "出處": "Sabiston Textbook of Surgery, 21th\ned., 2021. chap 25"
+    },
+    {
+        "題別": "複",
+        "題號": "14",
+        "題目": "腎臟移植病人接受活體捐腎（living donor）的好處：",
+        "選項": [
+            "A. 不必洗腎。",
+            "B. 不必苦等屍體捐腎者。",
+            "C. 移植後不用吃抗排斥藥。",
+            "D. 移植後比來自屍體捐贈者少急性腎衰竭。",
+            "E. 移植後長期存活率較高。"
+        ],
+        "答案": "ABDE",
+        "出處": "Sabiston Textbook of Surgery, 21th\ned., 2021. chap 25"
+    },
+    {
+        "題別": "複",
+        "題號": "15",
+        "題目": "移植心臟的冠狀動脈疾病和下列那些有關？",
+        "選項": [
+            "A. 慢性排斥",
+            "B. CMV感染",
+            "C. 高血脂症",
+            "D. 糖尿病",
+            "E. 慢性阻塞性肺疾病"
+        ],
+        "答案": "ABCD",
+        "出處": "Sabiston Textbook of Surgery, 21th\ned., 2021. chap 60"
+    },
+    {
+        "題別": "複",
+        "題號": "16",
+        "題目": "器官移植後的排斥機轉，下列那些敘述正確？",
+        "選項": [
+            "A. 超急性排斥（hyperacute rejection）由預存抗體（pre- formed autibody）達成",
+            "B. 急性排斥（acute rejection）由T淋巴球達成",
+            "C. 急性細胞性排斥（acute cellular rejection）由T淋巴球及 巨嗜細胞浸潤達成",
+            "D. 急性血管性排斥（acute vascular rejection）因T淋巴球 對異物反應而引起",
+            "E. 慢性排斥（chronic rejection）由T和B淋巴球達成"
+        ],
+        "答案": "ABCDE",
+        "出處": "Sabiston Textbook of Surgery, 21th\ned., 2021. chap 25"
+    },
+    {
+        "題別": "複",
+        "題號": "17",
+        "題目": "腎臟移植後發生delayed graft function，下列何者正確？",
+        "選項": [
+            "A. 須先排除acute vascular or urological complication",
+            "B. 可能與donor factor (advancing donor age) 有關",
+            "C. 可能與prolonged ischemic time有關",
+            "D. 在此期間，可能需要透析治療",
+            "E. Acute rejection的機率會增加"
+        ],
+        "答案": "ABCDE",
+        "出處": "Morris. Kidney Transplantation, 8th\ned., 2020, chap 13"
+    },
+    {
+        "題別": "複",
+        "題號": "18",
+        "題目": "下列何者是環胞靈素（Cyclosporin）的副作用？",
+        "選項": [
+            "A. Nephrotoxicity",
+            "B. Hypertension",
+            "C. Neurotoxicity, such as fine hand tremor",
+            "D. Hyperuricemia",
+            "E. Gingival hyperplasia"
+        ],
+        "答案": "ABCDE",
+        "出處": "Morris. Kidney Transplantation, 8th\ned., 2020, chap 17"
+    },
+    {
+        "題別": "複",
+        "題號": "19",
+        "題目": "有關移植後糖尿病（posttranplant diabetes）的敘述，何者 為非？",
+        "選項": [
+            "A. 危險因子包括肥胖、年紀大、糖尿病家族史",
+            "B. Corticosteroids、cyclosporine、tacrolimus都是危險因 子",
+            "C. 免疫抑制劑減量或停藥並無助於糖尿病控制",
+            "D. 腎臟移植後第一年產生糖尿病者約有80﹪",
+            "E. 腎臟移植術後，規則監測血糖值是必要的"
+        ],
+        "答案": "CD",
+        "出處": "Morris. Kidney Transplantation, 8th\ned., 2020, chap 14"
+    },
+    {
+        "題別": "複",
+        "題號": "20",
+        "題目": "有關不適合活體腎臟移植捐贈的敘述，下列何者為正確？",
+        "選項": [
+            "A. 捐贈者年齡小於18歲或大於70歲",
+            "B. Positive T-cell cytotoxic crossmatch",
+            "C. Major anatomic disorders of donor kidneys",
+            "D. 肝癌病史",
+            "E. HIV positive"
+        ],
+        "答案": "ABCDE",
+        "出處": "Gabriel M, Handbook of Kidney\nTransplantation, 6th ed, 2017. chap 7"
+    },
+    {
+        "題別": "複",
+        "題號": "21",
+        "題目": "有關活體腎臟移植捐贈者的腎切除手術，下列何者為非？",
+        "選項": [
+            "A. 可以腹腔鏡手術執行",
+            "B. 一般摘取右腎多於左腎",
+            "C. 輸尿管周邊組織及血管須清除乾淨",
+            "D. 單一腎動脈的那一側腎臟優先選擇",
+            "E. 腎動脈應避免過度拉扯"
+        ],
+        "答案": "BC",
+        "出處": "Morris. Kidney Transplantation, 8th\ned., 2020, chap 8"
+    },
+    {
+        "題別": "複",
+        "題號": "22",
+        "題目": "有關活體腎移植的敘述，下列Laparoscopic nephrectomy 的優點？",
+        "選項": [
+            "A. Less postoperative pain",
+            "B. Magnified view of renal vessels",
+            "C. Minimal surgical scarring",
+            "D. Shorter operative time",
+            "E. Shorter hospital stay"
+        ],
+        "答案": "ABCE",
+        "出處": "Gabriel M, Handbook of Kidney\nTransplantation, 6th ed, 2017., chap\n7"
+    },
+    {
+        "題別": "複",
+        "題號": "23",
+        "題目": "肝臟移植手術（不論屍體捐肝或活體捐肝）時，一定需要 吻合的是哪一個構造？",
+        "選項": [
+            "A. 肝動脈",
+            "B. 肝靜脈",
+            "C. 肝門靜脈",
+            "D. 下肝靜脈（inferior hepatic vein）<3mm",
+            "E. 膽囊管（cystic duct）"
+        ],
+        "答案": "ABC",
+        "出處": "Sabiston Textbook of Surgery, 21th\ned., 2021. chap 26"
+    },
+    {
+        "題別": "複",
+        "題號": "24",
+        "題目": "腎臟移植後兩年，血液中BUN，Creatinine逐漸往上爬升， 下列何者是較為可能之診斷？",
+        "選項": [
+            "A. 急性排斥",
+            "B. 慢性排斥",
+            "C. 輸尿管狹窄",
+            "D. 抗排斥藥所引起之腎臟毒性",
+            "E. 原本之IgA nephropathy再發"
+        ],
+        "答案": "BCDE",
+        "出處": "Morris. Kidney Transplantation, 8th\ned., 2020, chap 27"
+    },
+    {
+        "題別": "複",
+        "題號": "25",
+        "題目": "在台灣有關活體捐贈實體器官（非骨髓）之規定，下列何 者正確？",
+        "選項": [
+            "A. 夫妻之間（結婚超過兩年(有小孩者≧1年)）可以互相捐 贈。",
+            "B. 兄弟姐妹之間。",
+            "C. 朋友之間。",
+            "D. 五等姻親之間可以捐贈肝臟。",
+            "E. 三等姻親之間可以捐贈腎臟。"
+        ],
+        "答案": "ABDE",
+        "出處": "中華民國人體器官移植條例\n110/01/20"
+    },
+    {
+        "題別": "複",
+        "題號": "26",
+        "題目": "有關目前所使用之抗排斥藥之作用機轉，下列敘述何者正 確？",
+        "選項": [
+            "A. cyclosporine是calcineurine 之抑制劑",
+            "B. tacrolimus是calcineurine之抑制劑",
+            "C. sirolimus是calcineurine之抑制劑",
+            "D. basiliximab 是IL-2接受器之阻斷劑",
+            "E. mycophenolic acid是白血球DNA合成抑制劑"
+        ],
+        "答案": "ABDE",
+        "出處": "Morris. Kidney Transplantation, 8th\ned., 2020, chap 15-18"
+    },
+    {
+        "題別": "複",
+        "題號": "27",
+        "題目": "下列何者不是肝臟移植之適應症？",
+        "選項": [
+            "A. B型肝炎導致之猛爆性肝炎",
+            "B. 藥物中毒導致之猛爆性肝炎",
+            "C. 肝硬化合併小型肝癌",
+            "D. 胰頭癌導致之黃疸及肝衰竭",
+            "E. 大腸癌肝臟轉移導致之肝衰竭"
+        ],
+        "答案": "DE",
+        "出處": "Schwartz's Principle of Surgery, 11th\ned. 2019, chap 11"
+    },
+    {
+        "題別": "複",
+        "題號": "28",
+        "題目": "有關腎臟移植之後的排斥作用，下列敘述何者正確？",
+        "選項": [
+            "A. 超急性排斥之發生，目前只能預防，幾乎無法治療。",
+            "B. 慢性排斥與急性排斥是以發生之時間之早晚來定義。",
+            "C. 組織抗原（Human Leukocyte Antigen, HLA）越配合者 越不會發生排斥。",
+            "D. 兄弟姐妹間移植即使是組織抗原完全相同也需要使用抗 排斥藥。",
+            "E. 移植初期發生多次急性排斥者有較差之腎臟長期存活 率。"
+        ],
+        "答案": "ACDE",
+        "出處": "Morris. Kidney Transplantation, 8th\ned., 2020, chap 25"
+    },
+    {
+        "題別": "複",
+        "題號": "29",
+        "題目": "從有症狀如黃疸到昏迷的時間很短,稱為猛暴性肝炎(FHF)， 其相關敘述何者為非？",
+        "選項": [
+            "A. INR＞6.5，Cr＞3.4mg/dL，Age＞40 years 為 poor prognosis factor， 需緊急肝臟移植。",
+            "B. 定義FHF必須病患過往無肝炎病史。",
+            "C. Non-B，non-C hepatitis virus所引起之FHF較易自我恢 復，不需肝臟移植。",
+            "D. 發生黃疸症狀到肝昏迷時間小於七天，較不易自我恢復 ，需緊急肝臟移植。",
+            "E. 猛暴性肝炎(FHF)亦可考慮使用acetaminophen 解毒劑 acetylcysteine 。"
+        ],
+        "答案": "CD",
+        "出處": "Schwartz's Principle of Surgery, 11th\ned. 2019, chap 11"
+    },
+    {
+        "題別": "複",
+        "題號": "30",
+        "題目": "胰臟移植的適應症包括下列何種病人？",
+        "選項": [
+            "A. 第一型糖尿病合併腎衰竭者。",
+            "B. 第二型糖尿病服用口服降血糖藥控制，且合併腎衰竭 者。",
+            "C. 第一型糖尿病患者，常合併危害生命的低血糖症。",
+            "D. 第一型糖尿病患者，且產生糖尿病合併症。",
+            "E. 第二型糖尿病已使用胰島素者且使用胰島素量大於 1.5U/kg/day。"
+        ],
+        "答案": "ACD",
+        "出處": "Hakim, Transplantation Surgery.\n2nd ed, Springer.2021, p205-217"
+    },
+    {
+        "題別": "複",
+        "題號": "31",
+        "題目": "MELD (model of end stage liver disease) 是評估肝功能及 肝臟疾病死亡率的一個指標。其計算包括那幾項因子？",
+        "選項": [
+            "A. albumin",
+            "B. total bilirubin",
+            "C. creatinine",
+            "D. K+",
+            "E. INR"
+        ],
+        "答案": "BCE",
+        "出處": "Sabiston Textbook of Surgery, 21th\ned., 2021. chap 26"
+    },
+    {
+        "題別": "複",
+        "題號": "32",
+        "題目": "下列那項為肝臟移植之禁忌症？",
+        "選項": [
+            "A. 肺部aspergillus感染。",
+            "B. Ｃ型肝炎感染。",
+            "C. 肝癌合併肺轉移。",
+            "D. 嚴重hepatopulmonary syndrome 。",
+            "E. 部分portal vein non-tumor thrombosis 。"
+        ],
+        "答案": "ACD",
+        "出處": "Sabiston Textbook of Surgery, 21th\ned., 2021. chap 26"
+    },
+    {
+        "題別": "複",
+        "題號": "33",
+        "題目": "肝臟移植手術要吻合的組織包含：",
+        "選項": [
+            "A. 肝動脈。",
+            "B. 肝門脈。",
+            "C. 肝靜脈。",
+            "D. 膽囊。",
+            "E. 肝迷走神經。"
+        ],
+        "答案": "ABC",
+        "出處": "Sabiston Textbook of Surgery: The\nBiological Basis of Modern Surgical\nPractice 21st ed, 2022, Ch26, Page 620"
+    },
+    {
+        "題別": "複",
+        "題號": "34",
+        "題目": "依據衛生福利部所頒布的等候移植登錄基準，以下那位病 人不適合接受肝臟移植？",
+        "選項": [
+            "A. 愛滋病患者，最近6個月淋巴免疫細胞指數CD4 = 50 cells/mm3。",
+            "B. 第三期乳癌病人，接受根除性治療後滿1年未發現腫瘤 復發。",
+            "C. 膽道閉鎖病人，反覆發生膽道感染，周邊血細菌培養為 陰性。",
+            "D. 罹患肝癌，腫瘤數量=3；大小分別為3cm、2cm 及1 cm。",
+            "E. 酒精性肝硬化，戒酒9個月後，肝功能仍然為Child- Pugh C。"
+        ],
+        "答案": "AB",
+        "出處": "行政院衛生福利部函 /發文日\n期：中華民國壹百零八年六月二\n十四日/發文字號：衛部醫字第\n1081668440A號 難度: 簡單"
+    },
+    {
+        "題別": "複",
+        "題號": "35",
+        "題目": "腎臟移植前捐贈者與受贈者的組織配對關於HLA(human leukocyte antigen)的配對，下列那些項是目前組織配對的 項目？",
+        "選項": [
+            "A. HLA-A 。",
+            "B. HLA-B 。",
+            "C. HLD-C 。",
+            "D. HLA-DP 。",
+            "E. HLA-DR 。"
+        ],
+        "答案": "ABE",
+        "出處": "Peter J. Morris Kidney\nTransplantation-Principles and\nPractice. 2020, 8th ed, Chapter 10"
+    },
+    {
+        "題別": "複",
+        "題號": "36",
+        "題目": "有關肝臟移植之等候者及移植者是否接受COVID-19疫苗注 射，下列敘述何者正確？",
+        "選項": [
+            "A. 肝臟移植等候者最好在移植前2星期以上完成疫苗接 種。",
+            "B. 肝臟移植病人移植手術後宜在三個月後接受疫苗接種。",
+            "C. 肝臟移植病人因使用抗排斥藥，不必注射COVID-19疫 苗。",
+            "D. 肝臟移植病人接受疫苗注射時應暫時減少抗排斥藥。",
+            "E. 肝臟移植的捐贈者應接受COVID-19篩檢。"
+        ],
+        "答案": "ABE",
+        "出處": "NIH: COVID-19 treatment\nguidelines. 2022/05/31\nhttps://www.covid19treatmentguideli\nnes.nih.gov/special-\npopulations/transplant/"
+    },
+    {
+        "題別": "複",
+        "題號": "37",
+        "題目": "心臟移植病患，術後容易發生淋巴癌 (post-transplant lymphoproliferative disorder)，可能與下列何者病毒相關？",
+        "選項": [
+            "A. Human papilloma virus 。",
+            "B. Epstein-Barr virus 。",
+            "C. Herpes simplex virus 。",
+            "D. Enterovirus 。",
+            "E. Cytomegalovirus 。"
+        ],
+        "答案": "BE",
+        "出處": "Cardiac Surgery, Kirklin/Barratt-\nBoyes 4th edition 2013, Part IV\nChapter 21 Page 844"
+    },
+    {
+        "題別": "複",
+        "題號": "38",
+        "題目": "關於腎臟移植後使用免疫抑制劑副作用，請選出正確敘 述：",
+        "選項": [
+            "A. Tacrolimus：腎毒性、高血壓、高血糖及高血脂。",
+            "B. Mycophenolate mofetil：骨髓抑制、腸胃道不適。",
+            "C. Azathioprine：高血糖、高血壓。",
+            "D. Sirolimus：高血脂、間質性肺炎。",
+            "E. Prednisolone：高血糖、骨質疏鬆、月亮臉。"
+        ],
+        "答案": "ABDE",
+        "出處": "Lenihan, Chapter 72: Clinical\nManagement of the Adult Kidney\nTransplant Recipient, Brenner and\nRector's The Kidney, 10th edition, 2016"
+    },
+    {
+        "題別": "複",
+        "題號": "39",
+        "題目": "心臟移植後的冠狀動脈疾病和一般沒移植者之冠狀動脈疾 病，通常有些不同，前者：",
+        "選項": [
+            "A. 往往冗長（diffuse）而非局部。",
+            "B. 往往同中心（concentric）而非偏心。",
+            "C. 往往因免疫傷害而非單純脂肪堆積。",
+            "D. 最後往往需要再移植手術而非一般繞道手術。",
+            "E. 往往不會心絞痛。"
+        ],
+        "答案": "ABCDE",
+        "出處": "Sabiston Textbook of Surgery, 21th\ned., 2021. chap 60"
+    },
+    {
+        "題別": "複",
+        "題號": "40",
+        "題目": "下列那些不是合適的腎臟移植捐贈者？",
+        "選項": [
+            "A. 一位 37 歲男性 with un-treated HIV died in a traffic accident",
+            "B. 一位 80 歲男性 died of septic shock",
+            "C. 一位 30 歲男性 died of traumatic ICH",
+            "D. 一位 51 歲女性 died of breast CA with brain metastasis",
+            "E. 一位 25 歲女性 with SLE nephritis"
+        ],
+        "答案": "ABDE",
+        "出處": "Gabriel M, Handbook of Kidney\nTransplantation, 8th ed, 2017. chap 7"
+    },
+    {
+        "題別": "複",
+        "題號": "41",
+        "題目": "有關人類組織抗原HLA complex 之敘述，下列何者錯誤？",
+        "選項": [
+            "A. 主要位於第七對染色體",
+            "B. 可以大致區分為classⅠ、Ⅱ",
+            "C. ClassⅠ只包括HLA-A和B",
+            "D. ClassⅡ包括 HLA-C, DP, DQ, DR",
+            "E. 另有 HLA classⅢ其功能尚不清楚。"
+        ],
+        "答案": "ACD",
+        "出處": "Sabiston Textbook of Surgery, 2022,\ned 21, Chap 25"
+    },
+    {
+        "題別": "複",
+        "題號": "42",
+        "題目": "有關器官移植時之組織抗原配對，下列敘述何者不正確？",
+        "選項": [
+            "A. 常用的檢驗方式為lymphocytotoxicity assay 及 mixed lymphocyte reaction",
+            "B. 一般共驗 HLA-A,B,C,DR 等8個allel",
+            "C. 在腎臟移植，HLA越相配其5年腎存活率越低",
+            "D. 利用genetic-based technique可以驗出各種HLA allel之 種類",
+            "E. 在部分器官移植，HLA typing 程度不一定與臨床存活率 有關"
+        ],
+        "答案": "BC",
+        "出處": "Sabiston Textbook of Surgery, 2022,\ned 21, Chap 25"
+    },
+    {
+        "題別": "複",
+        "題號": "43",
+        "題目": "下列那些細胞有參與在器官移植時之急性排斥反應？",
+        "選項": [
+            "A. macrophage",
+            "B. CD4+ T cell",
+            "C. CD8+ T cell",
+            "D. B cell",
+            "E. RBC"
+        ],
+        "答案": "ABCD",
+        "出處": "Sabiston Textbook of Surgery, 2022,\ned 21, Chap 25"
+    },
+    {
+        "題別": "複",
+        "題號": "44",
+        "題目": "有關器官移植時發生的排斥作用，下列敘述何者不正確？",
+        "選項": [
+            "A. Hyperacute rejection發生於數分鐘至數天",
+            "B. Acute rejection 主要是由T cell 之反應所造成",
+            "C. Chronic rejection可由B及T cell共同造成",
+            "D. Hyperacute rejection 發生時可以立即治療救回植體",
+            "E. 急性排斥發生後一般無法救回移植器官"
+        ],
+        "答案": "DE",
+        "出處": "Sabiston Textbook of Surgery, 2021,\ned 21, Chap 25"
+    },
+    {
+        "題別": "複",
+        "題號": "45",
+        "題目": "有關現行使用的免疫抑制劑作用機轉，下列敘述何者不正 確？",
+        "選項": [
+            "A. Cyclospprine: 抑制 calcineurin 之作用",
+            "B. Tacrolimus: 抑制 calcineurin 之作用",
+            "C. Rapamycin: 抑制 IL-2 dependent T-cell proliferation",
+            "D. Mycophenolate mofetil: 抑制purine synthesis 然後抑制 所有細胞之分裂及增生",
+            "E. Rituximab: 抑制 T-cell 上的CD-28"
+        ],
+        "答案": "DE",
+        "出處": "Sabiston Textbook of Surgery, 2022,\ned 21, Chap 25"
+    },
+    {
+        "題別": "複",
+        "題號": "46",
+        "題目": "有關器官移植後之感染症，下列何者不正確？",
+        "選項": [
+            "A. HBV, HCV, HIV, CMV 均可由移植器官造成接受者感染",
+            "B. Pneumocystic pneumonia可以用 trimethoprim- sulfamethoxazole 作術後之預防",
+            "C. BK virus 感染一般無害，可以不必太在乎",
+            "D. EB virus 和移植後之 PTLD 無關",
+            "E. 受贈者本身之黴菌感染有可能在器官移植後活化"
+        ],
+        "答案": "CD",
+        "出處": "Sabiston Textbook of Surgery, 2022,\ned 21, Chap 25"
+    },
+    {
+        "題別": "複",
+        "題號": "47",
+        "題目": "有關抗排斥藥的非免疫性副作用，下列敘述何者正確？",
+        "選項": [
+            "A. Calcineurin inhibitor 會造成高血壓",
+            "B. Tacorlimus 和 steroid 可能造成糖尿病",
+            "C. EB 病毒之活化可能造成 PTLD",
+            "D. HBV 的活化可能造成 cholestatic sclerosing hepatitis",
+            "E. BK virus 可能造成移植腎之腎衰竭"
+        ],
+        "答案": "ABCDE",
+        "出處": "Sabiston Textbook of Surgery, 2022,\ned 21, Chap 25"
+    },
+    {
+        "題別": "複",
+        "題號": "48",
+        "題目": "Tolerance 是器官移植醫學的終極目標下列那些方法是有可 能並被用來造成 induced tolerance？",
+        "選項": [
+            "A. Lymphocyte depletion",
+            "B. Co-stimulation blockade",
+            "C. chimerism",
+            "D. Treg cell and dendritic cell",
+            "E. Symchronous bone marrow transplantation"
+        ],
+        "答案": "ABCDE",
+        "出處": "Sabiston Textbook of Surgery, 2022,\ned 21, Chap 25"
+    },
+    {
+        "題別": "複",
+        "題號": "49",
+        "題目": "Ｃ型肝炎肝硬化的病人使用DAA (direct acting agent)治療 ，下列敘述何者不正確？",
+        "選項": [
+            "A. 還是有很高的SVR (sustained viral response)比率",
+            "B. 現今因為 HCV 相關疾病需要肝臟移植的人數已明顯減 少",
+            "C. Ｃ型肝炎治療達到SVR後即可不必再定期追蹤檢查",
+            "D. Ｃ型肝炎病人經治療之後仍然不可以捐贈肝臟",
+            "E. Ｃ型肝炎合併輕微肝硬化之病人在治療後肝纖維化仍有 機會改善"
+        ],
+        "答案": "CD",
+        "出處": "Sabiston Textbook of Surgery, 2022,\ned 21, Chap 26"
+    },
+    {
+        "題別": "複",
+        "題號": "50",
+        "題目": "下列何者為肝臟移植之禁忌症？",
+        "選項": [
+            "A. 嚴重之心血管疾病",
+            "B. Portopulmonary hypertension, >50 mmHg",
+            "C. 嚴重之hepatopulmonary syndrome",
+            "D. Uncontrolled infection",
+            "E. 合併有肝外的惡性腫瘤"
+        ],
+        "答案": "ABCDE",
+        "出處": "Sabiston Textbook of Surgery, 2022,\ned 21, Chap 26"
+    },
+    {
+        "題別": "複",
+        "題號": "51",
+        "題目": "有關肝臟移植之適應症，下列疾病何者正確？",
+        "選項": [
+            "A. B型肝炎肝硬化",
+            "B. Nonalcoholic fatty liver disease造成之肝硬化",
+            "C. Autoimmune hepatitis造成之肝硬化",
+            "D. 大腸癌合併肝臟轉移",
+            "E. Primary biliary cirrhosis"
+        ],
+        "答案": "ABCE",
+        "出處": "Sabiston Textbook of Surgery, 2022,\ned 21, Chap 26"
+    },
+    {
+        "題別": "複",
+        "題號": "52",
+        "題目": "有關小腸移植之適應症，下列狀況何者正確？",
+        "選項": [
+            "A. 短腸症後群，有合併症",
+            "B. 腸道蠕動性疾病",
+            "C. 腸道吸收不良症候群",
+            "D. Crohn disease 導致之短腸症候群",
+            "E. 兒童 NEC (necrotizing enterocolitis) 造成之短腸症候群"
+        ],
+        "答案": "ABCDE",
+        "出處": "Sabiston Textbook of Surgery, 2022,\ned 21, Chap 28"
+    },
+    {
+        "題別": "複",
+        "題號": "53",
+        "題目": "下列何者是肝臟移植後發生primary non-function之常見原 因？",
+        "選項": [
+            "A. 摘取肝臟時之 procurement error",
+            "B. High risk donor",
+            "C. Fatty liver",
+            "D. 抗排斥藥濃度不足",
+            "E. 使用 DCD donor (donation after circulatory determination of death)"
+        ],
+        "答案": "ABCE",
+        "出處": "Sabiston Textbook of Surgery, 2022,\ned 21, Chap 26"
+    },
+    {
+        "題別": "複",
+        "題號": "54",
+        "題目": "有關活體捐肝肝臟移植之敘述，下列何者正確？",
+        "選項": [
+            "A. 捐肝者之死亡率約為400至500分之1",
+            "B. 至少需留下20%之肝臟給捐肝者",
+            "C. 一般希望捐贈肝與受贈者體重之重量比(GRWR)為0.8至 1.0%為安全",
+            "D. 大大小小會有約40%之捐肝者會有合併症之發生",
+            "E. 脂肪肝、年長者捐肝、高 MELD score 時會希望GRWR (graft recipient weight ratio) 高一些"
+        ],
+        "答案": "ACDE",
+        "出處": "Sabiston Textbook of Surgery, 2022,\ned 21, Chap 26"
+    },
+    {
+        "題別": "複",
+        "題號": "55",
+        "題目": "有關腎臟移植之敘述，下列何者不正確？",
+        "選項": [
+            "A. 以長期存活率來說，腎臟透析比腎臟移植有較好的存率",
+            "B. 在美國最常見的腎臟移植疾病是高血壓及糖尿病引起之 腎病",
+            "C. FSGS及MPGN type 2 在腎臟移植後很少復發",
+            "D. Systemic lupus 在腎移植後很少復發",
+            "E. 當 GFR 低於 20ml/min/1.72m2 時即可考慮腎移植，不 一定需要經過透析這ㄧ病程"
+        ],
+        "答案": "AC",
+        "出處": "Sabiston Textbook of Surgery, 2022,\ned 21, Chap 27"
+    },
+    {
+        "題別": "複",
+        "題號": "56",
+        "題目": "HIV (human immunodeficiency virus) 與器官移植之敘述， 下列何者正確？",
+        "選項": [
+            "A. HIV感染目前仍是腎、肝移植之禁忌症",
+            "B. HIV病人治療後仍然可以考慮器官移植",
+            "C. HIV病人接受器官移植之條件包括血液 CD4+ 細胞數大 於400/cmm",
+            "D. HIV病人接受器官移植之條件包括undetectable viral load",
+            "E. HIV(+) 病人可以捐贈器官給 HIV(+) 受贈者"
+        ],
+        "答案": "BCDE",
+        "出處": "Sabiston Textbook of Surgery, 2022,\ned 21, Chap 27"
+    },
+    {
+        "題別": "複",
+        "題號": "57",
+        "題目": "下列何者為活體捐腎之禁忌症？",
+        "選項": [
+            "A. BMI > 40",
+            "B. Active malignant disease",
+            "C. Horseshoe kidney",
+            "D. diabetes",
+            "E. Age < 16"
+        ],
+        "答案": "ABCDE",
+        "出處": "Sabiston Textbook of Surgery, 2022,\ned 21, Chap 27"
+    },
+    {
+        "題別": "複",
+        "題號": "58",
+        "題目": "在胰臟移植之捐贈者方面，下列敘述何者不正確？",
+        "選項": [
+            "A. 最好不要有胰臟之 fatty change",
+            "B. 胰臟不可以來自 DCD (donation after circulatory death) 捐贈者",
+            "C. 理想捐贈者年齡為10-45歲",
+            "D. 動脈部分需保留 SMA (superior mesenteric artery) 及 splenic artery",
+            "E. 靜脈部分portal vein 保留愈長愈好"
+        ],
+        "答案": "BE",
+        "出處": "Sabiston Textbook of Surgery, 2022,\ned 21, Chap 27"
+    },
+    {
+        "題別": "複",
+        "題號": "59",
+        "題目": "胰臟移植時外分泌與內分泌系統之引流，下列敘述何者正 確？",
+        "選項": [
+            "A. 膀胱外引流的好處是可以即早診斷胰臟之功能及是否有 排斥作用",
+            "B. 現今最常使用的仍然是膀胱外引流手術",
+            "C. 十二指腸-腸道吻合術比較 physiologic，但有較多合併 症",
+            "D.胰臟內分泌系統之 systemic drainage 會造成血液中之胰 島素濃度增加",
+            "E. 胰臟內分泌系統之門靜脈引流比較 physiologic ，但是 臨床上沒有明顯優於 sysyemic drainage"
+        ],
+        "答案": "ADE",
+        "出處": "Sabiston Textbook of Surgery, 2022,\ned 21, Chap 27"
+    },
+    {
+        "題別": "複",
+        "題號": "60",
+        "題目": "有關肝臟移植後評估 graft function 的方法，何者為非？",
+        "選項": [
+            "A. 需反覆評估 graft 的 function 。",
+            "B. 移植術後 hemodynamic stable，病患可以被叫醒，代 表 graft function 好。",
+            "C. AST、ALT會在第24小時內上升到最高值，之後逐漸下 降，代表 graft function 好。",
+            "D. T型管流出透明 bile juice，且血中 pH 呈現酸性，代表 graft function 好。",
+            "E. 動脈血中 pH 值呈現鹼性，代表 graft function 好。"
+        ],
+        "答案": "CD",
+        "出處": "Schwartz's Principle of Surgery, 11th\ned. 2019, chap 11"
+    }
+]

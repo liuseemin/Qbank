@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>登入</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 40px;
+            background-color: #f4f7f6;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .main-container {
+            display: flex;
+            gap: 30px;
+            width: 100%;
+            max-width: 1500px;
+            justify-content: center;
+        }
+
+        .container {
+            flex: 1;
+            max-width: 500px;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 2em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            margin-top: 0px;
+        }
+
+        /* 新增：為每一行表單項目建立容器 */
+        .form-group {
+            display: flex;
+            /* 使用 Flexbox 進行水平排列 */
+            align-items: center;
+            /* 垂直居中對齊 */
+            margin-bottom: 15px;
+        }
+
+        form label {
+            /* 調整標籤樣式以適應水平佈局 */
+            display: block;
+            flex-shrink: 0;
+            /* 防止標籤被壓縮 */
+            width: 150px;
+            /* 固定標籤寬度以確保對齊 */
+            text-align: right;
+            /* 讓標籤文字靠右對齊 */
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-right: 15px;
+            /* 在標籤右側增加一些間距 */
+        }
+
+        form input {
+            /* 讓輸入框填滿剩餘空間 */
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .error {
+            color: #e74c3c;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="container">
+            <h1>登入</h1>
+            {% if error %}
+            <div class="error">{{ error }}</div>
+            {% endif %}
+            <form method="post">
+                <div class="form-group">
+                    <label for="password">密碼</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="api_key">Gemini API Key</label>
+                    <input type="text" id="api_key" name="api_key" required>
+                </div>
+
+                <button type="submit">登入</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,842 @@
+[
+    {
+        "題別": "複",
+        "題號": "1",
+        "題目": "橈神經 (radial nerve) 在肘下之運動支 posterior interosseous nerve，支配下述的何種動作？",
+        "選項": [
+            "A. Innervates the extensor digiti quinti muscle",
+            "B. Radial deviation of the wrist",
+            "C. Metacarpophalangeal joint extension",
+            "D. Wrist extension",
+            "E. Thumb interphalangeal joint extension"
+        ],
+        "答案": "ABDE",
+        "出處": "Grabb and Smith's Plastic Surgery,\n2020, 8th ed., p765"
+    },
+    {
+        "題別": "複",
+        "題號": "2",
+        "題目": "下列有關神經修補（Nerve repair）手術之敘述，何者是對 的?",
+        "選項": [
+            "A. 神經修補只要注意顯微手術之技術，即可得好的結果",
+            "B. 手術醫師無法保證神經修補後之功能恢復",
+            "C. 神經之直接縫合，比間接用神經移植（Graft）好",
+            "D. 神經修補後，在神經再生方面常有神經迷走（aberrant regeneration）之現象發生",
+            "E. 神經修補，愈年輕，效果愈好"
+        ],
+        "答案": "BCDE",
+        "出處": "Grabb and Smith's Plastic Surgery,\n2020, 8th ed., p93"
+    },
+    {
+        "題別": "複",
+        "題號": "3",
+        "題目": "根據 American Burn Association 所訂，須住燒傷中心的情 況，下列敘述何者為正確？",
+        "選項": [
+            "A. 二及三度燒傷大於 20﹪TBSA",
+            "B. 三度燒傷大於 5﹪TBSA",
+            "C. Inhalation injury",
+            "D. 5歲以下，50歲以上，二及三度燒傷大於 5﹪TBSA",
+            "E. Electrical burn"
+        ],
+        "答案": "ABCE",
+        "出處": "Grabb and Smith's Plastic Surgery,\n2020, 8th ed., p180"
+    },
+    {
+        "題別": "複",
+        "題號": "4",
+        "題目": "關於惡性黑色素瘤的特性，下列何者為正確？",
+        "選項": [
+            "A. superficial spreading melanoma 最常見",
+            "B. lentigo malignant melanoma 好發於老年人的顏面",
+            "C. lentigo malignant melanoma 較 superficial spreading melanoma 之惡性度高",
+            "D. Acral-Lentigo melanoma 好發於指甲基底，手掌及腳掌",
+            "E. 惡性黑色素瘤的預後與組織切片時的浸入厚度有明顯的 關係"
+        ],
+        "答案": "ABDE",
+        "出處": "Sabiston Textbook of Surgery, 2017,\n20th ed. P728-730"
+    },
+    {
+        "題別": "複",
+        "題號": "5",
+        "題目": "為防止燒傷病人營養狀況的惡化，下列各種方法中何者可 以改善營養狀況？",
+        "選項": [
+            "A. 傷口應包紮起來，避免直接暴露於空氣中",
+            "B. 提供病人足夠的熱能及蛋白質",
+            "C. 降低病房的溫度，以降低病人的體溫",
+            "D. 控制傷口的感染",
+            "E. 利用藥物以減輕病人的疼痛"
+        ],
+        "答案": "ABDE",
+        "出處": "Sabiston Textbook of Surgery, 2017,\n20th ed. P124"
+    },
+    {
+        "題別": "複",
+        "題號": "6",
+        "題目": "電擊 (Electrical burn) 常造成深部組織較嚴重的壞死變化， 其主要的原因不是下列何者？",
+        "選項": [
+            "A. 肌肉組織較多",
+            "B. 組織電阻較小",
+            "C. 組織的散熱速度較慢",
+            "D. 電流較大",
+            "E. 組織電阻較大"
+        ],
+        "答案": "ABDE",
+        "出處": "Sabiston Textbook of Surgery, 2017,\n20th ed. P525-526"
+    },
+    {
+        "題別": "複",
+        "題號": "7",
+        "題目": "關於組織擴張（tissue expansion），在組織學上的變化， 下列敘述何者為正確？",
+        "選項": [
+            "A. 表皮（epidermis）增厚",
+            "B. 真皮（dermis）變薄",
+            "C. 皮下組織變薄",
+            "D. 組織學上變化的程度與擴張的時間無關",
+            "E. 組織學上變化的程度與擴張的體積有關"
+        ],
+        "答案": "ABCD",
+        "出處": "Sabiston Textbook of Surgery, 2017,\n20th ed. P143"
+    },
+    {
+        "題別": "複",
+        "題號": "8",
+        "題目": "下列何者會影響傷口縫合後的疤痕？",
+        "選項": [
+            "A. Local infection",
+            "B. Increase in tension",
+            "C. The routine use of post operative antibiotics",
+            "D. Length of time of sutures are left in place",
+            "E. Type of closure"
+        ],
+        "答案": "ABDE",
+        "出處": "Grabb and Smith's Plastic Surgery,\n8th ed., p20"
+    },
+    {
+        "題別": "複",
+        "題號": "9",
+        "題目": "關於淋巴水腫（lymphedema），下列敘述何者為正確？",
+        "選項": [
+            "A. 淋巴水腫僅局限在皮下表層組織，而不見於深筋膜（ deep fascia）下",
+            "B. 原發性淋巴水腫以遲發性淋巴水腫（lymphedema tarda）為最多",
+            "C. 原發性淋巴水腫以女性較為好發",
+            "D. 原發性淋巴水腫下肢較上肢好發，左下肢尤其厲害",
+            "E. 次發性淋巴水腫，在世界上以絲蟲病引起為最多"
+        ],
+        "答案": "ACDE",
+        "出處": "Grabb and Smith's Plastic Surgery,\n8th ed., p1000"
+    },
+    {
+        "題別": "複",
+        "題號": "10",
+        "題目": "下列關於化學性灼傷的敘述，何者有為正確？",
+        "選項": [
+            "A. 化學物品對皮膚的損傷，主要由於熱能的產生",
+            "B. 大量的沖水是最基本的急救措施",
+            "C. 氫氟酸（Hydrofluoric acid）灼傷可以Calcium gluconate外敷或皮下注射以減輕傷害",
+            "D. 酚（Phenol）的灼傷，可以Plyethylene glycol或植物油 塗抹",
+            "E. 水泥（Cement）灼傷，應先保持傷口潤濕而後再保持乾 燥"
+        ],
+        "答案": "BCDE",
+        "出處": "Selected Reading in Plastic\nSurgery:Burns. Vol.7, No.12, 1994,\np12"
+    },
+    {
+        "題別": "複",
+        "題號": "11",
+        "題目": "即使有很好的抗生素可用，手部的感染的治療仍不理想， 其原因是？",
+        "選項": [
+            "A. 抗藥性的出現",
+            "B. 抗生素只對某些細菌有效",
+            "C. 手的間隔結構特性",
+            "D. 手部易水腫",
+            "E. 肌腱血液循環較差"
+        ],
+        "答案": "CE",
+        "出處": "McCarthy, p5530"
+    },
+    {
+        "題別": "複",
+        "題號": "12",
+        "題目": "治療燒傷病人急性期的營養缺失（malnutrition），有多種 方式，下列何者是正確的？",
+        "選項": [
+            "A. 控制感染",
+            "B. 利用narcotics或tranquilizers以減少疼痛",
+            "C. 維持較低溫以降低病人的體溫",
+            "D. 供給足夠的熱能及蛋白質",
+            "E. 儘可能早期給予餵食"
+        ],
+        "答案": "ABDE",
+        "出處": "Grabb and Smith's Plastic Surgery,\n8th ed., p182"
+    },
+    {
+        "題別": "複",
+        "題號": "13",
+        "題目": "百分之四十體表面積燒傷患者，代謝作用（metabolism） 在什麼情況不易回到正常？",
+        "選項": [
+            "A. 患者放在溫暖（warm）的環境下",
+            "B. 傷口水份蒸發的損失（evaporative loss）被阻斷",
+            "C. 卡路里（caloric）攝取量足夠時",
+            "D. 傷口完全癒合時",
+            "E. 傷口範圍降至百分之二十體表面積時"
+        ],
+        "答案": "ABCE",
+        "出處": "Grabb and Smith's Plastic Surgery,\n8th ed., p182"
+    },
+    {
+        "題別": "複",
+        "題號": "14",
+        "題目": "關於懷孕與燒燙傷的敘述，下列何者正確？",
+        "選項": [
+            "A. 孕婦燒燙傷面積超過30﹪體表面積，早產機會明顯增加",
+            "B. 孕婦燒燙傷發生在懷孕末期三個月（3rd trimester），嬰 兒的死亡率高",
+            "C. 為了確保胎兒有足夠的血流量，輸液治療期孕婦的小便 量，最好維持在50至70ml/hr",
+            "D. 使孕婦處於左側躺或半坐姿，可促進PAO 之提高 2",
+            "E. silver sulfadiazine軟膏對胎兒是否有影響，仍未有定論"
+        ],
+        "答案": "ACDE",
+        "出處": "燒燙傷治療準則-中華民國燒傷\n學會，p65-66"
+    },
+    {
+        "題別": "複",
+        "題號": "15",
+        "題目": "關於燒燙傷病患營養支持的原則，下列何者為正確？",
+        "選項": [
+            "(A). Curreri的公式是：熱量需要 = 25大卡x 傷前體重（ kg）+40大卡x 燒傷面積百分比",
+            "(B). 成人大於20﹪燒傷面積時，非蛋白質熱量對氮的比宜 為100: 1",
+            "(C). 小孩大於10﹪燒傷面積時，非蛋白質熱量對氮的比宜 為100: 1",
+            "(D). 醣類最好佔總熱量的 50% 至 60﹪",
+            "(E). 脂肪最好佔總熱量的 50﹪左右"
+        ],
+        "答案": "ABCD",
+        "出處": "Grabb and Smith's Plastic Surgery,\n8th ed., p182"
+    },
+    {
+        "題別": "複",
+        "題號": "16",
+        "題目": "有關全厚層（Full-thickness）及薄層（Split-thicknell）皮 膚移植的描述，何者為正確？",
+        "選項": [
+            "A. 全厚層可獲較佳之知覺",
+            "B. 薄層可以有較佳之存活",
+            "C. 全厚層有較明顯之primary contraction",
+            "D. 薄層有較明顯之secondary contraction",
+            "E. 全厚層移植在小孩後，它無法隨年齡增加而成長（ growth）"
+        ],
+        "答案": "ABCD",
+        "出處": "Grabb and Smith's Plastic Surgery,\n8th ed., p50-51"
+    },
+    {
+        "題別": "複",
+        "題號": "17",
+        "題目": "關於 Latissimus dorsi myocutaneous flap 的敘述，下列何 者正確？",
+        "選項": [
+            "A. 它是屬於 type V 的 muscle flap",
+            "B. 它有二個 Angiosomes",
+            "C. 它的主要 Pedicle 是 Thoracodorsal artery",
+            "D. 這 flap 的 lower portion 是由 Lumbar vessel 來 blood supply",
+            "E. 在 harvest flap 時，有可能會傷到 long thoracic nerve"
+        ],
+        "答案": "ACDE",
+        "出處": "Grabb and Smith's Plastic Surgery,\n8th ed., p1940-1941"
+    },
+    {
+        "題別": "複",
+        "題號": "18",
+        "題目": "有關糖尿病足部潰瘍（diabetic foot ulcer），何者敘述為正 確？",
+        "選項": [
+            "A. It is a kind of neurotrophic ulcer",
+            "B. A reduction in nerve blood flow is always an early sign",
+            "C. It typically showed combination of distal sensory loss and reduced peripheral arterial perfusion",
+            "D. The possibility of underlying osteomyelitis is very small",
+            "E. It always develops at weigh-bearing area"
+        ],
+        "答案": "ABCE",
+        "出處": "Sabiston Textbook of Surgery, 2017,\n20th ed. P257"
+    },
+    {
+        "題別": "複",
+        "題號": "19",
+        "題目": "關於wound healing的敘述, 下列何者為非?",
+        "選項": [
+            "A. 可以分為 inflammatory, proliferative, and maturational phase。",
+            "B. Reepithelialization, matrix synthesis, and neovascularization 等現象是發生在 maturational phase。",
+            "C. Polymorphonuclear cells會釋放 histamine及 serotonin 等物質，會使微血管 permeability 增加。",
+            "D. 在傷口中，B lymphocytes 會在第五天大量出現，第七 天達到高峰。",
+            "E. Polymorphonuclear cells 在傷口癒和的過程當中，扮演 重要角色，負責主導 cytokines 的釋放以及引發傷口癒和的 進程。"
+        ],
+        "答案": "BDE",
+        "出處": "Sabiston Textbook of Surgery, 2017,\n20th ed. P132-136"
+    },
+    {
+        "題別": "複",
+        "題號": "20",
+        "題目": "有關Breast reconstruction，下列何者正確？",
+        "選項": [
+            "(A). Pedicled TRAM flap比Free TRAM flap較容易有脂肪 壞死及因放射性治療所造成的問題",
+            "(B). Superficial inferior epigastric artery flap可以不用犧牲 腹直肌",
+            "(C). Deep inferior epigastric artery perforator flap不需要 intramuscular dissection",
+            "(D). IGAP flap由Superior Gluteal artery供應血流",
+            "(E). Free flap的recipient vessels通常可以接在 thoracodorsal artery and vein或internal mammary artery and vein"
+        ],
+        "答案": "ABE",
+        "出處": "Schwartz’s Principles of Surgery,\n8th edition, 2005, p1816"
+    },
+    {
+        "題別": "複",
+        "題號": "21",
+        "題目": "下列有關下肢 compartment syndrome 需要進行 fasciotomy 之時機，何者正確？",
+        "選項": [
+            "A. Compartment pressure 連續 6小時超過 40 mmHg",
+            "B. 疼痛程度與外傷不成比例",
+            "C. 被動屈曲（passive flexion）會痛",
+            "D. 摸不到脈搏",
+            "E. 可以檢查到 tense compartments"
+        ],
+        "答案": "ABDE",
+        "出處": "Grabb and Smith's Plastic Surgery,\n8th ed., p900-902"
+    },
+    {
+        "題別": "複",
+        "題號": "22",
+        "題目": "de Quervain's Disease為一種stenosing tenosynovitis，其 影響了下列那幾條肌腱？",
+        "選項": [
+            "A. Abductor pollicis brevis",
+            "B. Abductor pollicis longus",
+            "C. Extensor pollicis brevis",
+            "D. Extensor pollicis longus",
+            "E. Adductor pollicis"
+        ],
+        "答案": "BC",
+        "出處": "Sabiston Textbook of Surgery, 2017,\n20th ed. P2004"
+    },
+    {
+        "題別": "複",
+        "題號": "23",
+        "題目": "關於下肢的 compression neuropathy，下列敘述何者為正 確？",
+        "選項": [
+            "(A). Tibial nerve compression at soleal sling often manifests as flexor hallux longus weakness",
+            "(B). The most common nerve entrapment in the leg is common peroneal nerve compression at fibular neck",
+            "(C). The pressure within tarsal tunnel will be elevated with plantar extension and supination",
+            "(D). The pathognomonic feature of chronic nerve compression is the presence of a positive Hoffman–Tinel sign.",
+            "(E). An electrodiagnostic test is not an essential tool for confirmation."
+        ],
+        "答案": "ADE",
+        "出處": "Plastic Surgery, 3rd Edition,\nNeligan, Peter C. Volume 4 Chapter\n6, page 158, 166, 171"
+    },
+    {
+        "題別": "複",
+        "題號": "24",
+        "題目": "關於 abdominal hernia，下列敘述何者為正確？",
+        "選項": [
+            "(A). Obesity, diabetes, smoking, nutritional deficiency are among the common risk factors",
+            "(B). Some of the failures comes from undiagnosed multiple defects",
+            "(C). Mesh prosthesis repair has a less favorable result ( higher recurrence rate) when compared with primary suture techniques",
+            "(D). The component separation method is to separate the transversus /rectus unit from the external/internal oblique muscles",
+            "(E). Cyclical fatigue due to abdomen movement, lack of true bioincorporation into the mesh, or biofilm seeding may be the etiologic cause of the synthetic mesh device failure."
+        ],
+        "答案": "ABE",
+        "出處": "Plastic Surgery, 3rd Edition,\nNeligan, Peter C. Volume 4 Chapter\n12, page 280, 280 e1, 280e4"
+    },
+    {
+        "題別": "複",
+        "題號": "25",
+        "題目": "關於 conventional free bone grafting 的基本原則，下列敘 述何者為正確？",
+        "選項": [
+            "A. bone-to-bone contact must be established to facilitate creeping substitution,",
+            "B. require a well-vascularized bed",
+            "C. free of underlying infection",
+            "D. there should be consistent, slight motion at the fracture site",
+            "E. bony defects should be kept at 5~6 cm or less in length."
+        ],
+        "答案": "ABCE",
+        "出處": "Plastic Surgery, 3rd Edition,\nNeligan, Peter C. Volume 4 Chapter\n7 , page 176"
+    },
+    {
+        "題別": "複",
+        "題號": "26",
+        "題目": "關於顏面骨骨折的 fixture device，下列敘述何者為正確？",
+        "選項": [
+            "A. wire fixation is less stable than miniplate",
+            "B. miniplate has the strength about 2/3 of intact zygoma bone",
+            "C. resorbable plate has the strength about 1/10 of intact zygoma bone",
+            "D. bending is the cause of the failure of the resorbable system",
+            "E. plate and screw breakage is the cause of the failure in the titanium system."
+        ],
+        "答案": "AC",
+        "出處": "Plastic Surgery, 3rd Edition,\nNeligan, Peter C. Volume 3 Chapter\n3 Facial fractures, Page 67"
+    },
+    {
+        "題別": "複",
+        "題號": "27",
+        "題目": "關於 fibrous dysplasia，下列敘述何者為正確？",
+        "選項": [
+            "A. Polyostotic fibrous dysplasia is much more common than monostotic one",
+            "B. skull involvement occurs in 27% of polyostotic patients",
+            "C. In the craniofacial region, fibrous dysplasia most frequently involves the maxilla",
+            "D. In the mandible, the condylar area is the most frequently affected.",
+            "E. Multiple brownish skin pigmentations and precocious sexual development, hyperthyroidism, or hyperparathyroidism, indicate McCune–Albright syndrome."
+        ],
+        "答案": "CE",
+        "出處": "Plastic Surgery, 3rd Edition,\nNeligan, Peter C. Volume 3 Chapter\n15 Tumors of the facial skeleton:\nFibrous dysplasia, Page 381"
+    },
+    {
+        "題別": "複",
+        "題號": "28",
+        "題目": "關於 obstructive sleep apnea (OSA) 的描述，下列敘述何 者為正確？",
+        "選項": [
+            "A. OSA is associated with the development of left ventricular hypertrophy and stroke",
+            "B. An AHI of greater than 5 is diagnostic of OSA",
+            "C. CPAP therapy in OSA patients may decrease systemic blood pressure.",
+            "D. OSA affects 42% of adult men",
+            "E. First line of treatment in adult patients with OSA is surgery"
+        ],
+        "答案": "ABC",
+        "出處": "Plastic Surgery, 3rd Edition,\nNeligan, Peter C. Volume 3 Chapter\n4 TMJ dysfunction and obstructive\nsleep apnea, Page 96"
+    },
+    {
+        "題別": "複",
+        "題號": "29",
+        "題目": "下列症狀何者屬於 Superior orbital fissure syndrome？",
+        "選項": [
+            "A. Ptosis of eyelid",
+            "B. strabismus",
+            "C. Blindness",
+            "D. Paralysis of cranial nervesⅢ,Ⅳ,Ⅵ",
+            "E. Anesthesia of upper eyelid"
+        ],
+        "答案": "ABDE",
+        "出處": "Schwartz's Principles of Surgery.\n11th edition, 2019, p2004"
+    },
+    {
+        "題別": "複",
+        "題號": "30",
+        "題目": "有關眼眶的骨折（orbital fracture），下列敘述何者為正 確？",
+        "選項": [
+            "A. 視神經孔（optic foramen）距離眼眶下緣（inferior orbital rim）約35mm",
+            "B. blow-out fracture最多發生在於infraorbital nerve的內側 眼眶及medial orbit的下半部",
+            "C. 眼眶四周由七塊骨骼形成",
+            "D. 複視（diplopia）最常發生在於往外側注視（lateral gaze）",
+            "E. 眼眶底部在blow-out fracture時對眼球具有保護作用"
+        ],
+        "答案": "BCE",
+        "出處": "Schwartz's Principles of Surgery.\n11th edition, 2019, p2004"
+    },
+    {
+        "題別": "複",
+        "題號": "31",
+        "題目": "關於isolated cleft palate，下列何者之敘述為正確？",
+        "選項": [
+            "A. 女性嬰孩具有較高發生率",
+            "B. 構音障礙係因為tensor veli palatini muscle以及 depressor veli palatini muscle 的連續性遭到破壞",
+            "C. Primary posterior pharyngeal flap（初期後側咽皮瓣） 不考慮用於Robin Sequence或Treacher Collin's syndrome 患者",
+            "D. Furlow operation是使用兩個z plasty犧牲其長度達成寬 度可以較好的發聲效果",
+            "E. 顎裂患者常因鼻淚管不通導致中耳疾病"
+        ],
+        "答案": "AC",
+        "出處": "Schwartz's Principles of Surgery.\n11th edition, 2019, p1982-1984"
+    },
+    {
+        "題別": "複",
+        "題號": "32",
+        "題目": "關於唇顎裂(Cleft lip and/or Palate)的敘述，下列何者正 確？",
+        "選項": [
+            "A. 唇顎裂病患在3個月大時,應行lip repair手術",
+            "B. 唇顎裂病患在12個月大時,應行palate repair手術",
+            "C. 唇顎裂病患在9歲左右時,應行alveolar bone graft手術",
+            "D. 唇裂小孩常有Eustachian tube dysfunction 的問題",
+            "E. 其遺傳基因為自體顯性遺傳"
+        ],
+        "答案": "ABC",
+        "出處": "Sabiston Textbook of Surgery, 2017,\n20th ed. P1946"
+    },
+    {
+        "題別": "複",
+        "題號": "33",
+        "題目": "有關鰓裂囊腫畸形（branchial arch cyst）的陳述，下列何 者為是？",
+        "選項": [
+            "A. 第一對鰓裂囊腫畸形（first branchial cleft cyst）最常見",
+            "B. 第一對鰓裂囊腫畸形（first branchial cleft cyst）常發生 於舌骨之下",
+            "C. 第二對鰓裂囊腫畸形（second branchial cleft cyst）之 fistula 會穿過external carotid artery與 internal carotid artery之間",
+            "D. 第二對鰓裂囊腫畸形（second branchial cleft cyst）表 皮開口出現於胸鎖乳突肌（sternocleidomastoid muscle） 中段前緣",
+            "E. 第三對鰓裂囊腫畸形（second branchial cleft cyst）之 fistula最終通至 foramen cecum"
+        ],
+        "答案": "CD",
+        "出處": "Sabiston Textbook of Surgery, 2017,\n20th ed. P1861-1862"
+    },
+    {
+        "題別": "複",
+        "題號": "34",
+        "題目": "有關小耳症（microtia）的陳述，下列何者正確？",
+        "選項": [
+            "A. 手術年齡的決定是基於對聽力的拯救",
+            "B. 常合併有同側下頷骨之發育障礙",
+            "C. 正常人至六歲時耳朵垂直長度約略比成年時短少6~7mm",
+            "D. 以肋軟骨重建後其尺寸不會隨年齡成長而變大",
+            "E. 發生率大約如次；左側：右側：雙側＝6：3：1"
+        ],
+        "答案": "BC",
+        "出處": "Grabb and Smith's Plastic Surgery,\n8th ed., p314-317"
+    },
+    {
+        "題別": "複",
+        "題號": "35",
+        "題目": "下列何者是 Silver sulfadiazine 用於治療燒燙傷傷口時的特 性？",
+        "選項": [
+            "A. 廣效抗菌",
+            "B. 穿透eschar能力強",
+            "C. 造成傷口脫鈉",
+            "D. 稍微抑制上皮化",
+            "E. 大量使用會造成代謝性酸中毒"
+        ],
+        "答案": "AD",
+        "出處": "Sabiston Textbook of Surgery, 2017,\n20th ed. P517"
+    },
+    {
+        "題別": "複",
+        "題號": "36",
+        "題目": "最常見引起 Pronator syndrome之原因，下述何者正確？",
+        "選項": [
+            "A. 屈指淺肌的纖維弧（Fibrous arch）壓迫正中神經",
+            "B. 因ligament of Struthers壓迫正中神經",
+            "C. 因Lacertus fibrosus of biceps壓迫正中神經",
+            "D. 因Pronator muscle壓迫正中神經",
+            "E. 因Flexor profurdus muscle壓迫正中神經"
+        ],
+        "答案": "ABCD",
+        "出處": "Sabiston Textbook of Surgery, 2017,\n20th ed. P2006-2007"
+    },
+    {
+        "題別": "複",
+        "題號": "37",
+        "題目": "以類固醇注射來治療蟹足腫的常見的合併症有？",
+        "選項": [
+            "A. 皮膚萎縮",
+            "B. Cushing disease",
+            "C. 皮膚脫色",
+            "D. 疤痕孿縮",
+            "E. 感染"
+        ],
+        "答案": "AC",
+        "出處": "Grabb and Smith's Plastic Surgery,\n8th ed., p20"
+    },
+    {
+        "題別": "複",
+        "題號": "38",
+        "題目": "屈指肌腱 (Flexor Digitorum muscle) 能維持最大握力所需 要的 pulley 是？",
+        "選項": [
+            "A. A1",
+            "B. A2",
+            "C. A3",
+            "D. A4",
+            "E. A5"
+        ],
+        "答案": "BDE",
+        "出處": "Grabb and Smith's Plastic Surgery,\n8th ed., p760"
+    },
+    {
+        "題別": "複",
+        "題號": "39",
+        "題目": "乳癌的病人檢查出有 BRCA gene mutations，可能會有較 高的機會得到以下何種癌症？",
+        "選項": [
+            "A. Ovarian cancer",
+            "B. Pancreatic cancer",
+            "C. Basal cell carcinoma",
+            "D. Lymphoma",
+            "E. Glioblastoma"
+        ],
+        "答案": "AB",
+        "出處": "Grabb and Smith's Plastic Surgery,\n8th ed., p583-584"
+    },
+    {
+        "題別": "複",
+        "題號": "40",
+        "題目": "嚴重燒傷患者併發多重器官衰竭，其可能原因下列何者正 確？",
+        "選項": [
+            "A. 嚴重休克後造成之菌血症或毒血症（Toxemia）",
+            "B. 吸入性傷害（inhalation injury）",
+            "C. 發燒（fever）",
+            "D. 其主要介質（mediator）為Interleukin-2",
+            "E. 通常在燒傷面積大於30﹪體表面積才會發生"
+        ],
+        "答案": "ABDE",
+        "出處": "Acute Management of the Burned\nPatient, p146"
+    },
+    {
+        "題別": "複",
+        "題號": "41",
+        "題目": "有關糖尿病足潰瘍 (diabetic foot ulcer) 之描述，下列何者 為正確？",
+        "選項": [
+            "A. 將單側下肢作截肢後，三年以內，另一側下肢截除之可 能為百分之三十",
+            "B. 血糖之控制，可使紅血球柔軟度改善，立即有助於微循 環之效率",
+            "C. 足底肌肉因後脛神經過度作用產生痙攣，致使腳掌易生 壓迫性潰瘍",
+            "D. 由於中等口徑之血管阻塞，故動脈繞道手術（ byppass）有助於部份病患之末稍循環",
+            "E. 其感染常係多種病原菌之混合式感染型態"
+        ],
+        "答案": "ABDE",
+        "出處": "(1) Morain WD. Wound healing in\ndiabetes mellitns. Clinics in Plast surg.\n1990,17, p493-501\n(2) Oishi SN: Microsurgical\nmanagement of extremity wounds in\ndiabeties with peripheral vascalar\ndisease. PRS.1993, 92, p485-492"
+    },
+    {
+        "題別": "複",
+        "題號": "42",
+        "題目": "下列何者為外科治療褥瘡（pressure sore）的原則？",
+        "選項": [
+            "A. 完全切除潰瘍及周圍疤痕，以形成一個乾淨及血循環良 好之邊緣",
+            "B. 將突出之骨頭切除，以分散壓力",
+            "C. 於清創後，立即進行裂層植皮（S.T.S.G）手術，可以有 較高成功率",
+            "D. 肌肉或皮瓣填塞死腔，可提供良好血循環之緩衝墊",
+            "E. 手術時之止血和手術前後之營養補充，同樣重要"
+        ],
+        "答案": "ABDE",
+        "出處": "Sabiston Textbook of Surgery, 2017,\n20th ed. P1965"
+    },
+    {
+        "題別": "複",
+        "題號": "43",
+        "題目": "有關keloid之陳述，下列何者為正確？",
+        "選項": [
+            "A. keloid fibroblast產生過量之Type I 及Type III collagen",
+            "B. 在組織學上可見到collagen nodule",
+            "C. 缺氧可刺激fibrolast產生collagen",
+            "D. keloid及hypertrophic scar之最大區別，在於組織學之不 同",
+            "E. 手術切除，不易再發"
+        ],
+        "答案": "ABC",
+        "出處": "Sabiston Textbook of Surgery, 2017,\n20th ed. P141-142"
+    },
+    {
+        "題別": "複",
+        "題號": "44",
+        "題目": "關於鱗狀細胞癌 (Squamous Cell Carcinoma; SCC)的前癌 性皮膚病灶（premalignant skin lesion）下列何者為正確？",
+        "選項": [
+            "A. Actinic keratosis",
+            "B. Bowen disease",
+            "C. Blue nevus",
+            "D. Seborrheic keratosis",
+            "E. Dermoid cyst"
+        ],
+        "答案": "AB",
+        "出處": "Grabb and Smith's Plastic Surgery,\n8th ed., p173"
+    },
+    {
+        "題別": "複",
+        "題號": "45",
+        "題目": "有關台灣地區國人 Polydactyly of Thumb 之 type 中，請問 何種 type 為最多種？",
+        "選項": [
+            "A. Bifid of distal phalanx of thumb",
+            "B. Bifid of proximal phalanx of thumb",
+            "C. Bifid of 1st meta-carpal bone of thumb",
+            "D. Duplication of proximal phalanx (MP joint) of thumb",
+            "E. Type IV polydactyly thumb"
+        ],
+        "答案": "DE",
+        "出處": "Grabb and Smith's Plastic Surgery,\n8th ed., p909"
+    },
+    {
+        "題別": "複",
+        "題號": "46",
+        "題目": "有關局部麻醉劑（local anesthetic）lidocaine，下列敘述何 者正確？",
+        "選項": [
+            "A. 局部麻醉劑 lidocaine 的作用機轉，是 blockade of potassium currents in nerve fibers",
+            "B. Lidocaine 不與 epinephrine合用時，其最大安全劑量為 10mg/kg",
+            "C. 局部麻醉劑的毒性 (toxicity) 與注射的部位及吸收速度有 關",
+            "D. 當病患覺得舌部或唇部有麻木感，可能是 overdose 的 早期症狀",
+            "E. 過量的 local anesthetics，也會造成 cardiovascular collapse"
+        ],
+        "答案": "CDE",
+        "出處": "Sabiston Textbook of Surgery, 2017,\n20th ed. P378"
+    },
+    {
+        "題別": "複",
+        "題號": "47",
+        "題目": "下列有關血管瘤 (hemangioma) 之敘述，何者正確?",
+        "選項": [
+            "A. 女多於男",
+            "B. 新生兒之血管瘤，好發的時間是出生後八至十個月內",
+            "C. 深層皮下組織或內臟之血管瘤常在出生後二至三個月才 發現",
+            "D. 大約 80% 為單一血管瘤，20% 為多發性",
+            "E. 大約 30-40% 之血管瘤於出生時只以皮膚色素斑點表現"
+        ],
+        "答案": "ACDE",
+        "出處": "Grabb and Smith's Plastic Surgery,\n8th ed., p246-248"
+    },
+    {
+        "題別": "複",
+        "題號": "48",
+        "題目": "下列有關口腔癌之 risk factor，何者正確？",
+        "選項": [
+            "A. 酒類（alcohol）",
+            "B. 病毒（virus）",
+            "C. 口腔衛生不良",
+            "D. 牙齒或假牙之 mechanical irritation",
+            "E. 時常洗牙"
+        ],
+        "答案": "ABCD",
+        "出處": "Mathes Plastic Surgery, 2nd edition,\nvol.3, P.918"
+    },
+    {
+        "題別": "複",
+        "題號": "49",
+        "題目": "有關手指屈指淺肌 (Flexor Digitorum Superficialis muscle; FDS) 肌腱斷裂時，下列何者不是檢查方式？",
+        "選項": [
+            "A. 檢查受傷手指能否彎曲DIP joint",
+            "B. 檢查受傷手指能否彎曲PIP joint",
+            "C. 檢查受傷手指能否彎曲MP joint",
+            "D. 固定未受傷手指的 DIP joint 及 PIP joint 檢查受傷手指 能否彎曲 DIP joint",
+            "E. 固定未受傷手指的 DIP joint 及 PIP joint 檢查受傷手指能 否彎曲 PIP joint"
+        ],
+        "答案": "ABCD",
+        "出處": "Schwartz's Principles of Surgery.\n11th edition, 2019, p1931"
+    },
+    {
+        "題別": "複",
+        "題號": "50",
+        "題目": "關於肉毒桿菌毒素(botulinum toxin)的敘述，下列何者正 確？",
+        "選項": [
+            "A. Clostridium difficile可製造多種肉毒桿菌毒素，其中已被 作為醫療製劑的為toxin types A and B。",
+            "B. BoNT‐A 比起 BoNT‐B，能更快的產生效用，持續時間 較短，注射處較不疼痛。",
+            "C. 施打肉毒桿菌素之劑量，應以皺紋深度作為主要評估依 據，而非肌肉質量大小。",
+            "D. 針對Lambert–Eaton myasthenic syndrome及 Myasthenia gravis病患，肉毒桿菌素之注射為禁忌症。",
+            "E. 不同種類的肉毒桿菌毒素製劑，達到相同效果的劑量均 相同。"
+        ],
+        "答案": "BD",
+        "出處": "Plastic Surgery, 4th edition, Neligan,\nPeter C. Volume 2, Chapter 5.3,\np54,56,57"
+    },
+    {
+        "題別": "複",
+        "題號": "51",
+        "題目": "對於大量減重 (massive weight loss) 病人，那些因子會影 響其外觀呈現？",
+        "選項": [
+            "A. Body Mass Index (BMI) level",
+            "B. Fat deposition pattern",
+            "C. 食肉的 (carnivorous)",
+            "D. Quality of the skin/fat envelope",
+            "E. Psychologic status"
+        ],
+        "答案": "ABD",
+        "出處": "Plastic Surgery, 4th edition, Neligan,\nPeter C. Volume 2, Chapter 25\npage161-617"
+    },
+    {
+        "題別": "複",
+        "題號": "52",
+        "題目": "關於預防深部靜脈栓塞 (Deep Vein Thrombosis ; DVT) 的 方式，下列描述何者錯誤？",
+        "選項": [
+            "A. 術前詳細的詢問病史，有助於制定適合的方式來預防手 術中 DVT的生成。",
+            "B. Nonpharmacologic therapy 可減少DVT發生的機率至 85%。",
+            "C. 預防手術中DVT的發生，使用Pharmacologic therapy比 使用 mechanical therapy 效果要好。",
+            "D. Pharmacologic therapy會增加major bleeding complication 的機會。",
+            "E. 合併使用Pharmacologic therapy及mechanical therapy ，比單獨一種therapy，能更好的預防手術中DVT的發生。"
+        ],
+        "答案": "BE",
+        "出處": "Plastic Surgery, 4th edition, Neligan,\nPeter C. Volume 1, page 95"
+    },
+    {
+        "題別": "複",
+        "題號": "53",
+        "題目": "那些敘述關於Bone graft transfer是正確的？",
+        "選項": [
+            "A. 緻密骨(Cortical bone)相比海綿骨(Cancellous bone)， 有較理想的骨生長特性，像是osteoinductive and osteoconductive properties。",
+            "B. 海綿骨可以用在長度大於10公分Stress-bearing area 的 bone gap。",
+            "C. Cortical bone graft需藉由recipient bed 提供plasmatic imbibition。",
+            "D. Cortical bone graft通常3週內就能有不錯revascularized 的癒合。",
+            "E. 取下Bone graft後，溫度不要超過42°C，否則易造成骨 細胞死亡。"
+        ],
+        "答案": "CE",
+        "出處": "Plastic Surgery, 4th edition, Neligan,\nPeter C. Volume 1, Ch.18 P.303"
+    },
+    {
+        "題別": "複",
+        "題號": "54",
+        "題目": "有關facial paralysis，下列敘述何者錯誤？",
+        "選項": [
+            "A.(cid:9) 可分成primary或secondary。",
+            "B.(cid:9) 若facial paralysis < 12個月之內，則認為facial muscle 尚可以re-innervation。",
+            "C.(cid:9) 若facial paralysis超過12個月，則認為muscle出現 irreversibly atrophy。",
+            "D.(cid:9) 處置的方法包含static procedure 如fascia sling的方法 ，或dynamic procedure如functional muscle transfer。",
+            "E. Cross facial nerve graft的方法，由於手術時間太長，目 前已經被放棄使用了。"
+        ],
+        "答案": "CE",
+        "出處": "Plastic Surgery, 4th Edition, Neligan,\nPeter C. Vol 3. p.341-342"
+    },
+    {
+        "題別": "複",
+        "題號": "55",
+        "題目": "關於自體脂肪隆乳，以下敘述何者錯誤？",
+        "選項": [
+            "A. 自體脂肪隆乳，建議使用在想要大量增加 (massive increase) 的隆乳病人。",
+            "B. 製備脂肪時，離心後的脂肪，要把上方的油脂跟中間血 水倒掉，留下底下萃取的脂肪，才拿來做脂肪移植使用。",
+            "C. 脂肪移植時，補脂的順序，建議先補深層再補淺層。",
+            "D. 脂肪移植隆乳，建議要稍微多補一點脂肪，因為之後大 約會有20-30%的脂肪會被吸收(resorption)。",
+            "E. 自體脂肪經過培養一天後，再行隆乳，是目前自體脂肪 隆乳的主流方法。"
+        ],
+        "答案": "ABE",
+        "出處": "Plastic Surgery, 4th Edition, Neligan,\nPeter C. Volume 4, Chapter 5, page\n73, 81-83"
+    },
+    {
+        "題別": "複",
+        "題號": "56",
+        "題目": "以下何者適用於男性女乳症 (gynecomastia) 的治療？",
+        "選項": [
+            "(A). Pull-through technique",
+            "(B). Open excision via an axillary approach",
+            "(C). Skin reduction and tissue resection with Le-Jour vertical mammoplasty skin pattern",
+            "(D). Suction-assisted lipectomy",
+            "(E). Skoog operation"
+        ],
+        "答案": "ACD",
+        "出處": "Plastic Surgery, 4th Edition, Neligan,\nPeter C. Volume 5, Chapter 11, page\n176-183"
+    },
+    {
+        "題別": "複",
+        "題號": "57",
+        "題目": "關於使用 Deep inferior epigastric artery perforator (DIEP) flap 於乳房重建，以下敘述何者正確？",
+        "選項": [
+            "(A). The deep inferior epigastric artery arises from the femoral artery",
+            "(B). The superficial inferior epigastric vein is the largest vein draining the skin paddle of the DIEP flap",
+            "(C). The dissection of a DIEP flap has a steep learning curve",
+            "(D). Abdominal scarring is not an important risk factor for raising a DIEP flap",
+            "(E). Smoking is considered a relative contraindication to raising a DIEAP flap"
+        ],
+        "答案": "BCE",
+        "出處": "Plastic Surgery, 4th Edition, Neligan,\nPeter C. Vol.5, Ch.20, Page 324,\n327, 340"
+    },
+    {
+        "題別": "複",
+        "題號": "58",
+        "題目": "關於 vascular tumors (如 hemangioma) 的描述，下列何者 錯誤？",
+        "選項": [
+            "A. 90% 的 infantile hemangioma 是靠病史和理學檢查來 診斷",
+            "B. GLUT1的免疫染色，可以用來做infantile hemangioma 的鑑別診斷",
+            "C. 若診斷為Infantile hemangioma ，應立即手術",
+            "D. Rapid involuting congenital hemangioma 通常都需要 手術，無論病灶大小",
+            "E. Pyogenic granuloma的主要治療方式是手術切除"
+        ],
+        "答案": "CD",
+        "出處": "Plastic Surgery, 4th edition, Neligan,\nPeter C. Volume VI, Chapter 31,\npage 693, 696"
+    },
+    {
+        "題別": "複",
+        "題號": "59",
+        "題目": "關於神經損傷 (nerve injury) 及治療，以下描述何者錯誤？",
+        "選項": [
+            "A. Sunderland和Mackinnon 將神經受傷分成六個degree",
+            "B. Third degree的神經損傷，經nerve repair後，神經能夠 能完全恢復",
+            "C. Electrophysiological study，需在受傷後2-3週內完成",
+            "D. 如果神經損傷, 可以進行nerve repair，則最佳手術時間 ，是在受傷後的48小時內",
+            "E. 超過三週的delayed nerve repair ，通常就需要nerve graft"
+        ],
+        "答案": "BC",
+        "出處": "Plastic Surgery, 4th edition, Neligan,\nPeter C. Volume VI, Chapter 32,\npage 719, 722, 723, 728"
+    },
+    {
+        "題別": "複",
+        "題號": "60",
+        "題目": "關於脂肪移植 (fat grafting)，以下敘述何者錯誤？",
+        "選項": [
+            "A. 移植的脂肪，術後會有部分的體積消失",
+            "B. 對於相等體積的脂肪移植，小顆粒的脂肪相對於大顆粒 的脂肪移植，消失的體積較少",
+            "C. 由於移植的脂肪體積會減少，下眼皮的脂肪移植，建議 over-grafting，效果較佳",
+            "D. 對於年老皮膚鬆弛的病患，移植脂肪的存活率較好、美 觀效果較佳",
+            "E. 脂肪若移植在較表淺的位置，較會有不平整的情形"
+        ],
+        "答案": "CD",
+        "出處": "Plastic Surgery, 4th edition, Neligan,\nPeter C. Vol 2, Ch13, p390-400"
+    }
+]

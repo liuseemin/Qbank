@@ -22,18 +22,13 @@ app = Flask(__name__)
 # 模擬一個儲存累積 token 數的變數
 total_tokens_used = 0
 
-# 全域資料，注意現在的q["題號"]，題號格式已經在load_questions()裡面被轉成f"{file_path.stem}_{q.get('題號')}"
+# 全域資料
 questions = []
-
-# 建立一個question_list_index來對應題號和題目的索引
-question_list_index = {}
-
 wrong_questions = []
 marked_questions = []
-question_index = 0 # 用來記錄按照順序出題的索引
-# remaining_questions_order = []
-# remaining_questions_random = []
-remaining_questions = []
+question_index = 0
+remaining_questions_order = []
+remaining_questions_random = []
 
 answered_questions = set()
 
@@ -60,9 +55,18 @@ def review():
 def review_marked():
     return render_template("review_marked.html", marked_questions=marked_questions)
 
+@app.route("/review_ai")
+def review_ai():
+    q_ai = []
+    for q in questions:
+        q["ai_explanation"] = ai_explanation_cache.get(q["題號"], "")
+        if q["ai_explanation"] != "":
+            q_ai.append(q)
+    return render_template("review_ai.html", q_ai=q_ai)
+
 @app.route("/get_question")
 def get_question():
-    global question_index, remaining_questions
+    global question_index, remaining_questions_order, remaining_questions_random
     mode = request.args.get("mode", "random")
     question_id = request.args.get("question_id")
 
@@ -74,6 +78,9 @@ def get_question():
         try:
             jump_index = next(i for i, q in enumerate(questions) if q.get("題號") == question_id)
             question_index = jump_index
+            
+            if mode == "order":
+                remaining_questions_order = questions[question_index:]
 
             q = questions[question_index]
             # 修正：透過題號判斷題目是否已被標記
@@ -84,18 +91,23 @@ def get_question():
         except StopIteration:
             return jsonify({"error": f"找不到題號為 {question_id} 的題目"})
 
-    # initialize question order
-    remaining_questions = list(questions)
-    if mode == "wrong" and not wrong_questions:
+    # 以下是處理正常出題模式的邏輯
+    if mode == "order" and not remaining_questions_order:
+        remaining_questions_order = list(questions)
+        question_index = 0
+    elif mode == "random" and not remaining_questions_random:
+        remaining_questions_random = list(questions)
+        random.shuffle(remaining_questions_random)
+    elif mode == "wrong" and not wrong_questions:
         return jsonify({"error": "目前沒有錯題"})
 
     q = None
     if mode == "random":
-        if remaining_questions:
-            q = remaining_questions.pop(random.randint(0, len(remaining_questions) - 1))
+        if remaining_questions_random:
+            q = remaining_questions_random.pop(0)
     elif mode == "order":
-        if remaining_questions:
-            q = questions[question_index]
+        if remaining_questions_order:
+            q = remaining_questions_order[question_index]
             question_index += 1
     elif mode == "wrong":
         if wrong_questions:
@@ -112,7 +124,6 @@ def get_question():
 
 @app.route("/submit_answer", methods=["POST"])
 def submit_answer():
-    global remaining_questions, wrong_questions, answered_questions
     data = request.json
     q = data["question"]
     answer = data["answer"].strip().upper()
@@ -125,7 +136,6 @@ def submit_answer():
             wrong_questions.append(q)
 
     answered_questions.add(q.get("題號"))
-    remaining_questions.remove(questions[question_list_index[q.get("題號")]])
     return jsonify({
         "correct": is_correct,
         "right_answer": correct,
@@ -134,7 +144,6 @@ def submit_answer():
 
 @app.route("/mark_question", methods=["POST"])
 def mark_question():
-    global marked_questions
     data = request.json
     q = data["question"]
     # 儲存題號，而不是整個題目物件
@@ -155,6 +164,7 @@ def reset_questions():
 @app.route("/get_ai_explanation", methods=["POST"])
 def get_ai_explanation():
     global total_tokens_used
+    is_detail = request.args.get("detail", "false").lower() == "true"
     data = request.json
     question = data.get("question")
 
@@ -174,9 +184,10 @@ def get_ai_explanation():
         })
 
     # 步驟 2: 如果快取中沒有，則執行 API 呼叫
-
-    prompt = f"請以繁體中文，針對以下問題提供詳細的解釋：\n\n題目：{question['題目']}\n選項：{' '.join(question['選項'])}\n答案：{question['答案']}"
-    
+    prompt = f"請以繁體中文，針對以下問題，生成 1 分鐘內可以閱讀完的詳解，包含關鍵概念和每個選項解釋，文字簡明，重點清楚：\n\n題目：{question['題目']}\n選項：{' '.join(question['選項'])}\n答案：{question['答案']}"
+    if is_detail:
+        prompt = f"請以繁體中文，針對以下問題提供詳細的解釋：\n\n題目：{question['題目']}\n選項：{' '.join(question['選項'])}\n答案：{question['答案']}"
+        
     try:
         # response = model.generate_content(prompt)
         response = client.models.generate_content(
@@ -196,6 +207,10 @@ def get_ai_explanation():
         
         # 更新累積 token 數
         total_tokens_used += current_tokens
+
+        html = review_ai()
+        with open("tmp_explanation.html", "w", encoding="utf-8") as f:
+            f.write(html)
 
         return jsonify({
             "explanation": explanation,
@@ -266,7 +281,7 @@ def stream_ai_explanation():
     return Response(generate_stream(), mimetype='text/html')
 
 def load_questions(json_paths):
-    global questions, remaining_questions, question_list_index
+    global questions, remaining_questions_order, remaining_questions_random
     all_question_files = []
     
     for path_str in json_paths:
@@ -308,8 +323,9 @@ def load_questions(json_paths):
             print(f"❌ 處理檔案 {file_path} 時發生錯誤：{e}")
             
     questions = all_questions
-    remaining_questions = list(questions)
-    question_list_index = {q.get("題號"): i for i, q in enumerate(questions)}
+    remaining_questions_order = list(questions)
+    remaining_questions_random = list(questions)
+    random.shuffle(remaining_questions_random)
 
 if __name__ == "__main__":
     import argparse

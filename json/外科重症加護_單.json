@@ -1,0 +1,1052 @@
+[
+    {
+        "題別": "單",
+        "題號": "1",
+        "題目": "有關Multiple organ system failure (MOSF)，下列敘述何者是錯 誤？",
+        "選項": [
+            "A. 剛開始的症狀包括ARDS, Tachypnea, tachycardia, progressive hypoxia",
+            "B. 胸部X光片有 \" fluffy whiteout \" 現象",
+            "C. 常見是Respiratory及Hepatic failure",
+            "D. MOSF中Renal failure是屬於典型嚴重Nephrosclerosis造成",
+            "E. 至目前其原因及pathogenesis仍然不清楚"
+        ],
+        "答案": "D",
+        "出處": "SCHWARTZ, 7th ed., p1074-\n1076"
+    },
+    {
+        "題別": "單",
+        "題號": "2",
+        "題目": "一位62歲的女性病人，其平日營養狀況尚佳。病人因腹膜炎接受壞 死腸段的切除後而住進加護病房。本病人接受治療四天後，小腸蠕 動仍然非常不佳，腹漲的情況未改善，且有肺部感染的跡象。她的 鼻胃管每天仍有1500毫升的黃綠色引流液。此時針對病人靜脈營 養給予的考量，下列何項得的輸液給予最理想？",
+        "選項": [
+            "A. 繼續給予普通靜脈輸液",
+            "B. 應立即給予中心靜脈全營養(TPN)",
+            "C. 給予添加Soybean based fat emulsion 的部份靜脈營養輸液",
+            "D. 針對此類病人不應常規給予添加Glutamine-dipeptide的部份靜 脈營養輸液",
+            "E. 應給予低蛋白靜脈輸液"
+        ],
+        "答案": "D",
+        "出處": "Guidelines for the Provision\nand Assessment of Nutrition\nSupport Therapy in the Adult\nCritically Ill Patient\nSociety of Critical Care\nMedicine (SCCM) and\nAmerican Society for Parenteral\nand Enteral Nutrition\n(A.S.P.E.N.)"
+    },
+    {
+        "題別": "單",
+        "題號": "3",
+        "題目": "對於有critical illness的病童何時需介入nutrition support?",
+        "選項": [
+            "A. 最好在24-48小時內即開始。",
+            "B. NPO 3天後開始。",
+            "C. NPO 5天後開始。",
+            "D. NPO 7天後開始。",
+            "E. NPO 10天後開始。"
+        ],
+        "答案": "A",
+        "出處": "Intensive care med 2020; 46(3):\n411-425"
+    },
+    {
+        "題別": "單",
+        "題號": "4",
+        "題目": "一位38歲婦人不幸發生車禍，經電惱斷層檢查，診斷為肝臟撕裂傷 而接受非手術治療。受傷後20天因持續解血便，右上腹痛及黃疸而 接受電惱斷層檢查及再次住院。下列何者處置較適當?",
+        "選項": [
+            "A. 立刻安排腹腔鏡檢查。",
+            "B. 安排ERCP放stent。",
+            "C. 安排RBC scan。",
+            "D. 安排肝動脈血管攝影及栓塞術。",
+            "E. 立刻緊急手術。"
+        ],
+        "答案": "D",
+        "出處": "RadioGraphics 2005; 25:87–\n104"
+    },
+    {
+        "題別": "單",
+        "題號": "5",
+        "題目": "26歲男性在KTV打架時腹部遭受木板撞擊而送醫。到院 BP 70/40 mmHg, HR 135/min, RR 25/min,GCS 14，經緊急輸液及輸血後 BP 75/42 mmHg， HR 138/min。FAST為陽性反應， 下列處置較 適當？",
+        "選項": [
+            "A. 安排腹腔鏡檢查。",
+            "B. 安排緊急電惱斷層檢查。",
+            "C. 立刻做 DPL ( diagnostic peritoneal lavage )。",
+            "D. 安排緊急剖腹探查術。",
+            "E. 繼續觀察。"
+        ],
+        "答案": "D",
+        "出處": "Curr Opin Crit Care 16:596–\n601"
+    },
+    {
+        "題別": "單",
+        "題號": "6",
+        "題目": "下列何項描述不是腸系膜缺血患者的特徵？",
+        "選項": [
+            "A. 患者常有慢性心血管疾病或血管鈣化病史。",
+            "B. 病人可能有裝置機械式心瓣膜。",
+            "C. 病人主觀之腹痛常與身體檢查之發現不一致。",
+            "D. 腹痛往往可以清楚定位。",
+            "E. 病人可能有心房震顫病史。"
+        ],
+        "答案": "D",
+        "出處": "Emergency Radiology: The\nrequisites, Ch. 9"
+    },
+    {
+        "題別": "單",
+        "題號": "7",
+        "題目": "下列何者為診斷十二指腸破裂最可靠的CT特徵？",
+        "選項": [
+            "A. 十二指腸壁變厚。",
+            "B. 十二指腸壁變薄 。",
+            "C. 十二指腸周邊有氣體。",
+            "D. 十二指腸旁有血塊。",
+            "E. 腹內游離氣。"
+        ],
+        "答案": "C",
+        "出處": "Radiographics. 2008\nOct;28(6):1571-90."
+    },
+    {
+        "題別": "單",
+        "題號": "8",
+        "題目": "肝臟手術最常見引起術後死亡事件之併發症為？",
+        "選項": [
+            "A. 肝衰竭。",
+            "B. 術後大出血。",
+            "C. 肺炎。",
+            "D. 腦血管阻塞。",
+            "E. 心臟衰竭。"
+        ],
+        "答案": "A",
+        "出處": "Mastery of Surgery, 2007"
+    },
+    {
+        "題別": "單",
+        "題號": "9",
+        "題目": "目前最主要用來評估肝臟功能用以做為手術容許程度依據的檢查項 目為？",
+        "選項": [
+            "A. AST/platelet ratio。",
+            "B. Albumin level。",
+            "C. ICG test。",
+            "D. MELD scoring system。",
+            "E. Serum gamma-GT。"
+        ],
+        "答案": "C",
+        "出處": "Hemming AW et al: Am J Surg\n1992"
+    },
+    {
+        "題別": "單",
+        "題號": "10",
+        "題目": "對於創傷性心包膜填塞的敘述，以下何者錯誤？",
+        "選項": [
+            "A. 會有Pulsus paradoxus。",
+            "B. Pericardiocentesis是有效之治療方式 。",
+            "C. Clamshell incision 是治療心包膜填塞之唯一手術方式。",
+            "D. 不一定會有Beck's triad的症狀表現。",
+            "E. 超音波檢查對診斷有幫助。"
+        ],
+        "答案": "C",
+        "出處": "Cardiac surgery in the adult,\n3rd edition"
+    },
+    {
+        "題別": "單",
+        "題號": "11",
+        "題目": "對於主動脈損傷的描述，以下何者錯誤？",
+        "選項": [
+            "A. 最常發生於主動脈狹部(aortic isthmus)。",
+            "B. 最佳診斷工具為血管攝影檢查。",
+            "C. 建議儘早治療以避免血管破裂。",
+            "D. 相較於傳統開胸血管置換手術，腔內治療(endovascular therapy)有較好之預後。",
+            "E. 電腦斷層檢查對診斷有幫助。"
+        ],
+        "答案": "B",
+        "出處": "Cardiac surgery in the adult,\n3rd edition"
+    },
+    {
+        "題別": "單",
+        "題號": "12",
+        "題目": "處理B型肝炎相關急性肝衰竭原則，下列何者為非？",
+        "選項": [
+            "A. 提供良好內科照顧治療。",
+            "B. 評估肝移植的可能性。",
+            "C. 抗B型肝炎病毒藥物治療是無效的。",
+            "D. 在台灣，相關案例並非罕見。",
+            "E. 面對嚴重肝衰竭患者，應注意乳酸血症的問題。"
+        ],
+        "答案": "C",
+        "出處": "Sherlock's Diseases of the Liver\nand Biliary System, 12th\nedition"
+    },
+    {
+        "題別": "單",
+        "題號": "13",
+        "題目": "何指標最能呈現外傷患者有休克現象？",
+        "選項": [
+            "A. 血壓為95/65。",
+            "B. 心跳為105下。",
+            "C. 體溫35度。",
+            "D. 放置導尿管後的二十分鐘都無尿流。",
+            "E. 意識不清。"
+        ],
+        "答案": "D",
+        "出處": "Advanced Trauma Life Support\n(8th Edition)"
+    },
+    {
+        "題別": "單",
+        "題號": "14",
+        "題目": "一位12歲的小女孩，在自家後院騎自行車，不慎跌倒後送到急診。 病患的生命跡象正常，但是左上方腹部有觸痛。超音波檢查發現腹 內有一些血在Morrison's pouch。下列步驟以何者較為正確？",
+        "選項": [
+            "A. 收入加護病房，病患可以接受非手術療法處置腹部外傷。",
+            "B. 囑咐家屬回家後每四小時量血壓，有變化趕緊回到醫院。",
+            "C. 安排緊急腹部電腦斷層檢查。",
+            "D. 安排緊急剖腹檢查手術。",
+            "E. 安排緊急腹腔鏡檢查。"
+        ],
+        "答案": "C",
+        "出處": "Advanced Trauma Life Support\n(8th Edition)"
+    },
+    {
+        "題別": "單",
+        "題號": "15",
+        "題目": "腹部增壓症候群(Abdominal compartment syndrome)的臨床表現 如下，何者為例外？",
+        "選項": [
+            "A. Peak airway pressures增高。",
+            "B. 尿流減少（oliguria）。",
+            "C. CVP 與 pulmonary artery wedge pressure下降。",
+            "D. 膀胱壓力增高。",
+            "E. sustained intraabdominal pressure >20 mmHg (with or without APP <60 mmHg) that is associated with new organ dysfunction"
+        ],
+        "答案": "C",
+        "出處": "Trauma (6 edition) by Feliciano\net al"
+    },
+    {
+        "題別": "單",
+        "題號": "16",
+        "題目": "不正確使用安全帶，腹部繫帶所造成的腹內臟器損傷，下列何者錯 誤？",
+        "選項": [
+            "A. 腸系膜撕裂傷",
+            "B. 主動脈血栓",
+            "C. 腰椎骨折",
+            "D. 肋骨骨折",
+            "E. 十二指腸破裂"
+        ],
+        "答案": "D",
+        "出處": "2018 10th ed. ATLS, p.86"
+    },
+    {
+        "題別": "單",
+        "題號": "17",
+        "題目": "外傷造成腎動脈斷裂，依照腎臟外傷分級是第幾級？",
+        "選項": [
+            "A. 第一級",
+            "B. 第二級",
+            "C. 第三級",
+            "D. 第四級",
+            "E. 第五級"
+        ],
+        "答案": "E",
+        "出處": "EAU Guidelines on Urological\nTrauma, 2003"
+    },
+    {
+        "題別": "單",
+        "題號": "18",
+        "題目": "免疫抑制劑Tacrolimus不適合與下列哪一個藥物併用？",
+        "選項": [
+            "A. Sirolimus。",
+            "B. Mycophenolate mofetil。",
+            "C. Cyclosporine。",
+            "D. Everolimus。",
+            "E. Amoxicillin。"
+        ],
+        "答案": "C",
+        "出處": "Gabriel M. Danovitch:\nHandbook of Kidney\nTransplantation (Lippincott\nWilliams & Wilkins Handbook\nSeries)"
+    },
+    {
+        "題別": "單",
+        "題號": "19",
+        "題目": "下列有關urosepsis 何者為誤？",
+        "選項": [
+            "A. Prostatitis with abscess formation 亦可造成urosepsis。",
+            "B. 約佔所有sepsis 20~25%。",
+            "C. 以obstructive uropathy 為主因, 特別是tumor related cause。",
+            "D. 老人為易感染族群。",
+            "E. 糖尿病患為易感染族群。"
+        ],
+        "答案": "C",
+        "出處": "Florian ME et al. Urosepsis-\nfrom the view of the urologist.\nInternational journal of\nantimicrobial agents.\n385(2011), 51-57."
+    },
+    {
+        "題別": "單",
+        "題號": "20",
+        "題目": "關於發生急性腎臟衰竭病患接受血液透析治療(renal replacement therapy)時，相較於未接受血液透析治療時的每天蛋白質補充，原 則上是需要增加或是減少？",
+        "選項": [
+            "A. 增加",
+            "B. 減少",
+            "C. 不變",
+            "D. 都可以",
+            "E. 抽血看 BUN 決定。"
+        ],
+        "答案": "A",
+        "出處": "Clinical Nutrition 28 (2009)\n436–444 Clinical\nNutrition 28 (2009) 401–414"
+    },
+    {
+        "題別": "單",
+        "題號": "21",
+        "題目": "Sepsis 病患之血中值，下列何項為非？",
+        "選項": [
+            "A. 凝血功能異常。",
+            "B. Lactate 上升。",
+            "C. Procalcitonin 上升。",
+            "D. Anti-thrombin 上升。",
+            "E. CRP 上升。"
+        ],
+        "答案": "D",
+        "出處": "UptoDate: Sepsis syndromes in\nadults: Epidemiology,\ndefinitions, clinical\npresentation, diagnosis, and\nprognosis"
+    },
+    {
+        "題別": "單",
+        "題號": "22",
+        "題目": "關於 ω-3 fatty acid Fat emulsion之敘述，何者為非？",
+        "選項": [
+            "A. 具備 anti-inflammatory effect。",
+            "B. 沒有 liver protect effectt。",
+            "C. High stress 病患適合使用。",
+            "D. Mixed type 較 pure form 為佳。",
+            "E. 也可當成能量來源。"
+        ],
+        "答案": "B",
+        "出處": "Sabinston 17th edition P152"
+    },
+    {
+        "題別": "單",
+        "題號": "23",
+        "題目": "關於 Glutamine 功能之敘述，何者為非？",
+        "選項": [
+            "A. Fuel for enterocytes。",
+            "B. Fuel for lymphocytes。",
+            "C. Increased free radical availability。",
+            "D. Preserved cellular energetics。",
+            "E. Increased trypsinogen secretion。"
+        ],
+        "答案": "C",
+        "出處": "Sabinston 17th edition P176"
+    },
+    {
+        "題別": "單",
+        "題號": "24",
+        "題目": "急性冠心症可分為：unstable angina, NSTEMI and STEMI 請問 STEMI依病態生理學來看，其病因為何？",
+        "選項": [
+            "A. Transient complete coronary occlusion with spontaneous revascularization。",
+            "B. Complete coronary occlusion without collaterals。",
+            "C. Complete coronary occlusion with collaterals。",
+            "D. Incomplete coronary occlusion。",
+            "E. Psychologically induced pain。"
+        ],
+        "答案": "B",
+        "出處": "The ICU Book, 3rd edition,\np318"
+    },
+    {
+        "題別": "單",
+        "題號": "25",
+        "題目": "ICU的病人，torsade de pointes是一種可能容易見到的心室頻脈 (polymorphic ventricular tachycardia)，請問以下關於torsade d epointes的描述，何者為非？",
+        "選項": [
+            "A. 該心律不整可能由藥物誘發。",
+            "B. 該心律不整可能因電解質異常產生，例如：低血鎂、低血鉀。",
+            "C. 該心律須考慮以Amiodarone矯正。",
+            "D. 病患若發生該心律，須考慮中止任何會造成QT prolong的藥物 ，例如haloperidol 。",
+            "E. Magnesium sulfate (MgSO4) 靜脈推注。"
+        ],
+        "答案": "C",
+        "出處": "The ICU Book, 3rd edition,\np360-361"
+    },
+    {
+        "題別": "單",
+        "題號": "26",
+        "題目": "下列何者不是人工氣道之適應症？",
+        "選項": [
+            "A. 小氣道阻塞。",
+            "B. 保護呼吸道 。",
+            "C. 幫忙氣道分泌物清除。",
+            "D. 使用呼吸器。",
+            "E. 長時間需呼吸輔助。"
+        ],
+        "答案": "A",
+        "出處": "Hess DR, Kacmarek RM.\nEssential of mechanical\nventilation. 2003. 2nd ed. P295-\n306"
+    },
+    {
+        "題別": "單",
+        "題號": "27",
+        "題目": "有位60歲男性病患因為跌倒頭部外傷併呼吸衰竭，使用呼吸器 ACMV (Volume Control) Mode. PEEP調5 cmH2O ,FiO2: 40%, Tidal volume為600c.c，病情忽然惡化，病患呼吸困難加重，血氧 飽合度下降，血壓下降，身體檢查發現: 右側呼吸音減弱，右側胸 壁未隨呼吸器有起伏現象，而且有皮下氣腫。此時最可能是出現何 種併發症？",
+        "選項": [
+            "A. 人工氣道阻塞。",
+            "B. 呼吸器管路漏氣。",
+            "C. 張力性氣胸。",
+            "D. ARDS惡化。",
+            "E. 顱內大量出血。"
+        ],
+        "答案": "C",
+        "出處": "Hess DR, Kacmarek RM.\nEssential of mechanical\nventilation. 2003. 2nd ed. P316-\n322"
+    },
+    {
+        "題別": "單",
+        "題號": "28",
+        "題目": "呼吸器使用病患經過一段時間的治療，病情已有明顯改善，生命徵 象穩定，無呼吸異常聲。胸腔內科醫師請呼吸治療師開始給予病患 呼吸訓練，準備脫離呼吸器。請問何種呼吸器通氣模式，是病患自 己可以帶動呼吸器，以氣流 (flow)來決定吸氣轉為吐氣，呼吸時間 幾乎是病患自行決定，呼吸器只是給予一些吸氣輔助？",
+        "選項": [
+            "A. ACMV (Assist Control Mechanical Ventilation)。",
+            "B. SIMV (Synchronized Intermittent Mandatory Ventilation) 。",
+            "C. Non-invasive Positive Pressure Ventilation。",
+            "D. PS (Pressure Support)。",
+            "E. Volume control。"
+        ],
+        "答案": "D",
+        "出處": "Hess DR, Kacmarek RM.\nEssential of mechanical\nventilation. 2003. 2nd ed. P34-\n56"
+    },
+    {
+        "題別": "單",
+        "題號": "29",
+        "題目": "高乳酸血症可區分為A型與B型高乳酸血症，A型是指乳酸的上升和 組織灌流不足或氧氣輸送不夠有關，也就是說A型高乳酸血症和血 液動力學的不穩定有關，但B型高乳酸血症則和血液動力學的不穩 定較無相關性，請問以下何者是B型高乳酸血症的可能因素？",
+        "選項": [
+            "A. 心因性休克 。",
+            "B. 低血容積性休克。",
+            "C. 敗血性休克。",
+            "D. Thiamine缺乏。",
+            "E. 腦中風。"
+        ],
+        "答案": "D",
+        "出處": "ICU Book 3rd Edition Chapter\n11 page 202"
+    },
+    {
+        "題別": "單",
+        "題號": "30",
+        "題目": "使用正壓呼吸器時，吸氣期的氣流型態有時可以選擇，請問當你看 到呼吸器的圖形中，氣流(縱軸)時間(橫軸)曲線為方型波，此時呼 吸器的設定模式較可能為以下何種模式？",
+        "選項": [
+            "A. 壓力控制模式。",
+            "B. 壓力支持模式。",
+            "C. 體積控制模式。",
+            "D. 高頻換氣模式。",
+            "E. 低頻換氣模式。"
+        ],
+        "答案": "C",
+        "出處": "ICU Book 3rd Edition Chapter\n24 page 458"
+    },
+    {
+        "題別": "單",
+        "題號": "31",
+        "題目": "針對呼吸器設定，下列何者敘述錯誤？",
+        "選項": [
+            "A. ARDS病患儘管其PaCO2偏高，仍應以low tidal volume為主。",
+            "B. 慢性阻塞性肺病病患易有air trapping，呼吸速率不宜太快。",
+            "C. 急性氣喘發作因氣道阻力大，PIP稍高是可以接受的。",
+            "D. 氣胸病患仍可使用PEEP。",
+            "E. PEEP會減少靜脈回流。"
+        ],
+        "答案": "D",
+        "出處": "EGAN'S ninth edition chapter\n41"
+    },
+    {
+        "題別": "單",
+        "題號": "32",
+        "題目": "37歲男性因騎機車摔倒導致顱內出血，腦部電腦斷層發現腦部嚴重 水腫，此病患因呼吸衰竭而使用呼吸器，下列敘述何者為非？",
+        "選項": [
+            "A. 可採用hyperventilation使其PaCO2下降，減少顱內壓增加。",
+            "B. PaCO2之所以可以減少顱內壓是因為血管收縮的作用。",
+            "C. PEEP會減少靜脈回流進而影響顱內壓增加。",
+            "D. 因顱內壓增高所以建議平躺，不要將床頭抬高。",
+            "E. 可將床頭抬高。"
+        ],
+        "答案": "D",
+        "出處": "EGAN'S ninth edition chapter\n41"
+    },
+    {
+        "題別": "單",
+        "題號": "33",
+        "題目": "24歲女性因感情問題，服用大量安眠藥，經家人發現緊急送至急診 室，其動脈血如下：pH = 7.33, PaCO2 = 56 mmHg, HCO3- = 24, PaO2 =61 mmHg，以下敘述何者有誤？",
+        "選項": [
+            "A. 是急性 hypercapnic respiratory failure。",
+            "B. 單純是安眠藥引起的呼吸衰竭，給予anexate即可。",
+            "C. 要考慮有吸入性肺炎。",
+            "D. 告知家屬可能有插管的危險性。",
+            "E. 給予氧氣。"
+        ],
+        "答案": "B",
+        "出處": "EGAN'S ninth edition chapter\n41"
+    },
+    {
+        "題別": "單",
+        "題號": "34",
+        "題目": "ARDS 之描述何者為非？",
+        "選項": [
+            "A. Increased capillary permeability。",
+            "B. Surfactant intact。",
+            "C. Interstial and alveolar exudates。",
+            "D. Neutrophil entrapment within the lung's microcirculation。",
+            "E. Diffuse alveolar damage due to inflammation。"
+        ],
+        "答案": "B",
+        "出處": "N Engl J Med 2017; 377:562-\n572\nDOI: 10.1056/NEJMra1608077"
+    },
+    {
+        "題別": "單",
+        "題號": "35",
+        "題目": "ARDS 常見之etiology中，以下何者屬 less common cause？",
+        "選項": [
+            "A. Pneumonia。",
+            "B. Sepsis。",
+            "C. Severe trauma with shock。",
+            "D. Transfusion of blood product。",
+            "E. Received major operation。"
+        ],
+        "答案": "D",
+        "出處": "NEJM 2000,342,P1334-1349"
+    },
+    {
+        "題別": "單",
+        "題號": "36",
+        "題目": "插管連續使用呼吸器多久以後發生的肺炎稱之為相關VAP？",
+        "選項": [
+            "A. 12 小時。",
+            "B. 24 小時。",
+            "C. 48 小時。",
+            "D. 96 小時。",
+            "E. > 96 小時。"
+        ],
+        "答案": "C",
+        "出處": "Am J Respir Crit Care Med Vol\n171,P388-416,2005"
+    },
+    {
+        "題別": "單",
+        "題號": "37",
+        "題目": "下列何者不是呼吸器相關肺炎(ventilator-associated pneumonia)之 高危險群？",
+        "選項": [
+            "A. 老年人。",
+            "B. 沒有妥善評估與監測之大量胃灌食。",
+            "C. 避免上腸胃潰瘍而投給抗潰瘍藥物(H2-blockers)。",
+            "D. 讓病人半坐臥(semierect positioning)。",
+            "E. 糖尿病、癌症等病患。"
+        ],
+        "答案": "D",
+        "出處": "Am J Respir Crit Care Med Vol\n171,P388-416,2005"
+    },
+    {
+        "題別": "單",
+        "題號": "38",
+        "題目": "避免呼吸器相關性肺炎(ventilator-associated pneumonia)的方法， 下列何者正確？",
+        "選項": [
+            "A. 進入ICU後立即預防性使用抗生素。",
+            "B. 病患宜將頭部搖高30度以上。",
+            "C. 可以不必理會吸氣端的管路水滴(condensation)問題。",
+            "D. 呼吸管路每日更換。",
+            "E. 每日照胸部 X 光片檢查。"
+        ],
+        "答案": "B",
+        "出處": "N Engl J Med 2010; 362:1804-\n1813"
+    },
+    {
+        "題別": "單",
+        "題號": "39",
+        "題目": "在intensive care units中的病人使用呼吸器（ventilator）目前可預 防ventilator-associated pneumonia的intervention，下列組合何者 最正確？ (1)病人預置semirecumbent positioning。 (2)使用low tidal volume mechanical ventilation。 (3)抽取subglottic secretions。 (4)Regular antiseptic oral care",
+        "選項": [
+            "A. (1)+(2)+(3)+(4)",
+            "B. (1)+(2)+(3)",
+            "C. (1)+(2)+(4)",
+            "D. (1)+(3)+(4)",
+            "E. (1)+(2) only"
+        ],
+        "答案": "D",
+        "出處": "N Engl J Med 2010; 362:1804-\n1813"
+    },
+    {
+        "題別": "單",
+        "題號": "40",
+        "題目": "血中氧的運送量不足或組織氧的攝取量過多都會造成低血氧的現象 ，下列何種疾病是因為組織氧攝取量過多造成的低血氧？",
+        "選項": [
+            "A. 敗血性休克。",
+            "B. 心臟衰竭。",
+            "C. 貧血。",
+            "D. 肺栓塞。",
+            "E. 腦中風。"
+        ],
+        "答案": "A",
+        "出處": "ICU 3rd edition P377"
+    },
+    {
+        "題別": "單",
+        "題號": "41",
+        "題目": "使用高濃度的氧氣予患者治療，患者血中氧濃度仍不見上升，下列 何種疾病會有如此表現？",
+        "選項": [
+            "A. 重症肌無力。",
+            "B. 安眠藥過量。",
+            "C. 腦幹出血。",
+            "D. 急性呼吸窘迫症候群。",
+            "E. 心衰竭。"
+        ],
+        "答案": "D",
+        "出處": "ICU 3rd edition P368"
+    },
+    {
+        "題別": "單",
+        "題號": "42",
+        "題目": "下列何者不是手術後呼吸衰竭常見的原因？",
+        "選項": [
+            "A. 胸部手術後疼痛患者不敢用力咳嗽，造成肺塌陷。",
+            "B. 輸液過多造成肺水腫。",
+            "C. 中樞性睡眠呼吸中止症候群。",
+            "D. 吸入性肺炎。",
+            "E. 年紀大及COPD 患者。"
+        ],
+        "答案": "C",
+        "出處": "Fisherman Pulmonary diseases\nand disorders, 3rd edition,\nChapter 170, P2594"
+    },
+    {
+        "題別": "單",
+        "題號": "43",
+        "題目": "心腎症候群的相關病態生理變化中，下列敘述何者為非？",
+        "選項": [
+            "A. 心臟病導致血行動力學變化引發腎損傷。",
+            "B. 腹內壓及腎靜脈壓下降引發腎血流下降。",
+            "C. 腎素血管升壓素醛固酮系統及交感神經系統活性改變。",
+            "D. 氧化壓力、發炎反應及細胞內質網壓力上升。",
+            "E. 由心因性休克造成急性腎衰竭，屬於心腎症候群第一型。"
+        ],
+        "答案": "B",
+        "出處": "Sarraf M et al. CJASN\n2009;4:2013-2026; Circulation.\n2019;139:e840–e878"
+    },
+    {
+        "題別": "單",
+        "題號": "44",
+        "題目": "患有心血管疾病的腎臟病患者腎功能快速惡化，與所謂心腎症候群 (cardiorenal syndrome)有關。下列那一種心血管疾病具有最強大 的影響？",
+        "選項": [
+            "A. 左心室肥厚。",
+            "B. 急性充血性心力衰竭。",
+            "C. 冠狀動脈疾病。",
+            "D. 高血壓。",
+            "E. 糖尿病。"
+        ],
+        "答案": "B",
+        "出處": "Sarraf M et al. CJASN\n2009;4:2013-2026; Circulation.\n2019;139:e840–e878"
+    },
+    {
+        "題別": "單",
+        "題號": "45",
+        "題目": "因Blunt chest trauma造成之tracheobronchial injury最常發生在：",
+        "選項": [
+            "A. Upper trachea。",
+            "B. Right intermediate bronchus。",
+            "C. Left bronchus end。",
+            "D. Carina 1 inch 內。",
+            "E. Distal bronchus。"
+        ],
+        "答案": "D",
+        "出處": "ATLS 10th 2018 P. 64"
+    },
+    {
+        "題別": "單",
+        "題號": "46",
+        "題目": "以下有關Diaphragmatic injury之敘述，何者為是？",
+        "選項": [
+            "A. 較常發生於右側。",
+            "B. 通常chest X-ray 即可診斷。",
+            "C. 較常合併thoracic organs injury。",
+            "D. Acute injury手術以laparotomy為主。",
+            "E. Acute injury手術以thoracotomy為主。"
+        ],
+        "答案": "D",
+        "出處": "Pearson's Thoracic Surgery 3rd.\nedition p.1776"
+    },
+    {
+        "題別": "單",
+        "題號": "47",
+        "題目": "影響食道破裂治療預後的最重要因素為：",
+        "選項": [
+            "A. 破裂大小。",
+            "B. 破裂位置。",
+            "C. 診斷時間。",
+            "D. 手術方式。",
+            "E. 年紀。"
+        ],
+        "答案": "C",
+        "出處": "Pearson's Thoracic Surgery,\nesophageal 3rd. edition p.793"
+    },
+    {
+        "題別": "單",
+        "題號": "48",
+        "題目": "下列何種腎臟替代治療與人的腎小球濾過最相似，用於重症透析病 人存活率及腎功能恢復率較佳：",
+        "選項": [
+            "A. Intermittent Hemodialysis (IHD)。",
+            "B. Peritoneal dialysis (DP)。",
+            "C. Continuous veno-venous hemofitration. (CVVH)。",
+            "D. Sustained Low Efficiency Daily Diafiltration (SLEDD-f)。",
+            "E. Plasma Transfusion。"
+        ],
+        "答案": "C",
+        "出處": "Management of Acute Kidney\nProblems. Springer 2010. P604"
+    },
+    {
+        "題別": "單",
+        "題號": "49",
+        "題目": "ICU sedation過程合併使用相關藥物的描述，下列何者為非？",
+        "選項": [
+            "A. Pain使用Analgesics。",
+            "B. Anxiety使用Benzodiazepines。",
+            "C. Alcohol withdrawal的症狀使用Haldol。",
+            "D. Muscle relaxant可降低氧氣的消耗。",
+            "E. 適當使用 morphine。"
+        ],
+        "答案": "C",
+        "出處": "Critical Care Medicine: The\nEssentials, 4th Edition, 2010\nLippincott Williams & Wilkins,\np305-315"
+    },
+    {
+        "題別": "單",
+        "題號": "50",
+        "題目": "下列有關morphine 的敘述，何者為非？",
+        "選項": [
+            "A. 靜脈注射速率少於 10 mg/hour的話可以降低發生hypotension 的風險。",
+            "B. 可增加靜脈容量而降低靜脈血回流至心臟。",
+            "C. 靜脈注射止痛作用時間慢，因其half-life 長達1-3 小時。",
+            "D. 肝臟或腎臟功能不好的患者在使用上要特別注意。",
+            "E. 會刺激μ1,μ2 及κ接受器。"
+        ],
+        "答案": "C",
+        "出處": "Critical Care Medicine: The\nEssentials, 4th Edition, 2010\nLippincott Williams & Wilkins,\np307"
+    },
+    {
+        "題別": "單",
+        "題號": "51",
+        "題目": "陳太太，65 歲，本身有氣喘病史，因腹部感染合併多重器官衰竭 ，且發生腎衰竭，病人呼吸急促合併嚴重低血氧，在呼吸治療方面 ，必需給予肌神經肌肉阻斷(neuromuscular blockade)以增加病人 對呼吸器的順應性，下列何種神經肌肉阻斷劑最為合適？",
+        "選項": [
+            "A. Pancuronium。",
+            "B. Vecuronium。",
+            "C. Cisatracurium。",
+            "D. Succinylcholine。",
+            "E. Morphine。"
+        ],
+        "答案": "C",
+        "出處": "Critical Care Medicine: The\nEssentials, 4th Edition, 2010\nLippincott Williams & Wilkins,\np315"
+    },
+    {
+        "題別": "單",
+        "題號": "52",
+        "題目": "下列那一項描述為非?",
+        "選項": [
+            "A. 營養支持就是提供熱量、蛋白質、電解質、維生素、礦物質、 微量元素及水份",
+            "B. 營養的供應可以分為腸道營養及非腸道營養",
+            "C. 重症患者在急性期時，其catabolism大於anabolism，此時脂肪 為主要能量來源",
+            "D. 病患在恢復期時，anabolism大於catabolism，此時營養供應主 要在校正蛋白質低下及肌肉的修復",
+            "E. 重症患者能量來源通常腸道營養比靜脈營養好"
+        ],
+        "答案": "C",
+        "出處": "Up to date: nutrition support in\ncritically ill patient: 2012,Feb"
+    },
+    {
+        "題別": "單",
+        "題號": "53",
+        "題目": "Hypertensive emergency合併心肌缺氧及肺水腫時，哪種藥物是最 被建議的？",
+        "選項": [
+            "A. Nitroglycerin。",
+            "B. Labetalol。",
+            "C. Nicardipine。",
+            "D. Hydralazine。",
+            "E. Inderol。"
+        ],
+        "答案": "A",
+        "出處": "Hospital Physician March 2007"
+    },
+    {
+        "題別": "單",
+        "題號": "54",
+        "題目": "一名大腸癌病人接受手術後住到SICU，接上尿導管，尿液培養為 Candida albicans 臨床上無發燒或其他感染症狀，下列何者正確？",
+        "選項": [
+            "A. 嘗試移除尿導管不需要治療。",
+            "B. 使用抗黴菌藥物。",
+            "C. 使用抗生素。",
+            "D. 使用抗黴菌藥物及 抗生素。",
+            "E. 移除尿導管並使用抗生素。"
+        ],
+        "答案": "A",
+        "出處": "Mandell et. Al.Principals and\nPractice of Infectious Diseases,\n5th edition . Page 2656"
+    },
+    {
+        "題別": "單",
+        "題號": "55",
+        "題目": "臨床上對於顱內壓升高的治療方法的敘述，下列何者最適當？",
+        "選項": [
+            "A. 採平躺，頭部不睡枕頭的姿勢較佳。",
+            "B. 使用呼吸器長期保持過度換氣(hyperventilation) 的狀態 。",
+            "C. 使用滲透性利尿劑(osmotic diuretics)。",
+            "D. 為能正確評估神經學症狀，不應使用鎮靜劑。",
+            "E. 使用強效降血壓藥物。"
+        ],
+        "答案": "C",
+        "出處": "ICU 3rd edition P900-905"
+    },
+    {
+        "題別": "單",
+        "題號": "56",
+        "題目": "下列何者為目前神經重症對病患監測值的理想控制目標﹖",
+        "選項": [
+            "A. 顱內壓(ICP)小於20 mmHg, 腦灌流壓(CPP)大於60mmHg",
+            "B. 顱內壓(ICP)小於20 mmHg, 腦灌流壓(CPP)大於70mmHg",
+            "C. 顱內壓(ICP)小於25 mmHg, 腦灌流壓(CPP)大於60mmHg",
+            "D. 顱內壓(ICP)小於25 mmHg, 腦灌流壓(CPP)大於70mmHg",
+            "E. 顱內壓(ICP)小於30 mmHg, 腦灌流壓(CPP)大於80mmHg"
+        ],
+        "答案": "A",
+        "出處": "Surgical Neurology 65(2006)\n539-546"
+    },
+    {
+        "題別": "單",
+        "題號": "57",
+        "題目": "在腦死判定中，無法自行呼吸(Apena)的測試中，檢視病患是否能 自行呼吸時，血液中二氧化碳分壓須達多少毫米汞柱以上？",
+        "選項": [
+            "A. 50 mmHg。",
+            "B. 60 mmHg。",
+            "C. 70 mmHg。",
+            "D. 80 mmHg。",
+            "E. 90mmHg。"
+        ],
+        "答案": "B",
+        "出處": "腦死判定準則第六條"
+    },
+    {
+        "題別": "單",
+        "題號": "58",
+        "題目": "蜘蛛膜下腔出血後所引起血管臠縮(vasospasm)下述何者為非？",
+        "選項": [
+            "A. 血管攝影顯示約60%有血管收縮現象。",
+            "B. 臨床上約有20-30%的發生率。",
+            "C. 常發生於出血後三天內。",
+            "D. 可用Hypertensive治療。",
+            "E. 可用Hypervolemic及Hemodilution來治療。"
+        ],
+        "答案": "C",
+        "出處": "Neurosurgery, Robert H.\nWilkins, 2nd edition, Update II,\np.84-90"
+    },
+    {
+        "題別": "單",
+        "題號": "59",
+        "題目": "血胸時何時不須緊急手術？",
+        "選項": [
+            "A. 心臟破裂。",
+            "B. 胸管插入時，出血>1500ml。",
+            "C. 每小時出>200ml。",
+            "D. 肺挫傷。",
+            "E. 嚴重低血壓。"
+        ],
+        "答案": "D",
+        "出處": "ACLS Handbook"
+    },
+    {
+        "題別": "單",
+        "題號": "60",
+        "題目": "Flail chest何者為是？",
+        "選項": [
+            "A. 須立刻手術。",
+            "B. 吸氣時受損之胸壁凸出。",
+            "C. 吐氣時受損之胸壁凹陷。",
+            "D. 可以正壓呼吸改善呼吸狀況。",
+            "E. 立即插氣管內插管。"
+        ],
+        "答案": "D",
+        "出處": "Workbook for Mosby's\nParamedic Textbook, 4th\nEdition Chapter 42 Thoracic\nTrauma"
+    },
+    {
+        "題別": "單",
+        "題號": "61",
+        "題目": "外傷性橫膈破裂 (Traumatic diaphragm rupture) 的敘述，何者最 適當？",
+        "選項": [
+            "A. 右側較容易發生。",
+            "B. 左側較容易由 X 光發現。",
+            "C. 右側橫膈破裂使用 NG 置入是很好的診斷工具。",
+            "D. 導致的橫膈疝氣其機轉與位置和裂孔疝氣 (hiatal hernia) 相同。",
+            "E. 診斷腹腔鏡為第一線診斷工具。"
+        ],
+        "答案": "B",
+        "出處": "ATLS 10th 2018, P 76"
+    },
+    {
+        "題別": "單",
+        "題號": "62",
+        "題目": "出血流速至少____？才能被血管攝影顯示出來。",
+        "選項": [
+            "A. 10 mL/min。",
+            "B. 0.5-1.0 mL/min。",
+            "C. 0.1 mL/min。",
+            "D. 0.01 mL/min。",
+            "E. 0.001 mL/min。"
+        ],
+        "答案": "B",
+        "出處": "Angiographic evaluation and\nmanagement of acute\ngastrointestinal hemorrhage.\nWorld J Gastroenterol. 2012\nMar 21;18(11):1191-201."
+    },
+    {
+        "題別": "單",
+        "題號": "63",
+        "題目": "血管攝影栓塞的目的為？",
+        "選項": [
+            "A. 完全阻斷出血血管以及周邊側支循環血管。",
+            "B. 阻斷出血血管但保留周邊側支循環血管。",
+            "C. 阻斷主幹血管。",
+            "D. 阻斷範圍越大越好。",
+            "E. 完全阻斷周邊側支循環血管。"
+        ],
+        "答案": "B",
+        "出處": "Angiographic evaluation and\nmanagement of acute\ngastrointestinal hemorrhage.\nWorld J Gastroenterol. 2012\nMar 21;18(11):1191-201."
+    },
+    {
+        "題別": "單",
+        "題號": "64",
+        "題目": "下列有關肝臟移植術後在ICU中發生seizure 的處置，何者錯誤？",
+        "選項": [
+            "A. 優先使用phyenotin或barbiturates，以阻斷seiure attack。",
+            "B. calcineurin inhibitors 是引起seizure的藥物之一。",
+            "C. Tacrolimus較cyclosporine易在老年病人引起seizure。",
+            "D. EEG 常是必要的檢查。",
+            "E. Brain CT 常是必要的檢查。"
+        ],
+        "答案": "A",
+        "出處": "Transplantationn of the\nLiver,Busuttil RW, 2nd\ned,.2005,Ch56,p845-847"
+    },
+    {
+        "題別": "單",
+        "題號": "65",
+        "題目": "根據我國安寧緩和醫療條例之規定，要診斷病患是否為末期病人， 應有幾位專科醫師認定？",
+        "選項": [
+            "A. 一位。",
+            "B. 二位。",
+            "C. 三位。",
+            "D. 四位。",
+            "E. 五位。"
+        ],
+        "答案": "B",
+        "出處": "安寧緩和醫療條例第七條第\n一項第一款"
+    },
+    {
+        "題別": "單",
+        "題號": "66",
+        "題目": "有關Withholding or Withdrawing Life Support，請選出正確者。",
+        "選項": [
+            "A. Withholding or Withdrawing Life Support在法律觀點來說，等 同殺人。",
+            "B. 病患或其代理人，有權拒絕任何治療，但維生性支持治療例 外。",
+            "C. 在重症末期因止痛而使用大量止痛藥如嗎啡類，如加速病患死 亡，有安樂死嫌疑。",
+            "D. 究竟是安樂死或順從疾病進城允許病患死亡，取決於醫師盡興 治療或給予要務實的「意圖」。",
+            "E. 醫師有權拒絕任何治療，但維生性支持治療例外。"
+        ],
+        "答案": "D",
+        "出處": "Crit Care Med 2008 Vol. 36,\nNo. 3; P.955"
+    },
+    {
+        "題別": "單",
+        "題號": "67",
+        "題目": "85歲男性病人因中風已於安養院臥床需他人照護三年，BMI僅有 17。今因闌尾炎合併闌尾破裂導致腹膜炎與休克，經剖腹探查切除 闌尾後住入加護病房，請問下列何者為誤？",
+        "選項": [
+            "A. 應以適當工具評估病人營養風險 。",
+            "B. 如依NRS-2002評分，此病人超過5分。",
+            "C. 此病人屬於高營養風險，應立即給予靜脈營養補充。",
+            "D. 如術中無腸道傷害，應於血液動力學漸趨穩定時開始給予腸道 營養。",
+            "E. 如預期此病人難以於一周內經腸道獲得足夠營養，應於48~72小 時後開始給予靜脈營養補充。"
+        ],
+        "答案": "C",
+        "出處": "Guidelines for the Provision\nand Assessment of Nutrition\nSupport Therapy in the Adult\nCritically Ill Patient\nSociety of Critical Care\nMedicine (SCCM) and\nAmerican Society for Parenteral\nand Enteral Nutrition\n(A.S.P.E.N.)"
+    },
+    {
+        "題別": "單",
+        "題號": "68",
+        "題目": "關於敗血症病人經手術後的輸液復甦，下列何者正確？",
+        "選項": [
+            "A. 應以膠體溶液，尤其是白蛋白，做為第一線的輸液。",
+            "B. 輸注晶體溶液較易造成水腫，故以血漿輸注補充體液是合理 的。",
+            "C. 假如一時間沒有血漿或白蛋白，可以使用高分子澱粉溶液。",
+            "D. 目前並無確切證據顯示膠體溶液比晶體溶液來得好。",
+            "E. 凝血功能異常的病人應常規給予新鮮冷凍血漿以矯正之。"
+        ],
+        "答案": "D",
+        "出處": "Am J Kidney Dis.\n2015;66(1):147-153,Curr Opin\nCrit Care 2015, 21:358–\n363,World J Crit Care Med.\n4(3): 192-201"
+    },
+    {
+        "題別": "單",
+        "題號": "69",
+        "題目": "68歲女性病人罹患胰臟癌，於五日前接受胰十二指腸切除術，術後 發生大出血，住入加護病房仍未能脫離呼吸器。現體溫攝氏39度， 使用氧氣濃度35%，血氧濃度95%，心率每分鐘150下，呈現心房 顫動，血壓90/60 mmHg，引流管呈現淡紅色但顏色漸漸變黃濁， 請問下列處理何者較為合理？",
+        "選項": [
+            "A. 因為病人隨時可能再度出血，現有之中央靜脈導管繼續使用比 較安全。",
+            "B. 可能有出血情形，立即安排胃鏡檢查。",
+            "C. 可能有肺部問題，應考慮肺部血管攝影檢查。",
+            "D. 可能有感染情形，嘗試輸液治療，收集檢體送驗，考慮進行腹 部電腦斷層檢查以及調整抗生素治療。",
+            "E. 可能有心臟問題，立刻給予amiodarone 150 mg 以降低心率。"
+        ],
+        "答案": "D",
+        "出處": "Handbook of postoperative\ncomplications Pp. 200-213,\nSurviving Sepsis Campaign:\nInternational Guidelines for\nManagement of Sepsis and\nSeptic Shock: 2016"
+    },
+    {
+        "題別": "單",
+        "題號": "70",
+        "題目": "依據2016年ASPEN guideline，關於營養治療，下列何者正確？",
+        "選項": [
+            "A. 免疫配方對重症病人是有益的。",
+            "B. 雖然腸道營養在大多數情形下比靜脈營養好，對於腹內臟器穿 孔合併休克的病人，術後應常規給予靜脈營養。",
+            "C. 應常規測量胃殘留量並依此調整灌食。",
+            "D. 所有重症病人皆可使用益生菌。",
+            "E. 訂立營養治療目標，重症病人應於24-48小時內開始給予腸道營 養，可先嘗試經胃灌食。"
+        ],
+        "答案": "E",
+        "出處": "Guidelines for the Provision\nand Assessment of Nutrition\nSupport Therapy in the Adult\nCritically Ill Patient\nSociety of Critical Care\nMedicine (SCCM) and\nAmerican Society for Parenteral\nand Enteral Nutrition\n(A.S.P.E.N.)"
+    },
+    {
+        "題別": "單",
+        "題號": "71",
+        "題目": "有關敗血症的定義（Sepsis-3），何者為誤？",
+        "選項": [
+            "A. 依照severe inflmmatory response syndrome的定義，能有效判 斷出生命有危險的敗血症病人。",
+            "B. 不再使用嚴重敗血症（severe sepsis）此一名詞。",
+            "C. 使用SOFA score判斷organ dysfunction。",
+            "D. Septic shock 乃指經過適當輸液治療後仍需要升壓劑以維持平 均動脈壓 MAP ≥65 mm Hg 以及lactate >2 mmol/L 的敗血症病 人。",
+            "E. Septic shock 病人死亡率超過40%。"
+        ],
+        "答案": "A",
+        "出處": "The Third International\nConsensus Definitions for\nSepsis and Septic Shock\n(Sepsis-3)"
+    },
+    {
+        "題別": "單",
+        "題號": "72",
+        "題目": "對於主動脈氣球幫浦(Intra-arterial Balloon counterpulsation)的描 述，以下何者錯誤？",
+        "選項": [
+            "A. 主動脈瓣膜閉鎖不全為使用之禁忌症。",
+            "B. 一律從股動脈插管使用。",
+            "C. 可增加病患左心室之後負荷(afterload)。",
+            "D. 下肢癱瘓為可能併發症之一。",
+            "E. 常用在急性心肌梗塞。"
+        ],
+        "答案": "C",
+        "出處": "Cardiac surgery in the adult,\n3rd edition"
+    },
+    {
+        "題別": "單",
+        "題號": "73",
+        "題目": "關於主動脈氣囊幫浦(Intra-aortic balloon pumping)之敘述，何者為 非？",
+        "選項": [
+            "A. Augment diastolic pressure",
+            "B. Augment coronary perfusion pressure",
+            "C. Increase systolic pressure",
+            "D. Increase cardiac output",
+            "E. decreasing the left ventricular stroke work and myocardial oxygen requirements"
+        ],
+        "答案": "C",
+        "出處": "Kirklin/Barratt-Boyes Cardiac\nSurgery, 3rd ed. P209"
+    },
+    {
+        "題別": "單",
+        "題號": "74",
+        "題目": "一位40歲心臟衰竭病人進到加護病房，抽血檢驗發現血鈉為 130mEq/L，請問下列敘述何者最正確？",
+        "選項": [
+            "A. 病人最可能缺納",
+            "B. 病人最可能不缺納",
+            "C. 最常見的原因是給納太多",
+            "D. 最常見的原因是給水太多",
+            "E. 病人血糖通常也偏低"
+        ],
+        "答案": "D",
+        "出處": "Sabiston: Textbook of Surgery,\n21th ed, p.84"
+    },
+    {
+        "題別": "單",
+        "題號": "75",
+        "題目": "有關手術病人的營養，下列敘述何者正確？",
+        "選項": [
+            "A. 體重不足病人，術前給予Omega-3和Arginine，確可減少術後 住院日數和感染率。",
+            "B. 體重不足病人，術前給與Omega-3和Omega-6比率為1:10，確 可減少術後住院日數和感染率。",
+            "C. 無特別禁忌者，術後應先給與 parenteral nutrition 再給與 enteral nutrition 。",
+            "D. 無特別禁忌者，術後開始進食clear liquid diet 遠優於開始進食 solid food 。",
+            "E. 安全起見，enteral nutrition 應在手術後第三天開始給予。"
+        ],
+        "答案": "A",
+        "出處": "Sabiston: Textbook of Surgery,\n21th ed, p.106-7"
+    }
+]

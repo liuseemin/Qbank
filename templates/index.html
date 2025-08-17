@@ -79,7 +79,8 @@
         #ai-explanation a,
         .controls select,
         .controls button,
-        .controls a {
+        .controls a,
+        #back-to-select a {
             padding: 10px 20px;
             border-radius: 8px;
             border: 1px solid #ccc;
@@ -87,6 +88,18 @@
             cursor: pointer;
             transition: all 0.3s ease;
             text-decoration: none;
+        }
+
+        #back-to-select {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        #back-to-select a {
+            background-color: #db5b34;
+            color: white;
+            border: none;
         }
 
         .controls select {
@@ -111,6 +124,7 @@
             transform: translateY(-2px);
             box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         }
+
 
         #ai-explanation a,
         .controls a {
@@ -403,6 +417,9 @@
 </head>
 
 <body>
+    <div id="back-to-select">
+        <a href="/select">選擇題庫</a>
+    </div>
     <div class="main-container">
         <div class="container">
             <h1>線上出題機</h1>

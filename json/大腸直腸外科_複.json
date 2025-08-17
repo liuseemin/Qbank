@@ -1,0 +1,828 @@
+[
+    {
+        "題別": "複",
+        "題號": "1",
+        "題目": "診斷克隆氏病與潰瘍性結腸炎可由下列哪些項目來鑑別診 斷？",
+        "選項": [
+            "A. Backwash ileitis",
+            "B. 肉芽組織之切片",
+            "C. 肛門廔管",
+            "D. 直腸不受疾病侵犯（Rectal sparing）",
+            "E. 鋇劑灌腸檢查顯現有鵝卵石（Cobble stone appearance）"
+        ],
+        "答案": "BCDE",
+        "出處": "Sabiston. Textbook of Surgery 15th\ned. 1997, p1003-1005"
+    },
+    {
+        "題別": "複",
+        "題號": "2",
+        "題目": "下列有關結腸憩室炎的敘述何者為非？",
+        "選項": [
+            "A. 大部分發生於乙狀結腸",
+            "B. 常見憩室口有糞便嵌塞",
+            "C. 出血前常合併急性腹痛",
+            "D. 常併發便秘或腹瀉",
+            "E. 常見左下腹或右下腹壓痛"
+        ],
+        "答案": "BC",
+        "出處": "Green field's Surgery 6th ed. P1164"
+    },
+    {
+        "題別": "複",
+        "題號": "3",
+        "題目": "下列有關直腸脫出的敘述何者為非？",
+        "選項": [
+            "A. 約有一半病人合併肛門失禁",
+            "B. 肛門失禁主要是由於pudenal nerve傷害所引起",
+            "C. 大部分的病人在手術治療（Rectopaxy）後，肛門失禁 的情況不會改善",
+            "D. 經會陰手術（如Delorme或Altemeier）對改善肛門失禁 的改善優於經腹手術",
+            "E. postanal repair最好在經腹手術時同時施行"
+        ],
+        "答案": "CDE",
+        "出處": "SABISTON 20th ed TEXTBOOK of\nSURGERY.\np1397-9"
+    },
+    {
+        "題別": "複",
+        "題號": "4",
+        "題目": "痔瘡切除手術，下列何者正確？",
+        "選項": [
+            "A. 主要適應症為第三度及第四度的內痔",
+            "B. 手術時病人不宜採Jack knife姿勢",
+            "C. 關閉式（closed）痔瘡切除術比開放式（open）痔瘡切 除術有較低的手術後併發症",
+            "D. 克隆氏病（Crohn’s disease）侵犯直腸肛門合併痔瘡時 應避免施行痔瘡切除術",
+            "E. 手術後溫水坐浴可減輕疼痛"
+        ],
+        "答案": "ADE",
+        "出處": "SABISTON 20th ed TEXTBOOK of\nSURGERY.\np1400-2"
+    },
+    {
+        "題別": "複",
+        "題號": "5",
+        "題目": "下列關於大腸直腸血管分佈的敘述，何者為是？",
+        "選項": [
+            "A. 直腸血管從Taenia處穿越肌肉層入直腸黏膜層",
+            "B. IMA供給到降結腸或乙狀結腸",
+            "C. 和腸道平行的marginal artery有完整左右吻合的情況為 15~20﹪",
+            "D. middle colic artery是IMA的分支",
+            "E. Ileocecal artery是IMA的分支"
+        ],
+        "答案": "BC",
+        "出處": "SABISTON 20th ed TEXTBOOK of\nSURGERY.\np1314-9"
+    },
+    {
+        "題別": "複",
+        "題號": "6",
+        "題目": "影響肛門上皮細胞癌預後的因素包含那幾個？",
+        "選項": [
+            "A. 腹股溝淋巴腺是否腫大",
+            "B. 侵犯的深度",
+            "C. 細胞組織的分級（Grading）",
+            "D. 細胞的種類（Type）",
+            "E. 腫瘤的大小"
+        ],
+        "答案": "ABCE",
+        "出處": "Greenfiel's SURGERY 6th\ned.p1196-7"
+    },
+    {
+        "題別": "複",
+        "題號": "7",
+        "題目": "Behcet氏病患者會出現有？",
+        "選項": [
+            "A. 再發性虹膜炎",
+            "B. 口腔黏膜潰瘍",
+            "C. 生殖器潰瘍",
+            "D. 皮下結節",
+            "E. 類似克隆氏症結腸炎"
+        ],
+        "答案": "ABCE",
+        "出處": "Colon and Reul surgery 4th ed.,\np496-498"
+    },
+    {
+        "題別": "複",
+        "題號": "8",
+        "題目": "下列關於結腸血管發育異常（angiodysplasia）的敘述正確 的為？",
+        "選項": [
+            "A. 血管攝影常可見到造影劑外漏",
+            "B. 慢性貧血是常見的",
+            "C. 最常發生的為左側結腸",
+            "D. 60歲以上的人約有25﹪有此病變",
+            "E. 有症狀者必須做次全結腸切除（subtotal colectomy）"
+        ],
+        "答案": "BD",
+        "出處": "Corman ML. Colon and Retal\nsurgery 4th edition 1998, p1033-\n1037"
+    },
+    {
+        "題別": "複",
+        "題號": "9",
+        "題目": "一位30歲有10年潰瘍性結腸炎病史的患者，接受了直腸全 結腸切除及迴腸袋肛門吻合術之後，下列腸道外症狀可能 會消失的為？",
+        "選項": [
+            "A. 原發性硬化膽管炎（primary sclerosing cholangitis）",
+            "B. 虹膜炎",
+            "C. 僵直性椎骨炎（ankylosing spondylitis）",
+            "D. 壞疽性膿皮症（pyoderma gangrenosum）",
+            "E. 口腔黏膜潰瘍"
+        ],
+        "答案": "BDE",
+        "出處": "Corman ML. Colon and Retal\nsurgery 4th edition 1998, p1079-\n1099"
+    },
+    {
+        "題別": "複",
+        "題號": "10",
+        "題目": "下列那些情況，不適合以局部切除來治療直腸腺癌？",
+        "選項": [
+            "A. 癌瘤不易移動",
+            "B. 切片顯示有侵犯至淋巴管及血管",
+            "C. 直腸內超音波顯示為UT1病變",
+            "D. 直腸內超音波顯示為UT2病變，患者有嚴重的心血管疾 病",
+            "E. 癌瘤為潰瘍性且大於三公分"
+        ],
+        "答案": "ABE",
+        "出處": "Corman ML. Colon and Retal\nsurgery 4th edition 1998, p833-834"
+    },
+    {
+        "題別": "複",
+        "題號": "11",
+        "題目": "生物回饋（Biofeedback）可以治療下列何種疾病？",
+        "選項": [
+            "A. 直腸澎出症（Rectocele）",
+            "B. Obstructed defecation or anismus（排便阻塞）",
+            "C. 大便失禁",
+            "D. 直腸脫出（Procidentia）",
+            "E. 直腸痛（Rectal Pain）"
+        ],
+        "答案": "BCE",
+        "出處": "Colon & Rectal Surgery (Corman),\n4th ed., p134-135,383-385"
+    },
+    {
+        "題別": "複",
+        "題號": "12",
+        "題目": "有關家族性大腸息肉症之敘述，下列敘述何者不正確？",
+        "選項": [
+            "A. 診斷上至少需有100個以上的腺性息肉",
+            "B. 常見的症狀為腹痛、腹泄、血便、貧血等",
+            "C. 若不處理，並不會轉化成大腸癌",
+            "D. 家族性大腸息肉症不會合併有其它部位腸道之息肉",
+            "E. 處理的方法是大腸直腸的全切除"
+        ],
+        "答案": "CD",
+        "出處": "Textbook of Surgery, Sabiston, 17th\ned., p1545"
+    },
+    {
+        "題別": "複",
+        "題號": "13",
+        "題目": "在Abdominoperineal (APR)手術當中，將會碰到以下那些 構造？",
+        "選項": [
+            "A. White line of Toldt",
+            "B. Douglas pouch",
+            "C. Morrison pouch",
+            "D. Denonvilliers fascia",
+            "E. Waldeyer's fascia"
+        ],
+        "答案": "ABDE",
+        "出處": "Maingot 10th ed, p1482-1486"
+    },
+    {
+        "題別": "複",
+        "題號": "14",
+        "題目": "有關HNPCC (Hereditary Nonpolyposis Colorectal Cancer) 之敘述以下何者為正確？",
+        "選項": [
+            "A. 為顯性體染色體遺傳",
+            "B. 常有同時或不同時多個腸癌發生",
+            "C. 常見第十七對染色體P53基因異常",
+            "D. 常有microsatellite instability現象",
+            "E. 常有mismatch repair gene異常"
+        ],
+        "答案": "ABDE",
+        "出處": "SABISTON 20th ed TEXTBOOK of\nSURGERY.\np1368-9"
+    },
+    {
+        "題別": "複",
+        "題號": "15",
+        "題目": "有關CEA (carcinoembryonic antigen)之陳述，以下何者為 正確？",
+        "選項": [
+            "A. 不是大腸直腸癌篩檢（Screening）之良好方法",
+            "B. 在大腸癌，胃癌，胰癌，乳癌，肺癌，血中CEA均有可 能昇高",
+            "C. 血中半衰期約10天",
+            "D. 在直腸癌復發早期，血中CEA濃度即會昇高",
+            "E. 大腸直腸癌病人至少70%血中CEA濃度升高"
+        ],
+        "答案": "AB",
+        "出處": "SABISTON 20th ed TEXTBOOK of\nSURGERY.\np698"
+    },
+    {
+        "題別": "複",
+        "題號": "16",
+        "題目": "有關Perianal abscess之敘述，以下何者錯誤？",
+        "選項": [
+            "A. Ischiorectal abscess通常是一種Intersphincter abscess",
+            "B. 引流ischiorectal abscess傷口離肛門口愈外側愈好",
+            "C. 肛門周圍膿瘍，最好等到膿瘍軟化，再引流較好",
+            "D. Deep postanal abscess是一種Intersphicter abscess",
+            "E. High intersphincteric abscess通常在門診局部麻藥注射 下由肛門周圍引流即可"
+        ],
+        "答案": "ABCDE",
+        "出處": "Colon & Rectal Surgery, Marvin\nL.Corman. 4th ed., p227-231"
+    },
+    {
+        "題別": "複",
+        "題號": "17",
+        "題目": "有關乙狀結腸扭結，下列敘述何者正確？",
+        "選項": [
+            "A. 常見於年紀大，長期臥床，需別人照顧之病人",
+            "B. Barium enema常可看到結腸呈“Bent inner-tube” appearance",
+            "C. 治療步驟首先最好由腹部作Detorsion",
+            "D. 用sigmoidoscopic reduction即可達理想之治療",
+            "E. 病人有發燒、白血球增多、腹部反彈痛時，不宜用大腸 鏡作detorsion"
+        ],
+        "答案": "AE",
+        "出處": "Colon & Rectal Surgery, Marvin\nL.Corman. 4th ed., p1067"
+    },
+    {
+        "題別": "複",
+        "題號": "18",
+        "題目": "以下何者不適宜作為colostomy之出口？",
+        "選項": [
+            "A. Summit of belly",
+            "B. Costal margin",
+            "C. Umbilicus",
+            "D. Waist line",
+            "E. Within the rectus abdominis muscle"
+        ],
+        "答案": "BCD",
+        "出處": "Colon & Rectal Surgery, Marvin\nL.Corman. 4th ed., p1264"
+    },
+    {
+        "題別": "複",
+        "題號": "19",
+        "題目": "某位28歲年輕男性主訴上腹痛、噁心、嘔吐、發燒及長 寒。經急診入院發現下腹部有明顯廣泛性壓痛，全血檢查 發現白血球數目為23,000/μL，且嗜中性球（neurophil）占 約90﹪。腹部單純X光攝影發現小腸麻痺性阻塞。經急診剖 腹探查發現是闌尾炎破裂造成腹膜炎。此病患在術中於 Douglas pouch引流約200 c.c.的惡臭膿汁，有關此病患的 致病機轉何者為不正確？",
+        "選項": [
+            "A. 急性闌尾炎以年輕成人最常見",
+            "B. Bacteroides fragilis是最常見的菌種，是一種厭氧菌。",
+            "C. 病患所表現的上腹痛是一種referred pain，此為闌尾炎 後期常見的現象",
+            "D. 當闌尾炎不予馬上治療，一定會造成與此病患相同的腹 膜炎情況",
+            "E. 大腸菌種最常見為大腸桿菌（E.coli），故此位病患細菌 培養的結果應以此菌種為大宗"
+        ],
+        "答案": "CDE",
+        "出處": "SABISTON 20th ed TEXTBOOK of\nSURGERY.\np1297-9"
+    },
+    {
+        "題別": "複",
+        "題號": "20",
+        "題目": "某位28歲男性，因急性腹痛至急診部求診，經醫師診視發 現：（甲）起初病患覺得噁心及嘔吐感；（乙）疼痛的感 覺起初是上腹痛，然後漸漸地移位至右下腹部；（丙）右 下腹McBurney point具明顯壓痛；（丁）CBC檢查發現白 血球高達14,000，且segment neutrophil占86﹪；（戊）單 純X光攝影發現右下腹有局部腸阻塞（local ileus）。病患 經診斷為急性闌尾炎，乃接受手術，而術中發現闌尾蓄膿 （suppuration），診斷乃告確定。試問，何以此病患會有 腹痛轉移（shifting pain）的現象？",
+        "選項": [
+            "A. 因剛開始的疼痛是visceral pain，而漸漸變成somatic pain",
+            "B. 因闌尾在胚胎發育過程屬尾腸（hidgut）結構，故會疼 痛在右下腹部",
+            "C. 推想初期闌尾可能因發炎而腫脹，因而表現出visceral pain，而此種疼痛極為尖銳",
+            "D. 此位病患因闌尾逐漸蓄膿，因而刺激體壁腹膜（parietal peritoneum），故最後會有somatic pain的表現",
+            "E. Somatic pain是一種隱晦不明的疼痛，不易定位，故病 患會感覺是上腹痛"
+        ],
+        "答案": "AD",
+        "出處": "SABISTON 20th ed TEXTBOOK of\nSURGERY.\nP1297-305"
+    },
+    {
+        "題別": "複",
+        "題號": "21",
+        "題目": "有一位28歲電腦工作者，主訴肛門劇痛，並發燒長寒達 39℃。經門診醫師做肛門指診發現肛門旁約7點鐘方向有一 約4公分直徑的膿瘍，乃給予切開引流。經門診治療三週後 ，病人自覺已改善。經三個月後，病患在肛門旁7點鐘方向 又發現一個疼痛突起，試問下列有關此病患的病情，何者 為正確？",
+        "選項": [
+            "A. 此病患是肛門膿瘍併發廔管形成",
+            "B. 此種肛門廔管常見於男性",
+            "C. 一般而言，肛門廔管以inter sphincteric type最常見",
+            "D. 此病患最好能接受手術",
+            "E. 此病患若係廔管形成，此膿瘍的內在開口應位於12點鐘 方向"
+        ],
+        "答案": "ABCD",
+        "出處": "SABISTON 20th ed TEXTBOOK of\nSURGERY.\np1406-8"
+    },
+    {
+        "題別": "複",
+        "題號": "22",
+        "題目": "某位22歲大學生，於夏秋季節交換時，因開學後功課較忙 ，發生嚴重的便血及腹瀉，起初不以為意，然上述症狀愈 來愈嚴重，偶而也會有發燒和腹痛現象。一個月後，體重 減輕8公斤，乃至大腸直腸外科求診。經一系列的診察之後 ，確定為嚴重之潰瘍性大腸炎，其內視鏡和病理學外觀更 證實此種診斷。試問有關此位病患的診療上，何者為正確 的陳述？",
+        "選項": [
+            "A. 潰瘍性結腸炎患者，通常在組織學上可見發炎表徵已經 侵犯至整個大腸肌肉層或漿膜層",
+            "B. 潰瘍性結腸炎的黏膜變化可以是連續性的，可綿延至整 個大腸",
+            "C. 當病患的大腸歷經潰瘍、肉芽組織的形成，以及表皮再 生的過程便會形成假性息肉（Pseudopolyp）",
+            "D. 遺傳因素以及心理因素與此疾病的加重有關",
+            "E. 此位病患亦可能合併關節炎、眼睛虹膜炎、肝功能失 調、皮膚病，必須詳加診察"
+        ],
+        "答案": "BCDE",
+        "出處": "SABISTON 20th ed TEXTBOOK of\nSURGERY.\np1339-43"
+    },
+    {
+        "題別": "複",
+        "題號": "23",
+        "題目": "有關肛門廔管（fistula-in-ano）的敘述，何者為是？",
+        "選項": [
+            "A. 最常見的症狀為是腫塊、疼痛及有分泌物",
+            "B. 常用的分類方式有intersphincteric、transsphincteric、 suprasphincteric、extrasphincteric",
+            "C. Goodsall’s Rule是指廔管外開口在後方，則內開口在前 方；反之，外開口在前方則內開口在後方",
+            "D. 肛門廔管不會有惡性變化的可能",
+            "E. 尋找肛門內開口可使用探針、H2O2、染料"
+        ],
+        "答案": "ABE",
+        "出處": "Colon &Rectal Surgery, 4th ed.,\np272-273"
+    },
+    {
+        "題別": "複",
+        "題號": "24",
+        "題目": "何者可能引起Recto-Vaginal fistula？",
+        "選項": [
+            "A. 直腸或大腸癌",
+            "B. 接受放射線治療之子宮頸癌病患",
+            "C. 大腸憩室炎",
+            "D. 生產",
+            "E. 痔瘡手術後"
+        ],
+        "答案": "ABCDE",
+        "出處": "Colon &Rectal Surgery, 4th ed.,\np272-273"
+    },
+    {
+        "題別": "複",
+        "題號": "25",
+        "題目": "下列有關大腸的敘述何者正確？",
+        "選項": [
+            "A. 直腸阻塞最易引起破裂之處為盲腸",
+            "B. 升結腸最主要的功能為吸收養份",
+            "C. middle colic artery是superior mesentery artery的分支",
+            "D. Inferior hemorrhoidal artery是internal iliac artery的分支",
+            "E. Middle hemorrhoidal artery是external iliac artery的分支"
+        ],
+        "答案": "ACD",
+        "出處": "Surgery of the Anus, Rectum and\nColon. 5nd ed., p22-23"
+    },
+    {
+        "題別": "複",
+        "題號": "26",
+        "題目": "關於大腸直腸息肉的敘述何者為是？",
+        "選項": [
+            "A. Juvenile polyp通常發生於十多歲的青少年",
+            "B. Adenomatous polyp有惡性的可能性",
+            "C. Familial adenomatous polyposis是一種隱性遺傳，約20 ﹪無家族史",
+            "D. 診斷直腸大腸息肉，大腸鏡優於大腸鋇劑攝影",
+            "E. 發現直腸有息肉，必須進行全大腸檢查，待確定無其它 病變再行息肉切除手術"
+        ],
+        "答案": "BDE",
+        "出處": "Colon &Rectal Surgery, 4th ed.,\np573-616"
+    },
+    {
+        "題別": "複",
+        "題號": "27",
+        "題目": "關於人工肛門的敘述何者為是？",
+        "選項": [
+            "A. 乙狀結腸的人工肛門由於糞便已成型最好照顧",
+            "B. 一般來說橫結腸的人工肛門最容易施行手術",
+            "C. Hartmann procedure的施行方法將遠端病變處切除，近 端處拉出體外成為人工肛門",
+            "D. 剛施行好的ileostomy若每日釋出的糞便量大於2000ml是 不正常的",
+            "E. 人工肛門術後的合併症包括出血、脫出、破裂、狹窄"
+        ],
+        "答案": "ABCE",
+        "出處": "Colon & Rectal Surgery, 4th ed,\np1264-1313"
+    },
+    {
+        "題別": "複",
+        "題號": "28",
+        "題目": "以下何者是痔瘡接受橡皮筋結紮後發生菌血症的特徵？",
+        "選項": [
+            "A. 排尿困難",
+            "B. 發燒",
+            "C. Rapid onset",
+            "D. 內痔脫出",
+            "E. 嚴重肛周疼痛"
+        ],
+        "答案": "ABCE",
+        "出處": "Principles and practice of Surgery\nfor the Colon, Rectum, and Anus,\np185-189"
+    },
+    {
+        "題別": "複",
+        "題號": "29",
+        "題目": "以下那兩個器官為結腸惡性腫瘤遠方轉移最常發生的部 位？",
+        "選項": [
+            "A. 膽囊",
+            "B. 卵巢",
+            "C. 胃",
+            "D. 肝",
+            "E. 肺"
+        ],
+        "答案": "DE",
+        "出處": "Colon & Rectal Surgery, 4th ed.,\np700-703"
+    },
+    {
+        "題別": "複",
+        "題號": "30",
+        "題目": "下列何者是遺傳性非息肉性大腸癌病人常見的特徵？",
+        "選項": [
+            "A. 發生癌症的年齡較年輕",
+            "B. 常合併其他部位腫瘤",
+            "C. 較常見於右側結腸",
+            "D. 不常合併其他部位的大腸息肉",
+            "E. 最好接受結腸全切除術"
+        ],
+        "答案": "ABCE",
+        "出處": "Principles and practice of Surgery\nfor the Colon, Rectum, and Anus,\np505-506"
+    },
+    {
+        "題別": "複",
+        "題號": "31",
+        "題目": "關於靜止壓力（Anal resting pressure）下列何者敘述正 確？",
+        "選項": [
+            "A. 30﹪來自肛門外括約肌",
+            "B. 55﹪來自肛門內括約肌",
+            "C. 15﹪來自痔瘡血管叢（hemorrhoidal plexus）",
+            "D. 當外括約肌麻痺時（paralyzed），肛門靜止壓力將不會 有明顯的改變",
+            "E. 內括約肌收縮是一種continual tonic contraction"
+        ],
+        "答案": "ABCDE",
+        "出處": "Principles and Practice of Surgery\nfor the Colon, Rectum, and Anus,\nGordon and Nivatrongs 2nd ed.\nQMP, Inc, p56"
+    },
+    {
+        "題別": "複",
+        "題號": "32",
+        "題目": "關於慢性肛門潰瘍（chronic anal ulcer）的“ulcer triad”下 列何者敘述正確？",
+        "選項": [
+            "A. 潰瘍深而暴露出肛門內括約肌",
+            "B. 肛門邊緣有sentinel pile",
+            "C. 肛門內有hypertrophic papilla",
+            "D. 大多數不會自然痊癒",
+            "E. 治療的首要目標是使內括約肌不再spasm"
+        ],
+        "答案": "ABCDE",
+        "出處": "Principles and Practice of Surgery\nfor the Colon, Rectum, and Anus,\nGordon and Nivatrongs 2nd ed.\nQMP, Inc, p226"
+    },
+    {
+        "題別": "複",
+        "題號": "33",
+        "題目": "關於Perianal Paget's disease敘述，下列何者為真？",
+        "選項": [
+            "A. Perianal Paget's disease和nipple Paget's disease不一 樣。剛開始是良性腫瘤，後來才漸漸變成侵犯性的腺癌",
+            "B. 好發於老年人，平均年齡介於60~70歲",
+            "C. 50﹪併有癌症",
+            "D. 治療的第一選擇為放射線治療加上化學治療",
+            "E. 治療的第一選擇為化學治療"
+        ],
+        "答案": "ABC",
+        "出處": "Principles and Practice of Surgery\nfor the Colon, Rectum, and Anus,\nGordon and Nivatrongs 2nd ed.\nQMP, Inc, p456-459"
+    },
+    {
+        "題別": "複",
+        "題號": "34",
+        "題目": "右側大腸憩室（Right-sided diverticula）下列何者敘述正 確？",
+        "選項": [
+            "A. 東方人比西方人常見",
+            "B. 發生的平均年齡比左側大腸憩室晚10年",
+            "C. 病理檢查以False diverticula佔絕大多數",
+            "D. 當產生急性憩室炎時，臨床症狀常被診斷為急性闌尾炎",
+            "E. 沒有併發症的右側大腸憩室炎，以抗生素等非手術治療 為主"
+        ],
+        "答案": "ACDE",
+        "出處": "Principles and Practice of Surgery\nfor the Colon, Rectum, and Anus,\nGordon and Nivatrongs 2nd ed.\nQMP, Inc, p1031-1034"
+    },
+    {
+        "題別": "複",
+        "題號": "35",
+        "題目": "52歲婦女，因乙狀結腸憩室炎（diverticulitis）復發進行剖 腹術時，意外發現有Meckel's diverticulum，下列敘述何者 正確？",
+        "選項": [
+            "A. Meckel's diverticulum發生率在一般人約6﹪",
+            "B. Meckel's diverticulum主要發生在terminal ileum",
+            "C. 成人時期的併發症主要是因發炎而引起",
+            "D. 隨著年齡增加，併發症發生的機會漸減",
+            "E. 50歲時約1﹪產生併發症，故此病人不須接受Meckel's diverticulectomy"
+        ],
+        "答案": "BCDE",
+        "出處": "Principles and Practice of Surgery\nfor the Colon, Rectum, and Anus,\nGordon and Nivatrongs 2nd ed.\nQMP, Inc, p1330-1331"
+    },
+    {
+        "題別": "複",
+        "題號": "36",
+        "題目": "關於Peutz-Jeghers Syndrome敘述何者正確？",
+        "選項": [
+            "A. 很少見的孟德爾代顯性遺傳（Medelian-dominant）",
+            "B. 腸道具有polyposis",
+            "C. 在口腔黏膜和嘴唇會有色素沉著",
+            "D. Polyposis是由Hamartomatous polyps構成",
+            "E. Hamartoma極少變成癌症，所以P-J syndrome患者極少 患癌症"
+        ],
+        "答案": "ABCD",
+        "出處": "Principles and Practice of Surgery\nfor the Colon, Rectum, and Anus,\nGordon and Nivatrongs 2nd ed.\nQMP, Inc, p551-552"
+    },
+    {
+        "題別": "複",
+        "題號": "37",
+        "題目": "剖腹後，下列何者是分辨大腸或小腸的解剖學特徵？",
+        "選項": [
+            "A. Diverticulum",
+            "B. Taeniae coli",
+            "C. Haustra",
+            "D. Serosa",
+            "E. Appendices epiploicae"
+        ],
+        "答案": "BE",
+        "出處": "Surgery of Colon and Rectal,\nNicholls, 1st ed., p1"
+    },
+    {
+        "題別": "複",
+        "題號": "38",
+        "題目": "關於偽膜性腸炎(psedomembranous colitis)之治療，下列 何者敘述為正確？",
+        "選項": [
+            "A. 必須先停用不必要之抗生素。",
+            "B. 用止瀉劑來治療腹瀉。",
+            "C. Vancomycin 靜脈注射優於口服。",
+            "D. Metronidazole口服與靜脈注射效果相同。",
+            "E. 可用Cholestyramine(Questran)來吸附偽膜性腸炎之致 病菌所分泌之 Toxin。"
+        ],
+        "答案": "ADE",
+        "出處": "Corman ML. Colon and Rectal\nSurgery, fifth edition, p1637-1643"
+    },
+    {
+        "題別": "複",
+        "題號": "39",
+        "題目": "治療肛門失禁的方法有幾種方式，包括手術治療和非手術 治療，何者不正確？",
+        "選項": [
+            "A. 括約肌修補（simple sphincter repair）",
+            "B. 生物迴饋治療（biofeedback）",
+            "C. 坐骨神經刺激（sacral nerve modulation）",
+            "D. 尾骨按摩（coccyx massage）",
+            "E. 後踁神經刺激（posterior tibial nerve modulation）"
+        ],
+        "答案": "DE",
+        "出處": "Corman’s colon and rectal surgery,\n6th edition, p461-512"
+    },
+    {
+        "題別": "複",
+        "題號": "40",
+        "題目": "目前根據最新的Rome criteria III來診斷腸躁症（irritable bowel syndrome），必須符合兩個或兩個以上的敍述，下 列何者不是Rome criteria III？",
+        "選項": [
+            "A. Straining during at least 25% of defecation",
+            "B. Fewer than one defecation per week",
+            "C. Sensation of incomplete evacuation for at least 25% of defecations",
+            "D. Manual maneuvers to facilitate at least 50% of defecations",
+            "E. Lumpy or hard stools in at least 25% of defecations"
+        ],
+        "答案": "BD",
+        "出處": "Corman’s colon and rectal surgery,\n6th edition, p617-618"
+    },
+    {
+        "題別": "複",
+        "題號": "41",
+        "題目": "關於直腸脫垂的描述，以下何者正確？",
+        "選項": [
+            "A. 好發的族群是60歲以上的老人，而年輕人則以女性為 主。",
+            "B. 沒有生育過的女性也可能發生。",
+            "C. 肛門檢查可以很明顯看到整圈全層的直腸脫垂出肛門外 ，不需要另外安排大腸鏡檢查。",
+            "D. 評估時必須注意肛門括約肌的張力和收縮功能，如果括 約肌的功能較佳，手術治療後排便控制的功能會較好。",
+            "E. 有強迫症行為，每天花好幾個小時蹲厠所的病人，也是 好發族群之一。"
+        ],
+        "答案": "ABDE",
+        "出處": "Greenfiel's Surgery 6th.p1056"
+    },
+    {
+        "題別": "複",
+        "題號": "42",
+        "題目": "下列何者與肛裂有相關連？",
+        "選項": [
+            "A. Constipation",
+            "B. Hypertrophied anal papilla",
+            "C. Sentinel piles",
+            "D. Higher anal resting pressure",
+            "E. Leukemia"
+        ],
+        "答案": "ABCD",
+        "出處": "Corman ML: Colon & Rectal\nSurgery, Corman, 6th ed., p346-348"
+    },
+    {
+        "題別": "複",
+        "題號": "43",
+        "題目": "某位肛門廔管病患在醫生的建議下接受廔管手術，然在術 後病患抱怨傷口劇痛而無法小便，此時有關此病患的陳述 何者為正確？",
+        "選項": [
+            "A. 排尿困難一般乃傷口疼痛造成排尿括約肌短暫收縮所致",
+            "B. 此病患要短暫限水",
+            "C. 給予止痛劑、消腫劑、優碘坐浴可緩解症狀",
+            "D. 病患在術後約需一個月後，方能使肉芽組織長滿",
+            "E. 手術中病患之內括約肌及外括約肌皮下部必須保留以免 術後大便失禁"
+        ],
+        "答案": "ABCD",
+        "出處": "Corman ML: Colon & Rectal\nSurgery, Corman, 6th ed., p346-348"
+    },
+    {
+        "題別": "複",
+        "題號": "44",
+        "題目": "下列何者不是橡皮圈結紮術（rubber band ligation）的適應 症？",
+        "選項": [
+            "A. 第一度內痔",
+            "B. 第二度內痔",
+            "C. 第三度內痔",
+            "D. 肛門乳突肥大（hypertrophic anal papilla）",
+            "E. 門脈高壓病人之直腸靜脈曲張"
+        ],
+        "答案": "DE",
+        "出處": "Green field's Surgery 6th ed. P1179\nSABISTON 20th ed TEXTBOOK of\nSURGERY ed, p1404"
+    },
+    {
+        "題別": "複",
+        "題號": "45",
+        "題目": "某位病患因外痔發作，造成急性疼痛、出血及血栓堆積， 試問下列哪些治療方法對此病患尚屬可行？",
+        "選項": [
+            "A. 橡皮筋結紮",
+            "B. 消腫、軟便、多攝取纖維、多喝水、調整生活型態",
+            "C. 手術治療",
+            "D. 肛門塞劑（包括止痛、止癢與潤滑收斂劑）",
+            "E. 肛門坐浴"
+        ],
+        "答案": "BCDE",
+        "出處": "SABISTON 20th ed TEXTBOOK of\nSURGERY.\np1400-2"
+    },
+    {
+        "題別": "複",
+        "題號": "46",
+        "題目": "在大腸直腸癌，以下哪些Tumor marker可能昇高？",
+        "選項": [
+            "A. CEA (carcinoembryonic antigen)",
+            "B. AFP (Alpha-fetoprotein)",
+            "C. CA-153",
+            "D. CA-199",
+            "E. CA-125"
+        ],
+        "答案": "AD",
+        "出處": "SABISTON 20th ed TEXTBOOK of\nSURGERY.\np1372"
+    },
+    {
+        "題別": "複",
+        "題號": "47",
+        "題目": "下列有關大腸直腸解剖學之敘述何者正確？",
+        "選項": [
+            "A. 直腸壁有mucosa, submucosa及muscular layer三層",
+            "B. 上直腸靜脈回流至caval system再至肺",
+            "C. 中直腸靜脈回流至caval system再至肺",
+            "D. 下直腸靜脈回流至門靜脈再至肝",
+            "E. 大腸壁之環狀肌形成三條Tenia"
+        ],
+        "答案": "AC",
+        "出處": "SABISTON 20th ed TEXTBOOK of\nSURGERY.\np1314-7"
+    },
+    {
+        "題別": "複",
+        "題號": "48",
+        "題目": "下列何者為接受結腸切除後，患者引起術後感染的危險因 子？",
+        "選項": [
+            "A. 糖尿病",
+            "B. 慢性酒精中毒",
+            "C. 長期營養不良",
+            "D. 長期接受類固醇治療",
+            "E. 癌症患者"
+        ],
+        "答案": "ABCD",
+        "出處": "Colon & Rectal Surgery, 4th ed.,\np700"
+    },
+    {
+        "題別": "複",
+        "題號": "49",
+        "題目": "關於直腸脫出（rectal prolapse）的敘述何者為是？",
+        "選項": [
+            "A. 直腸脫出之病患多為婦女，易便秘或直腸乙狀結腸鬆弛 或內括約肌機能較弱",
+            "B. 亦可稱rectal procidentia",
+            "C. 治療方式以手術為主，可採用固定或切除等方式",
+            "D. 有部份精神疾病的患者易合併直腸脫出",
+            "E. 常易與痔瘡合併發生"
+        ],
+        "答案": "ABCDE",
+        "出處": "Colon & Rectal Surgery, 4th ed.,\np401-410"
+    },
+    {
+        "題別": "複",
+        "題號": "50",
+        "題目": "關於痔瘡的敘述何者為是？",
+        "選項": [
+            "A. 外痔是由external hemorrhoidal plexus生成，並覆蓋一 層squamous epithelium",
+            "B. 內痔是由internal hemorrhoidal plexus生成，並覆蓋一層 mucosa",
+            "C. 內外痔的區分是pectinate line",
+            "D. 混合痔可以脫出或不可縮回，但不能是血栓性的痔",
+            "E. 血栓性的痔易導致疼痛"
+        ],
+        "答案": "ABCE",
+        "出處": "Greenfield's SURGERY 6th ed.\nP1175\nSABISTON 20th ed TEXTBOOK of\nSURGERY. p1321"
+    },
+    {
+        "題別": "複",
+        "題號": "51",
+        "題目": "以下何者為潰瘍性結腸炎（Ulcerative colitis）之手術適應 症？",
+        "選項": [
+            "A. 無法控制之大量出血",
+            "B. 毒性巨腸症（Acute toxic megacolon)，治療後病況穩定",
+            "C. 初診斷時已營養不良",
+            "D. 需使用類固醇治療才能控制病情時",
+            "E. 大腸鏡檢、切片檢查證實有severe dysplasia change"
+        ],
+        "答案": "ABDE",
+        "出處": "Green field's Surgery 6th ed. P1085\nSABISTON 20th ed TEXTBOOK of\nSURGERY ed, p1345"
+    },
+    {
+        "題別": "複",
+        "題號": "52",
+        "題目": "某位潰瘍性結腸炎病患因便血、腹痛而由急診入院，目前 十分虛弱，體重為41公斤（約減輕8公斤體重），腸蠕動音 正常、心跳正常、輕微脫水、腹部並無壓痛現象，而血中 白蛋白（Albumin）為2.0 gm/dl，有關此位病患，下列哪些 陳述不正確？",
+        "選項": [
+            "A. 必需急診手術",
+            "B. 先給予體液及營養補充，俟情況好轉即一定要進行手術",
+            "C. 先進行保守支持療法，再使用藥物包括sulfasalazine、 corticosteroid、Azathioprine、6-mercaptopurine，以及 cyclosporin Anti TNF藥物，如Adalimumab等",
+            "D. 一般而言，潰瘍性大腸炎與癌症無關，並不需做特別的 大腸癌評估",
+            "E. 一旦此病患之上述症狀得到控制之後，並不需長期服用 sulfasalazine或某些5-aminosalicylate衍生物"
+        ],
+        "答案": "ABDE",
+        "出處": "SABISTON 20th ed TEXTBOOK of\nSURGERY ed, p1344"
+    },
+    {
+        "題別": "複",
+        "題號": "53",
+        "題目": "Juvenile polyp之特徵包括下列那些？",
+        "選項": [
+            "A. 此很少發生於一歲以下小孩，是後天性疾病",
+            "B. 常發生於十歲以下之學齡兒童",
+            "C. Juvenile polyp是一種Hamartomas, 25﹪為多發性的",
+            "D. 四分之三之病灶發生在直腸",
+            "E. Juvenile polyp有惡性潛力"
+        ],
+        "答案": "ABCDE",
+        "出處": "SABISTON 20th ed TEXTBOOK of\nSURGERY ed., p1368"
+    },
+    {
+        "題別": "複",
+        "題號": "54",
+        "題目": "下列何種Pathological finding，在Crohn’s disease較 Ulcerative colitis發生率高？",
+        "選項": [
+            "A. Rectal bleeding",
+            "B. Skip lesion",
+            "C. Anal fistula",
+            "D. Pseudopolyp",
+            "E. Cobberstony mucosa"
+        ],
+        "答案": "BCE",
+        "出處": "SABISTON 20th ed TEXTBOOK of\nSURGERY ed., p1339"
+    },
+    {
+        "題別": "複",
+        "題號": "55",
+        "題目": "關於偽膜性腸炎(psedomembranous colitis)之論述，下列 何者敘述為正確？",
+        "選項": [
+            "A. 偽膜性腸炎大多由於抗生素使用所引起。",
+            "B. 偽膜性腸炎之致病菌為 Clostridium difficile。",
+            "C. 特色為糞便中革蘭氏陰性菌的存在。",
+            "D. 其症狀為腹瀉，有或無血便。",
+            "E. 免疫功能低下的病人，如 lymphoma、AIDS等也是好發 族群。"
+        ],
+        "答案": "ABDE",
+        "出處": "SABISTON 20th ed TEXTBOOK of\nSURGERY., p1133"
+    },
+    {
+        "題別": "複",
+        "題號": "56",
+        "題目": "下列疾病哪一項會增加大腸癌發生之危險性？",
+        "選項": [
+            "A. 肉芽性大腸疾病（Granulomatous disease）",
+            "B. 肛門周圍膿瘍與廔管",
+            "C. 慢性潰瘍性結腸炎（Chronic ulcerative colitis）",
+            "D. 慢性憩室炎（Chronic diverticulitis）",
+            "E. Peutz-Jegher症候群"
+        ],
+        "答案": "CE",
+        "出處": "SABISTON 20th ed TEXTBOOK of\nSURGERY p1372"
+    },
+    {
+        "題別": "複",
+        "題號": "57",
+        "題目": "45歲男性無肛門失禁病史，因Anal fistula 於OPD求診，檢 查發現無sepsis 情況，如何治療可減少失禁的可能：",
+        "選項": [
+            "A. Anorectal advancement flap",
+            "B. Fistulotomy",
+            "C. Instillation of fibrin glue",
+            "D. Placement of a collagen fistula plug",
+            "E. Seton drainage"
+        ],
+        "答案": "ABCDE",
+        "出處": "SABISTON 20th ed TEXTBOOK of\nSURGERY., p1408"
+    },
+    {
+        "題別": "複",
+        "題號": "58",
+        "題目": "急診病人臨床診斷為急性腹痛，診療過程可能發生的錯誤 包括：",
+        "選項": [
+            "A. 未作必要的肛門指診",
+            "B. 未作必要的鼠蹊或陰囊檢查",
+            "C. 接受器官移植病人，服用抗免疫藥物，沒有peritoreal sign就沒有開刀的必要。",
+            "D. 已安排作必要的檢查如CT等，報告出來前，若有必要仍 需去訪視病人。",
+            "E. 初步檢驗、檢查沒有異常，就可以請病人即刻離院。"
+        ],
+        "答案": "ABCE",
+        "出處": "SABISTON 20th ed TEXTBOOK of\nSURGERY p1135"
+    },
+    {
+        "題別": "複",
+        "題號": "59",
+        "題目": "下列有關直腸癌的治療，何者不正確？",
+        "選項": [
+            "A. 切除術前放療的效果比術後差",
+            "B. 切除術前化放療complete remission rate可達10~20%",
+            "C. 切除術前化放療，可以取代切除手術。",
+            "D. 標準式化放療，6~10週後再行切除術。",
+            "E. short course 化放療後可以接著做切除術。"
+        ],
+        "答案": "AC",
+        "出處": "SABISTON 20th ed TEXTBOOK of\nSURGERY p1377-8"
+    }
+]
