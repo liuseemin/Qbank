@@ -11,27 +11,6 @@ APP_PASSWORD = os.environ.get("APP_PASSWORD")
 app.secret_key = os.environ.get("APP_SECRET_KEY")
 MODEL = "gemini-2.5-flash"
 
-# 模擬一個儲存累積 token 數的變數
-total_tokens_used = 0
-
-# 全域資料
-questions = []
-wrong_questions = []
-marked_questions = []
-question_index = 0
-remaining_questions = []
-
-# 新增：建立一個全域字典來儲存題號對應的題目
-question_index_dict = {}
-
-answered_questions = set()
-
-# 新增：建立一個全域快取字典來儲存 AI 詳解
-# ai_explanation_cache = {}
-
-# 儲存題庫路徑，啟動時從參數取得
-# AVAILABLE_JSONS = []
-
 # --- 登入頁 ---
 @app.route("/login", methods=["GET", "POST"])
 def login():
@@ -92,21 +71,28 @@ def select():
 
 @app.route("/")
 def index():
-    # 檢查是否已登入
     if not session.get("logged_in"):
         return redirect(url_for("login"))
-    if not questions:
+    
+    # 從 session 取得當前題號列表
+    current_question_ids = session.get("current_question_ids")
+    
+    if not current_question_ids:
         return redirect(url_for("select"))
 
     # 傳遞所有題號給前端，以便生成下拉選單
-    all_question_ids = [q.get("題號") for q in questions]
-    return render_template("index.html", all_question_ids=all_question_ids, total_questions=len(questions))
+    # 注意：這裡使用 current_question_ids
+    return render_template("index.html", all_question_ids=current_question_ids, total_questions=len(current_question_ids))
 
 @app.route("/test")
 def test():
+    # 從 session 取得當前題號列表
+    current_question_ids = session.get("current_question_ids")
+    if not current_question_ids:
+         return redirect(url_for("select")) # 如果沒有題庫，導向選擇頁
+
     # 傳遞所有題號給前端，以便生成下拉選單
-    all_question_ids = [q.get("題號") for q in questions]
-    return render_template("index_test.html", all_question_ids=all_question_ids, total_questions=len(questions))
+    return render_template("index_test.html", all_question_ids=current_question_ids, total_questions=len(current_question_ids))
 
 @app.route("/review")
 def review():
@@ -121,10 +107,25 @@ def review_marked():
 @app.route("/review_ai")
 def review_ai():
     q_ai = []
-    for q in questions:
-        q["ai_explanation"] = ai_explanation_cache.get(q["題號"], "")
-        if q["ai_explanation"] != "":
-            q_ai.append(q)
+    # 從 session 取得 AI 詳解快取
+    ai_explanation_cache = session.get("ai_explanation_cache", {})
+    
+    # 取得當前已選擇的題庫 ID 列表
+    current_question_ids = session.get("current_question_ids", [])
+    
+    # 建立一個從題號到題目物件的映射，以便快速查詢
+    q_id_to_question_map = {q["題號"]: q for q_list in ALL_QUESTIONS_DATA.values() for q in q_list}
+
+    for q_id in current_question_ids:
+        explanation = ai_explanation_cache.get(q_id, "")
+        if explanation:
+            # 從 ALL_QUESTIONS_DATA 中取得完整的題目資訊
+            q = q_id_to_question_map.get(q_id)
+            if q:
+                q_copy = q.copy()
+                q_copy["ai_explanation"] = explanation
+                q_ai.append(q_copy)
+                
     return render_template("review_ai.html", q_ai=q_ai)
 
 @app.route("/get_question")
@@ -220,9 +221,16 @@ def submit_answer():
 def mark_question():
     data = request.json
     q = data["question"]
+    
+    # 從 session 取得標記題目列表
+    marked_questions = session.get("marked_questions", [])
+    
     # 儲存題號，而不是整個題目物件
     if q.get("題號") not in [mq.get("題號") for mq in marked_questions]:
         marked_questions.append(q)
+        # 將修改後的列表存回 session
+        session["marked_questions"] = marked_questions
+        
     return jsonify({"status": "marked"})
 
 @app.route("/reset_questions", methods=["POST"])
@@ -285,9 +293,7 @@ def get_ai_explanation():
         session["ai_explanation_cache"] = ai_explanation_cache
         
         # 計算本次請求的 token 數
-        prompt_tokens = response.usage_metadata.prompt_token_count
-        completion_tokens = response.usage_metadata.prompt_token_count
-        current_tokens = prompt_tokens + completion_tokens
+        current_tokens = response.usage_metadata.total_token_count
         
         # 更新累積 token 數
         total_tokens_used += current_tokens
