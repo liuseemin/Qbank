@@ -60,12 +60,14 @@ def logout():
 # --- 題庫選擇頁 ---
 @app.route("/select", methods=["GET", "POST"])
 def select():
-    global AVAILABLE_JSONS
+    # global AVAILABLE_JSONS
+    # AVAILABLE_JSONS=[]
     # 讀入檔案
+    available_jsons = []
     base_dir = Path(__file__).resolve().parent
     json_path = base_dir / 'json'
-    AVAILABLE_JSONS.extend(json_path.glob("*.json"))
-    AVAILABLE_JSONS.sort()
+    available_jsons.extend(json_path.glob("*.json"))
+    available_jsons.sort()
 
     if not session.get("logged_in"):
         return redirect(url_for("login"))
@@ -73,10 +75,11 @@ def select():
     if request.method == "POST":
         selected = request.form.getlist("question_sets")
         if not selected:
-            return render_template("select.html", files=AVAILABLE_JSONS, error="請至少選擇一個題庫")
+            return render_template("select.html", files=available_jsons, error="請至少選擇一個題庫")
 
         load_questions(selected)
         reset_questions()
+        all_question_ids = [q.get("題號") for q in questions]
         return redirect(url_for("index"))
 
     return render_template("select.html", files=AVAILABLE_JSONS)
@@ -208,6 +211,7 @@ def mark_question():
 @app.route("/reset_questions", methods=["POST"])
 def reset_questions():
     global remaining_questions, question_index
+    print("重設題庫...")
     remaining_questions = list(questions)
     question_index = 0
     answered_questions.clear()
@@ -359,6 +363,7 @@ def stream_ai_explanation():
     # mimetype 設為 text/html，讓瀏覽器能直接解析 HTML 標籤
     return Response(generate_stream(), mimetype='text/html')
 
+# TODO: 使用global 會有worker 和 race condition 問題，需解決
 def load_questions(json_paths):
     global questions, remaining_questions, question_index_dict
     all_question_files = []
