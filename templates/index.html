@@ -390,6 +390,7 @@
             height: 0;
         }
 
+        .slider2,
         .slider {
             position: absolute;
             cursor: pointer;
@@ -410,12 +411,48 @@
             content: "精簡";
         }
 
+        input:checked+.slider2,
         input:checked+.slider {
             background-color: #2196F3;
         }
 
         input:checked+.slider::after {
             content: "詳細";
+        }
+
+        .slider2::after {
+            content: "隱藏";
+        }
+
+        input:checked+.slider2::after {
+            content: "顯示";
+        }
+
+        /* three toggle */
+        .three-toggle {
+            display: flex;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            overflow: hidden;
+            width: fit-content;
+        }
+
+        .three-toggle input[type="radio"] {
+            display: none;
+        }
+
+        .three-toggle label {
+            padding: 10px 20px;
+            cursor: pointer;
+            background: #eee;
+            transition: background 0.3s;
+        }
+
+        .three-toggle input#off:checked~label[for="off"],
+        .three-toggle input#auto:checked~label[for="auto"],
+        .three-toggle input#on:checked~label[for="on"] {
+            background: #4caf50;
+            color: white;
         }
     </style>
 </head>
@@ -429,6 +466,10 @@
             <h1>線上出題機</h1>
             <div id="question_count"></div>
             <div class="controls">
+                <label class="switch">
+                    <input type="checkbox" id="is_show_answer">
+                    <span class="slider2"></span>
+                </label>
                 <label>
                     <select id="mode">
                         <option value="order">順序出題</option>
@@ -492,6 +533,8 @@
         const tokenInfoDiv = document.getElementById("token-info");
         const questionCountDiv = document.getElementById("question_count");
         const submitAnswerBtn = document.getElementById("submit-button");
+        const is_showAnswerBtn = document.getElementById("is_show_answer");
+        is_showAnswerBtn.onclick = () => renderQuestion(currentQuestion);
 
         var multiple_answers_string = '';
 
@@ -540,6 +583,11 @@
                         submitAnswer(extractOptionCode(opt));
                     }
                 };
+                if (is_showAnswerBtn.checked) {
+                    if (data.答案.includes(extractOptionCode(opt))) {
+                        btn.classList.add('correct');
+                    }
+                }
                 opts.appendChild(btn);
             });
 

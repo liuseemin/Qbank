@@ -177,18 +177,19 @@ def get_ai_explanation():
 
     # 步驟 1: 檢查快取中是否有詳解
     if question_id in ai_explanation_cache:
-        print(f"✅ 題號 {question_id} 的詳解已從快取中取得。")
         explanation = ai_explanation_cache[question_id]
-        return jsonify({
-            "explanation": explanation,
-            "current_tokens": 0,  # 從快取中取得，不計算 token 數
-            "total_tokens": total_tokens_used
-        })
+        if explanation is not None:
+            print(f"✅ 題號 {question_id} 的詳解已從快取中取得。")
+            return jsonify({
+                "explanation": explanation,
+                "current_tokens": 0,  # 從快取中取得，不計算 token 數
+                "total_tokens": total_tokens_used
+            })
 
     # 步驟 2: 如果快取中沒有，則執行 API 呼叫
-    prompt = f"請以繁體中文，針對以下問題，生成 1 分鐘內可以閱讀完的詳解，包含關鍵概念和每個選項解釋，文字簡明，重點清楚：\n\n題目：{question['題目']}\n選項：{' '.join(question['選項'])}\n答案：{question['答案']}"
+    prompt = f"請以繁體中文，針對以下問題，生成精簡的解釋：\n\n題目：{question['題目']}\n選項：{' '.join(question['選項'])}\n答案：{question['答案']}"
     if is_detail:
-        prompt = f"請以繁體中文，針對以下問題提供詳細的解釋：\n\n題目：{question['題目']}\n選項：{' '.join(question['選項'])}\n答案：{question['答案']}"
+        prompt = f"請以繁體中文，針對以下問題，生成 1 分鐘內可以閱讀完的詳解，包含關鍵概念和每個選項解釋，文字簡明，重點清楚：\n\n題目：{question['題目']}\n選項：{' '.join(question['選項'])}\n答案：{question['答案']}"
         
     try:
         # response = model.generate_content(prompt)
