@@ -265,6 +265,26 @@
             float: left;
         }
 
+        #timer {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            float: right;
+            width: 30px;
+            height: 30px;
+            color: red;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1em;
+        }
+
+        #timer.hidden {
+            color: transparent;
+            background-color: #cccccc;
+        }
+
         /* ==== AI 詳解 Loading 動畫 ==== */
         .ai-loading {
             margin-top: 10px;
@@ -465,6 +485,7 @@
         <div class="container">
             <h1>線上出題機</h1>
             <div id="question_count"></div>
+            <div id="timer"></div>
             <div class="controls">
                 <label class="switch">
                     <input type="checkbox" id="is_show_answer">
@@ -512,7 +533,6 @@
                         <span class="slider"></span>
                     </label>
                     <a href="/review_ai" target="_blank">詳解紀錄</a>
-
                 </div>
             </div>
             <div id="token-info" style="display:none;"></div>
@@ -535,6 +555,15 @@
         const submitAnswerBtn = document.getElementById("submit-button");
         const is_showAnswerBtn = document.getElementById("is_show_answer");
         is_showAnswerBtn.onclick = () => renderQuestion(currentQuestion);
+        const timerDiv = document.getElementById("timer");
+        timerDiv.onclick = () => timerDiv.classList.toggle('hidden');
+        let time = 0;
+        setInterval(() => {
+            time += 1;
+            const minute = Math.floor(time / 60).toString().padStart(2, '0');
+            const second = (time % 60).toString().padStart(2, '0');
+            timerDiv.innerText = `${minute}:${second}`;
+        }, 1000);
 
         var multiple_answers_string = '';
 
@@ -554,6 +583,7 @@
         }
 
         function renderQuestion(data) {
+            timer = 0;
             currentQuestion = data;
             multiple_answers_string = '';
             document.getElementById("question").innerText = `[${data.題號}] ${data.題目}`;

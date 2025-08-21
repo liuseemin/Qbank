@@ -14,6 +14,11 @@ import os
 # model = genai.GenerativeModel('gemini-2.5-flash')
 # ---
 
+# check if GEMINI_API_KEY is set in environment variable
+if "GEMINI_API_KEY" not in os.environ:
+    print("⚠️ GEMINI_API_KEY 環境變數未設定")
+    os.environ["GEMINI_API_KEY"] = input("請輸入 Gemini API Key: ")
+
 client = genai.Client()
 MODEL = "gemini-2.5-flash"
 
