@@ -1,9 +1,11 @@
+import re
 from flask import Flask, render_template, request, jsonify, Response
 import json
 import random
 from pathlib import Path
 # import google.generativeai as genai # 引入 Gemini SDK
 from google import genai
+
 
 # --- 設定 Gemini API ---
 # ⚠️ 注意：將你的 API 金鑰存在環境變數中，而非直接寫在程式碼裡
@@ -70,6 +72,10 @@ def review_ai():
         if q["ai_explanation"] != "":
             q_ai.append(q)
     return render_template("review_ai.html", q_ai=q_ai)
+
+@app.route("/search")
+def search_page():
+    return render_template("search.html")
 
 @app.route("/get_question")
 def get_question():
@@ -333,6 +339,36 @@ def load_questions(json_paths):
     questions = all_questions
     remaining_questions = list(questions)
     question_index_dict = {q['題號']: i for i, q in enumerate(questions)}
+
+@app.route("/search_questions")
+def search_questions():
+    keyword = request.args.get("keyword", "").strip()
+    if not keyword:
+        return jsonify([])
+
+    results = []
+    pattern = re.compile(re.escape(keyword), re.IGNORECASE)
+
+    for q in questions:
+        text = q.get("題目", "")
+        opts = q.get("選項", [])
+        # 題目 + 選項 全部檢查
+        combined = text + " " + " ".join(opts)
+        if pattern.search(combined):
+            highlighted_question = pattern.sub(
+                lambda m: f"<mark>{m.group(0)}</mark>", text
+            )
+            highlighted_options = [
+                pattern.sub(lambda m: f"<mark>{m.group(0)}</mark>", o) for o in opts
+            ]
+            results.append({
+                "題號": q.get("題號"),
+                "題目": highlighted_question,
+                "選項": highlighted_options,
+                "答案": q.get("答案", "")
+            })
+
+    return jsonify(results)
 
 if __name__ == "__main__":
     import argparse

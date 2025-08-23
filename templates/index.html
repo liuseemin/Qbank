@@ -110,6 +110,12 @@
             width: 150px;
         }
 
+        select#mode {
+            min-width: 80px;
+            max-width: 100px;
+            width: auto;
+        }
+
         select#question_jump {
             min-width: 60px;
             max-width: 80px;
@@ -475,6 +481,7 @@
             color: white;
         }
     </style>
+    <script src="https://kit.fontawesome.com/dd3b941d36.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -493,9 +500,9 @@
                 </label>
                 <label>
                     <select id="mode">
-                        <option value="order">順序出題</option>
-                        <option value="random">隨機出題</option>
-                        <option value="wrong">錯題練習</option>
+                        <option value="order">依序</option>
+                        <option value="random">隨機</option>
+                        <option value="wrong">錯題</option>
                     </select>
                 </label>
                 <button id="previousQuestionBtn" onclick="prevQuestion()">↩</button>
@@ -503,7 +510,8 @@
                 <button id="restartBtn" onclick="resetAndStart()" style="display:none;">重新開始</button>
                 <a href="/review" target="_blank">查看錯題</a>
                 <a href="/review_marked" target="_blank">查看已標記</a>
-                <label for="question_jump">跳：</label>
+                <a href="/search" target="_blank" class="icon-button"><i class="fa fa-search"></i></a>
+                <label for="question_jump">跳</label>
                 <select id="question_jump" onchange="jumpToQuestion()">
                     <option value="">題號</option>
                     {% for qid in all_question_ids %}

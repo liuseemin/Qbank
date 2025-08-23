@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <title>題庫搜尋</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 40px;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+
+        .controls {
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .controls input[type="text"] {
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+            width: 250px;
+        }
+
+        .controls button {
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .controls button:hover {
+            background-color: #ddd;
+        }
+
+        .results {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .question-card {
+            background: white;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 12px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .question-card h3 {
+            margin-top: 0;
+        }
+
+        mark {
+            background-color: yellow;
+            font-weight: bold;
+        }
+
+        #back-to-select {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        #back-to-select a {
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        #back-to-select a:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align:center;">題庫搜尋</h1>
+    <div class="controls">
+        <label for="keyword">關鍵字：</label>
+        <input type="text" id="keyword" placeholder="輸入關鍵字">
+        <button onclick="search()">搜尋</button>
+    </div>
+
+    <div class="results" id="results"></div>
+
+    <script>
+        async function search() {
+            const keyword = document.getElementById("keyword").value.trim();
+            if (!keyword) return;
+
+            const res = await fetch(`/search_questions?keyword=${encodeURIComponent(keyword)}`);
+            const data = await res.json();
+
+            const resultsDiv = document.getElementById("results");
+            resultsDiv.innerHTML = "";
+
+            if (data.length === 0) {
+                resultsDiv.innerHTML = "<p>❌ 沒有找到符合的題目</p>";
+                return;
+            }
+
+            data.forEach(q => {
+                const card = document.createElement("div");
+                card.className = "question-card";
+                card.innerHTML = `
+                    <h3>題號：${q.題號}</h3>
+                    <p>${q.題目}</p>
+                    <ul>${q.選項.map(opt => `<li>${opt}</li>`).join("")}</ul>
+                    <p><b>答案：</b> ${q.答案}</p>
+                `;
+                resultsDiv.appendChild(card);
+            });
+        }
+    </script>
+</body>
+
+</html>
