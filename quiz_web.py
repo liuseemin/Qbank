@@ -201,7 +201,9 @@ def get_ai_explanation():
     prompt = f"請以繁體中文，針對以下問題，生成精簡的解釋：\n\n題目：{question['題目']}\n選項：{' '.join(question['選項'])}\n答案：{question['答案']}"
     if is_detail:
         prompt = f"請以繁體中文，針對以下問題，生成 1 分鐘內可以閱讀完的詳解，包含關鍵概念和每個選項解釋，文字簡明，重點清楚：\n\n題目：{question['題目']}\n選項：{' '.join(question['選項'])}\n答案：{question['答案']}"
-        
+    
+    prompt += "\n\n請包涵答題相關知識，若需要分類、分級、分型等知識也請列出完整的內容。"
+
     try:
         # response = model.generate_content(prompt)
         response = client.models.generate_content(
