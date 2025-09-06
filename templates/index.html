@@ -576,7 +576,7 @@
         var multiple_answers_string = '';
 
         function extractOptionCode(optText) {
-            // 嘗試擷取開頭的 A/B/C/D，不管是否有括號、點、冒號、空格
+            // 嘗試擷取開頭的 A/B/C/D/E，不管是否有括號、點、冒號、空格
             const match = optText.match(/^\(?([A-E])[\.\):]?\s?/);
             return match ? match[1] : null;
         }

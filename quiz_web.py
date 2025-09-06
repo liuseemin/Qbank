@@ -168,7 +168,7 @@ def mark_question():
 
 @app.route("/reset_questions", methods=["POST"])
 def reset_questions():
-    global remaining_questions, question_index
+    global remaining_questions, question_index, answered_questions
     remaining_questions = list(questions)
     question_index = 0
     answered_questions.clear()
