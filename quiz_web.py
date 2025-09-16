@@ -21,7 +21,14 @@ if "GEMINI_API_KEY" not in os.environ:
     print("⚠️ GEMINI_API_KEY 環境變數未設定")
     os.environ["GEMINI_API_KEY"] = input("請輸入 Gemini API Key: ")
 
-client = genai.Client()
+ai_key = False
+if os.environ["GEMINI_API_KEY"] == "":
+    print("⚠️ 無有效 Gemini API Key, 啟動無詳解模式")
+    client = None
+    ai_key = False
+else:
+    client = genai.Client()
+    ai_key = True
 MODEL = "gemini-2.5-flash"
 
 app = Flask(__name__)
@@ -176,6 +183,8 @@ def reset_questions():
 
 @app.route("/get_ai_explanation", methods=["POST"])
 def get_ai_explanation():
+    if ai_key == False:
+        return jsonify({"error": "未設定 API Key，無法使用 AI 詳解"}), 400
     global total_tokens_used
     is_detail = request.args.get("detail", "false").lower() == "true"
     data = request.json
