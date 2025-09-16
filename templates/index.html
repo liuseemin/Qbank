@@ -416,8 +416,9 @@
             height: 0;
         }
 
+        .slider,
         .slider2,
-        .slider {
+        .slider3 {
             position: absolute;
             cursor: pointer;
             background-color: #cccccc;
@@ -437,8 +438,9 @@
             content: "精簡";
         }
 
+        input:checked+.slider,
         input:checked+.slider2,
-        input:checked+.slider {
+        input:checked+.slider3 {
             background-color: #2196F3;
         }
 
@@ -452,6 +454,14 @@
 
         input:checked+.slider2::after {
             content: "顯示";
+        }
+
+        .slider3::after {
+            content: "配合";
+        }
+
+        input:checked+.slider3::after {
+            content: "誠實";
         }
 
         /* three toggle */
@@ -539,6 +549,10 @@
                     <label class="switch">
                         <input type="checkbox" id="isDetail_toggleBtn">
                         <span class="slider"></span>
+                    </label>
+                    <label class="switch">
+                        <input type="checkbox" id="isHonest_toggleBtn">
+                        <span class="slider3"></span>
                     </label>
                     <a href="/review_ai" target="_blank">詳解紀錄</a>
                 </div>
@@ -776,7 +790,8 @@
                 `;
 
             is_detail = document.getElementById("isDetail_toggleBtn").checked;
-            fetch(`/get_ai_explanation?detail=${is_detail}`, {
+            is_honest = document.getElementById("isHonest_toggleBtn").checked;
+            fetch(`/get_ai_explanation?detail=${is_detail}&honest=${is_honest}`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

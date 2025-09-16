@@ -187,6 +187,7 @@ def get_ai_explanation():
         return jsonify({"error": "未設定 API Key，無法使用 AI 詳解"}), 400
     global total_tokens_used
     is_detail = request.args.get("detail", "false").lower() == "true"
+    is_honest = request.args.get("honest", "false").lower() == "true"
     data = request.json
     question = data.get("question")
 
@@ -212,6 +213,9 @@ def get_ai_explanation():
         prompt = f"請以繁體中文，針對以下問題，生成 1 分鐘內可以閱讀完的詳解，包含關鍵概念和每個選項解釋，文字簡明，重點清楚：\n\n題目：{question['題目']}\n選項：{' '.join(question['選項'])}\n答案：{question['答案']}"
     
     prompt += "\n\n簡要說明答題關鍵知識，若需要分類、分級、分型等知識也請簡要列出完整分級。"
+
+    if is_honest:
+        prompt += "\n\n若答案不合理則要公正的指出。"
 
     try:
         # response = model.generate_content(prompt)
