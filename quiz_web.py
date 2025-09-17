@@ -42,6 +42,7 @@ wrong_questions = []
 marked_questions = []
 question_index = 0
 remaining_questions = []
+wrong_questions_answer_count = 0
 
 # 新增：建立一個全域字典來儲存題號對應的題目
 question_index_dict = {}
@@ -86,7 +87,7 @@ def search_page():
 
 @app.route("/get_question")
 def get_question():
-    global question_index, remaining_questions
+    global question_index, remaining_questions, wrong_questions, wrong_questions_answer_count
     mode = request.args.get("mode", "random")
     question_id = request.args.get("question_id")
 
@@ -130,7 +131,14 @@ def get_question():
             question_index += 1
     elif mode == "wrong":
         if wrong_questions:
-            q = random.choice(wrong_questions)
+            # q = random.choice(wrong_questions)
+            wrong_questions_answer_count += 1
+            if wrong_questions_answer_count >= len(wrong_questions):
+                wrong_questions_answer_count = 0
+                random.shuffle(wrong_questions)
+            q = wrong_questions[0]
+            wrong_questions.remove(q)
+            wrong_questions.append(q)
 
     if q is None:
         return jsonify({"error": "所有題目都已出完！", "finished": True})
@@ -208,14 +216,17 @@ def get_ai_explanation():
             })
 
     # 步驟 2: 如果快取中沒有，則執行 API 呼叫
-    prompt = f"請以繁體中文，針對以下問題，生成精簡的解釋：\n\n題目：{question['題目']}\n選項：{' '.join(question['選項'])}\n答案：{question['答案']}"
-    if is_detail:
-        prompt = f"請以繁體中文，針對以下問題，生成 1 分鐘內可以閱讀完的詳解，包含關鍵概念和每個選項解釋，文字簡明，重點清楚：\n\n題目：{question['題目']}\n選項：{' '.join(question['選項'])}\n答案：{question['答案']}"
+    prompt = f"請以繁體中文，針對以下考題生成「精簡答題重點」，限600字內，強調快速閱讀。\n內容結構:"
     
-    prompt += "\n\n簡要說明答題關鍵知識，若需要分類、分級、分型等知識也請簡要列出完整分級。"
+    if is_detail:
+        prompt = f"請以繁體中文，針對以下問題，生成詳解，包含關鍵概念和每個選項解釋，文字簡明，重點清楚：\n內容結構:"
+    
+    prompt += "\n\n1. 簡要說明答題關鍵知識，列出相關分類、分級、分型。"
 
     if is_honest:
-        prompt += "\n\n若答案不合理則要公正的指出。"
+        prompt += "\n\n2. 判斷答案是否合理。"
+    
+    prompt += f"\n\n題目：{question['題目']}\n選項：{' '.join(question['選項'])}\n答案：{question['答案']}"
 
     try:
         # response = model.generate_content(prompt)
