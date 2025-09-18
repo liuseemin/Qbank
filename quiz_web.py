@@ -51,6 +51,7 @@ answered_questions = set()
 
 # 新增：建立一個全域快取字典來儲存 AI 詳解
 ai_explanation_cache = {}
+prompt_cache = {}
 
 @app.route("/")
 def index():
@@ -196,16 +197,31 @@ def get_ai_explanation():
     global total_tokens_used
     is_detail = request.args.get("detail", "false").lower() == "true"
     is_honest = request.args.get("honest", "false").lower() == "true"
+    is_choiceOnly = request.args.get("choiceOnly", "false").lower() == "true"
     data = request.json
     question = data.get("question")
+    choice = data.get("choice")
 
     if not question:
         return jsonify({"error": "未提供題目"}), 400
     
     question_id = question["題號"]
 
-    # 步驟 1: 檢查快取中是否有詳解
-    if question_id in ai_explanation_cache:
+    # 先設定prompt
+    prompt = f"請以繁體中文，針對以下問題，生成精簡的解釋：\n\n題目：{question['題目']}\n選項：{' '.join(question['選項'])}\n答案：{question['答案']}"
+    if is_detail:
+        prompt = f"請以繁體中文，針對以下問題，生成 1 分鐘內可以閱讀完的詳解，包含關鍵概念和每個選項解釋，文字簡明，重點清楚：\n\n題目：{question['題目']}\n選項：{' '.join(question['選項'])}\n答案：{question['答案']}"
+    
+    prompt += "\n\n簡要說明答題關鍵知識，若需要分類、分級、分型等知識也請簡要列出完整分級。"
+
+    if is_honest:
+        prompt += "\n\n若答案不合理則要公正的指出。"
+    
+    if is_choiceOnly:
+        prompt = f"題目：{question['題目']}\n選項：{' '.join(question['選項'])}\n答案：{question['答案']}\n\n請說明選項{choice}正確或錯誤的理由。"
+
+    # 檢查快取中是否有詳解，有的話直接回傳，如果prompt不一樣也繼續
+    if question_id in ai_explanation_cache and prompt_cache[question_id] == prompt:
         explanation = ai_explanation_cache[question_id]
         if explanation is not None:
             print(f"✅ 題號 {question_id} 的詳解已從快取中取得。")
@@ -215,15 +231,7 @@ def get_ai_explanation():
                 "total_tokens": total_tokens_used
             })
 
-    # 步驟 2: 如果快取中沒有，則執行 API 呼叫
-    prompt = f"請以繁體中文，針對以下問題，生成精簡的解釋：\n\n題目：{question['題目']}\n選項：{' '.join(question['選項'])}\n答案：{question['答案']}"
-    if is_detail:
-        prompt = f"請以繁體中文，針對以下問題，生成 1 分鐘內可以閱讀完的詳解，包含關鍵概念和每個選項解釋，文字簡明，重點清楚：\n\n題目：{question['題目']}\n選項：{' '.join(question['選項'])}\n答案：{question['答案']}"
-    
-    prompt += "\n\n簡要說明答題關鍵知識，若需要分類、分級、分型等知識也請簡要列出完整分級。"
 
-    if is_honest:
-        prompt += "\n\n若答案不合理則要公正的指出。"
 
     try:
         # response = model.generate_content(prompt)
@@ -236,6 +244,7 @@ def get_ai_explanation():
 
         # 步驟 3: 將新的詳解儲存到快取中
         ai_explanation_cache[question_id] = explanation
+        prompt_cache[question_id] = prompt
         
         # 計算本次請求的 token 數
         prompt_tokens = response.usage_metadata.prompt_token_count

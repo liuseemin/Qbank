@@ -418,7 +418,8 @@
 
         .slider,
         .slider2,
-        .slider3 {
+        .slider3,
+        .slider4 {
             position: absolute;
             cursor: pointer;
             background-color: #cccccc;
@@ -440,7 +441,8 @@
 
         input:checked+.slider,
         input:checked+.slider2,
-        input:checked+.slider3 {
+        input:checked+.slider3,
+        input:checked+.slider4 {
             background-color: #2196F3;
         }
 
@@ -462,6 +464,14 @@
 
         input:checked+.slider3::after {
             content: "誠實";
+        }
+
+        .slider4::after {
+            content: "整題";
+        }
+
+        input:checked+.slider4::after {
+            content: "選項";
         }
 
         /* three toggle */
@@ -553,6 +563,10 @@
                     <label class="switch">
                         <input type="checkbox" id="isHonest_toggleBtn">
                         <span class="slider3"></span>
+                    </label>
+                    <label class="switch">
+                        <input type="checkbox" id="isChoiceOnly_toggleBtn">
+                        <span class="slider4"></span>
                     </label>
                     <a href="/review_ai" target="_blank">詳解紀錄</a>
                 </div>
@@ -791,13 +805,20 @@
 
             is_detail = document.getElementById("isDetail_toggleBtn").checked;
             is_honest = document.getElementById("isHonest_toggleBtn").checked;
-            fetch(`/get_ai_explanation?detail=${is_detail}&honest=${is_honest}`, {
+            is_choiceOnly = document.getElementById("isChoiceOnly_toggleBtn").checked;
+            ans_btn = document.querySelectorAll('.selected');
+            ans = "";
+            ans_btn.forEach((btn) => {
+                ans += extractOptionCode(btn.innerText);
+            })
+            fetch(`/get_ai_explanation?detail=${is_detail}&honest=${is_honest}&choiceOnly=${is_choiceOnly}`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
-                    question: currentQuestion
+                    question: currentQuestion,
+                    choice: ans
                 })
             })
                 .then(res => {
