@@ -90,7 +90,7 @@
     <h1 style="text-align:center;">題庫搜尋</h1>
     <div class="controls">
         <label for="keyword">關鍵字：</label>
-        <input type="text" id="keyword" placeholder="輸入關鍵字">
+        <input type="text" id="keyword" placeholder="輸入關鍵字" onkeydown="if(event.key==='Enter') search()">
         <button onclick="search()">搜尋</button>
     </div>
 
