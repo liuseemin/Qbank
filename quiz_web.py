@@ -234,8 +234,6 @@ def get_ai_explanation():
             })
     
 
-    print(f"[prompt] {prompt.replace(question_part, question_id + "... ").replace("\n", '')}")
-
     try:
         # response = model.generate_content(prompt)
         response = client.models.generate_content(
