@@ -659,6 +659,11 @@
         gradient = [];
 
         function makeProgressShowDistribution(isCorrect) {
+            if (gradient.length < answered_questions - 1) {
+                for (let i = gradient.length; i < answered_questions - 1; i++) {
+                    gradient.push('#83b7e7');
+                }
+            }
             gradient.push(isCorrect ? '#83b7e7' : '#e57373');
             const gradientStr = `linear-gradient(to right, ${gradient.join(', ')})`;
             progress.style.background = gradientStr;
