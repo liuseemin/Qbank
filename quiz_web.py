@@ -67,6 +67,8 @@ def test():
 
 @app.route("/review")
 def review():
+    with open("wrong_questions.json", "w", encoding="utf-8") as f:
+        json.dump(wrong_questions, f, ensure_ascii=False, indent=2)
     return render_template("review.html", wrong_questions=wrong_questions)
 
 @app.route("/review_marked")
