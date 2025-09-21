@@ -509,7 +509,7 @@
             width: 60%;
             height: 5px;
             background-color: #ececec;
-            border-radius: 3px;
+            border-radius: 5px;
             margin-bottom: 20px;
         }
 
@@ -517,12 +517,40 @@
             width: 0%;
             height: 100%;
             background-color: #83b7e7;
-            border-radius: 2px;
+            border-radius: 5px;
             transition: width 0.5s ease;
         }
 
         .wrong_progress {
             background-color: #ee8b80 !important;
+        }
+
+        .countdown-container {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 5px;
+            background-color: #ececec;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .countdown {
+            width: 100%;
+            height: 100%;
+            background-color: #e74c3c;
+            border-radius: 5px;
+            transition: width 1s linear;
+        }
+
+        .countdown.instant {
+            transition: none;
+        }
+
+        .countdown.wrong_mode {
+            background-color: #7759e2;
         }
     </style>
     <script src="https://kit.fontawesome.com/dd3b941d36.js" crossorigin="anonymous"></script>
@@ -538,6 +566,9 @@
             <div id="question_count"></div>
             <div class="progress-container">
                 <div class="progress" id="progress"></div>
+            </div>
+            <div class="countdown-container">
+                <div class="countdown" id="countdown"></div>
             </div>
 
             <div id="timer"></div>
@@ -607,12 +638,12 @@
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
     <script>
-        let currentQuestion = null;
-        let total_questions = 0;
-        let answered_questions = 0;
-        let answered_count_total = 0;
-        let total_wrong = 0;
-        let answered_wrong = 0;
+        var currentQuestion = null;
+        var total_questions = 0;
+        var answered_questions = 0;
+        var answered_count_total = 0;
+        var total_wrong = 0;
+        var answered_wrong = 0;
         const nextQuestionBtn = document.getElementById("nextQuestionBtn");
         const restartBtn = document.getElementById("restartBtn");
         const modeSelect = document.getElementById("mode");
@@ -627,16 +658,21 @@
         const timerDiv = document.getElementById("timer");
         const progress = document.getElementById("progress");
         timerDiv.onclick = () => timerDiv.classList.toggle('hidden');
-        let time = 0;
+        var time = 0;
+
+        const countdown = document.getElementById("countdown");
+        var countdown_timer = 60;
+        const countdownInterval = 60;
         setInterval(() => {
             time += 1;
             const minute = Math.floor(time / 60).toString().padStart(2, '0');
             const second = (time % 60).toString().padStart(2, '0');
             timerDiv.innerText = `${minute}:${second}`;
+            countdown_timer -= 1;
+            countdown.style.width = `${(countdown_timer / countdownInterval) * 100}%`;
         }, 1000);
 
         var multiple_answers_string = '';
-
 
         function updateProgress() {
             if (total_questions === 0) {
@@ -685,7 +721,13 @@
         }
 
         function renderQuestion(data) {
-            timer = 0;
+            updateProgress();
+            countdown_timer = countdownInterval;
+            countdown.classList.toggle('instant');
+            countdown.style.width = `100%`;
+            setTimeout(() => {
+                countdown.classList.toggle('instant');
+            }, 50);
             currentQuestion = data;
             multiple_answers_string = '';
             document.getElementById("question").innerText = `[${data.題號}] ${data.題目}`;
@@ -761,12 +803,13 @@
             if (mode === 'wrong') {
                 progress.classList.add('wrong_progress');
                 progress.style.background = '#ee8b80';
+                countdown.classList.add('wrong_mode');
             } else {
                 progress.classList.remove('wrong_progress');
                 const gradientStr = `linear-gradient(to right, ${gradient.join(', ')})`;
                 progress.style.background = gradientStr;
+                countdown.classList.remove('wrong_mode');
             }
-            updateProgress();
             fetch(`/get_question?mode=${mode}`)
                 .then(res => res.json())
                 .then(data => {
