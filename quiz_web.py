@@ -416,7 +416,6 @@ if __name__ == "__main__":
 
     load_questions(args.json_files)
     print(f"✅ 題庫已載入，總題數：{len(questions)}")
-    print(f"🌐 網頁出題機：http://{args.host}:{args.port}")
     if args.wrong:
         def load_wrong_questions(json_path):
             global wrong_questions
@@ -433,5 +432,6 @@ if __name__ == "__main__":
         load_wrong_questions(args.wrong)
         print(f"✅ 錯題檔案已載入，總題數：{len(wrong_questions)}")
     
+    print(f"🌐 網頁出題機：http://{args.host}:{args.port}")
     app.run(host=args.host, port=args.port, debug=True)
 
