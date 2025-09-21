@@ -500,6 +500,30 @@
             background: #4caf50;
             color: white;
         }
+
+        .progress-container {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 5px;
+            background-color: #ececec;
+            border-radius: 3px;
+            margin-bottom: 20px;
+        }
+
+        .progress {
+            width: 0%;
+            height: 100%;
+            background-color: #83b7e7;
+            border-radius: 2px;
+            transition: width 0.5s ease;
+        }
+
+        .wrong_progress {
+            background-color: #ee8b80 !important;
+        }
     </style>
     <script src="https://kit.fontawesome.com/dd3b941d36.js" crossorigin="anonymous"></script>
 </head>
@@ -512,6 +536,10 @@
         <div class="container">
             <h1>線上出題機</h1>
             <div id="question_count"></div>
+            <div class="progress-container">
+                <div class="progress" id="progress"></div>
+            </div>
+
             <div id="timer"></div>
             <div class="controls">
                 <label class="switch">
@@ -580,6 +608,11 @@
 
     <script>
         let currentQuestion = null;
+        let total_questions = 0;
+        let answered_questions = 0;
+        let answered_count_total = 0;
+        let total_wrong = 0;
+        let answered_wrong = 0;
         const nextQuestionBtn = document.getElementById("nextQuestionBtn");
         const restartBtn = document.getElementById("restartBtn");
         const modeSelect = document.getElementById("mode");
@@ -592,6 +625,7 @@
         const is_showAnswerBtn = document.getElementById("is_show_answer");
         is_showAnswerBtn.onclick = () => renderQuestion(currentQuestion);
         const timerDiv = document.getElementById("timer");
+        const progress = document.getElementById("progress");
         timerDiv.onclick = () => timerDiv.classList.toggle('hidden');
         let time = 0;
         setInterval(() => {
@@ -602,6 +636,33 @@
         }, 1000);
 
         var multiple_answers_string = '';
+
+
+        function updateProgress() {
+            if (total_questions === 0) {
+                progress.style.width = "0%";
+                questionCountDiv.innerText = "";
+                return;
+            }
+            if (modeSelect.value === 'wrong' && total_wrong > 0) {
+                const width = Math.floor((answered_wrong / total_wrong) * 100);
+                progress.style.width = width + "%";
+                questionCountDiv.innerText = `已答題數 ${answered_wrong} / ${total_wrong}`;
+                return;
+            } else {
+                const width = Math.floor((answered_questions / total_questions) * 100);
+                progress.style.width = width + "%";
+                questionCountDiv.innerText = `已答題數 ${answered_questions} / ${total_questions}`;
+            }
+        }
+
+        gradient = [];
+
+        function makeProgressShowDistribution(isCorrect) {
+            gradient.push(isCorrect ? '#83b7e7' : '#e57373');
+            const gradientStr = `linear-gradient(to right, ${gradient.join(', ')})`;
+            progress.style.background = gradientStr;
+        }
 
         function extractOptionCode(optText) {
             // 嘗試擷取開頭的 A/B/C/D/E，不管是否有括號、點、冒號、空格
@@ -692,6 +753,15 @@
 
         function loadQuestion() {
             let mode = modeSelect.value;
+            if (mode === 'wrong') {
+                progress.classList.add('wrong_progress');
+                progress.style.background = '#ee8b80';
+            } else {
+                progress.classList.remove('wrong_progress');
+                const gradientStr = `linear-gradient(to right, ${gradient.join(', ')})`;
+                progress.style.background = gradientStr;
+            }
+            updateProgress();
             fetch(`/get_question?mode=${mode}`)
                 .then(res => res.json())
                 .then(data => {
@@ -780,7 +850,14 @@
                     }
 
                     aiExplanationBtn.style.display = "block";
-                    questionCountDiv.innerText = `已答題數 ${data.answered_count}`;
+                    total_questions = data.total_questions;
+                    answered_questions = data.answered_count_total;
+                    total_wrong = data.total_wrong;
+                    answered_wrong = data.answered_wrong;
+                    updateProgress();
+                    if (modeSelect.value !== 'wrong' && answered_questions > gradient.length) {
+                        makeProgressShowDistribution(data.correct);
+                    }
                 });
         }
 
@@ -875,6 +952,9 @@
                 method: "POST"
             }).then(() => {
                 loadQuestion();
+                gradient = [];
+                answered_questions = 0;
+                updateProgress();
             });
         }
 

@@ -172,7 +172,11 @@ def submit_answer():
     return jsonify({
         "correct": is_correct,
         "right_answer": correct,
-        "answered_count": "{}/{}".format(len(answered_questions), len(questions)) if questions else len(answered_questions)
+        # "answered_count": "{}/{}".format(len(answered_questions), len(questions)) if questions else len(answered_questions),
+        "total_questions": len(questions),
+        "answered_count_total": len(answered_questions),
+        "total_wrong": len(wrong_questions),
+        "answered_wrong": wrong_questions_answer_count
     })
 
 @app.route("/mark_question", methods=["POST"])
@@ -273,26 +277,46 @@ def get_ai_explanation():
 # 新增一個用於串流回應的路由
 @app.route("/stream_ai_explanation", methods=["POST"])
 def stream_ai_explanation():
+    if ai_key == False:
+        return jsonify({"error": "未設定 API Key，無法使用 AI 詳解"}), 400
     global total_tokens_used
+    is_detail = request.args.get("detail", "false").lower() == "true"
+    is_honest = request.args.get("honest", "false").lower() == "true"
+    is_choiceOnly = request.args.get("choiceOnly", "false").lower() == "true"
     data = request.json
     question = data.get("question")
+    choice = data.get("choice")
 
     if not question:
         return jsonify({"error": "未提供題目"}), 400
     
     question_id = question["題號"]
 
-    # 步驟 1: 檢查快取中是否有詳解
-    if question_id in ai_explanation_cache:
-        print(f"✅ 題號 {question_id} 的詳解已從快取中取得。")
-        explanation = ai_explanation_cache[question_id]
-        return jsonify({
-            "explanation": explanation,
-            "current_tokens": 0,  # 從快取中取得，不計算 token 數
-            "total_tokens": total_tokens_used
-        })
+    question_part = f"題目：{question['題目']}\n選項：{' '.join(question['選項'])}\n答案：{question['答案']}"
 
-    prompt = f"請以繁體中文，針對以下問題提供詳細的解釋：\n\n題目：{question['題目']}\n選項：{' '.join(question['選項'])}\n答案：{question['答案']}"
+    # 先設定prompt
+    prompt = f"請以繁體中文，針對以下問題，生成精簡的解釋：\n\n{question_part}"
+    if is_detail:
+        prompt = f"請以繁體中文，針對以下問題，生成 1 分鐘內可以閱讀完的詳解，包含關鍵概念和每個選項解釋，文字簡明，重點清楚：\n\n{question_part}"
+    
+    prompt += "\n\n簡要說明答題關鍵知識，若需要分類、分級、分型等知識也請簡要列出完整分級。"
+
+    if is_honest:
+        prompt += "\n\n若答案不合理則要公正的指出。"
+    
+    if is_choiceOnly:
+        prompt = f"{question_part}\n\n請說明選項{choice}正確或錯誤的理由。"
+
+    # 檢查快取中是否有詳解，有的話直接回傳，如果prompt不一樣也繼續
+    if question_id in ai_explanation_cache and prompt_cache[question_id] == prompt:
+        explanation = ai_explanation_cache[question_id]
+        if explanation is not None:
+            print(f"✅ 題號 {question_id} 的詳解已從快取中取得。")
+            return jsonify({
+                "explanation": explanation,
+                "current_tokens": 0,  # 從快取中取得，不計算 token 數
+                "total_tokens": total_tokens_used
+            })
     
     # 確保 prompt_tokens 在串流開始前計算一次
     # 因為 prompt tokens 在發送請求時就已確定
