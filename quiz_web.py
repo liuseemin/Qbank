@@ -411,9 +411,27 @@ if __name__ == "__main__":
     parser.add_argument("json_files", nargs="+", help="一個或多個題庫 JSON 檔案或資料夾")
     parser.add_argument("--host", default="127.0.0.1")
     parser.add_argument("--port", default=5000, type=int)
+    parser.add_argument("--wrong", "-w", type=str, help="載入錯題檔案")
     args = parser.parse_args()
 
     load_questions(args.json_files)
     print(f"✅ 題庫已載入，總題數：{len(questions)}")
     print(f"🌐 網頁出題機：http://{args.host}:{args.port}")
+    if args.wrong:
+        def load_wrong_questions(json_path):
+            global wrong_questions
+            try:
+                with open(json_path, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                    if isinstance(data, list):
+                        wrong_questions = data
+                        print(f"✅ 載入錯題檔案：{json_path}，題數：{len(wrong_questions)}")
+                    else:
+                        print(f"⚠️ {json_path} 格式錯誤，非陣列，略過")
+            except Exception as e:
+                print(f"❌ 處理錯題檔案 {json_path} 時發生錯誤：{e}")
+        load_wrong_questions(args.wrong)
+        print(f"✅ 錯題檔案已載入，總題數：{len(wrong_questions)}")
+    
     app.run(host=args.host, port=args.port, debug=True)
+
