@@ -5,44 +5,127 @@
     <meta charset="utf-8">
     <title>錯題回顧</title>
     <style>
+        /* 與 review.html 相同的 CSS 樣式 */
         body {
-            font-family: Arial;
-            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 40px;
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
         }
 
-        table {
-            border-collapse: collapse;
+        .container {
             width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
-        th,
-        td {
-            border: 1px solid #ccc;
-            padding: 5px;
+        h1 {
+            font-size: 2.5em;
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .question-card {
+            background-color: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            /* transition: box-shadow 0.2s ease-in-out;*/
+        }
+
+        /*
+        .question-card:hover {
+            box-shadow: 0 0 10px rgb(26, 255, 129);
+        }
+        */
+
+        .question-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #34495e;
+            margin-bottom: 10px;
+        }
+
+        .options-list {
+            list-style-type: none;
+            padding-left: 0;
+            margin-top: 10px;
+        }
+
+        .options-list li {
+            background-color: #e8f0fe;
+            border-radius: 6px;
+            padding: 10px;
+            margin-bottom: 8px;
+            border: 1px solid #d1e2ff;
+        }
+
+        .answer {
+            font-weight: bold;
+            color: #27ae60;
+            margin-top: 15px;
+        }
+
+        .empty-message {
+            text-align: center;
+            font-size: 1.2em;
+            color: #7f8c8d;
+            padding: 50px;
+        }
+
+        .back-button {
+            display: block;
+            width: 150px;
+            margin: 20px auto 0;
+            text-align: center;
+            padding: 12px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #2980b9;
         }
     </style>
 </head>
 
 <body>
-    <h1>錯題回顧</h1>
-    <table>
-        <tr>
-            <th>題號</th>
-            <th>題目</th>
-            <th>選項</th>
-            <th>答案</th>
-            <th>出處</th>
-        </tr>
+    <div class="container">
+        <h1>錯題回顧</h1>
+        {% if wrong_questions %}
         {% for q in wrong_questions %}
-        <tr>
-            <td>{{ q.題號 }}</td>
-            <td>{{ q.題目 }}</td>
-            <td>{{ q.選項 | join(" / ") }}</td>
-            <td>{{ q.答案 }}</td>
-            <td>{{ q.出處 }}</td>
-        </tr>
+        <div class="question-card">
+            <div class="question-title">
+                [{{ q.題號 }}] {{ q.題目 }}
+            </div>
+            <ul class="options-list">
+                {% for option in q.選項 %}
+                <li>{{ option }}</li>
+                {% endfor %}
+            </ul>
+            <div class="answer">
+                正確答案：{{ q.答案 }}
+            </div>
+            <a>出處：{{ q.出處 }}</a>
+        </div>
         {% endfor %}
-    </table>
+        {% else %}
+        <div class="empty-message">
+            還沒有錯題
+        </div>
+        {% endif %}
+    </div>
 </body>
 
 </html>
