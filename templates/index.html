@@ -901,8 +901,14 @@
                     total_questions = data.total_questions;
                     answered_questions = data.answered_count_total;
                     total_wrong = data.total_wrong;
-                    answered_wrong = data.answered_wrong;
-                    updateProgress();
+                    if (answered_wrong + 1 == total_wrong) {
+                        answered_wrong = total_wrong;
+                        updateProgress();
+                        answered_wrong = data.answered_wrong;
+                    } else {
+                        answered_wrong = data.answered_wrong;
+                        updateProgress();
+                    }
                     if (modeSelect.value !== 'wrong' && answered_questions > gradient.length) {
                         makeProgressShowDistribution(data.correct);
                     }
