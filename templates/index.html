@@ -901,8 +901,8 @@
                     total_questions = data.total_questions;
                     answered_questions = data.answered_count_total;
                     total_wrong = data.total_wrong;
-                    if (answered_wrong + 1 == total_wrong) {
-                        answered_wrong = total_wrong;
+                    if (data.answered_wrong == 0 && answered_wrong > 0) {
+                        answered_wrong += 1;
                         updateProgress();
                         answered_wrong = data.answered_wrong;
                     } else {
@@ -994,10 +994,17 @@
                 })
             })
                 .then(res => res.json())
-                .then(() => {
+                .then((data) => {
                     const markBtn = document.querySelector(".mark-button");
-                    markBtn.innerText = "已標記";
-                    markBtn.style.backgroundColor = "#2ecc71";
+                    if (data.status === "marked") {
+                        markBtn.innerText = "已標記";
+                        markBtn.style.backgroundColor = "#2ecc71";
+                        return;
+                    } else if (data.status === "unmarked") {
+                        markBtn.innerText = "標記本題";
+                        markBtn.style.backgroundColor = "#9b59b6";
+                        return;
+                    }
                 });
         }
 

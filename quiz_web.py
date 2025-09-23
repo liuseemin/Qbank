@@ -135,13 +135,13 @@ def get_question():
     elif mode == "wrong":
         if wrong_questions:
             # q = random.choice(wrong_questions)
+            q = wrong_questions[0]
             wrong_questions_answer_count += 1
+            wrong_questions.remove(q)
+            wrong_questions.append(q)
             if wrong_questions_answer_count >= len(wrong_questions):
                 wrong_questions_answer_count = 0
                 random.shuffle(wrong_questions)
-            q = wrong_questions[0]
-            wrong_questions.remove(q)
-            wrong_questions.append(q)
 
     if q is None:
         return jsonify({"error": "所有題目都已出完！", "finished": True})
@@ -186,7 +186,11 @@ def mark_question():
     # 儲存題號，而不是整個題目物件
     if q.get("題號") not in [mq.get("題號") for mq in marked_questions]:
         marked_questions.append(q)
-    return jsonify({"status": "marked"})
+        return jsonify({"status": "marked"})
+    else:
+        # 如果已經標記過，則取消標記
+        marked_questions[:] = [mq for mq in marked_questions if mq.get("題號") != q.get("題號")]
+        return jsonify({"status": "unmarked"})
 
 @app.route("/reset_questions", methods=["POST"])
 def reset_questions():
