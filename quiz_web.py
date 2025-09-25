@@ -73,6 +73,22 @@ def review():
         json.dump(wrong_questions, f, ensure_ascii=False, indent=2)
     return render_template("review.html", wrong_questions=wrong_questions)
 
+@app.route("/save_wrong")
+def save_wrong():
+    data = json.dumps(wrong_questions, ensure_ascii=False, indent=2)
+    file_obj = io.BytesIO()
+    file_obj.write(data.encode("utf-8"))
+    file_obj.seek(0)
+    # 讓使用者下載檔案
+    # def a function to remove q['題號']'s "_number" part for all q in wrong_questions
+    def remove_suffixs(q):
+        return re.sub(r'_\d+$', '', q['題號'])
+        
+    default_filename = ''.join({remove_suffixs(q) for q in wrong_questions}) + ".json"
+    from urllib.parse import quote
+     # 使用 RFC 5987 編碼來處理非 ASCII 字元
+    return Response(file_obj, mimetype="application/json", headers={"Content-Disposition": f"attachment; filename*=UTF-8''{quote(default_filename)}"})
+
 @app.route("/review_marked")
 def review_marked():
     return render_template("review_marked.html", marked_questions=marked_questions)

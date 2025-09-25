@@ -80,10 +80,12 @@
             padding: 50px;
         }
 
-        .back-button {
+        .save-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
             display: block;
-            width: 150px;
-            margin: 20px auto 0;
+            width: 100px;
             text-align: center;
             padding: 12px 20px;
             background-color: #3498db;
@@ -94,7 +96,7 @@
             transition: background-color 0.3s ease;
         }
 
-        .back-button:hover {
+        .save-button:hover {
             background-color: #2980b9;
         }
     </style>
@@ -102,7 +104,7 @@
 
 <body>
     <div class="container">
-        <h1>錯題回顧</h1>
+        <h1>錯題回顧</h1><a class="save-button" href="/save_wrong">儲存錯題</a>
         {% if wrong_questions %}
         {% for q in wrong_questions %}
         <div class="question-card">
@@ -128,6 +130,9 @@
             目前沒有錯題
         </div>
         {% endif %}
+    </div>
+    <div id="save-status">
+
     </div>
 </body>
 

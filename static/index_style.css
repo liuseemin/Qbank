@@ -1,0 +1,547 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 40px;
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.main-container {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    max-width: 1500px;
+}
+
+.container {
+    flex: 1;
+    max-width: 1000px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+}
+
+#ai-explanation {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+#ai-explanation h2 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+#ai-explanation .loading {
+    color: #7f8c8d;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    margin-top: 0px;
+}
+
+.controls {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.controls label {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+#ai-explanation a,
+.controls select,
+.controls button,
+.controls a,
+#save-status a {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+#restartBtn {
+    background-color: #e0af0d;
+}
+
+#save-status {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#save-status a {
+    background-color: #db5b34;
+    color: white;
+    border: none;
+}
+
+.controls select {
+    width: 150px;
+}
+
+select#mode {
+    min-width: 80px;
+    max-width: 100px;
+    width: auto;
+}
+
+select#question_jump {
+    min-width: 60px;
+    max-width: 80px;
+    width: auto;
+}
+
+.controls button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    font-weight: bold;
+}
+
+.controls button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+#ai-explanation a,
+.controls a {
+    color: #2c3e50;
+    border: 1px solid #bdc3c7;
+    background-color: #ecf0f1;
+}
+
+.controls a:hover {
+    background-color: #e0e6e9;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.question {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    min-height: 50px;
+}
+
+.options {
+    margin: 20px 0;
+}
+
+.options button {
+    display: block;
+    margin: 15px auto;
+    padding: 15px;
+    width: 80%;
+    max-width: 500px;
+    font-size: 1.2em;
+    background-color: #e8f0fe;
+    border: 1px solid #d1e2ff;
+    color: #34495e;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+.options button:hover {
+    background-color: #d1e2ff;
+    transform: scale(1.02);
+}
+
+.options button.selected,
+.options button.chosen {
+    background-color: #3498db;
+    color: white;
+    border-color: #2980b9;
+}
+
+.options button.correct {
+    background-color: #e74c3c;
+    color: white;
+    border-color: #c0392b;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.result a {
+    color: #e74c3c;
+    text-decoration: underline;
+    font-size: 1em;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.result a:hover {
+    color: #c0392b;
+}
+
+.action-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+#submit-button,
+.mark-button,
+.explanation-button {
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.mark-button {
+    background-color: #9b59b6;
+}
+
+#submit-button {
+    background-color: #e0af0d;
+}
+
+.mark-button:hover {
+    background-color: #8e44ad;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.explanation-button {
+    background-color: #e74c3c;
+}
+
+.explanation-button:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.correct {
+    color: #27ae60;
+}
+
+.wrong {
+    color: #e74c3c;
+}
+
+#question_count {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    float: left;
+}
+
+#timer {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    float: right;
+    width: 30px;
+    height: 30px;
+    color: red;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+}
+
+#timer.hidden {
+    color: transparent;
+    background-color: #cccccc;
+}
+
+/* ==== AI 詳解 Loading 動畫 ==== */
+.ai-loading {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 16px;
+    border: 1px dashed #dfe6e9;
+    border-radius: 12px;
+    background: #fafbfc;
+}
+
+/* 旋轉圈 */
+.ai-loading .spinner {
+    width: 22px;
+    height: 22px;
+    border: 3px solid #e5e9f0;
+    border-top-color: #3498db;
+    border-radius: 50%;
+    animation: ai-spin 1s linear infinite;
+}
+
+@keyframes ai-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* 跳動三點 */
+.ai-loading .typing {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.ai-loading .typing span {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #7f8c8d;
+    animation: ai-bounce 1.2s infinite ease-in-out;
+    opacity: .85;
+}
+
+.ai-loading .typing span:nth-child(2) {
+    animation-delay: .15s;
+}
+
+.ai-loading .typing span:nth-child(3) {
+    animation-delay: .3s;
+}
+
+@keyframes ai-bounce {
+
+    0%,
+    80%,
+    100% {
+        transform: translateY(0);
+        opacity: .6;
+    }
+
+    40% {
+        transform: translateY(-6px);
+        opacity: 1;
+    }
+}
+
+/* 骨架條（讓內容區有「正在生成」的感覺） */
+.ai-loading .skeleton {
+    flex: 1;
+}
+
+.ai-loading .skeleton-line {
+    height: 10px;
+    border-radius: 999px;
+    margin: 8px 0;
+    background: linear-gradient(90deg, #eceff1 25%, #f6f8fa 37%, #eceff1 63%);
+    background-size: 400% 100%;
+    animation: ai-shimmer 1.2s ease-in-out infinite;
+}
+
+.ai-loading .skeleton-line:nth-child(1) {
+    width: 85%;
+}
+
+.ai-loading .skeleton-line:nth-child(2) {
+    width: 95%;
+}
+
+.ai-loading .skeleton-line:nth-child(3) {
+    width: 70%;
+}
+
+@keyframes ai-shimmer {
+    0% {
+        background-position: 100% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.ai-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* switch*/
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 34px;
+    vertical-align: middle;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider,
+.slider2,
+.slider3,
+.slider4 {
+    position: absolute;
+    cursor: pointer;
+    background-color: #cccccc;
+    border-radius: 34px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: .4s;
+    text-align: center;
+    line-height: 34px;
+    font-weight: bold;
+    color: white;
+}
+
+.slider::after {
+    content: "精簡";
+}
+
+input:checked+.slider,
+input:checked+.slider2,
+input:checked+.slider3,
+input:checked+.slider4 {
+    background-color: #2196F3;
+}
+
+input:checked+.slider::after {
+    content: "詳細";
+}
+
+.slider2::after {
+    content: "隱藏";
+}
+
+input:checked+.slider2::after {
+    content: "顯示";
+}
+
+.slider3::after {
+    content: "配合";
+}
+
+input:checked+.slider3::after {
+    content: "誠實";
+}
+
+.slider4::after {
+    content: "整題";
+}
+
+input:checked+.slider4::after {
+    content: "選項";
+}
+
+/* three toggle */
+.three-toggle {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+    width: fit-content;
+}
+
+.three-toggle input[type="radio"] {
+    display: none;
+}
+
+.three-toggle label {
+    padding: 10px 20px;
+    cursor: pointer;
+    background: #eee;
+    transition: background 0.3s;
+}
+
+.three-toggle input#off:checked~label[for="off"],
+.three-toggle input#auto:checked~label[for="auto"],
+.three-toggle input#on:checked~label[for="on"] {
+    background: #4caf50;
+    color: white;
+}
+
+.progress-container {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 5px;
+    background-color: #ececec;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.progress {
+    width: 0%;
+    height: 100%;
+    background-color: #83b7e7;
+    border-radius: 5px;
+    transition: width 0.5s ease;
+}
+
+.wrong_progress {
+    background-color: #ee8b80 !important;
+}
+
+.countdown-container {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 5px;
+    background-color: #ececec;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.countdown {
+    width: 100%;
+    height: 100%;
+    background-color: #e74c3c;
+    border-radius: 5px;
+    transition: width 1s linear;
+}
+
+.countdown.instant {
+    transition: none;
+}
+
+.countdown.wrong_mode {
+    background-color: #7759e2;
+}
