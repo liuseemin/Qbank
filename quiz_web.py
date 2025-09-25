@@ -88,15 +88,37 @@ def review_ai():
 def search_page():
     return render_template("search.html")
 
+@app.route("/save_progress")
+def save_progress():
+    path = request.args.get("path") or "progress.json"  # 如果沒有指定路徑，預設為 progress.json
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump({
+            "questions": questions,
+            "answered_questions": list(answered_questions),
+            "wrong_questions": wrong_questions,
+            "marked_questions": marked_questions
+        }, f, ensure_ascii=False, indent=2)
+    return jsonify({"status": "success"})
+
 @app.route("/get_question")
 def get_question():
     global question_index, remaining_questions, wrong_questions, wrong_questions_answer_count
     mode = request.args.get("mode", "random")
     question_id = request.args.get("question_id")
+    prev = request.args.get("prev", "false").lower() == "true"
 
     if not questions:
         return jsonify({"error": "題庫尚未載入"})
 
+    if prev:
+        question_index = max(0, question_index - 1)
+        q = questions[question_index]
+        # 透過題號判斷題目是否已被標記
+        q["is_marked"] = any(marked_q.get("題號") == q.get("題號") for marked_q in marked_questions)
+        q["is_multiple"] = True if q.get("題別") == "複" else False
+        question_index += 1
+        return jsonify(q)
+    
     # 處理跳轉到特定題號的請求
     if question_id:
         try:
@@ -106,7 +128,7 @@ def get_question():
                 raise KeyError
 
             q = questions[question_index]
-            # 修正：透過題號判斷題目是否已被標記
+            # 透過題號判斷題目是否已被標記
             q["is_marked"] = any(marked_q.get("題號") == q.get("題號") for marked_q in marked_questions)
             q["is_multiple"] = True if q.get("題別") == "複" else False
             question_index += 1
@@ -397,7 +419,7 @@ def load_questions(json_paths):
                             q['題目'] = q['題目'].replace('\r\n', ' ').replace('\n', ' ').strip()
                         if '選項' in q and isinstance(q['選項'], list):
                             q['選項'] = [opt.replace('\r\n', ' ').replace('\n', ' ').strip() for opt in q['選項']]
-                        if '題號' in q:
+                        if '題號' in q and f"{file_path.stem}" not in q['題號']:
                             q['題號'] = f"{file_path.stem}_{q.get('題號')}"
                         cleaned_questions.append(q)
                     all_questions.extend(cleaned_questions)
@@ -450,7 +472,21 @@ if __name__ == "__main__":
     parser.add_argument("--host", default="127.0.0.1")
     parser.add_argument("--port", default=5000, type=int)
     parser.add_argument("--wrong", "-w", type=str, help="載入錯題檔案")
+    parser.add_argument("--save", "-s", type=str, help="載入進度檔案")
     args = parser.parse_args()
+
+    if args.save:
+        try:
+            with open(args.save, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                questions = data.get("questions", [])
+                answered_questions = set(data.get("answered_questions", []))
+                wrong_questions = data.get("wrong_questions", [])
+                marked_questions = data.get("marked_questions", [])
+                question_index_dict = {q['題號']: i for i, q in enumerate(questions)}
+                print(f"✅ 進度檔案已載入，總題數：{len(questions)}，已答題數：{len(answered_questions)}")
+        except Exception as e:
+            print(f"❌ 載入進度檔案失敗：{e}")
 
     load_questions(args.json_files)
     print(f"✅ 題庫已載入，總題數：{len(questions)}")

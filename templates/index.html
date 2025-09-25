@@ -80,7 +80,7 @@
         .controls select,
         .controls button,
         .controls a,
-        #back-to-select a {
+        #save-status a {
             padding: 10px 20px;
             border-radius: 8px;
             border: 1px solid #ccc;
@@ -94,13 +94,13 @@
             background-color: #e0af0d;
         }
 
-        #back-to-select {
+        #save-status {
             position: absolute;
             top: 10px;
             right: 10px;
         }
 
-        #back-to-select a {
+        #save-status a {
             background-color: #db5b34;
             color: white;
             border: none;
@@ -557,8 +557,8 @@
 </head>
 
 <body>
-    <div id="back-to-select">
-        <a href="/select">選擇題庫</a>
+    <div id="save-status">
+        <a onclick="saveProgress()">儲存進度</a>
     </div>
     <div class="main-container">
         <div class="container">
@@ -855,7 +855,7 @@
             parts[parts.length - 1] = numberId;
             const questionId = parts.join("_");
             if (questionId) {
-                fetch(`/get_question?question_id=${questionId}`)
+                fetch(`/get_question?question_id=${questionId}&prev=True`)
                     .then(res => res.json())
                     .then(data => {
                         if (data.error) {
@@ -1023,6 +1023,51 @@
             loadQuestion();
             modeSelect.addEventListener("change", loadQuestion);
         });
+
+        function saveProgress() {
+            // show dialog to select folder
+            const pathPicker = document.createElement('input');
+            pathPicker.type = 'file';
+            pathPicker.webkitdirectory = 'true';
+            pathPicker.multiple = 'false';
+            pathPicker.accept = 'application/json';
+            pathPicker.onchange = () => {
+                const filepath = pathPicker.value;
+                fetch("/save_progress", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        path: filepath
+                    })
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.status === "success") {
+                            saveStatus.innerText = "儲存成功";
+                            saveStatus.style.color = "green";
+                        } else {
+                            saveStatus.innerText = "儲存失敗";
+                            saveStatus.style.color = "red";
+                        }
+                    });
+            };
+            path.click();
+            // Call server to save progress and retrun status
+            fetch("/save_progress", {
+                method: "POST"
+            }).then(res => res.json())
+                .then(data => {
+                    if (data.status === "success") {
+                        saveStatus.innerText = "儲存成功";
+                        saveStatus.style.color = "green";
+                    } else {
+                        saveStatus.innerText = "儲存失敗";
+                        saveStatus.style.color = "red";
+                    }
+                });
+        }
     </script>
 </body>
 
