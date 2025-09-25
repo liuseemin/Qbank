@@ -118,7 +118,7 @@
                 card.innerHTML = `
                     <h3>題號：${q.題號}</h3>
                     <p>${q.題目}</p>
-                    ${q.圖片 ? `<br><img src="${q.圖片}" alt="題目圖片" style="max-width:100%; margin-top:15px;"/>` : ''}
+                    ${q.圖片 ? `<img src="${q.圖片}" alt="題目圖片" style="max-width:100%; margin-top:15px;"/>` : ''}
                     <ul>${q.選項.map(opt => `<li>${opt}</li>`).join("")}</ul>
                     <p><b>答案：</b> ${q.答案}</p>
                 `;

@@ -484,6 +484,7 @@ def search_questions():
             results.append({
                 "題號": q.get("題號"),
                 "題目": highlighted_question,
+                "圖片": q.get("圖片", ""),
                 "選項": highlighted_options,
                 "答案": q.get("答案", "")
             })
