@@ -84,7 +84,7 @@ def save_wrong():
     def remove_suffixs(q):
         return re.sub(r'_\d+$', '', q['題號'])
         
-    default_filename = ''.join({remove_suffixs(q) for q in wrong_questions}) + ".json"
+    default_filename = '+'.join({remove_suffixs(q) for q in wrong_questions}) + ".json"
     from urllib.parse import quote
      # 使用 RFC 5987 編碼來處理非 ASCII 字元
     return Response(file_obj, mimetype="application/json", headers={"Content-Disposition": f"attachment; filename*=UTF-8''{quote(default_filename)}"})
