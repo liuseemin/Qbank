@@ -111,7 +111,7 @@ def get_question():
         return jsonify({"error": "題庫尚未載入"})
 
     if prev:
-        question_index = max(0, question_index - 1)
+        question_index = max(0, question_index - 2)
         q = questions[question_index]
         # 透過題號判斷題目是否已被標記
         q["is_marked"] = any(marked_q.get("題號") == q.get("題號") for marked_q in marked_questions)
