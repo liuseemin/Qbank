@@ -5,6 +5,7 @@ import random
 from pathlib import Path
 # import google.generativeai as genai # 引入 Gemini SDK
 from google import genai
+import io
 
 
 # --- 設定 Gemini API ---
@@ -90,15 +91,21 @@ def search_page():
 
 @app.route("/save_progress")
 def save_progress():
-    path = request.args.get("path") or "progress.json"  # 如果沒有指定路徑，預設為 progress.json
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump({
+    data = {
             "questions": questions,
             "answered_questions": list(answered_questions),
             "wrong_questions": wrong_questions,
-            "marked_questions": marked_questions
-        }, f, ensure_ascii=False, indent=2)
-    return jsonify({"status": "success"})
+            "marked_questions": marked_questions,
+            "question_index_dict": question_index_dict,
+            "wrong_questions_answer_count": wrong_questions_answer_count,
+            "remaining_questions": remaining_questions,
+            "question_index": question_index
+        }
+    file_obj = io.BytesIO()
+    file_obj.write(json.dumps(data, indent=2).encode("utf-8"))
+    file_obj.seek(0)
+    # 讓使用者下載檔案
+    return Response(file_obj, mimetype="application/json", headers={"Content-Disposition": "attachment; filename=progress.json"})
 
 @app.route("/get_question")
 def get_question():
@@ -468,7 +475,7 @@ def search_questions():
 if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser(description="國考出題機（支援多題庫與模式切換）")
-    parser.add_argument("json_files", nargs="+", help="一個或多個題庫 JSON 檔案或資料夾")
+    parser.add_argument("json_files", nargs="*", help="一個或多個題庫 JSON 檔案或資料夾")
     parser.add_argument("--host", default="127.0.0.1")
     parser.add_argument("--port", default=5000, type=int)
     parser.add_argument("--wrong", "-w", type=str, help="載入錯題檔案")
@@ -484,12 +491,16 @@ if __name__ == "__main__":
                 wrong_questions = data.get("wrong_questions", [])
                 marked_questions = data.get("marked_questions", [])
                 question_index_dict = {q['題號']: i for i, q in enumerate(questions)}
+                wrong_questions_answer_count = data.get("wrong_questions_answer_count", 0)
+                remaining_questions = data.get("remaining_questions", list(questions))
+                question_index = data.get("question_index", 0)
                 print(f"✅ 進度檔案已載入，總題數：{len(questions)}，已答題數：{len(answered_questions)}")
         except Exception as e:
             print(f"❌ 載入進度檔案失敗：{e}")
-
-    load_questions(args.json_files)
-    print(f"✅ 題庫已載入，總題數：{len(questions)}")
+    else:
+        load_questions(args.json_files)
+        print(f"✅ 題庫已載入，總題數：{len(questions)}")
+    
     if args.wrong:
         def load_wrong_questions(json_path):
             global wrong_questions

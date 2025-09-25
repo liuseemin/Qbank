@@ -558,7 +558,7 @@
 
 <body>
     <div id="save-status">
-        <a onclick="saveProgress()">儲存進度</a>
+        <a onclick="window.location.href='/save_progress'">儲存進度</a>
     </div>
     <div class="main-container">
         <div class="container">
@@ -1024,50 +1024,6 @@
             modeSelect.addEventListener("change", loadQuestion);
         });
 
-        function saveProgress() {
-            // show dialog to select folder
-            const pathPicker = document.createElement('input');
-            pathPicker.type = 'file';
-            pathPicker.webkitdirectory = 'true';
-            pathPicker.multiple = 'false';
-            pathPicker.accept = 'application/json';
-            pathPicker.onchange = () => {
-                const filepath = pathPicker.value;
-                fetch("/save_progress", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify({
-                        path: filepath
-                    })
-                })
-                    .then(res => res.json())
-                    .then(data => {
-                        if (data.status === "success") {
-                            saveStatus.innerText = "儲存成功";
-                            saveStatus.style.color = "green";
-                        } else {
-                            saveStatus.innerText = "儲存失敗";
-                            saveStatus.style.color = "red";
-                        }
-                    });
-            };
-            path.click();
-            // Call server to save progress and retrun status
-            fetch("/save_progress", {
-                method: "POST"
-            }).then(res => res.json())
-                .then(data => {
-                    if (data.status === "success") {
-                        saveStatus.innerText = "儲存成功";
-                        saveStatus.style.color = "green";
-                    } else {
-                        saveStatus.innerText = "儲存失敗";
-                        saveStatus.style.color = "red";
-                    }
-                });
-        }
     </script>
 </body>
 
