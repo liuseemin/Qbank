@@ -730,7 +730,16 @@
             }, 50);
             currentQuestion = data;
             multiple_answers_string = '';
+            document.getElementById("question").innerText = "";
             document.getElementById("question").innerText = `[${data.題號}] ${data.題目}`;
+            if (data.圖片) {
+                document.getElementById("question").innerHTML += `<br>`;
+                let img = document.createElement("img");
+                img.src = data.圖片;
+                img.style.maxWidth = "100%";
+                img.style.marginTop = "15px";
+                document.getElementById("question").appendChild(img);
+            }
             let opts = document.getElementById("options");
             opts.innerHTML = "";
             submitAnswerBtn.style.display = "none";

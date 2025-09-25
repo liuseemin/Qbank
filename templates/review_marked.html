@@ -109,6 +109,9 @@
         <div class="question-card">
             <div class="question-title">
                 [{{ question.題號 }}] {{ question.題目 }}
+                {% if question.圖片 %}
+                <br><img src="{{ question.圖片 }}" alt="題目圖片" style="max-width:100%; margin-top:15px;" />
+                {% endif %}
             </div>
             <ul class="options-list">
                 {% for option in question.選項 %}

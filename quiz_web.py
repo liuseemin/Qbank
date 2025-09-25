@@ -1,3 +1,4 @@
+import base64
 import re
 from flask import Flask, render_template, request, jsonify, Response
 import json
@@ -416,6 +417,13 @@ def load_questions(json_paths):
 
     all_questions = []
     for file_path in all_question_files:
+        image_folder = file_path.parent / (file_path.stem + "_images")
+        if image_folder.exists():
+            
+            # 讀入圖片檔案
+            image_files = list(image_folder.glob("*.png"))
+            print(f"圖片list: {image_files}")
+
         try:
             with open(file_path, "r", encoding="utf-8") as f:
                 data = json.load(f)
@@ -428,6 +436,16 @@ def load_questions(json_paths):
                             q['選項'] = [opt.replace('\r\n', ' ').replace('\n', ' ').strip() for opt in q['選項']]
                         if '題號' in q and f"{file_path.stem}" not in q['題號']:
                             q['題號'] = f"{file_path.stem}_{q.get('題號')}"
+                            # 如果圖片資料夾中有與題號相同的圖片，則加入題目中
+                            if image_folder.exists():
+                                for image_file in image_files:
+                                    if image_file.stem == q['題號']:
+                                        print(f"✅ 找到題號 {q['題號']} 的圖片：{image_file}")
+                                        # 存入base64編碼的圖片
+                                        with open(image_file, "rb") as img_f:
+                                            img_data = img_f.read()
+                                            img_base64 = "data:image/png;base64," + base64.b64encode(img_data).decode('utf-8')
+                                            q['圖片'] = img_base64
                         cleaned_questions.append(q)
                     all_questions.extend(cleaned_questions)
                     print(f"✅ 載入檔案：{file_path}，題數：{len(cleaned_questions)}")
