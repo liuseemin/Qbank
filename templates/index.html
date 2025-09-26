@@ -376,6 +376,7 @@
         prevQuestionBtn.addEventListener('mouseleave', function () {
             clearTimeout(pressTimer);
             prevQuestionBtn.classList.remove('longpress');
+            longpress = false;
         });
 
         function submitAnswer(ans) {
