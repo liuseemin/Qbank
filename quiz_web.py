@@ -45,6 +45,7 @@ marked_questions = []
 question_index = 0
 remaining_questions = []
 wrong_questions_answer_count = 0
+prev_question_index = 0
 
 # 新增：建立一個全域字典來儲存題號對應的題目
 question_index_dict = {}
@@ -126,16 +127,19 @@ def save_progress():
 
 @app.route("/get_question")
 def get_question():
-    global question_index, remaining_questions, wrong_questions, wrong_questions_answer_count
+    global question_index, remaining_questions, wrong_questions, wrong_questions_answer_count, prev_question_index
     mode = request.args.get("mode", "random")
     question_id = request.args.get("question_id")
     prev = request.args.get("prev", "false").lower() == "true"
+    long = request.args.get("long", "false").lower() == "true"
 
     if not questions:
         return jsonify({"error": "題庫尚未載入"})
 
     if prev:
         question_index = max(0, question_index - 2)
+        if long:
+            question_index = prev_question_index
         q = questions[question_index]
         # 透過題號判斷題目是否已被標記
         q["is_marked"] = any(marked_q.get("題號") == q.get("題號") for marked_q in marked_questions)
@@ -168,6 +172,7 @@ def get_question():
     q = None
     if mode == "random":
         if remaining_questions:
+            prev_question_index = question_index
             q = random.choice(remaining_questions)
             question_index = questions.index(q)
     elif mode == "order":

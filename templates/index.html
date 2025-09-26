@@ -9,6 +9,11 @@
 </head>
 
 <body>
+    <div id="settings" class="container">
+        秒數：
+        <input type="number" id="countdownIntervalInput" value="36">
+        <button id="settings-apply"><i class="fa-solid fa-gear fa-lg"></i></button>
+    </div>
     <div id="save-status">
         <a href="/save_progress">儲存進度</a>
     </div>
@@ -112,9 +117,34 @@
         timerDiv.onclick = () => timerDiv.classList.toggle('hidden');
         var time = 0;
 
+        document.getElementById("settings-apply").onclick = () => {
+            if (document.getElementById("settings").classList.contains('open')) {
+                document.getElementById("settings").classList.toggle('open');
+                document.getElementById("settings-apply").innerHTML = '<i class="fa-solid fa-gear fa-lg"></i>';
+                const val = parseInt(document.getElementById("countdownIntervalInput").value);
+                if (isNaN(val) || val <= 0) {
+                    alert("請輸入正確的秒數");
+                    return;
+                }
+                countdownInterval = val;
+                countdown_timer = val;
+                countdown.classList.toggle('instant');
+                countdown.style.width = `100%`;
+                setTimeout(() => {
+                    countdown.classList.toggle('instant');
+                }, 50);
+
+            } else {
+                document.getElementById("settings").classList.toggle('open');
+                document.getElementById("settings-apply").innerHTML = '<i class="fa-solid fa-check fa-lg"></i>';
+
+            }
+
+        };
+
         const countdown = document.getElementById("countdown");
-        var countdown_timer = 60;
-        const countdownInterval = 60;
+        var countdownInterval = 36;
+        var countdown_timer = countdownInterval;
         setInterval(() => {
             time += 1;
             const minute = Math.floor(time / 60).toString().padStart(2, '0');
@@ -316,7 +346,7 @@
             parts[parts.length - 1] = numberId;
             const questionId = parts.join("_");
             if (questionId) {
-                fetch(`/get_question?question_id=${questionId}&prev=True`)
+                fetch(`/get_question?question_id=${questionId}&prev=True&long=${longpress}`)
                     .then(res => res.json())
                     .then(data => {
                         if (data.error) {
@@ -324,9 +354,29 @@
                             return;
                         }
                         renderQuestion(data);
+                        longpress = false;
                     });
             }
         }
+
+        // 長按上一題按鈕: 回到上一個題目
+        var longpress = false;
+        const prevQuestionBtn = document.getElementById("previousQuestionBtn");
+        let pressTimer;
+        prevQuestionBtn.addEventListener('mousedown', function () {
+            pressTimer = window.setTimeout(function () {
+                prevQuestionBtn.classList.add('longpress');
+                longpress = true;
+            }, 500);
+        });
+        prevQuestionBtn.addEventListener('mouseup', function () {
+            clearTimeout(pressTimer);
+            prevQuestionBtn.classList.remove('longpress');
+        });
+        prevQuestionBtn.addEventListener('mouseleave', function () {
+            clearTimeout(pressTimer);
+            prevQuestionBtn.classList.remove('longpress');
+        });
 
         function submitAnswer(ans) {
             fetch("/submit_answer", {

@@ -545,3 +545,41 @@ input:checked+.slider4::after {
 .countdown.wrong_mode {
     background-color: #7759e2;
 }
+
+#settings {
+    position: absolute;
+    top: 10px;
+    left: -115px;
+    font-size: 0.9em;
+    background-color: #ffffff;
+    padding: 8px 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: left 0.2s ease;
+}
+
+#settings.open {
+    left: 10px;
+}
+
+#settings-apply {
+    background-color: white;
+    border: none;
+    padding: 0px 0px 0px 15px;
+    cursor: pointer;
+}
+
+#countdownIntervalInput {
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    width: 40px;
+}
+
+#previousQuestionBtn.longpress {
+    background-color: palevioletred !important;
+    color: white !important;
+    border-color: darkred !important;
+}
