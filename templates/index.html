@@ -412,7 +412,7 @@
                     total_questions = data.total_questions;
                     answered_questions = data.answered_count_total;
                     total_wrong = data.total_wrong;
-                    if (data.answered_wrong == 0 && answered_wrong > 0) {
+                    if (data.answered_wrong == 0 && answered_wrong > 0 || total_wrong == 1) {
                         answered_wrong += 1;
                         updateProgress();
                         answered_wrong = data.answered_wrong;
