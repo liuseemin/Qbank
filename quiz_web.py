@@ -445,10 +445,8 @@ def load_questions(json_paths):
     for file_path in all_question_files:
         image_folder = file_path.parent / (file_path.stem + "_images")
         if image_folder.exists():
-            
             # 讀入圖片檔案
             image_files = list(image_folder.glob("*.png"))
-            print(f"圖片list: {image_files}")
 
         try:
             with open(file_path, "r", encoding="utf-8") as f:
@@ -466,7 +464,7 @@ def load_questions(json_paths):
                             if image_folder.exists():
                                 for image_file in image_files:
                                     if image_file.stem == q['題號']:
-                                        print(f"✅ 找到題號 {q['題號']} 的圖片：{image_file}")
+                                        print(f"🖼️ 找到題號 {q['題號']} 的圖片：{file_path.stem + "_images"}/{image_file.name}")
                                         # 存入base64編碼的圖片
                                         with open(image_file, "rb") as img_f:
                                             img_data = img_f.read()
