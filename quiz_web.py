@@ -144,6 +144,8 @@ def get_question():
         # 透過題號判斷題目是否已被標記
         q["is_marked"] = any(marked_q.get("題號") == q.get("題號") for marked_q in marked_questions)
         q["is_multiple"] = True if q.get("題別") == "複" else False
+
+        prev_question_index = question_index
         question_index += 1
         return jsonify(q)
     
@@ -156,9 +158,14 @@ def get_question():
                 raise KeyError
 
             q = questions[question_index]
+            prev_question_index = question_index
             # 透過題號判斷題目是否已被標記
             q["is_marked"] = any(marked_q.get("題號") == q.get("題號") for marked_q in marked_questions)
             q["is_multiple"] = True if q.get("題別") == "複" else False
+            
+            prev_question_index = question_index
+            if mode == "wrong":
+                prev_question_index = question_index - 1
             question_index += 1
             return jsonify(q)
         except StopIteration:
@@ -172,8 +179,8 @@ def get_question():
     q = None
     if mode == "random":
         if remaining_questions:
+            q = random.choice(remaining_questions)  
             prev_question_index = question_index
-            q = random.choice(remaining_questions)
             question_index = questions.index(q)
     elif mode == "order":
         if question_index < len(questions):
