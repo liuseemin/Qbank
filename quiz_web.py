@@ -464,7 +464,7 @@ def load_questions(json_paths):
                             if image_folder.exists():
                                 for image_file in image_files:
                                     if image_file.stem == q['題號']:
-                                        print(f"🖼️ 找到題號 {q['題號']} 的圖片：{file_path.stem + "_images"}/{image_file.name}")
+                                        print(f"　 🖼️ 找到題號 {q['題號']} 的圖片：{file_path.stem + "_images"}/{image_file.name}")
                                         # 存入base64編碼的圖片
                                         with open(image_file, "rb") as img_f:
                                             img_data = img_f.read()
@@ -560,6 +560,6 @@ if __name__ == "__main__":
         load_wrong_questions(args.wrong)
         print(f"✅ 錯題檔案已載入，總題數：{len(wrong_questions)}")
     
-    print(f"🌐 網頁出題機：http://{args.host}:{args.port}")
+    print(f"🌏 網頁出題機：http://{args.host}:{args.port}")
     app.run(host=args.host, port=args.port, debug=True)
 
