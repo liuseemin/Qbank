@@ -164,7 +164,7 @@ def get_question():
             q["is_multiple"] = True if q.get("題別") == "複" else False
             
             prev_question_index = question_index
-            if mode == "wrong":
+            if mode == "random":
                 prev_question_index = question_index - 1
             question_index += 1
             return jsonify(q)
