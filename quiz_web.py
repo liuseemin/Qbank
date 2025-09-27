@@ -78,7 +78,7 @@ def review():
 
 @app.route("/save_question")
 def save_question():
-    type = request.args.get("type", "wrong")
+    type = request.args.get("type", "")
     if type == "wrong":
         questions_to_save = wrong_questions
     elif type == "marked":
