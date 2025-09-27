@@ -516,7 +516,15 @@ def search_questions():
         return jsonify([])
 
     results = []
-    pattern = re.compile(re.escape(keyword), re.IGNORECASE)
+    # pattern = re.compile(re.escape(keyword), re.IGNORECASE)
+
+    if keyword.startswith('r/'):
+        # 移除標記，將剩下的字串視為 regular expression
+        regex_pattern = keyword[2:]
+        pattern = re.compile(regex_pattern, re.IGNORECASE)
+    else:
+        # 否則，視為純文字，進行轉義
+        pattern = re.compile(re.escape(keyword), re.IGNORECASE)
 
     for q in questions:
         text = q.get("題目", "")
