@@ -76,9 +76,16 @@ def review():
         json.dump(wrong_questions, f, ensure_ascii=False, indent=2)
     return render_template("review.html", wrong_questions=wrong_questions)
 
-@app.route("/save_wrong")
-def save_wrong():
-    data = json.dumps(wrong_questions, ensure_ascii=False, indent=2)
+@app.route("/save_question")
+def save_question():
+    type = request.args.get("type", "wrong")
+    if type == "wrong":
+        questions_to_save = wrong_questions
+    elif type == "marked":
+        questions_to_save = marked_questions
+    else:
+        return "無效的類型", 400
+    data = json.dumps(questions_to_save, ensure_ascii=False, indent=2)
     file_obj = io.BytesIO()
     file_obj.write(data.encode("utf-8"))
     file_obj.seek(0)
@@ -87,7 +94,7 @@ def save_wrong():
     def remove_suffixs(q):
         return re.sub(r'_\d+$', '', q['題號'])
         
-    default_filename = '+'.join({remove_suffixs(q) for q in wrong_questions}) + ".json"
+    default_filename = '+'.join({remove_suffixs(q) for q in questions_to_save}) + "_" + type + ".json"
     from urllib.parse import quote
      # 使用 RFC 5987 編碼來處理非 ASCII 字元
     return Response(file_obj, mimetype="application/json", headers={"Content-Disposition": f"attachment; filename*=UTF-8''{quote(default_filename)}"})
