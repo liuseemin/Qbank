@@ -113,7 +113,6 @@
         const is_showAnswerBtn = document.getElementById("is_show_answer");
         is_showAnswerBtn.onclick = () => {
             renderQuestion(currentQuestion)
-            toggleAiExplanationBtn()
         };
         const timerDiv = document.getElementById("timer");
         const progress = document.getElementById("progress");
@@ -290,6 +289,8 @@
                 markBtn.innerText = "標記本題";
                 markBtn.style.backgroundColor = "#9b59b6";
             }
+
+            checkifAiExplanationBtn();
         }
 
         function loadQuestion() {
@@ -501,7 +502,7 @@
                 });
         };
 
-        function toggleAiExplanationBtn() {
+        function checkifAiExplanationBtn() {
             if (is_showAnswerBtn.checked) {
                 aiExplanationBtn.style.display = "block";
             } else {
