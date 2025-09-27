@@ -531,7 +531,7 @@ def search_questions():
         opts = q.get("選項", [])
         ans = q.get("答案", "")
         # 題目 + 選項 全部檢查
-        combined = text + " " + " ".join(opts) + " " + ans
+        combined = text + " " + " ".join(opts) + " 答案:" + ans
         if pattern.search(combined):
             highlighted_question = pattern.sub(
                 lambda m: f"<mark>{m.group(0)}</mark>", text

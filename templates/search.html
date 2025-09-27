@@ -107,6 +107,9 @@
             const resultsDiv = document.getElementById("results");
             resultsDiv.innerHTML = "";
 
+            resultsDiv.innerHTML = `<p>搜尋結果 (${data.length} 筆)</p>`;
+
+
             if (data.length === 0) {
                 resultsDiv.innerHTML = "<p>❌ 沒有找到符合的題目</p>";
                 return;
