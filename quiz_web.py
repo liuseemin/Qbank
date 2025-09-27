@@ -497,6 +497,11 @@ def load_questions(json_paths):
     remaining_questions = list(questions)
     question_index_dict = {q['題號']: i for i, q in enumerate(questions)}
 
+    # 自動開啟網頁
+    if args.open:
+        import webbrowser
+        webbrowser.open(f"http://{args.host}:{args.port}")
+
 @app.route("/search_questions")
 def search_questions():
     keyword = request.args.get("keyword", "").strip()
@@ -536,6 +541,7 @@ if __name__ == "__main__":
     parser.add_argument("--port", default=5000, type=int)
     parser.add_argument("--wrong", "-w", type=str, help="載入錯題檔案")
     parser.add_argument("--save", "-s", type=str, help="載入進度檔案")
+    parser.add_argument("--open", "-o", action="store_true", help="自動開啟網頁")
     args = parser.parse_args()
 
     if args.save:

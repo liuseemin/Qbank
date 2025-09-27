@@ -111,7 +111,10 @@
         const questionCountDiv = document.getElementById("question_count");
         const submitAnswerBtn = document.getElementById("submit-button");
         const is_showAnswerBtn = document.getElementById("is_show_answer");
-        is_showAnswerBtn.onclick = () => renderQuestion(currentQuestion);
+        is_showAnswerBtn.onclick = () => {
+            renderQuestion(currentQuestion)
+            toggleAiExplanationBtn()
+        };
         const timerDiv = document.getElementById("timer");
         const progress = document.getElementById("progress");
         timerDiv.onclick = () => timerDiv.classList.toggle('hidden');
@@ -122,7 +125,7 @@
                 document.getElementById("settings").classList.toggle('open');
                 document.getElementById("settings-apply").innerHTML = '<i class="fa-solid fa-gear fa-lg"></i>';
                 const val = parseInt(document.getElementById("countdownIntervalInput").value);
-                if (isNaN(val) || val <= 0) {
+                if (isNaN(val) || val < 0) {
                     alert("請輸入正確的秒數");
                     return;
                 }
@@ -250,7 +253,7 @@
                 };
                 if (is_showAnswerBtn.checked) {
                     if (data.答案.includes(extractOptionCode(opt))) {
-                        btn.classList.add('correct');
+                        btn.classList.add('reveal');
                     }
                 }
                 opts.appendChild(btn);
@@ -405,8 +408,11 @@
                         const explanationText = `❌ 答錯！正確答案是：${rightAnswer}`;
                         resultDiv.innerText = explanationText;
                         resultDiv.className = "result wrong";
-                        Correct_OptionBtn = document.getElementById('option-' + extractOptionCode(rightAnswer));
-                        Correct_OptionBtn.classList.add('correct');
+                        for (let char of rightAnswer) {
+                            console.log(char, 'option-' + char);
+                            Correct_OptionBtn = document.getElementById('option-' + char);
+                            Correct_OptionBtn.classList.add('correct');
+                        }
                     }
 
                     aiExplanationBtn.style.display = "block";
@@ -494,6 +500,14 @@
                     aiExplanationContent.innerHTML = `<p style="color:red;">${error.message}</p>`;
                 });
         };
+
+        function toggleAiExplanationBtn() {
+            if (is_showAnswerBtn.checked) {
+                aiExplanationBtn.style.display = "block";
+            } else {
+                aiExplanationBtn.style.display = "none";
+            }
+        }
 
         function markCurrent() {
             fetch("/mark_question", {

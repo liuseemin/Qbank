@@ -186,6 +186,13 @@ select#question_jump {
     border-color: #c0392b;
 }
 
+.options button.reveal {
+    /* green */
+    background-color: #27ae60;
+    color: white;
+    border-color: #1e8449;
+}
+
 .result {
     margin-top: 20px;
     font-size: 1.3em;
