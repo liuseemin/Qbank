@@ -7,6 +7,8 @@ from pathlib import Path
 # import google.generativeai as genai # 引入 Gemini SDK
 from google import genai
 import io
+from InquirerPy import inquirer
+import locale
 
 
 # --- 設定 Gemini API ---
@@ -432,11 +434,22 @@ def load_questions(json_paths):
         if not p.exists():
             print(f"❌ 找不到路徑：{path_str}")
             continue
+        
+        keybindings = {
+            "toggle-all": [{"key": "c-a"}],
+            "toggle-all-false": [{"key": "c-d"}],
+        }
 
         if p.is_dir():
             # 如果是資料夾，尋找所有 .json 檔案
             print(f"📂 正在載入資料夾：{p}")
             all_question_files.extend(p.glob("*.json"))
+            locale.setlocale(locale.LC_COLLATE, "zh_TW.UTF-8")  # 設定為系統預設語系，確保排序正確
+            all_question_files = sorted(all_question_files, key=lambda x: locale.strxfrm(x.name))  # 使用 locale 進行排序
+            all_question_files = inquirer.checkbox(message="請選擇要載入的題庫檔案\n",
+                                choices=all_question_files if all_question_files else [],
+                                keybindings=keybindings,
+                                enabled_symbol="⬢", disabled_symbol="⬡", instruction='[Space 選擇] [Enter完成] [Ctrl + A 全選] [Ctrl + D 反選] [Ctrl + C 取消]').execute()
         else:
             # 如果是單一檔案，直接加入列表
             all_question_files.append(p)
@@ -561,5 +574,5 @@ if __name__ == "__main__":
         print(f"✅ 錯題檔案已載入，總題數：{len(wrong_questions)}")
     
     print(f"🌏 網頁出題機：http://{args.host}:{args.port}")
-    app.run(host=args.host, port=args.port, debug=True)
+    app.run(host=args.host, port=args.port, debug=True, use_reloader=False)
 
