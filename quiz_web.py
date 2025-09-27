@@ -529,8 +529,9 @@ def search_questions():
     for q in questions:
         text = q.get("題目", "")
         opts = q.get("選項", [])
+        ans = q.get("答案", "")
         # 題目 + 選項 全部檢查
-        combined = text + " " + " ".join(opts)
+        combined = text + " " + " ".join(opts) + " " + ans
         if pattern.search(combined):
             highlighted_question = pattern.sub(
                 lambda m: f"<mark>{m.group(0)}</mark>", text
@@ -538,12 +539,15 @@ def search_questions():
             highlighted_options = [
                 pattern.sub(lambda m: f"<mark>{m.group(0)}</mark>", o) for o in opts
             ]
+            highlighted_ans = [
+                pattern.sub(lambda m: f"<mark>{m.group(0)}</mark>", ans)
+            ]
             results.append({
                 "題號": q.get("題號"),
                 "題目": highlighted_question,
                 "圖片": q.get("圖片", ""),
                 "選項": highlighted_options,
-                "答案": q.get("答案", "")
+                "答案": highlighted_ans
             })
 
     return jsonify(results)
