@@ -64,6 +64,11 @@ def index():
     all_question_ids = [q.get("題號") for q in questions]
     return render_template("index.html", all_question_ids=all_question_ids, total_questions=len(questions))
 
+@app.route("/index2")
+def index2():
+    all_question_ids = [q.get("題號") for q in questions]
+    return render_template("index2.html", all_question_ids=all_question_ids, total_questions=len(questions))
+
 @app.route("/test")
 def test():
     # 傳遞所有題號給前端，以便生成下拉選單

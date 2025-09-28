@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>線上出題機</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index_style.css') }}">
+    <script src="https://kit.fontawesome.com/dd3b941d36.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="settings" class="container">
+        秒數：
+        <input type="number" id="countdownIntervalInput" value="36">
+        <button id="settings-apply"><i class="fa-solid fa-gear fa-lg"></i></button>
+    </div>
+    <div id="save-status">
+        <a href="/save_progress">儲存進度</a>
+    </div>
+    <div class="main-container">
+        <div class="container">
+            <h1>線上出題機</h1>
+            <div id="question_count"></div>
+            <div class="progress-container">
+                <div class="progress" id="progress"></div>
+            </div>
+            <div class="countdown-container">
+                <div class="countdown" id="countdown"></div>
+            </div>
+
+            <div id="timer"></div>
+            <div class="controls">
+                <label class="switch">
+                    <input type="checkbox" id="is_show_answer">
+                    <span class="slider2"></span>
+                </label>
+                <label>
+                    <select id="mode">
+                        <option value="order">依序</option>
+                        <option value="random">隨機</option>
+                        <option value="wrong">錯題</option>
+                    </select>
+                </label>
+                <button id="previousQuestionBtn" onclick="prevQuestion()">↩</button>
+                <button id="nextQuestionBtn" onclick="loadQuestion()">下一題</button>
+                <button id="restartBtn" onclick="resetAndStart()" style="display:none;">重新開始</button>
+                <a href="/review" target="_blank">查看錯題</a>
+                <a href="/review_marked" target="_blank">查看已標記</a>
+                <a href="/search" target="_blank" class="icon-button"><i class="fa fa-search"></i></a>
+                <label for="question_jump">跳</label>
+                <select id="question_jump" onchange="jumpToQuestion()">
+                    <option value="">題號</option>
+                    {% for qid in all_question_ids %}
+                    <option value="{{ qid }}">{{ qid }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="question" id="question"></div>
+            <div class="options" id="options"></div>
+            <div class="result" id="result"></div>
+
+            <div class="action-buttons">
+                <button id="submit-button">送出</button>
+                <button class="mark-button" onclick="markCurrent()">標記本題</button>
+                <button id="aiExplanationBtn" class="explanation-button" style="display: none;">取得 AI 詳解</button>
+            </div>
+
+        </div>
+
+        <div id="ai-explanation">
+            <div class="ai-header">
+                <h2>AI 詳解</h2>
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" id="isDetail_toggleBtn">
+                        <span class="slider"></span>
+                    </label>
+                    <label class="switch">
+                        <input type="checkbox" id="isHonest_toggleBtn">
+                        <span class="slider3"></span>
+                    </label>
+                    <label class="switch">
+                        <input type="checkbox" id="isChoiceOnly_toggleBtn">
+                        <span class="slider4"></span>
+                    </label>
+                    <a href="/review_ai" target="_blank">詳解紀錄</a>
+                </div>
+            </div>
+            <div id="token-info" style="display:none;"></div>
+            <div id="ai-explanation-content"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <script>
+        var currentQuestion = null;
+        var total_questions = 0;
+        var answered_questions = 0;
+        var answered_count_total = 0;
+        var total_wrong = 0;
+        var answered_wrong = 0;
+        const nextQuestionBtn = document.getElementById("nextQuestionBtn");
+        const restartBtn = document.getElementById("restartBtn");
+        const modeSelect = document.getElementById("mode");
+        const jumpSelect = document.getElementById("question_jump");
+        const aiExplanationBtn = document.getElementById("aiExplanationBtn");
+        const aiExplanationContent = document.getElementById("ai-explanation-content");
+        const tokenInfoDiv = document.getElementById("token-info");
+        const questionCountDiv = document.getElementById("question_count");
+        const submitAnswerBtn = document.getElementById("submit-button");
+        const is_showAnswerBtn = document.getElementById("is_show_answer");
+        is_showAnswerBtn.onclick = () => {
+            renderQuestion(currentQuestion)
+        };
+        const timerDiv = document.getElementById("timer");
+        const progress = document.getElementById("progress");
+        timerDiv.onclick = () => timerDiv.classList.toggle('hidden');
+        var time = 0;
+
+        document.getElementById("settings-apply").onclick = () => {
+            if (document.getElementById("settings").classList.contains('open')) {
+                document.getElementById("settings").classList.toggle('open');
+                document.getElementById("settings-apply").innerHTML = '<i class="fa-solid fa-gear fa-lg"></i>';
+                const val = parseInt(document.getElementById("countdownIntervalInput").value);
+                if (isNaN(val) || val < 0) {
+                    alert("請輸入正確的秒數");
+                    return;
+                }
+                countdownInterval = val;
+                countdown_timer = val;
+                countdown.classList.toggle('instant');
+                countdown.style.width = `100%`;
+                setTimeout(() => {
+                    countdown.classList.toggle('instant');
+                }, 50);
+
+            } else {
+                document.getElementById("settings").classList.toggle('open');
+                document.getElementById("settings-apply").innerHTML = '<i class="fa-solid fa-check fa-lg"></i>';
+
+            }
+
+        };
+
+        const countdown = document.getElementById("countdown");
+        var countdownInterval = 36;
+        var countdown_timer = countdownInterval;
+        setInterval(() => {
+            time += 1;
+            const minute = Math.floor(time / 60).toString().padStart(2, '0');
+            const second = (time % 60).toString().padStart(2, '0');
+            timerDiv.innerText = `${minute}:${second}`;
+            countdown_timer -= 1;
+            countdown.style.width = `${(countdown_timer / countdownInterval) * 100}%`;
+        }, 1000);
+
+        var multiple_answers_string = '';
+
+        function updateProgress() {
+            if (total_questions === 0) {
+                progress.style.width = "0%";
+                questionCountDiv.innerText = "";
+                return;
+            }
+            if (modeSelect.value === 'wrong' && total_wrong > 0) {
+                const width = Math.floor((answered_wrong / total_wrong) * 100);
+                progress.style.width = width + "%";
+                questionCountDiv.innerText = `已答題數 ${answered_wrong} / ${total_wrong}`;
+                return;
+            } else {
+                const width = Math.floor((answered_questions / total_questions) * 100);
+                progress.style.width = width + "%";
+                questionCountDiv.innerText = `已答題數 ${answered_questions} / ${total_questions}`;
+            }
+        }
+
+        gradient = [];
+
+        function makeProgressShowDistribution(isCorrect) {
+            if (gradient.length < answered_questions - 1) {
+                for (let i = gradient.length; i < answered_questions - 1; i++) {
+                    gradient.push('#83b7e7');
+                }
+            }
+            gradient.push(isCorrect ? '#83b7e7' : '#e57373');
+            const gradientStr = `linear-gradient(to right, ${gradient.join(', ')})`;
+            progress.style.background = gradientStr;
+        }
+
+        function extractOptionCode(optText) {
+            // 嘗試擷取開頭的 A/B/C/D/E，不管是否有括號、點、冒號、空格
+            const match = optText.match(/^\(?([A-E])[\.\):]?\s?/);
+            return match ? match[1] : null;
+        }
+
+        function sortAnswerLetters(answerStr) {
+            return answerStr
+                .toUpperCase()               // 確保都是大寫
+                .split('')                   // 拆成陣列
+                .filter(c => /[A-Z]/.test(c)) // 過濾非字母
+                .sort()                      // 排序
+                .join('');                   // 合併成字串
+        }
+
+        function renderQuestion(data) {
+            updateProgress();
+            countdown_timer = countdownInterval;
+            countdown.classList.toggle('instant');
+            countdown.style.width = `100%`;
+            setTimeout(() => {
+                countdown.classList.toggle('instant');
+            }, 50);
+            currentQuestion = data;
+            multiple_answers_string = '';
+            document.getElementById("question").innerText = "";
+            document.getElementById("question").innerText = `[${data.題號}] ${data.題目}`;
+            if (data.圖片) {
+                document.getElementById("question").innerHTML += `<br>`;
+                let img = document.createElement("img");
+                img.src = data.圖片;
+                img.style.maxWidth = "100%";
+                img.style.marginTop = "15px";
+                document.getElementById("question").appendChild(img);
+            }
+            let opts = document.getElementById("options");
+            opts.innerHTML = "";
+            submitAnswerBtn.style.display = "none";
+            data.選項.forEach(opt => {
+                let btn = document.createElement("button");
+                btn.innerText = opt;
+                btn.id = "option-" + extractOptionCode(opt);
+                btn.onclick = (event) => {
+                    if (data.is_multiple) {
+                        if (multiple_answers_string.includes(extractOptionCode(opt))) {
+                            event.target.classList.remove('chosen');
+                            multiple_answers_string = multiple_answers_string.replace(extractOptionCode(opt), '');
+                            console.log(multiple_answers_string);
+                        } else {
+                            event.target.classList.add('chosen');
+                            multiple_answers_string += extractOptionCode(opt);
+                            console.log(multiple_answers_string);
+                        }
+                    } else {
+                        document.querySelectorAll('.options button').forEach(button => {
+                            button.classList.remove('selected');
+                        });
+                        event.target.classList.add('selected');
+                        submitAnswer(extractOptionCode(opt));
+                    }
+                };
+                if (is_showAnswerBtn.checked) {
+                    if (data.答案.includes(extractOptionCode(opt))) {
+                        btn.classList.add('reveal');
+                    }
+                }
+                opts.appendChild(btn);
+            });
+
+            if (data.is_multiple) {
+                submitAnswerBtn.style.display = "block";
+                submitAnswerBtn.innerText = "送出";
+                submitAnswerBtn.onclick = () => {
+                    multiple_answers_string = sortAnswerLetters(multiple_answers_string)
+                    console.log(multiple_answers_string);
+                    if (multiple_answers_string == '') {
+                        alert('請選擇答案');
+                        return;
+                    }
+                    submitAnswer(multiple_answers_string);
+                };
+            }
+
+            document.getElementById("result").innerHTML = "";
+            nextQuestionBtn.style.display = "block";
+            restartBtn.style.display = "none";
+
+            jumpSelect.value = data.題號;
+
+            aiExplanationBtn.style.display = "none";
+            aiExplanationContent.innerHTML = "";
+
+            const markBtn = document.querySelector(".mark-button");
+            if (data.is_marked) {
+                markBtn.innerText = "已標記";
+                markBtn.style.backgroundColor = "#2ecc71";
+            } else {
+                markBtn.innerText = "標記本題";
+                markBtn.style.backgroundColor = "#9b59b6";
+            }
+
+            checkifAiExplanationBtn();
+        }
+
+        function loadQuestion() {
+            let mode = modeSelect.value;
+            if (mode === 'wrong') {
+                progress.classList.add('wrong_progress');
+                progress.style.background = '#ee8b80';
+                countdown.classList.add('wrong_mode');
+            } else {
+                progress.classList.remove('wrong_progress');
+                const gradientStr = `linear-gradient(to right, ${gradient.join(', ')})`;
+                progress.style.background = gradientStr;
+                countdown.classList.remove('wrong_mode');
+            }
+            fetch(`/get_question?mode=${mode}`)
+                .then(res => res.json())
+                .then(data => {
+                    if (data.finished) {
+                        document.getElementById("question").innerText = data.error;
+                        document.getElementById("options").innerHTML = "";
+                        document.getElementById("result").innerHTML = "";
+                        nextQuestionBtn.style.display = "none";
+                        restartBtn.style.display = "block";
+                        return;
+                    }
+
+                    if (data.error) {
+                        document.getElementById("question").innerText = data.error;
+                        document.getElementById("options").innerHTML = "";
+                        document.getElementById("result").innerHTML = "";
+                        nextQuestionBtn.style.display = "block";
+                        restartBtn.style.display = "none";
+                        return;
+                    }
+                    renderQuestion(data);
+                });
+        }
+
+        function jumpToQuestion() {
+            const questionId = jumpSelect.value;
+            if (questionId) {
+                fetch(`/get_question?question_id=${questionId}`)
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.error) {
+                            alert(data.error);
+                            return;
+                        }
+                        renderQuestion(data);
+                    });
+            }
+        }
+
+        function prevQuestion() {
+            const parts = jumpSelect.value.split("_");
+            const numberId = String(Number(parts[parts.length - 1]) - 1);
+            parts[parts.length - 1] = numberId;
+            const questionId = parts.join("_");
+            if (questionId) {
+                fetch(`/get_question?question_id=${questionId}&prev=True&long=${longpress}`)
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.error) {
+                            alert(data.error);
+                            return;
+                        }
+                        renderQuestion(data);
+                        longpress = false;
+                    });
+            }
+        }
+
+        // 長按上一題按鈕: 回到上一個題目
+        var longpress = false;
+        const prevQuestionBtn = document.getElementById("previousQuestionBtn");
+        let pressTimer;
+        prevQuestionBtn.addEventListener('mousedown', function () {
+            pressTimer = window.setTimeout(function () {
+                prevQuestionBtn.classList.add('longpress');
+                longpress = true;
+            }, 500);
+        });
+        prevQuestionBtn.addEventListener('mouseup', function () {
+            clearTimeout(pressTimer);
+            prevQuestionBtn.classList.remove('longpress');
+        });
+        prevQuestionBtn.addEventListener('mouseleave', function () {
+            clearTimeout(pressTimer);
+            prevQuestionBtn.classList.remove('longpress');
+            longpress = false;
+        });
+
+        function submitAnswer(ans) {
+            fetch("/submit_answer", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    question: currentQuestion,
+                    answer: ans
+                })
+            })
+                .then(res => res.json())
+                .then(data => {
+                    const resultDiv = document.getElementById("result");
+                    resultDiv.innerHTML = "";
+                    Correct_OptionBtn = document.getElementById('option-' + extractOptionCode(data.right_answer));
+                    Correct_OptionBtn.classList.remove('correct');
+                    if (data.correct) {
+                        resultDiv.innerText = "✅ 答對了！";
+                        resultDiv.className = "result correct";
+                        Correct_OptionBtn = document.getElementById('option-' + extractOptionCode(data.right_answer));
+                    } else {
+                        const rightAnswer = data.right_answer;
+                        const explanationText = `❌ 答錯！正確答案是：${rightAnswer}`;
+                        resultDiv.innerText = explanationText;
+                        resultDiv.className = "result wrong";
+                        for (let char of rightAnswer) {
+                            console.log(char, 'option-' + char);
+                            Correct_OptionBtn = document.getElementById('option-' + char);
+                            Correct_OptionBtn.classList.add('correct');
+                        }
+                    }
+
+                    aiExplanationBtn.style.display = "block";
+                    total_questions = data.total_questions;
+                    answered_questions = data.answered_count_total;
+                    total_wrong = data.total_wrong;
+                    if (data.answered_wrong == 0 && answered_wrong > 0 || total_wrong == 1) {
+                        answered_wrong += 1;
+                        updateProgress();
+                        answered_wrong = data.answered_wrong;
+                    } else {
+                        answered_wrong = data.answered_wrong;
+                        updateProgress();
+                    }
+                    if (modeSelect.value !== 'wrong' && answered_questions > gradient.length) {
+                        makeProgressShowDistribution(data.correct);
+                    }
+                });
+        }
+
+        aiExplanationBtn.onclick = () => {
+            aiExplanationBtn.innerText = "生成中...";
+            aiExplanationBtn.disabled = true;
+            aiExplanationContent.innerHTML = `
+            
+                <div class="ai-loading" id="ai-loading-box">
+                    <div class="spinner" aria-hidden="true"></div>
+                    <div class="skeleton">
+                    <div class="loading">AI 正在生成詳解，請稍候</div>
+                    <div class="skeleton-line"></div>
+                    <div class="skeleton-line"></div>
+                    <div class="skeleton-line"></div>
+                    <div class="typing" aria-label="loading">
+                        <span></span><span></span><span></span>
+                    </div>
+                    </div>
+                </div>
+                `;
+
+            is_detail = document.getElementById("isDetail_toggleBtn").checked;
+            is_honest = document.getElementById("isHonest_toggleBtn").checked;
+            is_choiceOnly = document.getElementById("isChoiceOnly_toggleBtn").checked;
+            ans_btn = document.querySelectorAll('.selected');
+            ans = "";
+            ans_btn.forEach((btn) => {
+                ans += extractOptionCode(btn.innerText);
+            })
+
+            let rawContent = '';
+            const url = `/stream_ai_explanation?detail=${is_detail}&honest=${is_honest}&choiceOnly=${is_choiceOnly}`;
+
+            fetch(url, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    question: currentQuestion,
+                    choice: ans
+                })
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        // 處理非 200 的錯誤 (例如後端傳回 400/500 的 JSON 錯誤)
+                        return response.json().then(errorData => {
+                            throw new Error(errorData.error || `HTTP 錯誤 ${response.status}`);
+                        });
+                    }
+
+                    // **獲取串流讀取器**
+                    const reader = response.body.getReader();
+                    const decoder = new TextDecoder('utf-8');
+
+                    // 遞迴函數來持續讀取 Stream
+                    function processStream() {
+                        return reader.read().then(({ done, value }) => {
+                            if (done) {
+                                // Stream 結束
+                                return;
+                            }
+
+                            // 將 Uint8Array 轉換為字串
+                            const chunk = decoder.decode(value, { stream: true });
+
+                            // 檢查是否是後端夾帶的 Token 資訊塊 (您的後端回傳了一個完整的 HTML 元素)
+                            const tokenMatch = chunk.match(/<div data-tokens='(.*?)' style='display:none;'><\/div>/);
+
+                            if (tokenMatch) {
+                                try {
+                                    // 解析 Token 資訊的 JSON 字串
+                                    const tokenData = JSON.parse(tokenMatch[1].replace(/&quot;/g, '"'));
+
+                                    // 更新 Token 資訊顯示
+                                    tokenInfoDiv.innerHTML = `本次請求 token 數: ${tokenData.current_tokens} | 累積 token 數: ${tokenData.total_tokens} / 250,000 (day)`;
+                                    tokenInfoDiv.style.display = "block";
+
+                                    // 將 Token 塊從主要內容中移除 (避免被 marked.js 解析)
+                                    rawContent += chunk.replace(tokenMatch[0], '');
+
+                                } catch (e) {
+                                    console.error("解析 Token 資訊錯誤:", e);
+                                }
+                            } else {
+                                // 正常的文本內容，累積起來
+                                rawContent += chunk;
+                            }
+
+                            // **即時 Markdown 解析與顯示**
+                            // 每次收到新內容就重新渲染一次
+                            aiExplanationContent.innerHTML = marked.parse(rawContent);
+
+                            // 繼續讀取下一個塊
+                            return processStream();
+                        });
+                    }
+
+                    return processStream(); // 開始讀取 Stream
+                })
+                .then(() => {
+                    // Stream 成功完成
+                    aiExplanationBtn.innerText = "取得 AI 詳解";
+                    aiExplanationBtn.disabled = false;
+                    console.log("AI 詳解串流完成。");
+                })
+                .catch(error => {
+                    // 處理 Stream 過程中的錯誤
+                    console.error('Error in AI explanation stream:', error);
+                    aiExplanationBtn.innerText = "取得 AI 詳解";
+                    aiExplanationBtn.disabled = false;
+
+                    if (rawContent) {
+                        // 如果已經有部分內容，則在後面追加錯誤提示
+                        aiExplanationContent.innerHTML += `<p style="color:red; margin-top: 10px;">資料串流中斷: ${error.message}</p>`;
+                    } else {
+                        // 如果沒有內容，則顯示錯誤信息
+                        aiExplanationContent.innerHTML = `<p style="color:red;">${error.message}</p>`;
+                    }
+                });
+        };
+
+        function checkifAiExplanationBtn() {
+            if (is_showAnswerBtn.checked) {
+                aiExplanationBtn.style.display = "block";
+            } else {
+                aiExplanationBtn.style.display = "none";
+            }
+        }
+
+        function markCurrent() {
+            fetch("/mark_question", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    question: currentQuestion
+                })
+            })
+                .then(res => res.json())
+                .then((data) => {
+                    const markBtn = document.querySelector(".mark-button");
+                    if (data.status === "marked") {
+                        markBtn.innerText = "已標記";
+                        markBtn.style.backgroundColor = "#2ecc71";
+                        return;
+                    } else if (data.status === "unmarked") {
+                        markBtn.innerText = "標記本題";
+                        markBtn.style.backgroundColor = "#9b59b6";
+                        return;
+                    }
+                });
+        }
+
+        function resetAndStart() {
+            fetch("/reset_questions", {
+                method: "POST"
+            }).then(() => {
+                loadQuestion();
+                gradient = [];
+                answered_questions = 0;
+                updateProgress();
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadQuestion();
+            modeSelect.addEventListener("change", loadQuestion);
+        });
+
+    </script>
+</body>
+
+</html>
