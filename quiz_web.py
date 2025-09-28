@@ -64,11 +64,6 @@ def index():
     all_question_ids = [q.get("題號") for q in questions]
     return render_template("index.html", all_question_ids=all_question_ids, total_questions=len(questions))
 
-@app.route("/index2")
-def index2():
-    all_question_ids = [q.get("題號") for q in questions]
-    return render_template("index2.html", all_question_ids=all_question_ids, total_questions=len(questions))
-
 @app.route("/test")
 def test():
     # 傳遞所有題號給前端，以便生成下拉選單
@@ -345,9 +340,9 @@ def get_ai_explanation():
         # 更新累積 token 數
         total_tokens_used += current_tokens
 
-        html = review_ai()
-        with open("tmp_explanation.html", "w", encoding="utf-8") as f:
-            f.write(html)
+        # html = review_ai()
+        # with open("tmp_explanation.html", "w", encoding="utf-8") as f:
+        #     f.write(html)
 
         return jsonify({
             "explanation": explanation,
@@ -418,6 +413,9 @@ def stream_ai_explanation():
 
     def generate_stream():
         global total_tokens_used
+
+        final_current_tokens = 0
+        full_explanation = ""
         try:
             response = client.models.generate_content_stream(
                 model=MODEL,
@@ -427,13 +425,18 @@ def stream_ai_explanation():
             for chunk in response:
                 if (chunk.text):
                     yield chunk.text.encode('utf-8')
+                    full_explanation += chunk.text
                 if (chunk.usage_metadata):
-                    current_tokens = chunk.usage_metadata.total_token_count
-                    total_tokens_used += current_tokens
-                    token_info = {
-                        "current_tokens": current_tokens,
-                        "total_tokens": total_tokens_used
-                    }
+                    final_current_tokens = chunk.usage_metadata.total_token_count
+            
+            if final_current_tokens > 0:
+                total_tokens_used += final_current_tokens
+                token_info = {
+                    "current_tokens": final_current_tokens,
+                    "total_tokens": total_tokens_used
+                }
+                ai_explanation_cache[question_id] = full_explanation
+                prompt_cache[question_id] = prompt
             
             # 將 JSON 資訊傳送給前端
             yield f"<div data-tokens='{json.dumps(token_info)}' style='display:none;'></div>".encode('utf-8')
@@ -578,6 +581,7 @@ if __name__ == "__main__":
     parser.add_argument("--open", "-o", action="store_true", help="自動開啟網頁")
     args = parser.parse_args()
 
+    # BUG: load ok but bug in some cases (index problem)
     if args.save:
         try:
             with open(args.save, "r", encoding="utf-8") as f:
@@ -597,6 +601,9 @@ if __name__ == "__main__":
         load_questions(args.json_files)
         print(f"✅ 題庫已載入，總題數：{len(questions)}")
     
+    # load_questions(args.json_files)
+    # print(f"✅ 題庫已載入，總題數：{len(questions)}")
+
     if args.wrong:
         def load_wrong_questions(json_path):
             global wrong_questions

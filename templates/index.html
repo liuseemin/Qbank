@@ -13,6 +13,7 @@
         秒數：
         <input type="number" id="countdownIntervalInput" value="36">
         <button id="settings-apply"><i class="fa-solid fa-gear fa-lg"></i></button>
+        <input type="checkbox" id="isAiStream" checked>
     </div>
     <div id="save-status">
         <a href="/save_progress">儲存進度</a>
@@ -434,7 +435,7 @@
                 });
         }
 
-        aiExplanationBtn.onclick = () => {
+        function getAiExplanation() {
             aiExplanationBtn.innerText = "生成中...";
             aiExplanationBtn.disabled = true;
             aiExplanationContent.innerHTML = `
@@ -461,6 +462,7 @@
             ans_btn.forEach((btn) => {
                 ans += extractOptionCode(btn.innerText);
             })
+            const startTime = time;
             fetch(`/get_ai_explanation?detail=${is_detail}&honest=${is_honest}&choiceOnly=${is_choiceOnly}`, {
                 method: "POST",
                 headers: {
@@ -486,9 +488,12 @@
                     if (ai_data.explanation) {
                         const html = marked.parse(ai_data.explanation);
                         aiExplanationContent.innerHTML = html;
+                        const endTime = time;
+                        const duration = endTime - startTime;
 
                         // 顯示 token 資訊
                         tokenInfoDiv.innerHTML = `本次請求 token 數: ${ai_data.current_tokens} | 累積 token 數: ${ai_data.total_tokens} / 250,000 (day)`;
+                        tokenInfoDiv.innerHTML += ` | ${duration} s`;
                         tokenInfoDiv.style.display = "block";
                     } else {
                         aiExplanationContent.innerHTML = `<p style="color:red;">無法取得 AI 詳解。</p>`;
@@ -501,6 +506,142 @@
                     aiExplanationContent.innerHTML = `<p style="color:red;">${error.message}</p>`;
                 });
         };
+
+        function getAiExplanationStream() {
+            aiExplanationBtn.innerText = "生成中...";
+            aiExplanationBtn.disabled = true;
+            aiExplanationContent.innerHTML = `
+            
+                <div class="ai-loading" id="ai-loading-box">
+                    <div class="spinner" aria-hidden="true"></div>
+                    <div class="skeleton">
+                    <div class="loading">AI 正在生成詳解，請稍候</div>
+                    <div class="skeleton-line"></div>
+                    <div class="skeleton-line"></div>
+                    <div class="skeleton-line"></div>
+                    <div class="typing" aria-label="loading">
+                        <span></span><span></span><span></span>
+                    </div>
+                    </div>
+                </div>
+                `;
+
+            is_detail = document.getElementById("isDetail_toggleBtn").checked;
+            is_honest = document.getElementById("isHonest_toggleBtn").checked;
+            is_choiceOnly = document.getElementById("isChoiceOnly_toggleBtn").checked;
+            ans_btn = document.querySelectorAll('.selected');
+            ans = "";
+            ans_btn.forEach((btn) => {
+                ans += extractOptionCode(btn.innerText);
+            })
+
+            let rawContent = '';
+            const url = `/stream_ai_explanation?detail=${is_detail}&honest=${is_honest}&choiceOnly=${is_choiceOnly}`;
+
+            const startTime = time;
+            let endTime;
+            fetch(url, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    question: currentQuestion,
+                    choice: ans
+                })
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        // 處理非 200 的錯誤 (例如後端傳回 400/500 的 JSON 錯誤)
+                        return response.json().then(errorData => {
+                            throw new Error(errorData.error || `HTTP 錯誤 ${response.status}`);
+                        });
+                    }
+
+                    // **獲取串流讀取器**
+                    const reader = response.body.getReader();
+                    const decoder = new TextDecoder('utf-8');
+
+                    // 遞迴函數來持續讀取 Stream
+                    function processStream() {
+                        return reader.read().then(({ done, value }) => {
+                            if (done) {
+                                // Stream 結束
+                                return;
+                            }
+
+                            // 將 Uint8Array 轉換為字串
+                            const chunk = decoder.decode(value, { stream: true });
+
+                            // 檢查是否是後端夾帶的 Token 資訊塊 (您的後端回傳了一個完整的 HTML 元素)
+                            const tokenMatch = chunk.match(/<div data-tokens='(.*?)' style='display:none;'><\/div>/);
+
+                            if (tokenMatch) {
+                                try {
+                                    // 解析 Token 資訊的 JSON 字串
+                                    const tokenData = JSON.parse(tokenMatch[1].replace(/&quot;/g, '"'));
+
+                                    // 更新 Token 資訊顯示
+                                    tokenInfoDiv.innerHTML = `本次請求 token 數: ${tokenData.current_tokens} | 累積 token 數: ${tokenData.total_tokens} / 250,000 (day)`;
+                                    const Duration = endTime - startTime;
+                                    tokenInfoDiv.innerHTML += ` | ${Duration} s`;
+                                    tokenInfoDiv.style.display = "block";
+
+                                    // 將 Token 塊從主要內容中移除 (避免被 marked.js 解析)
+                                    rawContent += chunk.replace(tokenMatch[0], '');
+
+                                } catch (e) {
+                                    console.error("解析 Token 資訊錯誤:", e);
+                                }
+                            } else {
+                                // 正常的文本內容，累積起來
+                                rawContent += chunk;
+                                if (endTime === undefined) {
+                                    endTime = time;
+                                }
+                            }
+
+                            // **即時 Markdown 解析與顯示**
+                            // 每次收到新內容就重新渲染一次
+                            aiExplanationContent.innerHTML = marked.parse(rawContent);
+
+                            // 繼續讀取下一個塊
+                            return processStream();
+                        });
+                    }
+
+                    return processStream(); // 開始讀取 Stream
+                })
+                .then(() => {
+                    // Stream 成功完成
+                    aiExplanationBtn.innerText = "取得 AI 詳解";
+                    aiExplanationBtn.disabled = false;
+                    console.log("AI 詳解串流完成。");
+                })
+                .catch(error => {
+                    // 處理 Stream 過程中的錯誤
+                    console.error('Error in AI explanation stream:', error);
+                    aiExplanationBtn.innerText = "取得 AI 詳解";
+                    aiExplanationBtn.disabled = false;
+
+                    if (rawContent) {
+                        // 如果已經有部分內容，則在後面追加錯誤提示
+                        aiExplanationContent.innerHTML += `<p style="color:red; margin-top: 10px;">資料串流中斷: ${error.message}</p>`;
+                    } else {
+                        // 如果沒有內容，則顯示錯誤信息
+                        aiExplanationContent.innerHTML = `<p style="color:red;">${error.message}</p>`;
+                    }
+                });
+        };
+
+
+        aiExplanationBtn.onclick = () => {
+            if (document.getElementById("isAiStream").checked) {
+                getAiExplanationStream();
+            } else {
+                getAiExplanation();
+            }
+        }
 
         function checkifAiExplanationBtn() {
             if (is_showAnswerBtn.checked) {
