@@ -265,7 +265,8 @@ def reset_questions():
     answered_questions.clear()
     return jsonify({"status": "reset"})
 
-def generate_prompt(question_part, choice, is_detail=False, is_honest=False, is_choiceOnly=False):
+def generate_prompt(question, choice, is_detail=False, is_honest=False, is_choiceOnly=False):
+    question_part = f"題目：{question['題目']}\n選項：{' '.join(question['選項'])}\n答案：{question['答案']}"
     prompt = f"請以繁體中文，針對以下問題，生成精簡的解釋：\n\n{question_part}"
     if is_detail:
         prompt = f"請以繁體中文，針對以下問題，生成 1 分鐘內可以閱讀完的詳解，包含關鍵概念和每個選項解釋，文字簡明，重點清楚：\n\n{question_part}"
@@ -276,7 +277,9 @@ def generate_prompt(question_part, choice, is_detail=False, is_honest=False, is_
         prompt += "\n\n若答案不合理則要公正的指出。"
     
     if is_choiceOnly:
-        prompt = f"{question_part}\n\n請說明選項{choice}正確或錯誤的理由。"
+        prompt = f"題目：{question['題目']}\n\n請說明下列選項正確或錯誤的理由:\n{choice}。"
+
+    print(f"[prompt] {prompt}")
     
     return prompt
 
@@ -311,7 +314,7 @@ def get_ai_explanation():
             question_part = related_part + "\n\n" + question_part
     
     # 先設定prompt
-    prompt = generate_prompt(question_part, choice, is_detail, is_honest, is_choiceOnly)
+    prompt = generate_prompt(question, choice, is_detail, is_honest, is_choiceOnly)
 
     # 檢查快取中是否有詳解，有的話直接回傳，如果prompt不一樣也繼續
     if question_id in ai_explanation_cache and prompt_cache[question_id] == prompt:
@@ -390,7 +393,7 @@ def stream_ai_explanation():
             question_part = related_part + "\n\n" + question_part
     
     # 先設定prompt
-    prompt = generate_prompt(question_part, choice, is_detail, is_honest, is_choiceOnly)
+    prompt = generate_prompt(question, choice, is_detail, is_honest, is_choiceOnly)
 
     # 檢查快取中是否有詳解，有的話直接回傳，如果prompt不一樣也繼續
     if question_id in ai_explanation_cache and prompt_cache[question_id] == prompt:

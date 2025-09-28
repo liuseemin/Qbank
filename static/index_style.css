@@ -175,9 +175,9 @@ select#question_jump {
 
 .options button.selected,
 .options button.chosen {
-    background-color: #3498db;
-    color: white;
-    border-color: #2980b9;
+    background-color: #3498db !important;
+    color: white !important;
+    border-color: #2980b9 !important;
 }
 
 .options button.correct {

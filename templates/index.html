@@ -439,6 +439,15 @@
                 });
         }
 
+        function getCurrentChoice() {
+            ans_btn = document.querySelectorAll('.selected, .chosen');
+            ans = "";
+            ans_btn.forEach((btn) => {
+                ans = ans + btn.innerText + ", ";
+            })
+            return ans;
+        }
+
         function getAiExplanation() {
             aiExplanationBtn.innerText = "生成中...";
             aiExplanationBtn.disabled = true;
@@ -461,11 +470,7 @@
             is_detail = document.getElementById("isDetail_toggleBtn").checked;
             is_honest = document.getElementById("isHonest_toggleBtn").checked;
             is_choiceOnly = document.getElementById("isChoiceOnly_toggleBtn").checked;
-            ans_btn = document.querySelectorAll('.selected');
-            ans = "";
-            ans_btn.forEach((btn) => {
-                ans += extractOptionCode(btn.innerText);
-            })
+            choice = getCurrentChoice();
             const startTime = time;
             fetch(`/get_ai_explanation?detail=${is_detail}&honest=${is_honest}&choiceOnly=${is_choiceOnly}`, {
                 method: "POST",
@@ -474,7 +479,7 @@
                 },
                 body: JSON.stringify({
                     question: currentQuestion,
-                    choice: ans
+                    choice: choice
                 })
             })
                 .then(res => {
@@ -533,11 +538,7 @@
             is_detail = document.getElementById("isDetail_toggleBtn").checked;
             is_honest = document.getElementById("isHonest_toggleBtn").checked;
             is_choiceOnly = document.getElementById("isChoiceOnly_toggleBtn").checked;
-            ans_btn = document.querySelectorAll('.selected');
-            ans = "";
-            ans_btn.forEach((btn) => {
-                ans += extractOptionCode(btn.innerText);
-            })
+            choice = getCurrentChoice();
 
             let rawContent = '';
             const url = `/stream_ai_explanation?detail=${is_detail}&honest=${is_honest}&choiceOnly=${is_choiceOnly}`;
@@ -551,7 +552,7 @@
                 },
                 body: JSON.stringify({
                     question: currentQuestion,
-                    choice: ans
+                    choice: choice
                 })
             })
                 .then(response => {
