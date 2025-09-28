@@ -373,6 +373,16 @@ def stream_ai_explanation():
 
     question_part = f"題目：{question['題目']}\n選項：{' '.join(question['選項'])}\n答案：{question['答案']}"
 
+    # 如果題目中有"組合題"，找出後面的第一組數字做為題號，並將該題號的題目加入prompt中
+    match = re.search(r"組合題.*?(\d+)", question['題目'])
+    if match:
+        related_q_num = match.group(1)
+        related_q_id = f"{question_id.rsplit('_', 1)[0]}_{related_q_num}"
+        if related_q_id in question_index_dict:
+            related_q = questions[question_index_dict[related_q_id]]
+            related_part = f"相關題目：{related_q['題目']}"
+            question_part = related_part + "\n\n" + question_part
+    
     # 先設定prompt
     prompt = f"請以繁體中文，針對以下問題，生成精簡的解釋：\n\n{question_part}"
     if is_detail:
