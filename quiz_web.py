@@ -272,14 +272,14 @@ def generate_prompt(question, choice, is_detail=False, is_honest=False, is_choic
         prompt = f"請以繁體中文，針對以下問題，生成 1 分鐘內可以閱讀完的詳解，包含關鍵概念和每個選項解釋，文字簡明，重點清楚：\n\n{question_part}"
     
     prompt += "\n\n簡要說明答題關鍵知識，若需要分類、分級、分型等知識也請簡要列出完整分級。"
+    
+    if is_choiceOnly:
+        prompt = f"題目：{question['題目']}\n答案：{question['答案']}\n請說明下列選項正確或錯誤的理由：\n{choice}"
 
     if is_honest:
         prompt += "\n\n若答案不合理則要公正的指出。"
-    
-    if is_choiceOnly:
-        prompt = f"題目：{question['題目']}\n\n請說明下列選項正確或錯誤的理由:\n{choice}。"
 
-    print(f"[prompt] {prompt}")
+    print(f"[prompt] {prompt.replace('\n', ' ')}")
     
     return prompt
 

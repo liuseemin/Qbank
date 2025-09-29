@@ -440,12 +440,7 @@
         }
 
         function getCurrentChoice() {
-            ans_btn = document.querySelectorAll('.selected, .chosen');
-            ans = "";
-            ans_btn.forEach((btn) => {
-                ans = ans + btn.innerText + ", ";
-            })
-            return ans;
+            return [...document.querySelectorAll('.selected')].map((btn) => btn.innerText).join(', ');
         }
 
         function getAiExplanation() {
