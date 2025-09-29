@@ -341,10 +341,8 @@ def get_ai_explanation():
         ai_explanation_cache[question_id] = explanation
         prompt_cache[question_id] = prompt
         
-        # 計算本次請求的 token 數
-        prompt_tokens = response.usage_metadata.prompt_token_count
-        completion_tokens = response.usage_metadata.prompt_token_count
-        current_tokens = prompt_tokens + completion_tokens
+        # 計算本次請求的總 token 數 (input + output)
+        current_tokens = response.usage_metadata.total_token_count
         
         # 更新累積 token 數
         total_tokens_used += current_tokens
