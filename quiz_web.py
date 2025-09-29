@@ -399,12 +399,16 @@ def stream_ai_explanation():
     if question_id in ai_explanation_cache and prompt_cache[question_id] == prompt:
         explanation = ai_explanation_cache[question_id]
         if explanation is not None:
+            
             print(f"✅ 題號 {question_id} 的詳解已從快取中取得。")
-            return jsonify({
-                "explanation": explanation,
-                "current_tokens": 0,  # 從快取中取得，不計算 token 數
-                "total_tokens": total_tokens_used
-            })
+            def response():
+                token_info = {
+                    "current_tokens": 0,  # 從快取中取得，不計算 token 數
+                    "total_tokens": total_tokens_used
+                }
+                yield explanation.encode('utf-8')
+                yield f"<div data-tokens='{json.dumps(token_info)}' style='display:none;'></div>".encode('utf-8')
+            return Response(response(), mimetype='text/html')
     
     # 確保 prompt_tokens 在串流開始前計算一次
     # 因為 prompt tokens 在發送請求時就已確定

@@ -440,7 +440,12 @@
         }
 
         function getCurrentChoice() {
-            return [...document.querySelectorAll('.selected')].map((btn) => btn.innerText).join(', ');
+            if (document.querySelectorAll('.selected, .chosen').length === 0) {
+                alert('無選擇：將帶入全部答案');
+                all = document.querySelector('#options').querySelectorAll(":scope > button");
+                return [...all].map((btn) => btn.innerText).join(', ');
+            }
+            return [...document.querySelectorAll('.selected, .chosen')].map((btn) => btn.innerText).join(', ');
         }
 
         function getAiExplanation() {
