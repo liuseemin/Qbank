@@ -274,7 +274,7 @@ def generate_prompt(question, choice, is_detail=False, is_honest=False, is_choic
     prompt += "\n\n簡要說明答題關鍵知識，若需要分類、分級、分型等知識也請簡要列出完整分級。"
     
     if is_choiceOnly:
-        prompt = f"題目：{question['題目']}\n答案：{question['答案']}\n請說明下列選項正確或錯誤的理由：\n{choice}"
+        prompt = f"題目：{question['題目']}\n答案：{question['答案']}\n請簡短說明下列選項正確或錯誤的理由：\n{choice}"
 
     if is_honest:
         prompt += "\n\n若答案不合理則要公正的指出。"

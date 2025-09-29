@@ -439,13 +439,17 @@
                 });
         }
 
-        function getCurrentChoice() {
-            if (document.querySelectorAll('.selected, .chosen').length === 0) {
-                alert('無選擇：將帶入全部答案');
-                all = document.querySelector('#options').querySelectorAll(":scope > button");
-                return [...all].map((btn) => btn.innerText).join(', ');
+        function getCurrentChoice(is_choiceOnly) {
+            if (is_choiceOnly) {
+                if (document.querySelectorAll('.selected, .chosen').length === 0) {
+                    console.log('無選擇：帶入全部答案');
+                    all = document.querySelector('#options').querySelectorAll(":scope > button");
+                    return [...all].map((btn) => btn.innerText).join(', ');
+                }
+                return [...document.querySelectorAll('.selected, .chosen')].map((btn) => btn.innerText).join(', ');
             }
-            return [...document.querySelectorAll('.selected, .chosen')].map((btn) => btn.innerText).join(', ');
+            console.log('不是ChoiceOnly mode');
+            return "";
         }
 
         function getAiExplanation() {
@@ -470,7 +474,7 @@
             is_detail = document.getElementById("isDetail_toggleBtn").checked;
             is_honest = document.getElementById("isHonest_toggleBtn").checked;
             is_choiceOnly = document.getElementById("isChoiceOnly_toggleBtn").checked;
-            choice = getCurrentChoice();
+            choice = getCurrentChoice(is_choiceOnly);
             const startTime = time;
             fetch(`/get_ai_explanation?detail=${is_detail}&honest=${is_honest}&choiceOnly=${is_choiceOnly}`, {
                 method: "POST",
@@ -538,7 +542,7 @@
             is_detail = document.getElementById("isDetail_toggleBtn").checked;
             is_honest = document.getElementById("isHonest_toggleBtn").checked;
             is_choiceOnly = document.getElementById("isChoiceOnly_toggleBtn").checked;
-            choice = getCurrentChoice();
+            choice = getCurrentChoice(is_choiceOnly);
 
             let rawContent = '';
             const url = `/stream_ai_explanation?detail=${is_detail}&honest=${is_honest}&choiceOnly=${is_choiceOnly}`;
