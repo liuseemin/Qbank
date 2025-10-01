@@ -531,8 +531,8 @@ def load_questions(json_paths):
 @app.route("/search_questions")
 def search_questions():
     keyword = request.args.get("keyword", "").strip()
-    if not keyword:
-        return jsonify([])
+    if keyword == "":
+        return jsonify(questions)
 
     results = []
     # pattern = re.compile(re.escape(keyword), re.IGNORECASE)
