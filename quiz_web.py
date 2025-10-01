@@ -546,11 +546,12 @@ def search_questions():
         pattern = re.compile(re.escape(keyword), re.IGNORECASE)
 
     for q in questions:
+        id = q.get("題號", "")
         text = q.get("題目", "")
         opts = q.get("選項", [])
         ans = q.get("答案", "")
         # 題目 + 選項 全部檢查
-        combined = text + " " + " ".join(opts) + " 答案:" + ans
+        combined = id + " " + text + " " + " ".join(opts) + " 答案:" + ans
         if pattern.search(combined):
             highlighted_question = pattern.sub(
                 lambda m: f"<mark>{m.group(0)}</mark>", text
