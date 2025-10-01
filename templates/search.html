@@ -99,7 +99,7 @@
     <script>
         async function search() {
             const keyword = document.getElementById("keyword").value.trim();
-            if (!keyword) return;
+            // if (!keyword) return;
 
             const res = await fetch(`/search_questions?keyword=${encodeURIComponent(keyword)}`);
             const data = await res.json();
