@@ -231,7 +231,7 @@ def submit_answer():
             wrong_questions.append(q)
             # open a file to save every wrong question as history
             with open("wrong_questions_history.json", "a", encoding="utf-8") as f:
-                f.write(json.dumps(q, ensure_ascii=False) + "\n")
+                f.write(json.dumps(q, ensure_ascii=False, indent=2))
 
     answered_questions.add(q.get("題號"))
     if questions[question_index_dict[q.get("題號")]] in remaining_questions:
