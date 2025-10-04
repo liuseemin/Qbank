@@ -500,7 +500,8 @@ def load_questions(json_paths):
                             q['題目'] = q['題目'].replace('\r\n', ' ').replace('\n', ' ').strip()
                         if '選項' in q and isinstance(q['選項'], list):
                             q['選項'] = [opt.replace('\r\n', ' ').replace('\n', ' ').strip() for opt in q['選項']]
-                        if '題號' in q and f"{file_path.stem}" not in q['題號']:
+                        qeustion_stem = re.match(r'^(.*?)(?:_\d+)$', q['題號'])
+                        if '題號' in q and qeustion_stem.group(1) not in f"{file_path.stem}":
                             q['題號'] = f"{file_path.stem}_{q.get('題號')}"
                             # 如果圖片資料夾中有與題號相同的圖片，則加入題目中
                             if image_folder.exists():
