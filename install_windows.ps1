@@ -19,8 +19,8 @@ function Find-Python {
 
     $py = Get-Command py.exe -ErrorAction SilentlyContinue
     if ($null -ne $py) {
-        & $py.Source -3 --version *> $null
-        if ($LASTEXITCODE -eq 0) {
+        $version = (& $py.Source -3 --version 2>&1 | Out-String).Trim()
+        if ($version -eq "Python $pythonVersion") {
             $script:pythonCommand = $py.Source
             $script:pythonPrefix = @("-3")
             return
@@ -29,8 +29,8 @@ function Find-Python {
 
     $python = Get-Command python.exe -ErrorAction SilentlyContinue
     if ($null -ne $python) {
-        & $python.Source --version *> $null
-        if ($LASTEXITCODE -eq 0) {
+        $version = (& $python.Source --version 2>&1 | Out-String).Trim()
+        if ($version -eq "Python $pythonVersion") {
             $script:pythonCommand = $python.Source
             return
         }
@@ -153,17 +153,22 @@ Find-Python
 if ($null -eq $pythonCommand) {
     $winget = Get-Command winget.exe -ErrorAction SilentlyContinue
     if ($null -ne $winget) {
-        Write-Host "Installing Python 3.13..."
+        Write-Host "Installing Python 3.13.7..."
         & $winget.Source install --id Python.Python.3.13 --exact --scope user --accept-package-agreements --accept-source-agreements
         if ($LASTEXITCODE -ne 0) {
             throw "Python installation failed."
         }
-    } else {
+        Refresh-Path
+        Find-Python
+    }
+
+    if ($null -eq $pythonCommand) {
         $curl = Get-Command curl.exe -ErrorAction SilentlyContinue
         if ($null -eq $curl) {
-            throw "Python was not found and curl.exe is unavailable. Install Python 3.13 and run this script again."
+            throw "Python 3.13.7 was not found and curl.exe is unavailable. Install Python 3.13.7 and run this script again."
         }
 
+        Write-Host "Downloading the official Python 3.13.7 installer..."
         $pythonInstaller = Join-Path $env:TEMP "qbank-python-installer.exe"
         $pythonUrl = "https://www.python.org/ftp/python/$pythonVersion/python-$pythonVersion-amd64.exe"
         Invoke-WebRequest -Uri $pythonUrl -OutFile $pythonInstaller -UseBasicParsing
@@ -192,6 +197,10 @@ Invoke-Python -Arguments @("-m", "venv", ".venv")
 $venvPython = Join-Path $InstallPath ".venv\Scripts\python.exe"
 if (-not (Test-Path -LiteralPath $venvPython)) {
     throw "The virtual environment was not created."
+}
+$venvVersion = (& $venvPython --version 2>&1 | Out-String).Trim()
+if ($venvVersion -ne "Python $pythonVersion") {
+    throw "The virtual environment uses $venvVersion instead of Python $pythonVersion."
 }
 
 Write-Host "[5/6] Installing Python packages..."

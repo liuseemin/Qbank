@@ -28,9 +28,9 @@ Remove-Item $installer -Force
 
 1. 找到現有的 Git，或透過 `winget` 安裝 Git for Windows。
 2. 從 `https://github.com/liuseemin/Qbank` clone 專案到指定位置，預設為 `%USERPROFILE%\Qbank`。
-3. 找到現有的 Python，或透過 `winget`/官方安裝程式安裝 Python 3.13。
+3. 找到現有的 Python 3.13.7，或透過 `winget`/官方安裝程式安裝指定的 Python 3.13.7。
 4. 建立 clone 後專案內的 `.venv` 虛擬環境。
-5. 升級 pip 並安裝 `requirements.txt` 的所有套件。
+5. 確認 `.venv` 使用 Python 3.13.7，然後升級 pip 並安裝 `requirements.txt` 的所有套件。
 6. 建立 `json` 題庫資料夾。
 7. 詢問 PDF 檔案或資料夾位置；若有提供，依序執行 PDF 轉 JSON、選項格式修正與圖片擷取工具，並將結果整理到 `json` 資料夾。
 8. 詢問是否要設定 `GEMINI_API_KEY`；留白仍可使用無 AI 模式。
