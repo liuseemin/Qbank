@@ -28,9 +28,9 @@ Remove-Item $installer -Force
 
 1. 找到現有的 Git，或透過 `winget` 安裝 Git for Windows。
 2. 從 `https://github.com/liuseemin/Qbank` clone 專案到指定位置，預設為 `%USERPROFILE%\Qbank`。
-3. 找到現有的 Python 3.13.7，或透過 `winget`/官方安裝程式安裝指定的 Python 3.13.7。
-4. 建立 clone 後專案內的 `.venv` 虛擬環境。
-5. 確認 `.venv` 使用 Python 3.13.7，然後升級 pip 並安裝 `requirements.txt` 的所有套件。
+3. 找到現有的 `uv`，或透過 `winget`/官方安裝程式安裝 uv。
+4. 依照 `.python-version` 與 `pyproject.toml` 設定，執行 `uv sync` 建立環境並安裝所有套件。
+5. 使用 `uv run` 執行專案與工具；Python 版本由 uv 管理，目前指定為 3.13.7。
 6. 建立 `json` 題庫資料夾。
 7. 詢問 PDF 檔案或資料夾位置；若有提供，依序執行 PDF 轉 JSON、選項格式修正與圖片擷取工具，並將結果整理到 `json` 資料夾。
 8. 詢問是否要設定 `GEMINI_API_KEY`；留白仍可使用無 AI 模式。
@@ -39,10 +39,10 @@ Remove-Item $installer -Force
 安裝完成後，若有輸入 PDF 路徑，腳本會依序執行 `pdftojson.py`、`check_and_fix_json_options.py` 與 `pdfgetimg.py`。產生的題庫 JSON 及 `<PDF檔名>_images` 圖片資料夾會放在專案的 `json` 資料夾中。桌面捷徑會直接執行下列命令，因此不需要手動開啟終端機：
 
 ```text
-<project>\.venv\Scripts\python.exe <project>\quiz_web.py <project>\json --open
+uv run --project "<project>" python "<project>\quiz_web.py" "<project>\json" --open
 ```
 
-安裝需要網路連線。若電腦沒有 `winget`，Git 必須先手動安裝；Python 則會嘗試使用 `curl.exe` 下載官方安裝程式。腳本不會刪除既有資料夾：若目標是同一個 Git repo 會更新，若是非空資料夾則會停止。
+安裝需要網路連線。若電腦沒有 `winget`，Git 必須先手動安裝；uv 則會嘗試使用官方安裝程式。腳本不會刪除既有資料夾：若目標是同一個 Git repo 會更新，若是非空資料夾則會停止。
 
 也可以直接傳入安裝位置，跳過位置詢問：
 
@@ -95,7 +95,7 @@ powershell -ExecutionPolicy Bypass -File $installer -InstallPath "D:\Apps\Qbank"
 `quiz_web.py` 是目前正式入口。在專案根目錄開啟新的 CMD 或 PowerShell，指定題庫檔案或資料夾：
 
 ```cmd
-.venv\Scripts\python.exe quiz_web.py "C:\path\to\question_banks" --open
+uv run python quiz_web.py "C:\path\to\question_banks" --open
 ```
 
 `--open` 會自動開啟瀏覽器；不使用時，請手動開啟 http://127.0.0.1:5000。
@@ -103,7 +103,7 @@ powershell -ExecutionPolicy Bypass -File $installer -InstallPath "D:\Apps\Qbank"
 也可以指定多個題庫來源：
 
 ```cmd
-.venv\Scripts\python.exe quiz_web.py "C:\path\first.json" "C:\path\more_banks" --open
+uv run python quiz_web.py "C:\path\first.json" "C:\path\more_banks" --open
 ```
 
 常用參數：
@@ -117,7 +117,7 @@ powershell -ExecutionPolicy Bypass -File $installer -InstallPath "D:\Apps\Qbank"
 例如讓區域網路上的其他裝置連線：
 
 ```cmd
-.venv\Scripts\python.exe quiz_web.py "C:\path\to\question_banks" --host 0.0.0.0 --port 5000 --open
+uv run python quiz_web.py "C:\path\to\question_banks" --host 0.0.0.0 --port 5000 --open
 ```
 
 這種模式請同時注意 Windows 防火牆與不要將服務直接暴露到公網。
@@ -143,8 +143,8 @@ $env:GEMINI_API_KEY = "your-gemini-api-key"
 `pdftojson.py` 會讀取 PDF 表格。它預期題別、題號、題目、答案、出處位於固定欄位，若 PDF 格式不同可能需要修改欄位索引。
 
 ```powershell
-.venv\Scripts\python.exe pdftojson.py "C:\path\exam.pdf"
-.venv\Scripts\python.exe pdftojson.py "C:\path\pdfs" -o "json" --autoitem
+uv run python pdftojson.py "C:\path\exam.pdf"
+uv run python pdftojson.py "C:\path\pdfs" -o "json" --autoitem
 ```
 
 `--autoitem` 會嘗試從題目欄位拆出 A 到 E 選項。單一 PDF 預設輸出到同目錄；資料夾輸入預設輸出到該資料夾。
@@ -154,8 +154,8 @@ $env:GEMINI_API_KEY = "your-gemini-api-key"
 `pdfgetimg.py` 會從 PDF 擷取圖片，依題號輸出到 `<PDF檔名>_images` 資料夾。這個圖片資料夾必須和對應的題庫 JSON 檔案放在同一個資料夾，題庫機啟動載入 JSON 時才能找到並讀取圖片。
 
 ```powershell
-.venv\Scripts\python.exe pdfgetimg.py "C:\path\exam.pdf"
-.venv\Scripts\python.exe pdfgetimg.py "C:\path\pdfs"
+uv run python pdfgetimg.py "C:\path\exam.pdf"
+uv run python pdfgetimg.py "C:\path\pdfs"
 ```
 
 例如，`exam.json` 與圖片資料夾應保持以下結構：
@@ -171,7 +171,7 @@ question_banks/
 啟動題庫機時，將 `question_banks` 資料夾作為題庫來源：
 
 ```cmd
-.venv\Scripts\python.exe quiz_web.py "C:\path\to\question_banks" --open
+uv run python quiz_web.py "C:\path\to\question_banks" --open
 ```
 
 ### 修正選項格式
@@ -179,7 +179,7 @@ question_banks/
 `check_and_fix_json_options.py` 會將全形 `Ａ` 到 `Ｅ` 轉成半形，並把修正後的檔案輸出到指定資料夾：
 
 ```powershell
-.venv\Scripts\python.exe check_and_fix_json_options.py "json" -o "fixed_json"
+uv run python check_and_fix_json_options.py "json" -o "fixed_json"
 ```
 
 ## 專案結構

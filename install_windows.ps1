@@ -5,45 +5,11 @@ param(
 )
 
 $ErrorActionPreference = "Stop"
-$pythonVersion = "3.13.7"
 
 function Refresh-Path {
     $userPath = [Environment]::GetEnvironmentVariable("Path", "User")
     $machinePath = [Environment]::GetEnvironmentVariable("Path", "Machine")
     $env:Path = "$machinePath;$userPath"
-}
-
-function Find-Python {
-    $script:pythonCommand = $null
-    $script:pythonPrefix = @()
-
-    $py = Get-Command py.exe -ErrorAction SilentlyContinue
-    if ($null -ne $py) {
-        $version = (& $py.Source -3 --version 2>&1 | Out-String).Trim()
-        if ($version -eq "Python $pythonVersion") {
-            $script:pythonCommand = $py.Source
-            $script:pythonPrefix = @("-3")
-            return
-        }
-    }
-
-    $python = Get-Command python.exe -ErrorAction SilentlyContinue
-    if ($null -ne $python) {
-        $version = (& $python.Source --version 2>&1 | Out-String).Trim()
-        if ($version -eq "Python $pythonVersion") {
-            $script:pythonCommand = $python.Source
-            return
-        }
-    }
-}
-
-function Invoke-Python {
-    param([Parameter(ValueFromRemainingArguments = $true)][string[]]$Arguments)
-
-    & $script:pythonCommand @script:pythonPrefix @Arguments
-    if ($LASTEXITCODE -ne 0) {
-        throw "Python command failed with exit code $LASTEXITCODE."
-    }
 }
 
 function Invoke-Git {
@@ -55,19 +21,66 @@ function Invoke-Git {
     }
 }
 
-function Invoke-VenvPython {
+function Invoke-Uv {
     param([Parameter(ValueFromRemainingArguments = $true)][string[]]$Arguments)
 
-    & $script:venvPython @Arguments
+    & $script:uvCommand @Arguments
     if ($LASTEXITCODE -ne 0) {
-        throw "Virtual-environment Python command failed with exit code $LASTEXITCODE."
+        throw "uv command failed with exit code $LASTEXITCODE."
+    }
+}
+
+function Find-Uv {
+    $uv = Get-Command uv.exe -ErrorAction SilentlyContinue
+    if ($null -ne $uv) {
+        $script:uvCommand = $uv.Source
+        return $true
+    }
+
+    $candidate = Join-Path $HOME ".local\bin\uv.exe"
+    if (Test-Path -LiteralPath $candidate) {
+        $script:uvCommand = $candidate
+        return $true
+    }
+
+    return $false
+}
+
+function Install-Uv {
+    if (Find-Uv) {
+        return
+    }
+
+    $winget = Get-Command winget.exe -ErrorAction SilentlyContinue
+    if ($null -ne $winget) {
+        Write-Host "Installing uv with winget..."
+        & $winget.Source install --id astral-sh.uv --exact --scope user --accept-package-agreements --accept-source-agreements
+        if ($LASTEXITCODE -eq 0) {
+            Refresh-Path
+            if (Find-Uv) { return }
+        }
+    }
+
+    Write-Host "Installing uv with the official installer..."
+    $uvInstaller = Join-Path $env:TEMP "qbank-uv-install.ps1"
+    Invoke-WebRequest -Uri "https://astral.sh/uv/install.ps1" -OutFile $uvInstaller -UseBasicParsing
+    & powershell.exe -NoProfile -ExecutionPolicy Bypass -File $uvInstaller
+    $installerExitCode = $LASTEXITCODE
+    Remove-Item -LiteralPath $uvInstaller -Force -ErrorAction SilentlyContinue
+    if ($installerExitCode -ne 0) {
+        throw "uv installation failed with exit code $installerExitCode."
+    }
+
+    Refresh-Path
+    if (-not (Find-Uv)) {
+        throw "uv was installed but could not be found. Open a new PowerShell window and run this script again."
     }
 }
 
 function New-DesktopShortcut {
     param(
         [string]$ProjectPath,
-        [string]$PythonPath,
+        [string]$UvPath,
         [string]$QuizScriptPath,
         [string]$QuestionBankPath
     )
@@ -76,11 +89,11 @@ function New-DesktopShortcut {
     $shortcutPath = Join-Path $desktopPath "Qbank.lnk"
     $shell = New-Object -ComObject WScript.Shell
     $shortcut = $shell.CreateShortcut($shortcutPath)
-    $shortcut.TargetPath = $PythonPath
-    $shortcut.Arguments = "`"$QuizScriptPath`" `"$QuestionBankPath`" --open"
+    $shortcut.TargetPath = $UvPath
+    $shortcut.Arguments = "run --project `"$ProjectPath`" python `"$QuizScriptPath`" `"$QuestionBankPath`" --open"
     $shortcut.WorkingDirectory = $ProjectPath
     $shortcut.Description = "Qbank online quiz"
-    $shortcut.IconLocation = "${PythonPath},0"
+    $shortcut.IconLocation = "${UvPath},0"
     $shortcut.Save()
     return $shortcutPath
 }
@@ -96,7 +109,7 @@ if ([string]::IsNullOrWhiteSpace($InstallPath)) {
 $InstallPath = [Environment]::ExpandEnvironmentVariables($InstallPath.Trim().Trim('"'))
 $InstallPath = [System.IO.Path]::GetFullPath($InstallPath)
 
-Write-Host "[1/6] Checking for Git..."
+Write-Host "[1/8] Checking for Git..."
 $git = Get-Command git.exe -ErrorAction SilentlyContinue
 if ($null -eq $git) {
     $winget = Get-Command winget.exe -ErrorAction SilentlyContinue
@@ -118,7 +131,7 @@ if ($null -eq $git) {
 }
 $script:gitCommand = $git.Source
 
-Write-Host "[2/6] Cloning project into $InstallPath..."
+Write-Host "[2/8] Cloning project into $InstallPath..."
 if (Test-Path -LiteralPath $InstallPath) {
     $items = @(Get-ChildItem -Force -LiteralPath $InstallPath)
     $gitFolder = Join-Path $InstallPath ".git"
@@ -143,81 +156,26 @@ if (Test-Path -LiteralPath $InstallPath) {
 }
 
 $quizScript = Join-Path $InstallPath "quiz_web.py"
+$pyproject = Join-Path $InstallPath "pyproject.toml"
 if (-not (Test-Path -LiteralPath $quizScript)) {
     throw "The project was downloaded, but quiz_web.py was not found."
 }
+if (-not (Test-Path -LiteralPath $pyproject)) {
+    throw "The project was downloaded, but pyproject.toml was not found."
+}
 Set-Location -Path $InstallPath
 
-Write-Host "[3/6] Checking for Python..."
-Find-Python
-if ($null -eq $pythonCommand) {
-    $winget = Get-Command winget.exe -ErrorAction SilentlyContinue
-    if ($null -ne $winget) {
-        Write-Host "Installing Python 3.13.7..."
-        & $winget.Source install --id Python.Python.3.13 --exact --scope user --accept-package-agreements --accept-source-agreements
-        if ($LASTEXITCODE -ne 0) {
-            throw "Python installation failed."
-        }
-        Refresh-Path
-        Find-Python
-    }
+Write-Host "[3/8] Checking for uv..."
+Install-Uv
 
-    if ($null -eq $pythonCommand) {
-        $curl = Get-Command curl.exe -ErrorAction SilentlyContinue
-        if ($null -eq $curl) {
-            throw "Python 3.13.7 was not found and curl.exe is unavailable. Install Python 3.13.7 and run this script again."
-        }
+Write-Host "[4/8] Synchronizing the uv environment..."
+Invoke-Uv -Arguments @("sync")
 
-        Write-Host "Downloading the official Python 3.13.7 installer..."
-        $pythonInstaller = Join-Path $env:TEMP "qbank-python-installer.exe"
-        $pythonUrl = "https://www.python.org/ftp/python/$pythonVersion/python-$pythonVersion-amd64.exe"
-        Invoke-WebRequest -Uri $pythonUrl -OutFile $pythonInstaller -UseBasicParsing
-        $process = Start-Process -FilePath $pythonInstaller -ArgumentList @(
-            "/quiet",
-            "InstallAllUsers=0",
-            "PrependPath=1",
-            "Include_launcher=1",
-            "Include_test=0"
-        ) -Wait -PassThru
-        Remove-Item -LiteralPath $pythonInstaller -Force -ErrorAction SilentlyContinue
-        if ($process.ExitCode -ne 0) {
-            throw "Python installation failed with exit code $($process.ExitCode)."
-        }
-    }
-    Refresh-Path
-    Find-Python
-}
-
-if ($null -eq $pythonCommand) {
-    throw "Python is still unavailable. Open a new PowerShell window and run this script again."
-}
-
-Write-Host "[4/6] Creating virtual environment..."
-Invoke-Python -Arguments @("-m", "venv", ".venv")
-$venvPython = Join-Path $InstallPath ".venv\Scripts\python.exe"
-if (-not (Test-Path -LiteralPath $venvPython)) {
-    throw "The virtual environment was not created."
-}
-$venvVersion = (& $venvPython --version 2>&1 | Out-String).Trim()
-if ($venvVersion -ne "Python $pythonVersion") {
-    throw "The virtual environment uses $venvVersion instead of Python $pythonVersion."
-}
-
-Write-Host "[5/6] Installing Python packages..."
-& $venvPython -m pip install --upgrade pip
-if ($LASTEXITCODE -ne 0) {
-    throw "pip upgrade failed."
-}
-& $venvPython -m pip install -r (Join-Path $InstallPath "requirements.txt")
-if ($LASTEXITCODE -ne 0) {
-    throw "Dependency installation failed."
-}
-
-Write-Host "[6/9] Creating the question-bank folder..."
 $jsonDirectory = Join-Path $InstallPath "json"
+Write-Host "[5/8] Creating the question-bank folder..."
 New-Item -ItemType Directory -Path $jsonDirectory -Force | Out-Null
 
-Write-Host "[7/9] Importing a question-bank PDF (optional)..."
+Write-Host "[6/8] Importing a question-bank PDF (optional)..."
 $pdfInput = Read-Host "Enter a PDF file or folder path (leave blank to skip)"
 if (-not [string]::IsNullOrWhiteSpace($pdfInput)) {
     $pdfInput = [Environment]::ExpandEnvironmentVariables($pdfInput.Trim().Trim('"'))
@@ -232,11 +190,11 @@ if (-not [string]::IsNullOrWhiteSpace($pdfInput)) {
     $inputItem = Get-Item -LiteralPath $pdfInputPath
 
     if ($inputItem.PSIsContainer) {
-        Invoke-VenvPython -Arguments @($pdfToJsonScript, $pdfInputPath, "-o", $jsonDirectory, "--autoitem")
+        Invoke-Uv -Arguments @("run", "python", $pdfToJsonScript, $pdfInputPath, "-o", $jsonDirectory, "--autoitem")
         $pdfFiles = @(Get-ChildItem -LiteralPath $pdfInputPath -Filter "*.pdf" -File)
     } else {
         $outputJson = Join-Path $jsonDirectory ($inputItem.BaseName + ".json")
-        Invoke-VenvPython -Arguments @($pdfToJsonScript, $pdfInputPath, "-o", $outputJson, "--autoitem")
+        Invoke-Uv -Arguments @("run", "python", $pdfToJsonScript, $pdfInputPath, "-o", $outputJson, "--autoitem")
         $pdfFiles = @($inputItem)
     }
 
@@ -244,13 +202,13 @@ if (-not [string]::IsNullOrWhiteSpace($pdfInput)) {
     if (Test-Path -LiteralPath $fixedDirectory) {
         Remove-Item -LiteralPath $fixedDirectory -Recurse -Force
     }
-    Invoke-VenvPython -Arguments @($fixOptionsScript, $jsonDirectory, "-o", $fixedDirectory)
+    Invoke-Uv -Arguments @("run", "python", $fixOptionsScript, $jsonDirectory, "-o", $fixedDirectory)
     Get-ChildItem -LiteralPath $fixedDirectory -Filter "*.json" -File | ForEach-Object {
         Copy-Item -LiteralPath $_.FullName -Destination (Join-Path $jsonDirectory $_.Name) -Force
     }
     Remove-Item -LiteralPath $fixedDirectory -Recurse -Force
 
-    Invoke-VenvPython -Arguments @($pdfGetImagesScript, $pdfInputPath)
+    Invoke-Uv -Arguments @("run", "python", $pdfGetImagesScript, $pdfInputPath)
     foreach ($pdfFile in $pdfFiles) {
         $sourceImages = Join-Path $pdfFile.DirectoryName ($pdfFile.BaseName + "_images")
         $destinationImages = Join-Path $jsonDirectory ($pdfFile.BaseName + "_images")
@@ -263,18 +221,16 @@ if (-not [string]::IsNullOrWhiteSpace($pdfInput)) {
             }
         }
     }
-
-    Write-Host "PDF question bank imported into $jsonDirectory"
 }
 
-Write-Host "[8/9] Configuring Gemini AI (optional)..."
+Write-Host "[7/8] Configuring Gemini AI (optional)..."
 $apiKey = Read-Host "Enter Gemini API Key (leave blank to disable AI)"
 [Environment]::SetEnvironmentVariable("GEMINI_API_KEY", $apiKey, "User")
 
-Write-Host "[9/9] Creating desktop shortcut..."
+Write-Host "[8/8] Creating desktop shortcut..."
 $shortcutPath = New-DesktopShortcut `
     -ProjectPath $InstallPath `
-    -PythonPath $venvPython `
+    -UvPath $script:uvCommand `
     -QuizScriptPath $quizScript `
     -QuestionBankPath $jsonDirectory
 
@@ -282,6 +238,4 @@ Write-Host ""
 Write-Host "Installation completed: $InstallPath"
 Write-Host "Put JSON question banks in: $jsonDirectory"
 Write-Host "Desktop shortcut created: $shortcutPath"
-Write-Host "Start Qbank with:"
-Write-Host "  cd `"$InstallPath`""
-Write-Host '  .venv\Scripts\python.exe quiz_web.py .\json --open'
+Write-Host "Shortcut runs: uv run --project `"$InstallPath`" python `"$quizScript`" `"$jsonDirectory`" --open"
