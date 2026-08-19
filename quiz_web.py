@@ -4,18 +4,19 @@ from flask import Flask, render_template, request, jsonify, Response
 import json
 import random
 from pathlib import Path
+
 # import google.generativeai as genai # 引入 Gemini SDK
 from google import genai
 import io
 from InquirerPy import inquirer
 import locale
 
-
 # --- 設定 Gemini API ---
 # ⚠️ 注意：將你的 API 金鑰存在環境變數中，而非直接寫在程式碼裡
 import os
+
 # 如果沒有設定環境變數，這裡會出錯，所以要先設定好
-# genai.configure(api_key=os.environ.get("GEMINI_API_KEY")) 
+# genai.configure(api_key=os.environ.get("GEMINI_API_KEY"))
 # 選擇一個適合的模型，例如 'gemini-1.5-flash-latest'
 # model = genai.GenerativeModel('gemini-2.5-flash')
 # ---
@@ -58,23 +59,33 @@ answered_questions = set()
 ai_explanation_cache = {}
 prompt_cache = {}
 
+
 @app.route("/")
 def index():
     # 傳遞所有題號給前端，以便生成下拉選單
     all_question_ids = [q.get("題號") for q in questions]
-    return render_template("index.html", all_question_ids=all_question_ids, total_questions=len(questions))
+    return render_template(
+        "index.html", all_question_ids=all_question_ids, total_questions=len(questions)
+    )
+
 
 @app.route("/test")
 def test():
     # 傳遞所有題號給前端，以便生成下拉選單
     all_question_ids = [q.get("題號") for q in questions]
-    return render_template("index_test.html", all_question_ids=all_question_ids, total_questions=len(questions))
+    return render_template(
+        "index_test.html",
+        all_question_ids=all_question_ids,
+        total_questions=len(questions),
+    )
+
 
 @app.route("/review")
 def review():
     with open("wrong_questions.json", "w", encoding="utf-8") as f:
         json.dump(wrong_questions, f, ensure_ascii=False, indent=2)
     return render_template("review.html", wrong_questions=wrong_questions)
+
 
 @app.route("/save_question")
 def save_question():
@@ -89,19 +100,31 @@ def save_question():
     file_obj = io.BytesIO()
     file_obj.write(data.encode("utf-8"))
     file_obj.seek(0)
+
     # 讓使用者下載檔案
     # def a function to remove q['題號']'s "_number" part for all q in wrong_questions
     def remove_suffixs(q):
-        return re.sub(r'_\d+$', '', q['題號'])
-        
-    default_filename = '+'.join({remove_suffixs(q) for q in questions_to_save}) + "_" + type + ".json"
+        return re.sub(r"_\d+$", "", q["題號"])
+
+    default_filename = (
+        "+".join({remove_suffixs(q) for q in questions_to_save}) + "_" + type + ".json"
+    )
     from urllib.parse import quote
-     # 使用 RFC 5987 編碼來處理非 ASCII 字元
-    return Response(file_obj, mimetype="application/json", headers={"Content-Disposition": f"attachment; filename*=UTF-8''{quote(default_filename)}"})
+
+    # 使用 RFC 5987 編碼來處理非 ASCII 字元
+    return Response(
+        file_obj,
+        mimetype="application/json",
+        headers={
+            "Content-Disposition": f"attachment; filename*=UTF-8''{quote(default_filename)}"
+        },
+    )
+
 
 @app.route("/review_marked")
 def review_marked():
     return render_template("review_marked.html", marked_questions=marked_questions)
+
 
 @app.route("/review_ai")
 def review_ai():
@@ -112,27 +135,34 @@ def review_ai():
             q_ai.append(q)
     return render_template("review_ai.html", q_ai=q_ai)
 
+
 @app.route("/search")
 def search_page():
     return render_template("search.html")
 
+
 @app.route("/save_progress")
 def save_progress():
     data = {
-            "questions": questions,
-            "answered_questions": list(answered_questions),
-            "wrong_questions": wrong_questions,
-            "marked_questions": marked_questions,
-            "question_index_dict": question_index_dict,
-            "wrong_questions_answer_count": wrong_questions_answer_count,
-            "remaining_questions": remaining_questions,
-            "question_index": question_index
-        }
+        "questions": questions,
+        "answered_questions": list(answered_questions),
+        "wrong_questions": wrong_questions,
+        "marked_questions": marked_questions,
+        "question_index_dict": question_index_dict,
+        "wrong_questions_answer_count": wrong_questions_answer_count,
+        "remaining_questions": remaining_questions,
+        "question_index": question_index,
+    }
     file_obj = io.BytesIO()
     file_obj.write(json.dumps(data, indent=2).encode("utf-8"))
     file_obj.seek(0)
     # 讓使用者下載檔案
-    return Response(file_obj, mimetype="application/json", headers={"Content-Disposition": "attachment; filename=progress.json"})
+    return Response(
+        file_obj,
+        mimetype="application/json",
+        headers={"Content-Disposition": "attachment; filename=progress.json"},
+    )
+
 
 @app.route("/get_question")
 def get_question():
@@ -154,12 +184,13 @@ def get_question():
             q = questions[question_index]
             question_index += 1
         # 透過題號判斷題目是否已被標記
-        q["is_marked"] = any(marked_q.get("題號") == q.get("題號") for marked_q in marked_questions)
+        q["is_marked"] = any(
+            marked_q.get("題號") == q.get("題號") for marked_q in marked_questions
+        )
         q["is_multiple"] = True if q.get("題別") == "複" else False
 
-        
         return jsonify(q)
-    
+
     # 處理跳轉到特定題號的請求
     if question_id:
         try:
@@ -170,9 +201,11 @@ def get_question():
 
             q = questions[question_index]
             # 透過題號判斷題目是否已被標記
-            q["is_marked"] = any(marked_q.get("題號") == q.get("題號") for marked_q in marked_questions)
+            q["is_marked"] = any(
+                marked_q.get("題號") == q.get("題號") for marked_q in marked_questions
+            )
             q["is_multiple"] = True if q.get("題別") == "複" else False
-            
+
             question_index += 1
             return jsonify(q)
         except StopIteration:
@@ -212,9 +245,12 @@ def get_question():
         return jsonify({"error": "所有題目都已出完！", "finished": True})
 
     # 修正：確保所有回傳題目的判斷方式一致
-    q["is_marked"] = any(marked_q.get("題號") == q.get("題號") for marked_q in marked_questions)
+    q["is_marked"] = any(
+        marked_q.get("題號") == q.get("題號") for marked_q in marked_questions
+    )
     q["is_multiple"] = True if q.get("題別") == "複" else False
     return jsonify(q)
+
 
 @app.route("/submit_answer", methods=["POST"])
 def submit_answer():
@@ -224,7 +260,7 @@ def submit_answer():
     answer = data["answer"].strip().upper()
 
     correct = q.get("答案", "").strip().upper()
-    is_correct = (answer == correct)
+    is_correct = answer == correct
 
     if not is_correct:
         if q not in wrong_questions:
@@ -236,16 +272,19 @@ def submit_answer():
     answered_questions.add(q.get("題號"))
     if questions[question_index_dict[q.get("題號")]] in remaining_questions:
         remaining_questions.remove(questions[question_index_dict[q.get("題號")]])
-     
-    return jsonify({
-        "correct": is_correct,
-        "right_answer": correct,
-        # "answered_count": "{}/{}".format(len(answered_questions), len(questions)) if questions else len(answered_questions),
-        "total_questions": len(questions),
-        "answered_count_total": len(answered_questions),
-        "total_wrong": len(wrong_questions),
-        "answered_wrong": wrong_questions_answer_count
-    })
+
+    return jsonify(
+        {
+            "correct": is_correct,
+            "right_answer": correct,
+            # "answered_count": "{}/{}".format(len(answered_questions), len(questions)) if questions else len(answered_questions),
+            "total_questions": len(questions),
+            "answered_count_total": len(answered_questions),
+            "total_wrong": len(wrong_questions),
+            "answered_wrong": wrong_questions_answer_count,
+        }
+    )
+
 
 @app.route("/mark_question", methods=["POST"])
 def mark_question():
@@ -257,8 +296,11 @@ def mark_question():
         return jsonify({"status": "marked"})
     else:
         # 如果已經標記過，則取消標記
-        marked_questions[:] = [mq for mq in marked_questions if mq.get("題號") != q.get("題號")]
+        marked_questions[:] = [
+            mq for mq in marked_questions if mq.get("題號") != q.get("題號")
+        ]
         return jsonify({"status": "unmarked"})
+
 
 @app.route("/reset_questions", methods=["POST"])
 def reset_questions():
@@ -268,14 +310,19 @@ def reset_questions():
     answered_questions.clear()
     return jsonify({"status": "reset"})
 
-def generate_prompt(question, choice, is_detail=False, is_honest=False, is_choiceOnly=False):
+
+def generate_prompt(
+    question, choice, is_detail=False, is_honest=False, is_choiceOnly=False
+):
     question_part = f"題目：{question['題目']}\n選項：{' '.join(question['選項'])}\n答案：{question['答案']}"
     prompt = f"請以繁體中文，針對以下問題，生成精簡的解釋：\n\n{question_part}"
     if is_detail:
         prompt = f"請以繁體中文，針對以下問題，生成 1 分鐘內可以閱讀完的詳解，包含關鍵概念和每個選項解釋，文字簡明，重點清楚：\n\n{question_part}"
-    
-    prompt += "\n\n簡要說明答題關鍵知識，若需要分類、分級、分型等知識也請簡要列出完整分級。"
-    
+
+    prompt += (
+        "\n\n簡要說明答題關鍵知識，若需要分類、分級、分型等知識也請簡要列出完整分級。"
+    )
+
     if is_choiceOnly:
         prompt = f"題目：{question['題目']}\n答案：{question['答案']}\n請簡短說明下列選項正確或錯誤的理由：\n{choice}"
 
@@ -283,7 +330,7 @@ def generate_prompt(question, choice, is_detail=False, is_honest=False, is_choic
         prompt += "\n\n若答案不合理則要公正的指出。"
 
     print(f"[prompt] {prompt.replace('\n', ' ')}")
-    
+
     return prompt
 
 
@@ -301,13 +348,13 @@ def get_ai_explanation():
 
     if not question:
         return jsonify({"error": "未提供題目"}), 400
-    
+
     question_id = question["題號"]
 
     question_part = f"題目：{question['題目']}\n選項：{' '.join(question['選項'])}\n答案：{question['答案']}"
 
     # 如果題目中有"組合題"，找出後面的第一組數字做為題號，並將該題號的題目加入prompt中
-    match = re.search(r"組合題.*?(\d+)", question['題目'])
+    match = re.search(r"組合題.*?(\d+)", question["題目"])
     if match:
         related_q_num = match.group(1)
         related_q_id = f"{question_id.rsplit('_', 1)[0]}_{related_q_num}"
@@ -315,7 +362,7 @@ def get_ai_explanation():
             related_q = questions[question_index_dict[related_q_id]]
             related_part = f"相關題目：{related_q['題目']}"
             question_part = related_part + "\n\n" + question_part
-    
+
     # 先設定prompt
     prompt = generate_prompt(question, choice, is_detail, is_honest, is_choiceOnly)
 
@@ -324,12 +371,13 @@ def get_ai_explanation():
         explanation = ai_explanation_cache[question_id]
         if explanation is not None:
             print(f"✅ 題號 {question_id} 的詳解已從快取中取得。")
-            return jsonify({
-                "explanation": explanation,
-                "current_tokens": 0,  # 從快取中取得，不計算 token 數
-                "total_tokens": total_tokens_used
-            })
-    
+            return jsonify(
+                {
+                    "explanation": explanation,
+                    "current_tokens": 0,  # 從快取中取得，不計算 token 數
+                    "total_tokens": total_tokens_used,
+                }
+            )
 
     try:
         # response = model.generate_content(prompt)
@@ -343,10 +391,10 @@ def get_ai_explanation():
         # 步驟 3: 將新的詳解儲存到快取中
         ai_explanation_cache[question_id] = explanation
         prompt_cache[question_id] = prompt
-        
+
         # 計算本次請求的總 token 數 (input + output)
         current_tokens = response.usage_metadata.total_token_count
-        
+
         # 更新累積 token 數
         total_tokens_used += current_tokens
 
@@ -354,15 +402,18 @@ def get_ai_explanation():
         # with open("tmp_explanation.html", "w", encoding="utf-8") as f:
         #     f.write(html)
 
-        return jsonify({
-            "explanation": explanation,
-            "current_tokens": current_tokens,
-            "total_tokens": total_tokens_used
-        })
+        return jsonify(
+            {
+                "explanation": explanation,
+                "current_tokens": current_tokens,
+                "total_tokens": total_tokens_used,
+            }
+        )
     except Exception as e:
         print(f"Gemini API 呼叫失敗: {e}")
         return jsonify({"error": "無法取得 AI 詳解，請稍後再試。"}), 500
-    
+
+
 # 新增一個用於串流回應的路由
 @app.route("/stream_ai_explanation", methods=["POST"])
 def stream_ai_explanation():
@@ -378,13 +429,13 @@ def stream_ai_explanation():
 
     if not question:
         return jsonify({"error": "未提供題目"}), 400
-    
+
     question_id = question["題號"]
 
     question_part = f"題目：{question['題目']}\n選項：{' '.join(question['選項'])}\n答案：{question['答案']}"
 
     # 如果題目中有"組合題"，找出後面的第一組數字做為題號，並將該題號的題目加入prompt中
-    match = re.search(r"組合題.*?(\d+)", question['題目'])
+    match = re.search(r"組合題.*?(\d+)", question["題目"])
     if match:
         related_q_num = match.group(1)
         related_q_id = f"{question_id.rsplit('_', 1)[0]}_{related_q_num}"
@@ -392,7 +443,7 @@ def stream_ai_explanation():
             related_q = questions[question_index_dict[related_q_id]]
             related_part = f"相關題目：{related_q['題目']}"
             question_part = related_part + "\n\n" + question_part
-    
+
     # 先設定prompt
     prompt = generate_prompt(question, choice, is_detail, is_honest, is_choiceOnly)
 
@@ -400,17 +451,21 @@ def stream_ai_explanation():
     if question_id in ai_explanation_cache and prompt_cache[question_id] == prompt:
         explanation = ai_explanation_cache[question_id]
         if explanation is not None:
-            
+
             print(f"✅ 題號 {question_id} 的詳解已從快取中取得。")
+
             def response():
                 token_info = {
                     "current_tokens": 0,  # 從快取中取得，不計算 token 數
-                    "total_tokens": total_tokens_used
+                    "total_tokens": total_tokens_used,
                 }
-                yield explanation.encode('utf-8')
-                yield f"<div data-tokens='{json.dumps(token_info)}' style='display:none;'></div>".encode('utf-8')
-            return Response(response(), mimetype='text/html')
-    
+                yield explanation.encode("utf-8")
+                yield f"<div data-tokens='{json.dumps(token_info)}' style='display:none;'></div>".encode(
+                    "utf-8"
+                )
+
+            return Response(response(), mimetype="text/html")
+
     # 確保 prompt_tokens 在串流開始前計算一次
     # 因為 prompt tokens 在發送請求時就已確定
     # prompt_tokens = client.models.count_tokens(model=MODEL, contents=prompt).total_tokens
@@ -422,48 +477,50 @@ def stream_ai_explanation():
         full_explanation = ""
         try:
             response = client.models.generate_content_stream(
-                model=MODEL,
-                contents=prompt
+                model=MODEL, contents=prompt
             )
             # 呼叫 genai API 並啟用串流
             for chunk in response:
-                if (chunk.text):
-                    yield chunk.text.encode('utf-8')
+                if chunk.text:
+                    yield chunk.text.encode("utf-8")
                     full_explanation += chunk.text
-                if (chunk.usage_metadata):
+                if chunk.usage_metadata:
                     final_current_tokens = chunk.usage_metadata.total_token_count
-            
+
             if final_current_tokens > 0:
                 total_tokens_used += final_current_tokens
                 token_info = {
                     "current_tokens": final_current_tokens,
-                    "total_tokens": total_tokens_used
+                    "total_tokens": total_tokens_used,
                 }
                 ai_explanation_cache[question_id] = full_explanation
                 prompt_cache[question_id] = prompt
-            
+
             # 將 JSON 資訊傳送給前端
-            yield f"<div data-tokens='{json.dumps(token_info)}' style='display:none;'></div>".encode('utf-8')
+            yield f"<div data-tokens='{json.dumps(token_info)}' style='display:none;'></div>".encode(
+                "utf-8"
+            )
 
         except Exception as e:
             # 處理可能發生的 API 錯誤
             error_message = f"無法取得 AI 詳解：{e}"
-            yield f'<p style="color:red;">{error_message}</p>'.encode('utf-8')
+            yield f'<p style="color:red;">{error_message}</p>'.encode("utf-8")
 
     # 這裡回傳 Response 物件，並將生成器函式作為回應內容
     # mimetype 設為 text/html，讓瀏覽器能直接解析 HTML 標籤
-    return Response(generate_stream(), mimetype='text/html')
+    return Response(generate_stream(), mimetype="text/html")
+
 
 def load_questions(json_paths):
     global questions, remaining_questions, question_index_dict
     all_question_files = []
-    
+
     for path_str in json_paths:
         p = Path(path_str)
         if not p.exists():
             print(f"❌ 找不到路徑：{path_str}")
             continue
-        
+
         keybindings = {
             "toggle-all": [{"key": "c-a"}],
             "toggle-all-false": [{"key": "c-d"}],
@@ -478,12 +535,20 @@ def load_questions(json_paths):
                 continue
 
             all_question_files.extend(directory_question_files)
-            locale.setlocale(locale.LC_COLLATE, "zh_TW.UTF-8")  # 設定為系統預設語系，確保排序正確
-            all_question_files = sorted(all_question_files, key=lambda x: locale.strxfrm(x.name))  # 使用 locale 進行排序
-            all_question_files = inquirer.checkbox(message="請選擇要載入的題庫檔案\n",
-                                choices=all_question_files,
-                                keybindings=keybindings,
-                                enabled_symbol="⬢", disabled_symbol="⬡", instruction='[Space 選擇] [Enter完成] [Ctrl + A 全選] [Ctrl + D 反選] [Ctrl + C 取消]').execute()
+            locale.setlocale(
+                locale.LC_COLLATE, "zh_TW.UTF-8"
+            )  # 設定為系統預設語系，確保排序正確
+            all_question_files = sorted(
+                all_question_files, key=lambda x: locale.strxfrm(x.name)
+            )  # 使用 locale 進行排序
+            all_question_files = inquirer.checkbox(
+                message="請選擇要載入的題庫檔案\n",
+                choices=all_question_files,
+                keybindings=keybindings,
+                enabled_symbol="⬢",
+                disabled_symbol="⬡",
+                instruction="[Space 選擇] [Enter完成] [Ctrl + A 全選] [Ctrl + D 反選] [Ctrl + C 取消]",
+            ).execute()
         else:
             # 如果是單一檔案，直接加入列表
             all_question_files.append(p)
@@ -501,26 +566,41 @@ def load_questions(json_paths):
                 if isinstance(data, list):
                     cleaned_questions = []
                     for q in data:
-                        if '題目' in q:
-                            q['題目'] = q['題目'].replace('\r\n', ' ').replace('\n', ' ').strip()
-                        if '選項' in q and isinstance(q['選項'], list):
-                            q['選項'] = [opt.replace('\r\n', ' ').replace('\n', ' ').strip() for opt in q['選項']]
-                        match = re.match(r'^(.*?)(?:_\d+)$', q['題號'])
-                        question_stem = '預設'
+                        if "題目" in q:
+                            q["題目"] = (
+                                q["題目"]
+                                .replace("\r\n", " ")
+                                .replace("\n", " ")
+                                .strip()
+                            )
+                        if "選項" in q and isinstance(q["選項"], list):
+                            q["選項"] = [
+                                opt.replace("\r\n", " ").replace("\n", " ").strip()
+                                for opt in q["選項"]
+                            ]
+                        match = re.match(r"^(.*?)(?:_\d+)$", q["題號"])
+                        question_stem = "預設"
                         if match:
-                            question_stem = match.group(1) 
-                        if '題號' in q and question_stem not in f"{file_path.stem}":
-                            q['題號'] = f"{file_path.stem}_{q.get('題號')}"
+                            question_stem = match.group(1)
+                        if "題號" in q and question_stem not in f"{file_path.stem}":
+                            q["題號"] = f"{file_path.stem}_{q.get('題號')}"
                             # 如果圖片資料夾中有與題號相同的圖片，則加入題目中
                             if image_folder.exists():
                                 for image_file in image_files:
-                                    if image_file.stem == q['題號']:
-                                        print(f"　 🖼️ 找到題號 {q['題號']} 的圖片：{(file_path.stem + '_images')}/{image_file.name}")
+                                    if image_file.stem == q["題號"]:
+                                        print(
+                                            f"　 🖼️ 找到題號 {q['題號']} 的圖片：{(file_path.stem + '_images')}/{image_file.name}"
+                                        )
                                         # 存入base64編碼的圖片
                                         with open(image_file, "rb") as img_f:
                                             img_data = img_f.read()
-                                            img_base64 = "data:image/png;base64," + base64.b64encode(img_data).decode('utf-8')
-                                            q['圖片'] = img_base64
+                                            img_base64 = (
+                                                "data:image/png;base64,"
+                                                + base64.b64encode(img_data).decode(
+                                                    "utf-8"
+                                                )
+                                            )
+                                            q["圖片"] = img_base64
                         cleaned_questions.append(q)
                     all_questions.extend(cleaned_questions)
                     print(f"✅ 載入檔案：{file_path}，題數：{len(cleaned_questions)}")
@@ -530,15 +610,17 @@ def load_questions(json_paths):
             print(f"⚠️ {file_path} 無法解析為 JSON，略過")
         except Exception as e:
             print(f"❌ 處理檔案 {file_path} 時發生錯誤：{e}")
-            
+
     questions = all_questions
     remaining_questions = list(questions)
-    question_index_dict = {q['題號']: i for i, q in enumerate(questions)}
+    question_index_dict = {q["題號"]: i for i, q in enumerate(questions)}
 
     # 自動開啟網頁
     if args.open:
         import webbrowser
+
         webbrowser.open(f"http://{args.host}:{args.port}")
+
 
 @app.route("/search_questions")
 def search_questions():
@@ -549,7 +631,7 @@ def search_questions():
     results = []
     # pattern = re.compile(re.escape(keyword), re.IGNORECASE)
 
-    if keyword.startswith('r/'):
+    if keyword.startswith("r/"):
         # 移除標記，將剩下的字串視為 regular expression
         regex_pattern = keyword[2:]
         pattern = re.compile(regex_pattern, re.IGNORECASE)
@@ -571,23 +653,27 @@ def search_questions():
             highlighted_options = [
                 pattern.sub(lambda m: f"<mark>{m.group(0)}</mark>", o) for o in opts
             ]
-            highlighted_ans = [
-                pattern.sub(lambda m: f"<mark>{m.group(0)}</mark>", ans)
-            ]
-            results.append({
-                "題號": q.get("題號"),
-                "題目": highlighted_question,
-                "圖片": q.get("圖片", ""),
-                "選項": highlighted_options,
-                "答案": highlighted_ans
-            })
+            highlighted_ans = [pattern.sub(lambda m: f"<mark>{m.group(0)}</mark>", ans)]
+            results.append(
+                {
+                    "題號": q.get("題號"),
+                    "題目": highlighted_question,
+                    "圖片": q.get("圖片", ""),
+                    "選項": highlighted_options,
+                    "答案": highlighted_ans,
+                }
+            )
 
     return jsonify(results)
 
+
 if __name__ == "__main__":
     import argparse
+
     parser = argparse.ArgumentParser(description="國考出題機（支援多題庫與模式切換）")
-    parser.add_argument("json_files", nargs="*", help="一個或多個題庫 JSON 檔案或資料夾")
+    parser.add_argument(
+        "json_files", nargs="*", help="一個或多個題庫 JSON 檔案或資料夾"
+    )
     parser.add_argument("--host", default="127.0.0.1")
     parser.add_argument("--port", default=5000, type=int)
     parser.add_argument("--wrong", "-w", type=str, help="載入錯題檔案")
@@ -604,21 +690,26 @@ if __name__ == "__main__":
                 answered_questions = set(data.get("answered_questions", []))
                 wrong_questions = data.get("wrong_questions", [])
                 marked_questions = data.get("marked_questions", [])
-                question_index_dict = {q['題號']: i for i, q in enumerate(questions)}
-                wrong_questions_answer_count = data.get("wrong_questions_answer_count", 0)
+                question_index_dict = {q["題號"]: i for i, q in enumerate(questions)}
+                wrong_questions_answer_count = data.get(
+                    "wrong_questions_answer_count", 0
+                )
                 remaining_questions = data.get("remaining_questions", list(questions))
                 question_index = data.get("question_index", 0)
-                print(f"✅ 進度檔案已載入，總題數：{len(questions)}，已答題數：{len(answered_questions)}")
+                print(
+                    f"✅ 進度檔案已載入，總題數：{len(questions)}，已答題數：{len(answered_questions)}"
+                )
         except Exception as e:
             print(f"❌ 載入進度檔案失敗：{e}")
     else:
         load_questions(args.json_files)
         print(f"✅ 題庫已載入，總題數：{len(questions)}")
-    
+
     # load_questions(args.json_files)
     # print(f"✅ 題庫已載入，總題數：{len(questions)}")
 
     if args.wrong:
+
         def load_wrong_questions(json_path):
             global wrong_questions
             try:
@@ -626,14 +717,16 @@ if __name__ == "__main__":
                     data = json.load(f)
                     if isinstance(data, list):
                         wrong_questions = data
-                        print(f"✅ 載入錯題檔案：{json_path}，題數：{len(wrong_questions)}")
+                        print(
+                            f"✅ 載入錯題檔案：{json_path}，題數：{len(wrong_questions)}"
+                        )
                     else:
                         print(f"⚠️ {json_path} 格式錯誤，非陣列，略過")
             except Exception as e:
                 print(f"❌ 處理錯題檔案 {json_path} 時發生錯誤：{e}")
+
         load_wrong_questions(args.wrong)
         print(f"✅ 錯題檔案已載入，總題數：{len(wrong_questions)}")
-    
+
     print(f"🌏 網頁出題機：http://{args.host}:{args.port}")
     app.run(host=args.host, port=args.port, debug=True, use_reloader=False)
-
