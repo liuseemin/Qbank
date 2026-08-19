@@ -32,9 +32,15 @@ Remove-Item $installer -Force
 4. 建立 clone 後專案內的 `.venv` 虛擬環境。
 5. 升級 pip 並安裝 `requirements.txt` 的所有套件。
 6. 建立 `json` 題庫資料夾。
-7. 詢問是否要設定 `GEMINI_API_KEY`；留白仍可使用無 AI 模式。
+7. 詢問 PDF 檔案或資料夾位置；若有提供，依序執行 PDF 轉 JSON、選項格式修正與圖片擷取工具，並將結果整理到 `json` 資料夾。
+8. 詢問是否要設定 `GEMINI_API_KEY`；留白仍可使用無 AI 模式。
+9. 在使用者桌面建立 `Qbank.lnk` 捷徑。
 
-安裝完成後，腳本會詢問 PDF 檔案或資料夾位置。若有提供，會自動執行 `pdftojson.py`、`check_and_fix_json_options.py` 與 `pdfgetimg.py`，將 JSON 題庫及 `<PDF檔名>_images` 圖片資料夾整理到 clone 專案的 `json` 資料夾。最後會在 Windows 桌面建立 `Qbank.lnk`，直接啟動正式入口並使用 `--open`。
+安裝完成後，若有輸入 PDF 路徑，腳本會依序執行 `pdftojson.py`、`check_and_fix_json_options.py` 與 `pdfgetimg.py`。產生的題庫 JSON 及 `<PDF檔名>_images` 圖片資料夾會放在專案的 `json` 資料夾中。桌面捷徑會直接執行下列命令，因此不需要手動開啟終端機：
+
+```text
+<project>\.venv\Scripts\python.exe <project>\quiz_web.py <project>\json --open
+```
 
 安裝需要網路連線。若電腦沒有 `winget`，Git 必須先手動安裝；Python 則會嘗試使用 `curl.exe` 下載官方安裝程式。腳本不會刪除既有資料夾：若目標是同一個 Git repo 會更新，若是非空資料夾則會停止。
 
@@ -158,8 +164,8 @@ $env:GEMINI_API_KEY = "your-gemini-api-key"
 question_banks/
 |-- exam.json
 `-- exam_images/
-  |-- exam_1.png
-  `-- exam_2.png
+    |-- exam_1.png
+    `-- exam_2.png
 ```
 
 啟動題庫機時，將 `question_banks` 資料夾作為題庫來源：
