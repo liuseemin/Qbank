@@ -472,11 +472,16 @@ def load_questions(json_paths):
         if p.is_dir():
             # 如果是資料夾，尋找所有 .json 檔案
             print(f"📂 正在載入資料夾：{p}")
-            all_question_files.extend(p.glob("*.json"))
+            directory_question_files = list(p.glob("*.json"))
+            if not directory_question_files:
+                print(f"⚠️ 資料夾中找不到 JSON 題庫檔案，略過：{p}")
+                continue
+
+            all_question_files.extend(directory_question_files)
             locale.setlocale(locale.LC_COLLATE, "zh_TW.UTF-8")  # 設定為系統預設語系，確保排序正確
             all_question_files = sorted(all_question_files, key=lambda x: locale.strxfrm(x.name))  # 使用 locale 進行排序
             all_question_files = inquirer.checkbox(message="請選擇要載入的題庫檔案\n",
-                                choices=all_question_files if all_question_files else [],
+                                choices=all_question_files,
                                 keybindings=keybindings,
                                 enabled_symbol="⬢", disabled_symbol="⬡", instruction='[Space 選擇] [Enter完成] [Ctrl + A 全選] [Ctrl + D 反選] [Ctrl + C 取消]').execute()
         else:
