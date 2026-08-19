@@ -17,9 +17,11 @@
 在一般 Windows 11 電腦上，不需要先下載整個專案。先下載 GitHub 上的安裝腳本，再執行它：
 
 ```powershell
-$installer = "$env:TEMP\qbank-install.ps1"
-Invoke-WebRequest "https://raw.githubusercontent.com/liuseemin/Qbank/main/install_windows.ps1" -OutFile $installer
+$installer = Join-Path $env:TEMP ("qbank-install-" + [guid]::NewGuid().ToString("N") + ".ps1")
+$installerUrl = "https://raw.githubusercontent.com/liuseemin/Qbank/main/install_windows.ps1?v=" + [DateTimeOffset]::UtcNow.ToUnixTimeMilliseconds()
+Invoke-WebRequest $installerUrl -UseBasicParsing -OutFile $installer
 powershell -ExecutionPolicy Bypass -File $installer
+Remove-Item $installer -Force
 ```
 
 腳本會自動：
