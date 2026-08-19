@@ -1,203 +1,189 @@
-# 線上出題機
+# 線上出題機 Qbank
 
-這是一個基於 Flask 的線上測驗應用程式，可以幫助你複習題庫。它提供了多種測驗模式（隨機、順序、錯題練習），並整合了 AI 詳解功能，提供更完整的學習體驗。
+這是一個以 Flask 製作的中文題庫練習工具。使用者可以選擇一個或多個 JSON 題庫，使用依序、隨機或錯題模式練習，並查看錯題、標記題目與 Gemini AI 詳解。
 
-![](qbank_full.png)
+## 功能
 
------
+- 多題庫載入：可在啟動參數中指定一個或多個 JSON 檔案或資料夾。
+- 三種出題模式：依序、隨機、錯題。
+- 題號跳轉與答題進度顯示。
+- 支援單選題與題別為 `複` 的多選題。
+- 錯題記錄、題目標記、進度儲存與題庫搜尋。
+- Gemini AI 詳解，支援一般、詳細、選項說明與串流顯示。
+- PDF 表格轉 JSON、PDF 圖片擷取、題庫選項格式修正工具。
 
-## 主要功能
+## 快速安裝
 
-  * **多樣化的測驗模式**：
-      * `隨機出題`：從題庫中隨機挑選題目。
-      * `順序出題`：依照題號順序出題。
-      * `錯題練習`：只練習你答錯過的題目。
-  * **即時回饋**：提交答案後，會立即顯示對錯，並標示正確答案。
-  * **AI 詳解**：點擊按鈕即可透過 Google Gemini AI 取得詳細的題目解釋，幫助你理解概念。
-  * **錯題與標記追蹤**：
-      * 系統會自動記錄你答錯的題目，方便日後進行錯題複習。
-      * 你可以手動標記特別需要關注的題目。
-  * **題號跳轉**：支援手動輸入題號，快速跳轉至特定題目。
-  * **視覺化介面**：美觀且直觀的使用者介面，提供良好的測驗體驗。
+在 Windows 電腦上，將整個專案資料夾複製或 clone 下來，雙擊執行：
 
------
-
-## 如何安裝與執行
-
-### 前置條件
-
-1.  **Python 3.x**：確保你的系統已安裝 Python。
-2.  **pip**：Python 的套件管理工具。
-3.  **Gemini API Key**：你需要從 [Google AI Studio](https://aistudio.google.com/app/apikey) 取得一個免費的 Gemini API Key。
-
-### 設定步驟
-
-1.  **複製專案**：
-
-    ```bash
-    git clone https://github.com/liuseemin/Qbank.git
-    cd 線上出題機
-    ```
-
-2.  **建立虛擬環境並安裝所需套件**：
-
-    ```bash
-    python -m venv venv
-    # Windows
-    venv\Scripts\activate
-    # macOS / Linux
-    source venv/bin/activate
-
-    pip install Flask google-generativeai
-    ```
-
-3.  **設定環境變數**：
-    為了安全地使用你的 Gemini API Key，請將其設為環境變數。
-
-    **macOS / Linux**
-    在終端機中執行：
-
-    ```bash
-    export GEMINI_API_KEY="你的API金鑰"
-    ```
-
-    **Windows (PowerShell)**
-    在 PowerShell 中執行：
-
-    ```powershell
-    $env:GEMINI_API_KEY = "你的API金鑰"
-    ```
-
-4.  **準備題庫 (`data.json`)**：
-    在專案根目錄下建立一個名為 `data.json` 的檔案，其格式如下：
-
-    ```json
-    [
-      {
-        "題號": "1",
-        "題目": "以下哪一個是 Python 的關鍵字？",
-        "選項": ["A. list", "B. class", "C. dict", "D. tuple"],
-        "答案": "B"
-      },
-      {
-        "題號": "2",
-        "題目": "HTTP 協定的預設 Port 是？",
-        "選項": ["A. 80", "B. 443", "C. 21", "D. 22"],
-        "答案": "A"
-      }
-    ]
-    ```
-
-5.  **啟動應用程式**：
-    在專案根目錄下執行：
-
-    ```bash
-    python quiz_web.py "data.json"
-    ```
-
-    然後打開你的瀏覽器，前往 `http://127.0.0.1:5000` 即可開始使用。
-
------
-
-## 專案結構
-
-```
-線上出題機/
-├── quiz_web.py                # 核心應用程式：處理路由、出題邏輯、AI 詳解生成
-├── data.json                  # 題庫檔案：儲存所有題目、選項與答案
-├── pdftojson.json             # 用pdf產生題庫檔案：抓取pdf中表格產生json(抓取欄位需自行設定)
-├── templates/
-│   ├── index.html             # 前端介面：應用程式的主要使用者介面
-│   ├── review.html            # 錯題記錄：自動記錄所有答錯的題目
-│   └── review_marked.html     # 標記題目：儲存使用者手動標記的題目
-└── README.md                  # 專案說明：介紹專案功能、安裝與使用方法
+```text
+install_windows.cmd
 ```
 
------
+腳本會自動：
 
-## PDF 轉 JSON 題庫工具 (pdftojson.py)
+1. 找到現有的 Python，或透過 `winget`/官方安裝程式安裝 Python 3.13。
+2. 建立專案內的 `.venv` 虛擬環境。
+3. 升級 pip 並安裝 `requirements.txt` 的所有套件。
+4. 建立 `json` 題庫資料夾。
+5. 詢問是否要設定 `GEMINI_API_KEY`；留白仍可使用無 AI 模式。
 
-這個 Python 腳本可以將特定格式的 PDF 表格自動轉換為 JSON 格式的題庫，方便用於線上測驗或其他應用程式。
+安裝需要網路連線。若電腦沒有 `winget`，腳本會嘗試使用 `curl.exe` 下載 Python 官方安裝程式；若兩者都不可用，請先手動安裝 Python 3.13，再重新執行腳本。
 
-### 功能
+PowerShell 版本：
 
-  * **自動化轉換**：將 PDF 中的表格內容解析為結構化的 JSON 資料。
-  * **支援單一檔案與資料夾**：可以處理單個 PDF 檔案，也可以批次處理整個資料夾中的所有 PDF。
-  * **自動拆分選項**：可選擇自動從題目內容中辨識並拆分出選項（A, B, C, ...），讓匯出資料更完整。
-
-### 使用方法
-
-首先，請確認你已安裝必要的函式庫：
-
-```bash
-pip install pdfplumber
+```powershell
+powershell -ExecutionPolicy Bypass -File .\install_windows.ps1
 ```
 
------
+若 PowerShell 顯示執行原則錯誤，使用上面的 `-ExecutionPolicy Bypass` 只會套用於這次執行，不會修改系統的永久設定。
 
-#### 轉換單一 PDF 檔案
+## 準備題庫
 
-你可以直接指定一個 PDF 檔案路徑。腳本會將轉換後的 JSON 檔案儲存在相同目錄下，並以 `.json` 作為副檔名。
-
-```bash
-python pdf_to_json.py your_file.pdf
-```
-
-**自訂輸出路徑**
-
-使用 `-o` 或 `--output` 參數來指定 JSON 檔案的輸出路徑。
-
-```bash
-python pdf_to_json.py your_file.pdf -o output_directory/result.json
-```
-
------
-
-#### 批次轉換整個資料夾
-
-如果你指定一個資料夾路徑，腳本會自動轉換該資料夾內所有的 PDF 檔案。
-
-```bash
-python pdf_to_json.py your_folder/
-```
-
-**自訂輸出資料夾**
-
-你可以使用 `-o` 或 `--output` 參數來指定 JSON 檔案的輸出資料夾。
-
-```bash
-python pdf_to_json.py your_folder/ -o output_folder/
-```
-
------
-
-#### 自動拆分選項
-
-如果你的 PDF 格式是題目和選項都在同一個欄位，可以使用 `--autoitem` 參數讓腳本嘗試自動拆分。
-
-```bash
-python pdf_to_json.py your_file.pdf --autoitem
-```
-
-### 轉換後的 JSON 格式範例
-
-腳本會生成一個包含題目資訊的 JSON 陣列，格式如下：
+每個題庫檔案必須是 JSON 陣列。題庫可以放在專案的 `json` 資料夾，也可以放在其他資料夾，啟動時用路徑指定。例如：
 
 ```json
 [
   {
     "題別": "單選題",
     "題號": "1",
-    "題目": "太陽系中，哪一個行星是離太陽最近的？",
+    "題目": "以下哪一個是 Python 的關鍵字？",
     "選項": [
-      "A. 水星",
-      "B. 金星",
-      "C. 地球",
-      "D. 火星"
+      "A. list",
+      "B. class",
+      "C. dict",
+      "D. tuple"
     ],
-    "答案": "A",
-    "出處": "天文學"
-  },
-  ...
+    "答案": "B",
+    "出處": "Python 基礎"
+  }
 ]
 ```
+
+主要欄位如下：
+
+| 欄位 | 說明 |
+| --- | --- |
+| `題別` | 題型；值為 `複` 時前端會以多選題處理 |
+| `題號` | 題目識別碼，建議在同一題庫內唯一 |
+| `題目` | 題幹文字 |
+| `選項` | 選項陣列，通常以 `A.`、`B.` 等字母開頭 |
+| `答案` | 正確答案，例如 `A` 或多選答案 `AC` |
+| `出處` | 可選，顯示題目來源 |
+| `圖片` | 可選，使用圖片 data URL；PDF 圖片工具會產生對應資料 |
+
+程式會在啟動時讀取指定的題庫；新增或修改 JSON 後需要重新啟動程式。
+
+## 啟動應用程式
+
+`quiz_web.py` 是目前正式入口。在專案根目錄開啟新的 CMD 或 PowerShell，指定題庫檔案或資料夾：
+
+```cmd
+.venv\Scripts\python.exe quiz_web.py "C:\path\to\question_banks" --open
+```
+
+`--open` 會自動開啟瀏覽器；不使用時，請手動開啟 http://127.0.0.1:5000。
+
+也可以指定多個題庫來源：
+
+```cmd
+.venv\Scripts\python.exe quiz_web.py "C:\path\first.json" "C:\path\more_banks" --open
+```
+
+常用參數：
+
+- `--host 0.0.0.0`：允許區域網路連線。
+- `--port 5000`：修改服務埠號。
+- `--wrong wrong.json` 或 `-w wrong.json`：載入錯題檔案。
+- `--save progress.json` 或 `-s progress.json`：載入已儲存的進度。
+- `--open` 或 `-o`：啟動後自動開啟瀏覽器。
+
+例如讓區域網路上的其他裝置連線：
+
+```cmd
+.venv\Scripts\python.exe quiz_web.py "C:\path\to\question_banks" --host 0.0.0.0 --port 5000 --open
+```
+
+這種模式請同時注意 Windows 防火牆與不要將服務直接暴露到公網。
+
+## 環境變數
+
+| 變數 | 必要性 | 用途 |
+| --- | --- | --- |
+| `GEMINI_API_KEY` | 可選 | Gemini AI 詳解；未設定或留白時使用無 AI 模式 |
+
+手動設定範例：
+
+```powershell
+$env:GEMINI_API_KEY = "your-gemini-api-key"
+```
+
+使用 `setx` 設定的變數只會套用到新開啟的終端機；設定後請重新開啟 CMD 或 PowerShell。
+
+## 題庫工具
+
+### PDF 轉 JSON
+
+`pdftojson.py` 會讀取 PDF 表格。它預期題別、題號、題目、答案、出處位於固定欄位，若 PDF 格式不同可能需要修改欄位索引。
+
+```powershell
+.venv\Scripts\python.exe pdftojson.py "C:\path\exam.pdf"
+.venv\Scripts\python.exe pdftojson.py "C:\path\pdfs" -o "json" --autoitem
+```
+
+`--autoitem` 會嘗試從題目欄位拆出 A 到 E 選項。單一 PDF 預設輸出到同目錄；資料夾輸入預設輸出到該資料夾。
+
+### PDF 圖片擷取
+
+`pdfgetimg.py` 會從 PDF 擷取圖片，依題號輸出到 `<PDF檔名>_images` 資料夾：
+
+```powershell
+.venv\Scripts\python.exe pdfgetimg.py "C:\path\exam.pdf"
+.venv\Scripts\python.exe pdfgetimg.py "C:\path\pdfs"
+```
+
+### 修正選項格式
+
+`check_and_fix_json_options.py` 會將全形 `Ａ` 到 `Ｅ` 轉成半形，並把修正後的檔案輸出到指定資料夾：
+
+```powershell
+.venv\Scripts\python.exe check_and_fix_json_options.py "json" -o "fixed_json"
+```
+
+## 專案結構
+
+```text
+Qbank/
+|-- quiz_web.py                    # 目前正式入口：命令列載入題庫並啟動 Flask
+|-- install_windows.cmd            # Windows 一鍵安裝腳本
+|-- install_windows.ps1            # PowerShell 一鍵安裝腳本
+|-- requirements.txt               # Python 套件版本
+|-- json/                          # 題庫資料夾，不納入 Git
+|-- pdftojson.py                   # PDF 表格轉 JSON
+|-- pdfgetimg.py                   # PDF 圖片擷取
+|-- check_and_fix_json_options.py  # 題庫選項格式修正
+|-- templates/                     # Jinja2 HTML 頁面
+|-- static/                        # CSS 與前端靜態檔案
+|-- app.py                         # 舊版/另一個 Flask 實作
+|-- app_old.py                     # 舊版 app.py，僅供參考
+|-- quiz_web_old.py                # 舊版 quiz_web.py，僅供參考
+`-- Procfile                       # 部署用設定：gunicorn app:app
+```
+
+## 常見問題
+
+### 題庫選擇頁沒有檔案
+
+確認啟動指令傳入正確的檔案或資料夾路徑，副檔名是 `.json`，且檔案最外層是陣列 `[...]`。檢查 JSON 語法後重新啟動應用程式。
+
+### AI 詳解無法使用
+
+確認 `GEMINI_API_KEY` 有效，並確認網路可連線。AI 請求會產生 Google Gemini API 使用量，相關費用與限制請以 Google 官方帳戶設定為準。
+
+### PDF 轉換結果不完整
+
+PDF 轉換器只支援符合程式預期表格欄位的 PDF。請先檢查 PDF 是否包含可擷取的表格文字，而不是掃描影像；必要時使用 `--autoitem` 或調整 `pdftojson.py` 的欄位設定。
+
+## 部署提示
+
+`Procfile` 目前仍使用 `gunicorn app:app`，這是舊版 `app.py` 的部署設定。正式入口 `quiz_web.py` 使用命令列參數載入題庫並啟動 Flask；部署時請自行設定 `GEMINI_API_KEY`，並使用平台的安全 secret 管理功能，不要把 API Key 提交到 Git。
