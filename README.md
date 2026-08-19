@@ -14,29 +14,37 @@
 
 ## 快速安裝
 
-在 Windows 電腦上，將整個專案資料夾複製或 clone 下來，雙擊執行：
+在一般 Windows 11 電腦上，不需要先下載整個專案。先下載 GitHub 上的安裝腳本，再執行它：
 
-```text
-install_windows.cmd
+```powershell
+$installer = "$env:TEMP\qbank-install.ps1"
+Invoke-WebRequest "https://raw.githubusercontent.com/liuseemin/Qbank/main/install_windows.ps1" -OutFile $installer
+powershell -ExecutionPolicy Bypass -File $installer
 ```
 
 腳本會自動：
 
-1. 找到現有的 Python，或透過 `winget`/官方安裝程式安裝 Python 3.13。
-2. 建立專案內的 `.venv` 虛擬環境。
-3. 升級 pip 並安裝 `requirements.txt` 的所有套件。
-4. 建立 `json` 題庫資料夾。
-5. 詢問是否要設定 `GEMINI_API_KEY`；留白仍可使用無 AI 模式。
+1. 找到現有的 Git，或透過 `winget` 安裝 Git for Windows。
+2. 從 `https://github.com/liuseemin/Qbank` clone 專案到指定位置，預設為 `%USERPROFILE%\Qbank`。
+3. 找到現有的 Python，或透過 `winget`/官方安裝程式安裝 Python 3.13。
+4. 建立 clone 後專案內的 `.venv` 虛擬環境。
+5. 升級 pip 並安裝 `requirements.txt` 的所有套件。
+6. 建立 `json` 題庫資料夾。
+7. 詢問是否要設定 `GEMINI_API_KEY`；留白仍可使用無 AI 模式。
 
-安裝需要網路連線。若電腦沒有 `winget`，腳本會嘗試使用 `curl.exe` 下載 Python 官方安裝程式；若兩者都不可用，請先手動安裝 Python 3.13，再重新執行腳本。
+安裝完成後，腳本會詢問 PDF 檔案或資料夾位置。若有提供，會自動執行 `pdftojson.py`、`check_and_fix_json_options.py` 與 `pdfgetimg.py`，將 JSON 題庫及 `<PDF檔名>_images` 圖片資料夾整理到 clone 專案的 `json` 資料夾。最後會在 Windows 桌面建立 `Qbank.lnk`，直接啟動正式入口並使用 `--open`。
 
-PowerShell 版本：
+安裝需要網路連線。若電腦沒有 `winget`，Git 必須先手動安裝；Python 則會嘗試使用 `curl.exe` 下載官方安裝程式。腳本不會刪除既有資料夾：若目標是同一個 Git repo 會更新，若是非空資料夾則會停止。
+
+也可以直接傳入安裝位置，跳過位置詢問：
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\install_windows.ps1
+powershell -ExecutionPolicy Bypass -File $installer -InstallPath "D:\Apps\Qbank"
 ```
 
 若 PowerShell 顯示執行原則錯誤，使用上面的 `-ExecutionPolicy Bypass` 只會套用於這次執行，不會修改系統的永久設定。
+
+若已經 clone 專案，也可以在專案根目錄執行 `install_windows.ps1`；它會使用目前專案的 Git 目錄更新並完成環境設定。`install_windows.cmd` 則適合在已經取得專案檔案後使用。
 
 ## 準備題庫
 
@@ -135,11 +143,27 @@ $env:GEMINI_API_KEY = "your-gemini-api-key"
 
 ### PDF 圖片擷取
 
-`pdfgetimg.py` 會從 PDF 擷取圖片，依題號輸出到 `<PDF檔名>_images` 資料夾：
+`pdfgetimg.py` 會從 PDF 擷取圖片，依題號輸出到 `<PDF檔名>_images` 資料夾。這個圖片資料夾必須和對應的題庫 JSON 檔案放在同一個資料夾，題庫機啟動載入 JSON 時才能找到並讀取圖片。
 
 ```powershell
 .venv\Scripts\python.exe pdfgetimg.py "C:\path\exam.pdf"
 .venv\Scripts\python.exe pdfgetimg.py "C:\path\pdfs"
+```
+
+例如，`exam.json` 與圖片資料夾應保持以下結構：
+
+```text
+question_banks/
+|-- exam.json
+`-- exam_images/
+  |-- exam_1.png
+  `-- exam_2.png
+```
+
+啟動題庫機時，將 `question_banks` 資料夾作為題庫來源：
+
+```cmd
+.venv\Scripts\python.exe quiz_web.py "C:\path\to\question_banks" --open
 ```
 
 ### 修正選項格式
