@@ -77,20 +77,55 @@ function Install-Uv {
     }
 }
 
-function New-DesktopShortcut {
+function New-LauncherScript {
     param(
         [string]$ProjectPath,
+        [string]$GitPath,
         [string]$UvPath,
         [string]$QuizScriptPath,
         [string]$QuestionBankPath
     )
 
+    $launcherPath = Join-Path $ProjectPath "qbank_start.ps1"
+    $launcherContent = @"
+`$ErrorActionPreference = "Stop"
+Set-Location -LiteralPath $(ConvertTo-Json $ProjectPath -Compress)
+& $(ConvertTo-Json $GitPath -Compress) pull --ff-only
+if (`$LASTEXITCODE -ne 0) {
+    Write-Warning "Git pull failed with exit code `$LASTEXITCODE. Starting with the current version."
+}
+& $(ConvertTo-Json $UvPath -Compress) sync
+if (`$LASTEXITCODE -ne 0) {
+    Write-Warning "uv sync failed with exit code `$LASTEXITCODE. Starting with the current environment."
+}
+& $(ConvertTo-Json $UvPath -Compress) run --project $(ConvertTo-Json $ProjectPath -Compress) python $(ConvertTo-Json $QuizScriptPath -Compress) $(ConvertTo-Json $QuestionBankPath -Compress) --open
+exit `$LASTEXITCODE
+"@
+    Set-Content -LiteralPath $launcherPath -Value $launcherContent -Encoding UTF8
+    return $launcherPath
+}
+
+function New-DesktopShortcut {
+    param(
+        [string]$ProjectPath,
+        [string]$GitPath,
+        [string]$UvPath,
+        [string]$QuizScriptPath,
+        [string]$QuestionBankPath
+    )
+
+    $launcherPath = New-LauncherScript `
+        -ProjectPath $ProjectPath `
+        -GitPath $GitPath `
+        -UvPath $UvPath `
+        -QuizScriptPath $QuizScriptPath `
+        -QuestionBankPath $QuestionBankPath
     $desktopPath = [Environment]::GetFolderPath("Desktop")
     $shortcutPath = Join-Path $desktopPath "Qbank.lnk"
     $shell = New-Object -ComObject WScript.Shell
     $shortcut = $shell.CreateShortcut($shortcutPath)
-    $shortcut.TargetPath = $UvPath
-    $shortcut.Arguments = "run --project `"$ProjectPath`" python `"$QuizScriptPath`" `"$QuestionBankPath`" --open"
+    $shortcut.TargetPath = (Get-Command powershell.exe).Source
+    $shortcut.Arguments = "-NoProfile -ExecutionPolicy Bypass -File `"$launcherPath`""
     $shortcut.WorkingDirectory = $ProjectPath
     $shortcut.Description = "Qbank online quiz"
     $shortcut.IconLocation = "${UvPath},0"
@@ -230,6 +265,7 @@ $apiKey = Read-Host "Enter Gemini API Key (leave blank to disable AI)"
 Write-Host "[8/8] Creating desktop shortcut..."
 $shortcutPath = New-DesktopShortcut `
     -ProjectPath $InstallPath `
+    -GitPath $script:gitCommand `
     -UvPath $script:uvCommand `
     -QuizScriptPath $quizScript `
     -QuestionBankPath $jsonDirectory
@@ -238,4 +274,4 @@ Write-Host ""
 Write-Host "Installation completed: $InstallPath"
 Write-Host "Put JSON question banks in: $jsonDirectory"
 Write-Host "Desktop shortcut created: $shortcutPath"
-Write-Host "Shortcut runs: uv run --project `"$InstallPath`" python `"$quizScript`" `"$jsonDirectory`" --open"
+Write-Host "Shortcut runs git pull before starting Qbank."
