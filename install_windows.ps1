@@ -198,7 +198,7 @@ if (-not [string]::IsNullOrWhiteSpace($pdfInput)) {
         $pdfFiles = @($inputItem)
     }
 
-    $fixedDirectory = Join-Path $InstallPath ".json"
+    $fixedDirectory = Join-Path $InstallPath ".fixed_json"
     if (Test-Path -LiteralPath $fixedDirectory) {
         Remove-Item -LiteralPath $fixedDirectory -Recurse -Force
     }
