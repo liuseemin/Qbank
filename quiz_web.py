@@ -34,7 +34,7 @@ if os.environ["GEMINI_API_KEY"] == "":
 else:
     client = genai.Client()
     ai_key = True
-MODEL = "gemini-2.5-flash"
+MODEL = "gemini-flash-latest"
 
 app = Flask(__name__)
 
