@@ -1,127 +1,31 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <title>選擇題庫</title>
+<!doctype html>
+<html lang="zh-Hant"><head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>選擇題庫</title>
     <style>
-        /* 直接沿用相同 CSS */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            padding: 40px;
-            background-color: #f4f7f6;
-            color: #333;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            /* min-height: 100vh; */
-            margin: 0;
-        }
-
-        .main-container {
-            display: flex;
-            gap: 30px;
-            width: 100%;
-            max-width: 1500px;
-            justify-content: center;
-        }
-
-        .container {
-            flex: 1;
-            max-width: 600px;
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            position: relative;
-        }
-
-        h1 {
-            font-size: 2em;
-            color: #2c3e50;
-            margin-bottom: 20px;
-            margin-top: 0px;
-        }
-
-        form label {
-            display: block;
-            font-size: 1.1em;
-            font-weight: bold;
-            margin: 10px 0 5px 0;
-        }
-
-        form input[type="checkbox"] {
-            margin-right: 10px;
-            transform: scale(1.2);
-        }
-
-        button,
-        a {
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #3498db;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 1em;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        button:hover {
-            background-color: #2980b9;
-            transform: translateY(-2px);
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        a {
-            background-color: #db5b34;
-        }
-
-        a:hover {
-            background-color: #db5b34;
-            transform: translateY(-2px);
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .error {
-            color: #e74c3c;
-            margin-bottom: 15px;
-        }
-
-        .file-list {
-            text-align: left;
-            max-height: 400px;
-            overflow-y: auto;
-            margin-bottom: 20px;
-        }
+        body{font-family:system-ui,sans-serif;padding:24px;background:#f4f7f6;color:#263238}main{max-width:760px;margin:auto;background:#fff;padding:28px;border-radius:12px;box-shadow:0 4px 16px #0002}
+        section{border-top:1px solid #ddd;padding-top:20px;margin-top:20px}.bank{display:flex;gap:10px;align-items:center;padding:10px;border-radius:7px}.bank:hover{background:#eef5fb}.count{color:#667;margin-left:auto}.image-status{font-size:.88rem;color:#28704f}.no-image{color:#777}
+        .message{padding:10px;border-radius:6px;background:#e8f5e9}.message.warning{background:#fff4ce;color:#724b00}.message.error,.error{background:#ffebee;color:#a31919;padding:10px}button,.button{display:inline-block;padding:10px 18px;margin-top:12px;border:0;border-radius:8px;background:#2878bd;color:white;text-decoration:none;cursor:pointer}.toolbar button{background:#5d6872;margin-right:8px}.delete{background:#b42318;padding:6px 10px;margin:0}
+        input[type=file]{width:100%;padding:12px 0}.hint{color:#667;line-height:1.55}
     </style>
-</head>
-
-<body>
-    <div class="main-container">
-        <div class="container">
-            <h1>選擇題庫</h1>
-            {% if error %}
-            <div class="error">{{ error }}</div>
-            {% endif %}
-            <form method="post">
-                <div class="file-list">
-                    {% for f in files %}
-                    <label>
-                        <input type="checkbox" name="question_sets" value="{{ f.stem }}"> {{ f.name }}
-                    </label>
-                    {% endfor %}
-                </div>
-                <button type="submit">開始出題</button>
-                <a href="/logout" class="logout-link">登出</a>
-            </form>
-        </div>
-    </div>
-</body>
-
-</html>
+</head><body><main>
+    <h1>題庫選單</h1>
+    {% if error %}<p class="error">{{ error }}</p>{% endif %}
+    {% for category, message in get_flashed_messages(with_categories=true) %}<p class="message {{ category }}">{{ message }}</p>{% endfor %}
+    <section><h2>上傳題庫</h2>
+        <form action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data">
+            <input type="file" name="question_files" accept=".json,.zip,application/json,application/zip" multiple required>
+            <p class="hint">可一次選多個 JSON，或上傳含 JSON 與 <code>&lt;題庫名&gt;_image/</code>（亦支援舊版 <code>_images/</code>）的 ZIP。ZIP 也可包含多份題庫；同名題庫會跳過。</p><button type="submit">上傳</button>
+        </form>
+    </section>
+    <section><h2>選擇要一起作答的題庫</h2>
+        {% if banks %}<form method="post" id="bank-selection">
+            <div class="toolbar"><button type="button" id="select-all">全選</button><button type="button" id="invert-selection">反選</button></div>
+            {% for bank in banks %}<div class="bank"><label><input class="bank-checkbox" type="checkbox" name="question_sets" value="{{ bank.id }}"> <span>{{ bank.name }}</span></label><span class="image-status{% if not bank.has_images %} no-image{% endif %}">{% if bank.has_images %}已偵測 {{ bank.image_count }} 張圖檔{% else %}未偵測到圖檔{% endif %}</span><span class="count">{{ bank.question_count }} 題</span>{% if bank.deletable %}<button class="delete" type="submit" form="delete-{{ bank.id }}">刪除</button>{% endif %}</div>{% endfor %}
+            <button type="submit">開始作答</button>
+        </form>{% for bank in banks if bank.deletable %}<form id="delete-{{ bank.id }}" action="{{ url_for('delete_bank', bank_id=bank.id) }}" method="post" onsubmit="return confirm('確定刪除這份題庫？')"></form>{% endfor %}{% else %}<p class="hint">目前沒有題庫，請先上傳。</p>{% endif %}
+    </section><a class="button" href="{{ url_for('logout') }}">登出</a>
+</main><script>
+const bankBoxes = () => document.querySelectorAll('.bank-checkbox');
+document.getElementById('select-all')?.addEventListener('click', () => bankBoxes().forEach(box => box.checked = true));
+document.getElementById('invert-selection')?.addEventListener('click', () => bankBoxes().forEach(box => box.checked = !box.checked));
+</script></body></html>

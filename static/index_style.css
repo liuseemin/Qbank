@@ -592,3 +592,12 @@ input:checked+.slider4::after {
     color: white !important;
     border-color: darkred !important;
 }
+
+.main-container.no-ai {
+    justify-content: center;
+}
+
+.main-container.no-ai > .container {
+    flex: 0 1 1000px;
+    width: 100%;
+}

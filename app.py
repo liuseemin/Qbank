@@ -1,444 +1,442 @@
-from flask import Flask, render_template, request, jsonify, Response, redirect, url_for, session
+import io
 import json
-import random
-from pathlib import Path
-from google import genai
 import os
+import random
+import re
+import secrets
+from functools import wraps
+from pathlib import Path
 
-app = Flask(__name__)
+from flask import (Flask, Response, flash, jsonify, redirect, render_template,
+                   request, send_file, session, url_for)
 
-APP_PASSWORD = os.environ.get("APP_PASSWORD")
-app.secret_key = os.environ.get("APP_SECRET_KEY")
-MODEL = "gemini-2.5-flash"
+from ai_providers import AIConfig, generate as generate_ai, stream as stream_ai
+from qbank_loader import BankValidationError, load_uploaded_file
+from qbank_storage import QBankStore, new_state
 
-# --- 登入頁 ---
-@app.route("/login", methods=["GET", "POST"])
-def login():
-    if request.method == "POST":
-        password = request.form.get("password")
-        api_key = request.form.get("api_key")
+SUPPORTED_AI_PROVIDERS = {"none", "gemini", "openai", "anthropic", "ollama"}
 
-        if password != APP_PASSWORD:
-            return render_template("login.html", error="密碼錯誤")
-        if not api_key:
-            return render_template("login.html", error="請輸入 Gemini API Key")
 
-        # 記錄 session
-        session["logged_in"] = True
-        session["gemini_api_key"] = api_key
+def create_app(test_config=None):
+    app = Flask(__name__)
+    data_dir = Path(os.environ.get("RENDER_DISK_PATH", app.instance_path))
+    secret_key = os.environ.get("APP_SECRET_KEY")
+    if os.environ.get("RENDER") and not secret_key and not test_config:
+        raise RuntimeError("Render 部署必須設定 APP_SECRET_KEY")
+    app.config.from_mapping(
+        SECRET_KEY=secret_key or "qbank-development-only-secret",
+        DATABASE_PATH=os.environ.get("DATABASE_PATH", str(data_dir / "qbank.sqlite3")),
+        APP_PASSWORD=os.environ.get("APP_PASSWORD", ""),
+        MAX_CONTENT_LENGTH=int(os.environ.get("MAX_UPLOAD_MB", "25")) * 1024 * 1024,
+        MAX_ZIP_UNCOMPRESSED_BYTES=100 * 1024 * 1024,
+        SESSION_COOKIE_HTTPONLY=True,
+        SESSION_COOKIE_SAMESITE="Lax",
+        SESSION_COOKIE_SECURE=bool(os.environ.get("RENDER")),
+        ALLOW_PRIVATE_AI_ENDPOINTS=not bool(os.environ.get("RENDER")),
+    )
+    if test_config:
+        app.config.update(test_config)
+    store = QBankStore(app.config["DATABASE_PATH"])
+    app.extensions["qbank_store"] = store
 
-        return redirect(url_for("select"))
+    @app.before_request
+    def ensure_browser_session():
+        if request.endpoint == "healthz":
+            return
+        if "sid" not in session:
+            session["sid"] = secrets.token_urlsafe(32)
+        store.ensure_session(session["sid"])
 
-    return render_template("login.html")
+    def login_required(view):
+        @wraps(view)
+        def wrapped(*args, **kwargs):
+            if not session.get("logged_in"):
+                return redirect(url_for("login", next=request.path))
+            return view(*args, **kwargs)
+        return wrapped
 
-@app.route("/logout")
-def logout():
-    session.pop("logged_in", None)
-    return redirect(url_for("login"))
+    def current_state():
+        return store.get_state(session["sid"])
 
-@app.route("/select", methods=["GET", "POST"])
-def select():
-    available_jsons = sorted(Path(__file__).resolve().parent.joinpath('json').glob("*.json"))
-    
-    if request.method == "POST":
-        selected_stems = request.form.getlist("question_sets")
-        if not selected_stems:
-            return render_template("select.html", files=available_jsons, error="請至少選擇一個題庫")
+    def selected_questions(state=None):
+        state = state or current_state()
+        return store.get_questions(session["sid"], state["selected_bank_ids"])
 
-        # 將選擇的題庫 ID 儲存在 session 中
-        session["selected_question_sets"] = selected_stems
-        session.pop("current_question_ids", None)
-        
-        # 載入選定的題目 IDs，並將狀態儲存到 Session
-        all_questions_for_user = []
-        for stem in selected_stems:
-            questions_list = ALL_QUESTIONS_DATA.get(stem, [])
-            all_questions_for_user.extend(questions_list)
-        
-        session["current_question_ids"] = [q["題號"] for q in all_questions_for_user]
-        
-        # 初始化 Session 狀態
-        session["wrong_questions"] = []
-        session["marked_questions"] = []
-        session["answered_questions"] = []
-        session["remaining_question_ids"] = session["current_question_ids"].copy()
-        session["question_index"] = 0
-        session["total_tokens_used"] = 0
+    def question_map(state=None):
+        return {q["_key"]: q for q in selected_questions(state)}
 
-        return redirect(url_for("index"))
+    def stored_ai_config():
+        raw = store.get_ai_config(session["sid"])
+        if not raw or raw.get("provider") == "none":
+            return None
+        return AIConfig(raw.get("provider", ""), raw.get("model", ""),
+                        raw.get("api_key", ""), raw.get("base_url", ""))
 
-    return render_template("select.html", files=available_jsons)
+    @app.get("/healthz")
+    def healthz():
+        return jsonify({"status": "ok"})
 
-@app.route("/")
-def index():
-    if not session.get("logged_in"):
+    @app.route("/login", methods=["GET", "POST"])
+    def login():
+        if request.method == "POST":
+            configured = app.config["APP_PASSWORD"]
+            if configured and not secrets.compare_digest(request.form.get("password", ""), configured):
+                return render_template("login.html", error="密碼錯誤", password_required=True), 401
+            api_key = request.form.get("api_key", "").strip()
+            provider = request.form.get("ai_provider")
+            # Backward-compatible with the original Gemini-only login form/tests.
+            provider = provider.strip().lower() if provider is not None else ("gemini" if api_key else "none")
+            model = request.form.get("ai_model", "").strip()
+            if provider == "gemini" and not model:
+                model = "gemini-2.5-flash"
+            if provider not in SUPPORTED_AI_PROVIDERS:
+                return render_template("login.html", error="不支援的 AI provider",
+                                       password_required=bool(app.config["APP_PASSWORD"])), 400
+            if provider != "none" and not model:
+                return render_template("login.html", error="啟用 AI 時必須填寫模型名稱",
+                                       password_required=bool(app.config["APP_PASSWORD"])), 400
+            if provider in {"gemini", "openai", "anthropic"} and not api_key:
+                return render_template("login.html", error="此 AI provider 必須填寫 API Key",
+                                       password_required=bool(app.config["APP_PASSWORD"])), 400
+            store.set_ai_config(session["sid"], {
+                "provider": provider, "model": model, "api_key": api_key,
+                "base_url": request.form.get("ai_base_url", "").strip(),
+            } if provider != "none" else None)
+            session["logged_in"] = True
+            return redirect(url_for("select"))
+        return render_template("login.html", password_required=bool(app.config["APP_PASSWORD"]))
+
+    @app.get("/logout")
+    def logout():
+        store.set_ai_config(session["sid"], None)
+        session.pop("logged_in", None)
         return redirect(url_for("login"))
-    
-    # 從 session 取得當前題號列表
-    current_question_ids = session.get("current_question_ids")
-    
-    if not current_question_ids:
+
+    @app.route("/select", methods=["GET", "POST"])
+    @login_required
+    def select():
+        banks = store.list_banks(session["sid"])
+        if request.method == "POST":
+            selected_ids = list(dict.fromkeys(request.form.getlist("question_sets")))
+            selected = store.get_banks(session["sid"], selected_ids)
+            if not selected_ids:
+                return render_template("select.html", banks=banks, error="請至少選擇一個題庫"), 400
+            if len(selected) != len(selected_ids):
+                return render_template("select.html", banks=banks, error="選取的題庫不存在或無權存取"), 400
+            keys = [q["_key"] for bank in selected for q in bank["questions"]]
+            state = new_state()
+            state["selected_bank_ids"] = selected_ids
+            state["current_keys"] = keys
+            state["remaining_keys"] = list(keys)
+            store.save_state(session["sid"], state)
+            return redirect(url_for("index"))
+        return render_template("select.html", banks=banks)
+
+    @app.post("/upload")
+    @login_required
+    def upload():
+        uploads = [f for f in request.files.getlist("question_files") if f.filename]
+        if not uploads:
+            flash("請選擇至少一個 JSON 或 ZIP 檔案", "error")
+            return redirect(url_for("select"))
+        parsed = []
+        try:
+            for uploaded in uploads:
+                parsed.extend(load_uploaded_file(uploaded, app.config["MAX_ZIP_UNCOMPRESSED_BYTES"]))
+        except BankValidationError as error:
+            flash(str(error), "error")
+            return redirect(url_for("select"))
+        created, duplicates = 0, []
+        for name, questions in parsed:
+            if store.create_bank_unique(session["sid"], name, questions):
+                created += 1
+            else:
+                duplicates.append(name)
+        if created:
+            flash(f"已上傳 {created} 份題庫", "success")
+        if duplicates:
+            flash(f"同名題庫已存在，已跳過：{', '.join(duplicates)}", "warning")
         return redirect(url_for("select"))
 
-    # 傳遞所有題號給前端，以便生成下拉選單
-    # 注意：這裡使用 current_question_ids
-    return render_template("index.html", all_question_ids=current_question_ids, total_questions=len(current_question_ids))
+    @app.post("/banks/<bank_id>/delete")
+    @login_required
+    def delete_bank(bank_id):
+        if not store.delete_bank(session["sid"], bank_id):
+            flash("題庫不存在或無權刪除", "error")
+            return redirect(url_for("select"))
+        state = current_state()
+        if bank_id in state["selected_bank_ids"]:
+            store.save_state(session["sid"], new_state())
+        flash("已刪除題庫", "success")
+        return redirect(url_for("select"))
 
-@app.route("/test")
-def test():
-    # 從 session 取得當前題號列表
-    current_question_ids = session.get("current_question_ids")
-    if not current_question_ids:
-         return redirect(url_for("select")) # 如果沒有題庫，導向選擇頁
+    @app.get("/")
+    @login_required
+    def index():
+        state = current_state()
+        if not state["current_keys"]:
+            return redirect(url_for("select"))
+        qmap = question_map(state)
+        jump_questions = [{"key": key, "label": qmap[key]["題號"]}
+                          for key in state["current_keys"] if key in qmap]
+        return render_template("index.html", jump_questions=jump_questions,
+                               total_questions=len(jump_questions),
+                               ai_enabled=bool(stored_ai_config()))
 
-    # 傳遞所有題號給前端，以便生成下拉選單
-    return render_template("index_test.html", all_question_ids=current_question_ids, total_questions=len(current_question_ids))
-
-@app.route("/review")
-def review():
-    wrong_questions = session.get("wrong_questions", [])
-    return render_template("review.html", wrong_questions=wrong_questions)
-
-@app.route("/review_marked")
-def review_marked():
-    marked_questions = session.get("marked_questions", [])
-    return render_template("review_marked.html", marked_questions=marked_questions)
-
-@app.route("/review_ai")
-def review_ai():
-    q_ai = []
-    # 從 session 取得 AI 詳解快取
-    ai_explanation_cache = session.get("ai_explanation_cache", {})
-    
-    # 取得當前已選擇的題庫 ID 列表
-    current_question_ids = session.get("current_question_ids", [])
-    
-    # 建立一個從題號到題目物件的映射，以便快速查詢
-    q_id_to_question_map = {q["題號"]: q for q_list in ALL_QUESTIONS_DATA.values() for q in q_list}
-
-    for q_id in current_question_ids:
-        explanation = ai_explanation_cache.get(q_id, "")
-        if explanation:
-            # 從 ALL_QUESTIONS_DATA 中取得完整的題目資訊
-            q = q_id_to_question_map.get(q_id)
-            if q:
-                q_copy = q.copy()
-                q_copy["ai_explanation"] = explanation
-                q_ai.append(q_copy)
-                
-    return render_template("review_ai.html", q_ai=q_ai)
-
-@app.route("/get_question")
-def get_question():
-    mode = request.args.get("mode", "random")
-    question_id = request.args.get("question_id")
-
-    current_question_ids = session.get("current_question_ids")
-    if not current_question_ids:
-        return jsonify({"error": "題庫尚未載入"})
-
-    q_id_to_question_map = {q["題號"]: q for q_list in ALL_QUESTIONS_DATA.values() for q in q_list}
-
-    q = None
-    if question_id:
-        q = q_id_to_question_map.get(question_id)
-        if q:
-            try:
-                session["question_index"] = current_question_ids.index(question_id)
-            except ValueError:
-                pass
+    @app.get("/get_question")
+    @login_required
+    def get_question():
+        state = current_state()
+        if not state["current_keys"]:
+            return jsonify({"error": "題庫尚未載入"}), 400
+        qmap = question_map(state)
+        requested_key = request.args.get("question_id")
+        mode = request.args.get("mode", "random")
+        question = None
+        if requested_key:
+            if requested_key not in state["current_keys"]:
+                return jsonify({"error": "找不到指定的題目"}), 404
+            question = qmap.get(requested_key)
+            state["question_index"] = state["current_keys"].index(requested_key) + 1
+        elif request.args.get("previous") == "true":
+            state["question_index"] = max(0, state["question_index"] - 2)
+            key = state["current_keys"][state["question_index"]]
+            question = qmap.get(key)
+            state["question_index"] += 1
+        elif mode == "wrong":
+            available = [key for key in state["wrong_keys"] if key in qmap]
+            if available:
+                question = qmap[random.choice(available)]
+            else:
+                return jsonify({"error": "目前沒有錯題"})
+        elif mode == "random":
+            available = [key for key in state["remaining_keys"] if key in qmap]
+            if available:
+                question = qmap[random.choice(available)]
         else:
-            return jsonify({"error": f"找不到題號為 {question_id} 的題目"})
-    elif mode == "wrong":
-        wrong_questions_list = session.get("wrong_questions", [])
-        if wrong_questions_list:
-            q = random.choice(wrong_questions_list)
-        else:
-            return jsonify({"error": "目前沒有錯題"})
-    elif mode == "random":
-        remaining_ids = session.get("remaining_question_ids", [])
-        if remaining_ids:
-            q_id = random.choice(remaining_ids)
-            q = q_id_to_question_map.get(q_id)
-    else:  # order
-        q_index = session.get("question_index", 0)
-        if q_index < len(current_question_ids):
-            q_id = current_question_ids[q_index]
-            q = q_id_to_question_map.get(q_id)
-            session["question_index"] = q_index + 1
-        else:
-            # 所有題目已出完
+            while state["question_index"] < len(state["current_keys"]):
+                key = state["current_keys"][state["question_index"]]
+                state["question_index"] += 1
+                if key in qmap:
+                    question = qmap[key]
+                    break
+        store.save_state(session["sid"], state)
+        if question is None:
             return jsonify({"error": "所有題目都已出完！", "finished": True})
+        result = dict(question)
+        result["is_marked"] = result["_key"] in state["marked_keys"]
+        result["is_multiple"] = result.get("題別") in ("複", "複選題", "多選題")
+        return jsonify(result)
 
-    if q is None:
-        return jsonify({"error": "所有題目都已出完！", "finished": True})
-
-    question_copy = q.copy()
-    marked_ids = [mq["題號"] for mq in session.get("marked_questions", [])]
-    question_copy["is_marked"] = question_copy.get("題號") in marked_ids
-    question_copy["is_multiple"] = True if question_copy.get("題別") == "複" else False
-    return jsonify(question_copy)
-
-@app.route("/submit_answer", methods=["POST"])
-def submit_answer():
-    data = request.json
-    q = data["question"]
-    answer = data["answer"].strip().upper()
-
-    correct = q.get("答案", "").strip().upper()
-    is_correct = (answer == correct)
-
-    wrong_questions_list = session.get("wrong_questions", [])
-    if not is_correct:
-        if q not in wrong_questions_list:
-            wrong_questions_list.append(q)
-            session["wrong_questions"] = wrong_questions_list
-    
-    answered_ids = session.get("answered_questions", [])
-    answered_ids.append(q.get("題號"))
-    session["answered_questions"] = answered_ids
-    
-    remaining_ids = session.get("remaining_question_ids", [])
-    if q.get("題號") in remaining_ids:
-        remaining_ids.remove(q.get("題號"))
-        session["remaining_question_ids"] = remaining_ids
-        
-    all_q_ids = session.get("current_question_ids", [])
-    
-    return jsonify({
-        "correct": is_correct,
-        "right_answer": correct,
-        "answered_count": f"{len(answered_ids)}/{len(all_q_ids)}"
-    })
-
-@app.route("/mark_question", methods=["POST"])
-def mark_question():
-    data = request.json
-    q = data["question"]
-    
-    # 從 session 取得標記題目列表
-    marked_questions = session.get("marked_questions", [])
-    
-    # 儲存題號，而不是整個題目物件
-    if q.get("題號") not in [mq.get("題號") for mq in marked_questions]:
-        marked_questions.append(q)
-        # 將修改後的列表存回 session
-        session["marked_questions"] = marked_questions
-        
-    return jsonify({"status": "marked"})
-
-@app.route("/reset_questions", methods=["POST"])
-def reset_questions():
-    all_q_ids = session.get("current_question_ids", [])
-    session["remaining_question_ids"] = all_q_ids.copy()
-    session["question_index"] = 0
-    session["answered_questions"] = []
-    return jsonify({"status": "reset"})
-
-@app.route("/get_ai_explanation", methods=["POST"])
-def get_ai_explanation():
-    total_tokens_used = session.get("total_tokens_used", 0)
-
-    # 檢查是否已登入，並且設定api key
-    if not session.get("logged_in"):
-        return jsonify({"error": "未登入"}), 403
-
-    api_key = session.get("gemini_api_key")
-    if not api_key:
-        return jsonify({"error": "缺少 API Key"}), 403
-
-    client = genai.Client(api_key=api_key)
-
-    # 取得題目
-    is_detail = request.args.get("detail", "false").lower() == "true"
-    data = request.json
-    question = data.get("question")
-    question_id = question["題號"]
-    
-    # 從 session 取得 AI 詳解快取
-    ai_explanation_cache = session.get("ai_explanation_cache", {})
-    
-    # 步驟 1: 檢查 session 快取中是否有詳解
-    if question_id in ai_explanation_cache:
-        print(f"✅ 題號 {question_id} 的詳解已從 Session 快取中取得。")
-        explanation = ai_explanation_cache[question_id]
-        return jsonify({
-            "explanation": explanation,
-            "current_tokens": 0,
-            "total_tokens": total_tokens_used
-        })
-
-    # 步驟 2: 如果快取中沒有，則執行 API 呼叫
-    prompt = f"請以繁體中文，針對以下問題，生成 1 分鐘內可以閱讀完的詳解，包含關鍵概念和每個選項解釋，文字簡明，重點清楚：\n\n題目：{question['題目']}\n選項：{' '.join(question['選項'])}\n答案：{question['答案']}"
-    if is_detail:
-        prompt = f"請以繁體中文，針對以下問題提供詳細的解釋：\n\n題目：{question['題目']}\n選項：{' '.join(question['選項'])}\n答案：{question['答案']}"
-        
-    try:
-        # response = model.generate_content(prompt)
-        response = client.models.generate_content(
-            model=MODEL,
-            contents=prompt,
-        )
-        # 移除這行程式碼，讓 AI 回傳的換行和格式得以保留
-        explanation = response.text
-
-        # 步驟 3: 將新的詳解儲存到 session 快取中
-        ai_explanation_cache[question_id] = explanation
-        session["ai_explanation_cache"] = ai_explanation_cache
-        
-        # 計算本次請求的 token 數
-        current_tokens = response.usage_metadata.total_token_count
-        
-        # 更新累積 token 數
-        total_tokens_used += current_tokens
-        session["total_tokens_used"] = total_tokens_used
-
-        return jsonify({
-            "explanation": explanation,
-            "current_tokens": current_tokens,
-            "total_tokens": total_tokens_used
-        })
-    except Exception as e:
-        print(f"Gemini API 呼叫失敗: {e}")
-        return jsonify({"error": "無法取得 AI 詳解，請稍後再試。"}), 500
-    
-# 新增一個用於串流回應的路由
-@app.route("/stream_ai_explanation", methods=["POST"])
-def stream_ai_explanation():
-    total_tokens_used = session.get("total_tokens_used", 0)
-
-    # 檢查是否已登入，並且設定api key
-    if not session.get("logged_in"):
-        return jsonify({"error": "未登入"}), 403
-
-    api_key = session.get("gemini_api_key")
-    if not api_key:
-        return jsonify({"error": "缺少 API Key"}), 403
-
-    client = genai.Client(api_key=api_key)
-
-    # 取得題目
-    is_detail = request.args.get("detail", "false").lower() == "true"
-    data = request.json
-    question = data.get("question")
-    question_id = question["題號"]
-
-    # 從 session 取得 AI 詳解快取
-    ai_explanation_cache = session.get("ai_explanation_cache", {})
-    
-    # 步驟 1: 檢查 session 快取中是否有詳解
-    if question_id in ai_explanation_cache:
-        print(f"✅ 題號 {question_id} 的詳解已從 Session 快取中取得。")
-        explanation = ai_explanation_cache[question_id]
-        return jsonify({
-            "explanation": explanation,
-            "current_tokens": 0,
-            "total_tokens": total_tokens_used
-        })
-
-    # 步驟 2: 如果 session 快取中沒有，則執行 API 呼叫
-
-    prompt = f"請以繁體中文，針對以下問題，生成 1 分鐘內可以閱讀完的詳解，包含關鍵概念和每個選項解釋，文字簡明，重點清楚：\n\n題目：{question['題目']}\n選項：{' '.join(question['選項'])}\n答案：{question['答案']}"
-    if is_detail:
-        prompt = f"請以繁體中文，針對以下問題提供詳細的解釋：\n\n題目：{question['題目']}\n選項：{' '.join(question['選項'])}\n答案：{question['答案']}"
-    
-    # 確保 prompt_tokens 在串流開始前計算一次
-    # 因為 prompt tokens 在發送請求時就已確定
-    # prompt_tokens = client.models.count_tokens(model=MODEL, contents=prompt).total_tokens
-
-    def generate_stream():
-        total_tokens_in_stream = session.get("total_tokens_used", 0)
-        try:
-            full_explanation = ""
-            response = client.models.generate_content_stream(
-                model=MODEL,
-                contents=prompt
+    @app.post("/submit_answer")
+    @login_required
+    def submit_answer():
+        payload = request.get_json(silent=True) or {}
+        key = (payload.get("question") or {}).get("_key")
+        state = current_state()
+        question = question_map(state).get(key)
+        if not question or key not in state["current_keys"]:
+            return jsonify({"error": "題目不存在或不屬於目前題庫"}), 404
+        answer = "".join(sorted(re.sub(r"[^A-Z]", "", str(payload.get("answer", "")).upper())))
+        correct = "".join(sorted(re.sub(r"[^A-Z]", "", str(question.get("答案", "")).upper())))
+        is_correct = answer == correct
+        if key not in state["answered_keys"]:
+            state["answered_keys"].append(key)
+        if key in state["remaining_keys"]:
+            state["remaining_keys"].remove(key)
+        if not is_correct and key not in state["wrong_keys"]:
+            state["wrong_keys"].append(key)
+        if payload.get("mode") == "wrong" and state["wrong_keys"]:
+            state["wrong_answer_count"] = min(
+                len(state["wrong_keys"]), state["wrong_answer_count"] + 1
             )
-            # 呼叫 genai API 並啟用串流
-            for chunk in response:
-                if (chunk.text):
-                    yield chunk.text.encode('utf-8')
-                    full_explanation += chunk.text
-                if (chunk.usage_metadata):
-                    current_tokens = chunk.usage_metadata.total_token_count
-                    total_tokens_in_stream += current_tokens
-                    session["total_tokens_used"] = total_tokens_in_stream
-                    token_info = {
-                        "current_tokens": current_tokens,
-                        "total_tokens": total_tokens_in_stream
-                    }
-            
-            # 將 JSON 資訊傳送給前端
-            yield f"<div data-tokens='{json.dumps(token_info)}' style='display:none;'></div>".encode('utf-8')
+        store.save_state(session["sid"], state)
+        return jsonify({"correct": is_correct, "right_answer": correct,
+                        "total_questions": len(state["current_keys"]),
+                        "answered_count_total": len(state["answered_keys"]),
+                        "total_wrong": len(state["wrong_keys"]),
+                        "answered_wrong": state["wrong_answer_count"]})
 
-        except Exception as e:
-            # 處理可能發生的 API 錯誤
-            error_message = f"無法取得 AI 詳解：{e}"
-            yield f'<p style="color:red;">{error_message}</p>'.encode('utf-8')
+    @app.post("/mark_question")
+    @login_required
+    def mark_question():
+        key = ((request.get_json(silent=True) or {}).get("question") or {}).get("_key")
+        state = current_state()
+        if key not in state["current_keys"] or key not in question_map(state):
+            return jsonify({"error": "題目不存在"}), 404
+        if key in state["marked_keys"]:
+            state["marked_keys"].remove(key)
+            status = "unmarked"
+        else:
+            state["marked_keys"].append(key)
+            status = "marked"
+        store.save_state(session["sid"], state)
+        return jsonify({"status": status})
 
-    # 這裡回傳 Response 物件，並將生成器函式作為回應內容
-    # mimetype 設為 text/html，讓瀏覽器能直接解析 HTML 標籤
-    return Response(generate_stream(), mimetype='text/html')
+    @app.post("/reset_questions")
+    @login_required
+    def reset_questions():
+        state = current_state()
+        state.update(remaining_keys=list(state["current_keys"]), answered_keys=[],
+                     question_index=0, wrong_answer_count=0)
+        store.save_state(session["sid"], state)
+        return jsonify({"status": "reset"})
 
-# 修改 load_questions 為啟動時載入所有 JSON 檔
-# 並將其儲存在一個全域字典中。
-# 此字典的鍵為檔案名稱，值為題目列表。
-ALL_QUESTIONS_DATA = {}
+    def questions_for_keys(keys):
+        qmap = question_map()
+        return [qmap[key] for key in keys if key in qmap]
 
-def load_all_question_files():
-    """在應用程式啟動時載入所有題庫檔案一次。"""
-    base_dir = Path(__file__).resolve().parent
-    json_path = base_dir / 'json'
-    available_jsons = sorted(json_path.glob("*.json"))
+    @app.get("/review")
+    @login_required
+    def review():
+        return render_template("review.html", wrong_questions=questions_for_keys(current_state()["wrong_keys"]))
 
-    for file_path in available_jsons:
+    @app.get("/review_marked")
+    @login_required
+    def review_marked():
+        return render_template("review_marked.html", marked_questions=questions_for_keys(current_state()["marked_keys"]))
+
+    @app.get("/review_ai")
+    @login_required
+    def review_ai():
+        if not stored_ai_config():
+            return redirect(url_for("index"))
+        state, qmap, items = current_state(), question_map(), []
+        for key, explanation in state["ai_cache"].items():
+            if key in qmap:
+                item = dict(qmap[key])
+                item["ai_explanation"] = explanation
+                items.append(item)
+        return render_template("review_ai.html", q_ai=items)
+
+    @app.get("/search")
+    @login_required
+    def search():
+        return render_template("search.html")
+
+    @app.get("/search_questions")
+    @login_required
+    def search_questions():
+        keyword = request.args.get("keyword", "").strip()
+        questions = selected_questions()
+        if not keyword:
+            return jsonify(questions)
         try:
-            with open(file_path, "r", encoding="utf-8") as f:
-                data = json.load(f)
-                if isinstance(data, list):
-                    # 處理並儲存每個題庫，鍵為檔案名稱
-                    ALL_QUESTIONS_DATA[file_path.stem] = data
-                    print(f"✅ 載入檔案：{file_path.stem}，題數：{len(data)}")
-                else:
-                    print(f"⚠️ {file_path} 格式錯誤，非陣列，略過")
-        except json.JSONDecodeError:
-            print(f"⚠️ {file_path} 無法解析為 JSON，略過")
-        except Exception as e:
-            print(f"❌ 處理檔案 {file_path} 時發生錯誤：{e}")
+            pattern = re.compile(keyword[2:] if keyword.startswith("r/") else re.escape(keyword), re.I)
+        except re.error:
+            return jsonify({"error": "正規表示式格式錯誤"}), 400
+        return jsonify([q for q in questions if pattern.search(" ".join([
+            str(q.get("題號", "")), str(q.get("題目", "")),
+            *map(str, q.get("選項", [])), str(q.get("答案", ""))]))])
 
-# 在應用程式啟動時呼叫此函數
-load_all_question_files()
+    def json_download(data, filename):
+        content = json.dumps(data, ensure_ascii=False, indent=2).encode("utf-8")
+        return send_file(io.BytesIO(content), mimetype="application/json",
+                         as_attachment=True, download_name=filename)
 
-# if __name__ == "__main__":
-#     import argparse
-#     parser = argparse.ArgumentParser(description="國考出題機（支援多題庫與模式切換）")
-#     # parser.add_argument("json_files", nargs="+", help="一個或多個題庫 JSON 檔案或資料夾")
-#     parser.add_argument("--host", default="127.0.0.1")
-#     parser.add_argument("--port", default=5000, type=int)
-#     args = parser.parse_args()
+    @app.get("/save_question")
+    @login_required
+    def save_question():
+        state = current_state()
+        keys = state["marked_keys"] if request.args.get("type") == "marked" else state["wrong_keys"]
+        return json_download(questions_for_keys(keys), "qbank_questions.json")
 
-#     default_path = ["./json"]
+    @app.get("/save_progress")
+    @login_required
+    def save_progress():
+        state = current_state()
+        return json_download({"state": state, "questions": selected_questions(state)}, "qbank_progress.json")
 
-#     # for debug
-#     for path_str in default_path:
-#         p = Path(path_str)
-#         if not p.exists():
-#             print(f"❌ 找不到路徑：{path_str}")
-#             continue
+    def build_prompt(question, choice="", detail=False, honest=False, choice_only=False):
+        base = f"題目：{question['題目']}\n選項：{' '.join(question['選項'])}\n答案：{question['答案']}"
+        if choice_only:
+            return f"{base}\n請簡短說明下列選項正確或錯誤的理由：{choice}"
+        style = "提供詳細的解釋與各選項分析" if detail else "生成精簡的解釋"
+        prompt = f"請以繁體中文針對以下問題{style}：\n\n{base}"
+        return prompt + ("\n若題庫答案不合理，請明確指出。" if honest else "")
 
-#         if p.is_dir():
-#             # 如果是資料夾，尋找所有 .json 檔案
-#             print(f"📂 正在載入資料夾：{p}")
-#             AVAILABLE_JSONS.extend(p.glob("*.json"))
-#         else:
-#             # 如果是單一檔案，直接加入列表
-#             AVAILABLE_JSONS.append(p)
+    def ai_context():
+        config = stored_ai_config()
+        if not config:
+            return None, None, (jsonify({"error": "未設定 API Key，AI 詳解已停用"}), 403)
+        payload = request.get_json(silent=True) or {}
+        key = (payload.get("question") or {}).get("_key")
+        state = current_state()
+        question = question_map(state).get(key)
+        if not question:
+            return None, None, (jsonify({"error": "題目不存在"}), 404)
+        prompt = build_prompt(question, payload.get("choice", ""),
+                              request.args.get("detail") == "true",
+                              request.args.get("honest") == "true",
+                              request.args.get("choiceOnly") == "true")
+        fingerprint = json.dumps({"provider": config.provider, "model": config.model,
+                                  "base_url": config.base_url, "prompt": prompt},
+                                 ensure_ascii=False, sort_keys=True)
+        return (config, question, prompt, fingerprint), state, None
 
-#     # base_dir = Path(__file__).resolve().parent
-#     # json_path = base_dir / 'json'
-#     # AVAILABLE_JSONS.extend(json_path.glob("*.json"))
+    @app.post("/get_ai_explanation")
+    @login_required
+    def get_ai_explanation():
+        context, state, error = ai_context()
+        if error:
+            return error
+        config, question, prompt, fingerprint = context
+        key = question["_key"]
+        if state["prompt_cache"].get(key) == fingerprint and key in state["ai_cache"]:
+            return jsonify(explanation=state["ai_cache"][key], current_tokens=0,
+                           total_tokens=state["total_tokens"])
+        try:
+            response = generate_ai(config, prompt,
+                                   allow_private_endpoint=app.config["ALLOW_PRIVATE_AI_ENDPOINTS"])
+            tokens = response.total_tokens
+            state["ai_cache"][key], state["prompt_cache"][key] = response.text, fingerprint
+            state["total_tokens"] += tokens
+            store.save_state(session["sid"], state)
+            return jsonify(explanation=response.text, current_tokens=tokens,
+                           total_tokens=state["total_tokens"])
+        except Exception:
+            app.logger.exception("AI provider request failed")
+            return jsonify({"error": "無法取得 AI 詳解，請確認 provider、模型、API Key 或端點"}), 502
 
-#     # load_questions(args.json_files)
-#     print(f"✅ 題庫已載入，總題數：{len(questions)}")
-#     print(f"🌐 網頁出題機：http://{args.host}:{args.port}")
-#     app.run(host=args.host, port=args.port, debug=True)
+    @app.post("/stream_ai_explanation")
+    @login_required
+    def stream_ai_explanation():
+        context, state, error = ai_context()
+        if error:
+            return error
+        config, question, prompt, fingerprint = context
+        key, sid = question["_key"], session["sid"]
+
+        def generate():
+            if state["prompt_cache"].get(key) == fingerprint and key in state["ai_cache"]:
+                yield state["ai_cache"][key]
+                yield "<div data-tokens='" + json.dumps({"current_tokens": 0, "total_tokens": state["total_tokens"]}) + "' style='display:none;'></div>"
+                return
+            full_text, tokens = [], 0
+            try:
+                chunks = stream_ai(config, prompt,
+                                   allow_private_endpoint=app.config["ALLOW_PRIVATE_AI_ENDPOINTS"])
+                for chunk in chunks:
+                    if chunk.text:
+                        full_text.append(chunk.text)
+                        yield chunk.text
+                    tokens = chunk.total_tokens or tokens
+                latest = store.get_state(sid)
+                latest["ai_cache"][key], latest["prompt_cache"][key] = "".join(full_text), fingerprint
+                latest["total_tokens"] += tokens
+                store.save_state(sid, latest)
+                yield "<div data-tokens='" + json.dumps({"current_tokens": tokens, "total_tokens": latest["total_tokens"]}) + "' style='display:none;'></div>"
+            except Exception:
+                app.logger.exception("AI provider streaming request failed")
+                yield "\n\nAI 詳解產生失敗，請確認 provider、模型、API Key 或端點。"
+        return Response(generate(), mimetype="text/plain")
+
+    @app.errorhandler(413)
+    def upload_too_large(_error):
+        flash(f"上傳檔案超過 {app.config['MAX_CONTENT_LENGTH'] // 1024 // 1024} MB 限制", "error")
+        return redirect(url_for("select"))
+
+    return app
+
+
+app = create_app()

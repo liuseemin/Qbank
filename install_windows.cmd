@@ -81,11 +81,8 @@ if errorlevel 1 (
     exit /b 1
 )
 
-echo [5/5] Configuring Gemini AI (optional)...
+echo [5/5] Preparing question bank folder...
 if not exist json mkdir json
-set "GEMINI_API_KEY="
-set /p "GEMINI_API_KEY=Enter Gemini API Key (leave blank to disable AI): "
-setx GEMINI_API_KEY "%GEMINI_API_KEY%" >nul
 
 echo.
 echo Installation completed.
@@ -93,6 +90,6 @@ echo Open a new terminal, then run:
 echo   .venv\Scripts\python.exe quiz_web.py "C:\path\to\question_banks" --open
 echo.
 echo Put question-bank JSON files in the json folder, or pass another folder path.
-echo GEMINI_API_KEY is available in new terminals.
+echo Enter a Gemini API Key on the login page, or leave it blank for non-AI mode.
 pause
 exit /b 0

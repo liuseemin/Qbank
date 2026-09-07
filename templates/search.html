@@ -97,6 +97,34 @@
     <div class="results" id="results"></div>
 
     <script>
+        function appendHighlightedText(element, value, keyword) {
+            const text = String(value ?? "");
+            if (!keyword) {
+                element.appendChild(document.createTextNode(text));
+                return;
+            }
+            let pattern;
+            try {
+                const source = keyword.startsWith("r/")
+                    ? keyword.slice(2)
+                    : keyword.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+                pattern = new RegExp(source, "gi");
+            } catch (_error) {
+                element.appendChild(document.createTextNode(text));
+                return;
+            }
+            let offset = 0;
+            for (const match of text.matchAll(pattern)) {
+                if (!match[0]) continue;
+                element.appendChild(document.createTextNode(text.slice(offset, match.index)));
+                const mark = document.createElement("mark");
+                mark.textContent = match[0];
+                element.appendChild(mark);
+                offset = match.index + match[0].length;
+            }
+            element.appendChild(document.createTextNode(text.slice(offset)));
+        }
+
         async function search() {
             const keyword = document.getElementById("keyword").value.trim();
             // if (!keyword) return;
@@ -107,24 +135,44 @@
             const resultsDiv = document.getElementById("results");
             resultsDiv.innerHTML = "";
 
-            resultsDiv.innerHTML = `<p>搜尋結果 (${data.length} 筆)</p>`;
+            if (!res.ok) {
+                resultsDiv.textContent = data.error || "搜尋失敗";
+                return;
+            }
+            const summary = document.createElement("p");
+            summary.textContent = `搜尋結果 (${data.length} 筆)`;
+            resultsDiv.appendChild(summary);
 
 
             if (data.length === 0) {
-                resultsDiv.innerHTML = "<p>❌ 沒有找到符合的題目</p>";
+                resultsDiv.textContent = "❌ 沒有找到符合的題目";
                 return;
             }
 
             data.forEach(q => {
                 const card = document.createElement("div");
                 card.className = "question-card";
-                card.innerHTML = `
-                    <h3>題號：${q.題號}</h3>
-                    <p>${q.題目}</p>
-                    ${q.圖片 ? `<img src="${q.圖片}" alt="題目圖片" style="max-width:100%; margin-top:15px;"/>` : ''}
-                    <ul>${q.選項.map(opt => `<li>${opt}</li>`).join("")}</ul>
-                    <p><b>答案：</b> ${q.答案}</p>
-                `;
+                const title = document.createElement("h3");
+                appendHighlightedText(title, `題號：${q.題號}`, keyword);
+                const body = document.createElement("p");
+                appendHighlightedText(body, q.題目, keyword);
+                const options = document.createElement("ul");
+                q.選項.forEach(text => {
+                    const option = document.createElement("li");
+                    appendHighlightedText(option, text, keyword);
+                    options.appendChild(option);
+                });
+                const answer = document.createElement("p");
+                appendHighlightedText(answer, `答案：${q.答案}`, keyword);
+                card.append(title, body);
+                if (q.圖片 && /^data:image\/(png|jpeg|gif|webp);base64,/.test(q.圖片)) {
+                    const image = document.createElement("img");
+                    image.src = q.圖片;
+                    image.alt = "題目圖片";
+                    image.style.maxWidth = "100%";
+                    card.appendChild(image);
+                }
+                card.append(options, answer);
                 resultsDiv.appendChild(card);
             });
         }

@@ -1,5 +1,4 @@
-def main():
-    print("Hello from qbank!")
+from quiz_web import main
 
 
 if __name__ == "__main__":

@@ -14,15 +14,15 @@
         <input type="number" id="countdownIntervalInput" value="36">
         <button id="settings-apply"><i class="fa-solid fa-gear fa-lg"></i></button>
         <br>
-        <label for="isAiStream" style="display: inline-block; position: relative; left: -35px; margin: 3px;">
+        {% if ai_enabled %}<label for="isAiStream" style="display: inline-block; position: relative; left: -35px; margin: 3px;">
             <input type="checkbox" id="isAiStream" checked style="vertical-align: middle;">
             <span style="vertical-align: middle;">Stream</span>
-        </label>
+        </label>{% endif %}
     </div>
     <div id="save-status">
         <a href="/save_progress">儲存進度</a>
     </div>
-    <div class="main-container">
+    <div class="main-container{% if not ai_enabled %} no-ai{% endif %}">
         <div class="container">
             <h1>線上出題機</h1>
             <div id="question_count"></div>
@@ -52,11 +52,12 @@
                 <a href="/review" target="_blank">查看錯題</a>
                 <a href="/review_marked" target="_blank">查看已標記</a>
                 <a href="/search" target="_blank" class="icon-button"><i class="fa fa-search"></i></a>
+                <a href="/select">更換題庫</a>
                 <label for="question_jump">跳</label>
                 <select id="question_jump" onchange="jumpToQuestion()">
                     <option value="">題號</option>
-                    {% for qid in all_question_ids %}
-                    <option value="{{ qid }}">{{ qid }}</option>
+                    {% for q in jump_questions %}
+                    <option value="{{ q.key }}">{{ q.label }}</option>
                     {% endfor %}
                 </select>
             </div>
@@ -68,12 +69,12 @@
             <div class="action-buttons">
                 <button id="submit-button">送出</button>
                 <button class="mark-button" onclick="markCurrent()">標記本題</button>
-                <button id="aiExplanationBtn" class="explanation-button" style="display: none;">取得 AI 詳解</button>
+                {% if ai_enabled %}<button id="aiExplanationBtn" class="explanation-button" style="display: none;">取得 AI 詳解</button>{% endif %}
             </div>
 
         </div>
 
-        <div id="ai-explanation">
+        {% if ai_enabled %}<div id="ai-explanation">
             <div class="ai-header">
                 <h2>AI 詳解</h2>
                 <div>
@@ -94,7 +95,7 @@
             </div>
             <div id="token-info" style="display:none;"></div>
             <div id="ai-explanation-content"></div>
-        </div>
+        </div>{% endif %}
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
@@ -110,9 +111,9 @@
         const restartBtn = document.getElementById("restartBtn");
         const modeSelect = document.getElementById("mode");
         const jumpSelect = document.getElementById("question_jump");
-        const aiExplanationBtn = document.getElementById("aiExplanationBtn");
-        const aiExplanationContent = document.getElementById("ai-explanation-content");
-        const tokenInfoDiv = document.getElementById("token-info");
+        const aiExplanationBtn = document.getElementById("aiExplanationBtn") || {style: {}};
+        const aiExplanationContent = document.getElementById("ai-explanation-content") || {innerHTML: ""};
+        const tokenInfoDiv = document.getElementById("token-info") || {style: {}, innerHTML: ""};
         const questionCountDiv = document.getElementById("question_count");
         const submitAnswerBtn = document.getElementById("submit-button");
         const is_showAnswerBtn = document.getElementById("is_show_answer");
@@ -196,7 +197,7 @@
 
         function extractOptionCode(optText) {
             // 嘗試擷取開頭的 A/B/C/D/E，不管是否有括號、點、冒號、空格
-            const match = optText.match(/^\(?([A-E])[\.\):]?\s?/);
+            const match = optText.match(/^\(?([A-Z])[\.\):]?\s?/i);
             return match ? match[1] : null;
         }
 
@@ -232,19 +233,20 @@
             let opts = document.getElementById("options");
             opts.innerHTML = "";
             submitAnswerBtn.style.display = "none";
-            data.選項.forEach(opt => {
+            data.選項.forEach((opt, optionIndex) => {
+                const optionCode = extractOptionCode(opt) || String.fromCharCode(65 + optionIndex);
                 let btn = document.createElement("button");
                 btn.innerText = opt;
-                btn.id = "option-" + extractOptionCode(opt);
+                btn.id = "option-" + optionCode;
                 btn.onclick = (event) => {
                     if (data.is_multiple) {
-                        if (multiple_answers_string.includes(extractOptionCode(opt))) {
+                        if (multiple_answers_string.includes(optionCode)) {
                             event.target.classList.remove('chosen');
-                            multiple_answers_string = multiple_answers_string.replace(extractOptionCode(opt), '');
+                            multiple_answers_string = multiple_answers_string.replace(optionCode, '');
                             console.log(multiple_answers_string);
                         } else {
                             event.target.classList.add('chosen');
-                            multiple_answers_string += extractOptionCode(opt);
+                            multiple_answers_string += optionCode;
                             console.log(multiple_answers_string);
                         }
                     } else {
@@ -252,11 +254,11 @@
                             button.classList.remove('selected');
                         });
                         event.target.classList.add('selected');
-                        submitAnswer(extractOptionCode(opt));
+                        submitAnswer(optionCode);
                     }
                 };
                 if (is_showAnswerBtn.checked) {
-                    if (data.答案.includes(extractOptionCode(opt))) {
+                    if (data.答案.includes(optionCode)) {
                         btn.classList.add('reveal');
                     }
                 }
@@ -281,7 +283,7 @@
             nextQuestionBtn.style.display = "block";
             restartBtn.style.display = "none";
 
-            jumpSelect.value = data.題號;
+            jumpSelect.value = data._key;
 
             aiExplanationBtn.style.display = "none";
             aiExplanationContent.innerHTML = "";
@@ -337,7 +339,7 @@
         function jumpToQuestion() {
             const questionId = jumpSelect.value;
             if (questionId) {
-                fetch(`/get_question?question_id=${questionId}`)
+                fetch(`/get_question?question_id=${encodeURIComponent(questionId)}`)
                     .then(res => res.json())
                     .then(data => {
                         if (data.error) {
@@ -350,12 +352,8 @@
         }
 
         function prevQuestion() {
-            const parts = jumpSelect.value.split("_");
-            const numberId = String(Number(parts[parts.length - 1]) - 1);
-            parts[parts.length - 1] = numberId;
-            const questionId = parts.join("_");
-            if (questionId) {
-                fetch(`/get_question?question_id=${questionId}&prev=True&long=${longpress}`)
+            if (jumpSelect.value) {
+                fetch(`/get_question?previous=true`)
                     .then(res => res.json())
                     .then(data => {
                         if (data.error) {
@@ -396,19 +394,20 @@
                 },
                 body: JSON.stringify({
                     question: currentQuestion,
-                    answer: ans
+                    answer: ans,
+                    mode: modeSelect.value
                 })
             })
                 .then(res => res.json())
                 .then(data => {
+                    if (data.error) {
+                        throw new Error(data.error);
+                    }
                     const resultDiv = document.getElementById("result");
                     resultDiv.innerHTML = "";
-                    Correct_OptionBtn = document.getElementById('option-' + extractOptionCode(data.right_answer));
-                    Correct_OptionBtn.classList.remove('correct');
                     if (data.correct) {
                         resultDiv.innerText = "✅ 答對了！";
                         resultDiv.className = "result correct";
-                        Correct_OptionBtn = document.getElementById('option-' + extractOptionCode(data.right_answer));
                     } else {
                         const rightAnswer = data.right_answer;
                         const explanationText = `❌ 答錯！正確答案是：${rightAnswer}`;
@@ -416,8 +415,8 @@
                         resultDiv.className = "result wrong";
                         for (let char of rightAnswer) {
                             console.log(char, 'option-' + char);
-                            Correct_OptionBtn = document.getElementById('option-' + char);
-                            Correct_OptionBtn.classList.add('correct');
+                            const correctOptionBtn = document.getElementById('option-' + char);
+                            if (correctOptionBtn) correctOptionBtn.classList.add('correct');
                         }
                     }
 
@@ -436,6 +435,11 @@
                     if (modeSelect.value !== 'wrong' && answered_questions > gradient.length) {
                         makeProgressShowDistribution(data.correct);
                     }
+                })
+                .catch(error => {
+                    const resultDiv = document.getElementById("result");
+                    resultDiv.innerText = error.message;
+                    resultDiv.className = "result wrong";
                 });
         }
 
@@ -644,7 +648,7 @@
         };
 
 
-        aiExplanationBtn.onclick = () => {
+        if (document.getElementById("aiExplanationBtn")) aiExplanationBtn.onclick = () => {
             if (document.getElementById("isAiStream").checked) {
                 getAiExplanationStream();
             } else {

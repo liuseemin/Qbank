@@ -258,9 +258,7 @@ if (-not [string]::IsNullOrWhiteSpace($pdfInput)) {
     }
 }
 
-Write-Host "[7/8] Configuring Gemini AI (optional)..."
-$apiKey = Read-Host "Enter Gemini API Key (leave blank to disable AI)"
-[Environment]::SetEnvironmentVariable("GEMINI_API_KEY", $apiKey, "User")
+Write-Host "[7/8] Gemini AI is configured securely in the browser at login (optional)."
 
 Write-Host "[8/8] Creating desktop shortcut..."
 $shortcutPath = New-DesktopShortcut `
@@ -275,3 +273,4 @@ Write-Host "Installation completed: $InstallPath"
 Write-Host "Put JSON question banks in: $jsonDirectory"
 Write-Host "Desktop shortcut created: $shortcutPath"
 Write-Host "Shortcut runs git pull before starting Qbank."
+Write-Host "Enter a Gemini API Key on the login page, or leave it blank for non-AI mode."

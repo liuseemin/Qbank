@@ -1,6 +1,8 @@
 Flask==3.1.1
 google-genai==1.30.0
+httpx==0.28.1
 inquirerpy==0.3.4
 pdfplumber==0.11.7
 PyMuPDF==1.26.4
 tqdm==4.67.1
+gunicorn==23.0.0; sys_platform != "win32"
